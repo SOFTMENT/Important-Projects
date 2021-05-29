@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Bold.ttf">
+            <string>Rubik-Bold</string>
+        </array>
+        <array key="Rubik-Medium.ttf">
+            <string>Rubik-Medium</string>
+        </array>
+        <array key="Rubik-Regular.ttf">
+            <string>Rubik-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OverlayView" customModule="KaiBall_Athletics" customModuleProvider="target">
+            <connections>
+                <outlet property="accountType" destination="4RR-Iw-OQt" id="hLm-ii-hb6"/>
+                <outlet property="email" destination="mIs-yW-pP3" id="1th-MQ-JdB"/>
+                <outlet property="goPremiumText" destination="i7J-1d-F3Z" id="Ns6-Vz-VbM"/>
+                <outlet property="goPremiumView" destination="L93-sq-NCc" id="5zV-R1-VQ1"/>
+                <outlet property="img" destination="N9r-Sb-G8I" id="eqW-DZ-hIh"/>
+                <outlet property="logout" destination="DfH-Ki-GpO" id="RQk-BM-ChM"/>
+                <outlet property="membershipImg" destination="ehs-V1-h4T" id="ZKg-CM-BCJ"/>
+                <outlet property="name" destination="FIA-WT-pKD" id="sSu-T8-eeh"/>
+                <outlet property="privacyPolicy" destination="8fH-OJ-VW5" id="MEr-iB-JZv"/>
+                <outlet property="rateUs" destination="1VF-Vr-TwO" id="QxA-Fn-2tO"/>
+                <outlet property="shareApp" destination="TbX-ZZ-YZh" id="FPw-zk-U4J"/>
+                <outlet property="slideIndicator" destination="R22-KD-mS4" id="sk4-74-LzH"/>
+                <outlet property="softment" destination="qyu-BO-i7e" id="GrN-Ul-PJv"/>
+                <outlet property="version" destination="RUy-7J-FqM" id="bkc-qV-oCq"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R22-KD-mS4">
+                    <rect key="frame" x="168.5" y="60" width="77" height="2"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="mTD-ny-E0u"/>
+                        <constraint firstAttribute="width" constant="77" id="rjE-8o-1VN"/>
+                    </constraints>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock (4)" translatesAutoresizingMaskIntoConstraints="NO" id="N9r-Sb-G8I">
+                    <rect key="frame" x="26" y="82" width="34" height="34"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="34" id="bPz-rw-n4k"/>
+                        <constraint firstAttribute="height" constant="34" id="sM3-b2-1R7"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vijay Rathore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIA-WT-pKD">
+                    <rect key="frame" x="72" y="82" width="101.5" height="18"/>
+                    <fontDescription key="fontDescription" name="Rubik-Bold" family="Rubik" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iamvijay67@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIs-yW-pP3">
+                    <rect key="frame" x="72" y="104" width="121.5" height="13"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="13" id="6TF-45-43l"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="11"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="N6N-Km-vk4">
+                    <rect key="frame" x="30" y="124" width="354" height="730"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="TCB-Zz-qp8">
+                            <rect key="frame" x="0.0" y="0.0" width="354" height="121.5"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6RA-O4-7ow">
+                                    <rect key="frame" x="0.0" y="0.0" width="354" height="121.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isE-QZ-D2T">
+                                            <rect key="frame" x="0.0" y="53" width="86" height="15.5"/>
+                                            <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="13"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Free Version" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4RR-Iw-OQt">
+                                            <rect key="frame" x="277.5" y="53" width="74.5" height="15.5"/>
+                                            <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="13"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="isE-QZ-D2T" firstAttribute="leading" secondItem="6RA-O4-7ow" secondAttribute="leading" id="Cfh-Iv-p40"/>
+                                        <constraint firstItem="4RR-Iw-OQt" firstAttribute="centerY" secondItem="6RA-O4-7ow" secondAttribute="centerY" id="c8U-d6-JLc"/>
+                                        <constraint firstAttribute="trailing" secondItem="4RR-Iw-OQt" secondAttribute="trailing" constant="2" id="mmx-xC-Wce"/>
+                                        <constraint firstItem="isE-QZ-D2T" firstAttribute="centerY" secondItem="6RA-O4-7ow" secondAttribute="centerY" id="sJh-VS-zX9"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TbX-ZZ-YZh">
+                            <rect key="frame" x="0.0" y="121.5" width="354" height="122"/>
+                            <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="13"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate Us on App Store" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1VF-Vr-TwO">
+                            <rect key="frame" x="0.0" y="243.5" width="354" height="121.5"/>
+                            <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="13"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy Policy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fH-OJ-VW5">
+                            <rect key="frame" x="0.0" y="365" width="354" height="121.5"/>
+                            <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="13"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DfH-Ki-GpO">
+                            <rect key="frame" x="0.0" y="486.5" width="354" height="122"/>
+                            <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="13"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vcT-HS-9mW">
+                            <rect key="frame" x="0.0" y="608.5" width="354" height="121.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed By - SOFTMENT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyu-BO-i7e">
+                                    <rect key="frame" x="0.0" y="0.0" width="354" height="60.5"/>
+                                    <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="13"/>
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version - 1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUy-7J-FqM">
+                                    <rect key="frame" x="0.0" y="60.5" width="354" height="61"/>
+                                    <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="13"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="basketball-ball (1) 2" translatesAutoresizingMaskIntoConstraints="NO" id="bGq-rU-PK6">
+                    <rect key="frame" x="117" y="358" width="180" height="180"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="180" id="CeU-Tz-fBp"/>
+                        <constraint firstAttribute="height" constant="180" id="zFu-Zo-tkc"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L93-sq-NCc">
+                    <rect key="frame" x="271" y="82" width="113" height="32"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crown (4)" translatesAutoresizingMaskIntoConstraints="NO" id="ehs-V1-h4T">
+                            <rect key="frame" x="8" y="6" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="Dhq-wW-WgT"/>
+                                <constraint firstAttribute="width" constant="20" id="zdu-f8-xqG"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go Premium" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7J-1d-F3Z">
+                            <rect key="frame" x="34" y="10" width="71" height="14.5"/>
+                            <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="12"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.60734572775504592" green="0.55743072909605185" blue="0.95084581471452811" alpha="0.94999999999999996" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstItem="i7J-1d-F3Z" firstAttribute="leading" secondItem="ehs-V1-h4T" secondAttribute="trailing" constant="6" id="4Ex-1w-0bv"/>
+                        <constraint firstItem="ehs-V1-h4T" firstAttribute="centerY" secondItem="L93-sq-NCc" secondAttribute="centerY" id="4pM-85-gxf"/>
+                        <constraint firstItem="ehs-V1-h4T" firstAttribute="leading" secondItem="L93-sq-NCc" secondAttribute="leading" constant="8" id="5EH-53-UNU"/>
+                        <constraint firstAttribute="height" constant="32" id="E5b-6Q-nJI"/>
+                        <constraint firstAttribute="trailing" secondItem="i7J-1d-F3Z" secondAttribute="trailing" constant="8" id="F7L-9d-L3f"/>
+                        <constraint firstItem="i7J-1d-F3Z" firstAttribute="centerY" secondItem="L93-sq-NCc" secondAttribute="centerY" constant="1" id="RBO-Ka-vbJ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.92941176470588238" green="0.10588235294117647" blue="0.14509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="mIs-yW-pP3" firstAttribute="leading" secondItem="FIA-WT-pKD" secondAttribute="leading" id="4DX-N2-tAq"/>
+                <constraint firstItem="R22-KD-mS4" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7u9-K5-YaR"/>
+                <constraint firstItem="N9r-Sb-G8I" firstAttribute="top" secondItem="R22-KD-mS4" secondAttribute="bottom" constant="20" id="J4h-LW-WwO"/>
+                <constraint firstAttribute="trailing" secondItem="L93-sq-NCc" secondAttribute="trailing" constant="30" id="Ocp-3K-cP6"/>
+                <constraint firstItem="bGq-rU-PK6" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="S0S-jF-81D"/>
+                <constraint firstItem="mIs-yW-pP3" firstAttribute="top" secondItem="FIA-WT-pKD" secondAttribute="bottom" constant="4" id="SFy-LN-zKk"/>
+                <constraint firstItem="bGq-rU-PK6" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Vk2-LG-ccg"/>
+                <constraint firstItem="FIA-WT-pKD" firstAttribute="top" secondItem="N9r-Sb-G8I" secondAttribute="top" id="eeq-g1-IvQ"/>
+                <constraint firstItem="N6N-Km-vk4" firstAttribute="top" secondItem="N9r-Sb-G8I" secondAttribute="bottom" constant="8" id="hfm-mJ-SAe"/>
+                <constraint firstItem="R22-KD-mS4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="leh-v4-m70"/>
+                <constraint firstItem="FIA-WT-pKD" firstAttribute="leading" secondItem="N9r-Sb-G8I" secondAttribute="trailing" constant="12" id="oku-cM-dcE"/>
+                <constraint firstItem="N6N-Km-vk4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="qMG-wx-xbU"/>
+                <constraint firstItem="L93-sq-NCc" firstAttribute="top" secondItem="N9r-Sb-G8I" secondAttribute="top" id="qZ6-vA-Wd5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="N6N-Km-vk4" secondAttribute="trailing" constant="30" id="s4X-zr-xba"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="N6N-Km-vk4" secondAttribute="bottom" constant="8" id="vLd-Cg-zfv"/>
+                <constraint firstItem="N9r-Sb-G8I" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="26" id="xty-hc-PQ7"/>
+            </constraints>
+            <point key="canvasLocation" x="-178.2608695652174" y="215.625"/>
+        </view>
+        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed By - SOFTMENT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HvY-h6-yf4">
+            <rect key="frame" x="0.0" y="0.0" width="314" height="102"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="13"/>
+            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <nil key="highlightedColor"/>
+            <point key="canvasLocation" x="-609" y="597"/>
+        </label>
+    </objects>
+    <resources>
+        <image name="basketball-ball (1) 2" width="512" height="512"/>
+        <image name="crown (4)" width="64" height="64"/>
+        <image name="lock (4)" width="64" height="64"/>
+    </resources>
+</document>

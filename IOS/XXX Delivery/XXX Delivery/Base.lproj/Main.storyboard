@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HcK-Ke-sCr">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="d5b-1W-Fky">
+            <objects>
+                <viewController id="HcK-Ke-sCr" customClass="HomeViewController" customModule="XXX_Delivery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JiK-A8-GQ4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eHi-TG-OJb">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Attachment_1596711668" translatesAutoresizingMaskIntoConstraints="NO" id="6Nb-r0-82g">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="eHi-TG-OJb" firstAttribute="top" secondItem="JiK-A8-GQ4" secondAttribute="top" id="71P-cV-ltM"/>
+                            <constraint firstAttribute="bottom" secondItem="eHi-TG-OJb" secondAttribute="bottom" id="GFg-7M-sPe"/>
+                            <constraint firstItem="csI-q0-0u8" firstAttribute="trailing" secondItem="eHi-TG-OJb" secondAttribute="trailing" id="IrB-cj-jyJ"/>
+                            <constraint firstItem="csI-q0-0u8" firstAttribute="trailing" secondItem="6Nb-r0-82g" secondAttribute="trailing" id="KHX-mH-FIq"/>
+                            <constraint firstItem="6Nb-r0-82g" firstAttribute="top" secondItem="csI-q0-0u8" secondAttribute="top" id="M8A-Lq-koM"/>
+                            <constraint firstItem="csI-q0-0u8" firstAttribute="bottom" secondItem="6Nb-r0-82g" secondAttribute="bottom" id="eFa-Wh-aGS"/>
+                            <constraint firstItem="eHi-TG-OJb" firstAttribute="leading" secondItem="csI-q0-0u8" secondAttribute="leading" id="nVW-92-DwL"/>
+                            <constraint firstItem="6Nb-r0-82g" firstAttribute="leading" secondItem="csI-q0-0u8" secondAttribute="leading" id="rpt-HT-LhH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="csI-q0-0u8"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" id="07t-Cv-vaf"/>
+                    <connections>
+                        <outlet property="im" destination="6Nb-r0-82g" id="hLq-rq-uIW"/>
+                        <outlet property="webView" destination="eHi-TG-OJb" id="3f0-XN-vcx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rdX-GT-IuW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133" y="95"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Attachment_1596711668" width="4000" height="4000"/>
+    </resources>
+</document>

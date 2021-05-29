@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "warmup.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

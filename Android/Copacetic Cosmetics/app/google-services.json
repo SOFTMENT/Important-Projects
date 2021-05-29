@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "137417401975",
+    "project_id": "copaceticcosmetics-203d6",
+    "storage_bucket": "copaceticcosmetics-203d6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:137417401975:android:218c4f1618a8e4ec500872",
+        "android_client_info": {
+          "package_name": "in.softment.CopaceticCosmetics"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "137417401975-8t47qp9ieuvupl84c73foramd2gk75v7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3EHTWutO1Ioj9aJ6N01g0Q55dvQ_JMUk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "137417401975-8t47qp9ieuvupl84c73foramd2gk75v7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

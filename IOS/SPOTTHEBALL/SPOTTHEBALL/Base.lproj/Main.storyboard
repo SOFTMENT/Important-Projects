@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aB8-aE-E5y">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Rate Us-->
+        <scene sceneID="Fmu-Om-7TP">
+            <objects>
+                <viewController id="mJg-wO-uXd" customClass="RateViewController" customModule="The_Backyard_Bar_and_Grill" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nuw-2g-7KS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="smg-1K-e9K">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <color key="barTintColor" red="0.71764705880000002" green="0.098039215690000001" blue="0.098039215690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Rate Us" id="vGh-Z7-3lF"/>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dML-KE-Jbj">
+                                <rect key="frame" x="0.0" y="44" width="600" height="556"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YJ8-n3-WdL"/>
+                        <color key="backgroundColor" red="0.71764705880000002" green="0.098039215690000001" blue="0.098039215690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="dML-KE-Jbj" firstAttribute="leading" secondItem="YJ8-n3-WdL" secondAttribute="leading" id="Che-ah-H9L"/>
+                            <constraint firstAttribute="trailing" secondItem="smg-1K-e9K" secondAttribute="trailing" symbolic="YES" id="F4x-pK-uAu"/>
+                            <constraint firstItem="YJ8-n3-WdL" firstAttribute="trailing" secondItem="dML-KE-Jbj" secondAttribute="trailing" id="H0Q-Gg-Syz"/>
+                            <constraint firstItem="dML-KE-Jbj" firstAttribute="top" secondItem="smg-1K-e9K" secondAttribute="bottom" id="JKv-Ju-qtV"/>
+                            <constraint firstItem="YJ8-n3-WdL" firstAttribute="bottom" secondItem="dML-KE-Jbj" secondAttribute="bottom" id="KqU-C5-NcL"/>
+                            <constraint firstItem="smg-1K-e9K" firstAttribute="top" secondItem="YJ8-n3-WdL" secondAttribute="top" id="SA9-zQ-SH0"/>
+                            <constraint firstItem="smg-1K-e9K" firstAttribute="leading" secondItem="YJ8-n3-WdL" secondAttribute="leading" id="vCG-7J-wF4"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Rate Us" id="MXO-4r-TE0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NGL-B0-7e1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2674" y="1156"/>
+        </scene>
+        <!--Share App-->
+        <scene sceneID="URb-Hm-gXw">
+            <objects>
+                <viewController id="a9v-w1-n8w" customClass="ShareViewController" customModule="The_Backyard_Bar_and_Grill" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WoE-SV-BTI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1I7-bF-4jk">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="gYG-Jk-jZ9"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.71764705880000002" green="0.098039215690000001" blue="0.098039215690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Share" id="Hd5-RC-pum"/>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VWf-Gh-nNn">
+                                <rect key="frame" x="0.0" y="44" width="600" height="556"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KKL-2L-tu3"/>
+                        <color key="backgroundColor" red="0.71764705880000002" green="0.098039215690000001" blue="0.098039215690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="1I7-bF-4jk" firstAttribute="trailing" secondItem="KKL-2L-tu3" secondAttribute="trailing" id="3nk-V0-ibT"/>
+                            <constraint firstItem="VWf-Gh-nNn" firstAttribute="top" secondItem="1I7-bF-4jk" secondAttribute="bottom" id="DP4-iH-OLK"/>
+                            <constraint firstItem="KKL-2L-tu3" firstAttribute="bottom" secondItem="VWf-Gh-nNn" secondAttribute="bottom" id="Gf3-fw-5Tn"/>
+                            <constraint firstItem="1I7-bF-4jk" firstAttribute="top" secondItem="KKL-2L-tu3" secondAttribute="top" id="Ndk-L6-4C3"/>
+                            <constraint firstItem="VWf-Gh-nNn" firstAttribute="leading" secondItem="KKL-2L-tu3" secondAttribute="leading" id="Ux5-Rt-wI5"/>
+                            <constraint firstItem="1I7-bF-4jk" firstAttribute="leading" secondItem="KKL-2L-tu3" secondAttribute="leading" id="gXF-y9-FFw"/>
+                            <constraint firstItem="KKL-2L-tu3" firstAttribute="trailing" secondItem="VWf-Gh-nNn" secondAttribute="trailing" id="h4z-WW-C8e"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Share App" id="qVL-pb-wXz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2xY-ZG-yWc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1957" y="1156"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="d5b-1W-Fky">
+            <objects>
+                <viewController id="HcK-Ke-sCr" customClass="HomeViewController" customModule="The_Backyard_Bar_and_Grill" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JiK-A8-GQ4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uXp-4k-T8J">
+                                <rect key="frame" x="0.0" y="44" width="600" height="4"/>
+                                <color key="progressTintColor" systemColor="systemBlueColor"/>
+                                <color key="trackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </progressView>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eHi-TG-OJb">
+                                <rect key="frame" x="0.0" y="49" width="600" height="551"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wwf-KY-wEu">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="tQZ-pY-mv1"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.71764705882352942" green="0.098039215686274508" blue="0.098039215686274508" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="SPOTTHEBALL" id="9a0-fL-KKw">
+                                        <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="iMh-Gw-Zs2">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="back:" destination="HcK-Ke-sCr" id="axL-4n-knM"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="csI-q0-0u8"/>
+                        <color key="backgroundColor" red="0.71764705880000002" green="0.098039215690000001" blue="0.098039215690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wwf-KY-wEu" secondAttribute="trailing" id="Aoi-OP-gdU"/>
+                            <constraint firstItem="uXp-4k-T8J" firstAttribute="top" secondItem="wwf-KY-wEu" secondAttribute="bottom" id="Cjb-vs-deT"/>
+                            <constraint firstItem="csI-q0-0u8" firstAttribute="bottom" secondItem="eHi-TG-OJb" secondAttribute="bottom" id="GFg-7M-sPe"/>
+                            <constraint firstItem="csI-q0-0u8" firstAttribute="trailing" secondItem="eHi-TG-OJb" secondAttribute="trailing" id="IrB-cj-jyJ"/>
+                            <constraint firstItem="uXp-4k-T8J" firstAttribute="leading" secondItem="csI-q0-0u8" secondAttribute="leading" id="Vy1-ne-K6E"/>
+                            <constraint firstItem="wwf-KY-wEu" firstAttribute="top" secondItem="csI-q0-0u8" secondAttribute="top" id="lfn-HA-W1w"/>
+                            <constraint firstItem="csI-q0-0u8" firstAttribute="trailing" secondItem="uXp-4k-T8J" secondAttribute="trailing" id="m7s-7t-Xfx"/>
+                            <constraint firstItem="eHi-TG-OJb" firstAttribute="leading" secondItem="csI-q0-0u8" secondAttribute="leading" id="nVW-92-DwL"/>
+                            <constraint firstItem="wwf-KY-wEu" firstAttribute="leading" secondItem="csI-q0-0u8" secondAttribute="leading" id="nZo-5u-Twa"/>
+                            <constraint firstItem="eHi-TG-OJb" firstAttribute="top" secondItem="uXp-4k-T8J" secondAttribute="bottomMargin" constant="9" id="vVH-29-aRh"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" id="07t-Cv-vaf"/>
+                    <connections>
+                        <outlet property="progressBar" destination="uXp-4k-T8J" id="zPd-YL-EcS"/>
+                        <outlet property="webView" destination="eHi-TG-OJb" id="3f0-XN-vcx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rdX-GT-IuW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1203" y="1156"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="m5f-IA-eFj">
+            <objects>
+                <tabBarController id="aB8-aE-E5y" customClass="TabBarController" customModule="The_Backyard_Bar_and_Grill" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oI8-Rf-HfY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="HcK-Ke-sCr" kind="relationship" relationship="viewControllers" id="MAu-cT-xqs"/>
+                        <segue destination="a9v-w1-n8w" kind="relationship" relationship="viewControllers" id="oDf-oO-SJg"/>
+                        <segue destination="mJg-wO-uXd" kind="relationship" relationship="viewControllers" id="0zb-cC-nbz"/>
+                        <segue destination="OUi-Zd-WlM" kind="relationship" relationship="viewControllers" id="LmE-l7-rU2"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3z8-rn-04Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2328" y="433"/>
+        </scene>
+        <!--Exit-->
+        <scene sceneID="ZKo-cH-WLf">
+            <objects>
+                <viewController id="OUi-Zd-WlM" customClass="ExitViewController" customModule="The_Backyard_Bar_and_Grill" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X51-Rc-xTt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qyh-XZ-gtZ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <color key="barTintColor" red="0.71764705880000002" green="0.098039215690000001" blue="0.098039215690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Exit" id="ugd-SW-ptF"/>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iEw-Ni-A9J">
+                                <rect key="frame" x="0.0" y="44" width="600" height="556"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="K9b-3L-sF2"/>
+                        <color key="backgroundColor" red="0.71764705880000002" green="0.098039215690000001" blue="0.098039215690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Qyh-XZ-gtZ" secondAttribute="trailing" symbolic="YES" id="3XE-RX-aXS"/>
+                            <constraint firstItem="Qyh-XZ-gtZ" firstAttribute="leading" secondItem="K9b-3L-sF2" secondAttribute="leading" id="6sN-AX-Yrq"/>
+                            <constraint firstItem="K9b-3L-sF2" firstAttribute="bottom" secondItem="iEw-Ni-A9J" secondAttribute="bottom" id="LXN-Cy-WCu"/>
+                            <constraint firstItem="Qyh-XZ-gtZ" firstAttribute="top" secondItem="K9b-3L-sF2" secondAttribute="top" id="PkG-2G-AvS"/>
+                            <constraint firstItem="K9b-3L-sF2" firstAttribute="trailing" secondItem="iEw-Ni-A9J" secondAttribute="trailing" id="cpL-Vm-Rhc"/>
+                            <constraint firstItem="iEw-Ni-A9J" firstAttribute="leading" secondItem="K9b-3L-sF2" secondAttribute="leading" id="lSV-34-JhH"/>
+                            <constraint firstItem="iEw-Ni-A9J" firstAttribute="top" secondItem="Qyh-XZ-gtZ" secondAttribute="bottom" id="m0Z-Dj-Cxp"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Exit" id="q9q-JG-teS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oh3-tB-b56" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3438" y="1156"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.backward" catalog="system" width="32" height="32"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

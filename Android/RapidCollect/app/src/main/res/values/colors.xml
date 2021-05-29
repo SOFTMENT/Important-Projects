@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ed1b25</color>
+    <color name="colorPrimaryDark">#ed1b25</color>
+    <color name="colorAccent">#1473BE</color>
+    <color name="actionButton">#F57C00</color>
+    <color name="numberButton">#455A64</color>
+    <color name="app_red">#9C222F</color>
+
+    <color name="tab_icon_color">#FFFFFF</color>
+    <color name="active_dot">#ed1b25</color>
+    <color name="inactive_dot">#AEAEAE</color>
+    <color name="complete">#107022</color>
+    <color name="charcoal">#36454f</color>
+    
+    <color name="black">#000000</color>
+    <color name="green">#164A2A</color>
+    <color name="blue">#223051</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="font_color">#2B2B2B</color>
+    <color name="gray">#7C7C7C</color>
+    <color name="button_spaces_color">#7C7C7C</color>
+    <color name="designlightblue">#909090</color>
+    <color name="off_color">#C8C8C8</color>
+</resources>

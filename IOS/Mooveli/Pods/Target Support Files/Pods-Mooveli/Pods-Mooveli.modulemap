@@ -1,0 +1,6 @@
+framework module Pods_Mooveli {
+  umbrella header "Pods-Mooveli-umbrella.h"
+
+  export *
+  module * { export * }
+}

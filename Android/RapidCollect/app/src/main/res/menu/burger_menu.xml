@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/home"
+    android:icon="@drawable/homemenu"
+    android:title="Home"
+
+    />
+
+    <item android:id="@+id/pricing"
+        android:title="Pricing"
+        android:icon="@drawable/pricingmenu"
+        />
+
+    <item android:id="@+id/notification"
+        android:title="Notification"
+        android:icon="@drawable/notificationmenu"
+        />
+
+    <item android:id="@+id/contactus"
+        android:title="Contact Us"
+        android:icon="@drawable/contactus"
+        />
+
+    <item android:id="@+id/faqs"
+        android:title="FAQs"
+        android:icon="@drawable/faqsmenu"
+        />
+
+
+
+    <item android:id="@+id/share"
+        android:title="Share"
+        android:icon="@drawable/sharemenu"
+        />
+
+    <item android:id="@+id/rateus"
+        android:title="Rate Us"
+        android:icon="@drawable/ratemenu"
+        />
+
+    <item android:id="@+id/settings"
+        android:title="Settings"
+        android:icon="@drawable/settingsmenus"
+        />
+    <item android:id="@+id/exit"
+        android:title="Exit"
+        android:icon="@drawable/exitmenu"/>
+</menu>

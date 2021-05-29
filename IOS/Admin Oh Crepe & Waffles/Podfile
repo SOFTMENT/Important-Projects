@@ -1,0 +1,26 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Admin Oh Crepe & Waffles' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Admin Oh Crepe & Waffles
+ 
+  pod 'Firebase/Messaging'
+  
+   pod 'Firebase/Analytics'
+   
+   pod 'Firebase/Storage'
+
+   pod 'FirebaseFirestoreSwift', '~> 8.0.0-beta'
+
+   pod 'MBProgressHUD', '~> 1.2.0'
+   
+   pod 'SDWebImage', '~> 4.0'
+
+   pod 'CropViewController'
+   
+   pod 'IQKeyboardManagerSwift'
+
+end

@@ -1,0 +1,6 @@
+framework module Pods_The_Backyard_Bar_and_Grill {
+  umbrella header "Pods-The Backyard Bar and Grill-umbrella.h"
+
+  export *
+  module * { export * }
+}

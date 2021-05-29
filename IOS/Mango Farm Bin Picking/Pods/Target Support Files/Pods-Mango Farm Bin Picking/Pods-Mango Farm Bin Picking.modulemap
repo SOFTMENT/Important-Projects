@@ -1,0 +1,6 @@
+framework module Pods_Mango_Farm_Bin_Picking {
+  umbrella header "Pods-Mango Farm Bin Picking-umbrella.h"
+
+  export *
+  module * { export * }
+}

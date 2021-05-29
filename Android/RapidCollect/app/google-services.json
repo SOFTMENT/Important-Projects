@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "643831608305",
+    "firebase_url": "https://mobile-app-91186.firebaseio.com",
+    "project_id": "mobile-app-91186",
+    "storage_bucket": "mobile-app-91186.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:643831608305:android:58ea108f0542a84d328a50",
+        "android_client_info": {
+          "package_name": "com.originaldevelopment.rapidcollect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "643831608305-r19on41dfl0duc75sip417ce46o5f6si.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCm8n2PjMQ6RDZwqil1ap0y6_EONR_wxio"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "643831608305-r19on41dfl0duc75sip417ce46o5f6si.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "643831608305-e2unt5pb6u74jbtdu2u94v4mted4ojsl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.originaldevelopment.RapidCollect"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

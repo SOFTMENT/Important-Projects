@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "buffet.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

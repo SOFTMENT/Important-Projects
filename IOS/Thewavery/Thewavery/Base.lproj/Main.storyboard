@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ddN-An-PMZ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Thewavery-->
+        <scene sceneID="d5b-1W-Fky">
+            <objects>
+                <viewController id="HcK-Ke-sCr" customClass="HomeViewController" customModule="Thewavery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JiK-A8-GQ4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uXp-4k-T8J">
+                                <rect key="frame" x="0.0" y="88" width="414" height="4"/>
+                                <color key="progressTintColor" systemColor="linkColor"/>
+                                <color key="trackTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eHi-TG-OJb">
+                                <rect key="frame" x="0.0" y="93" width="414" height="769"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="csI-q0-0u8"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="systemBlueColor"/>
+                        <constraints>
+                            <constraint firstItem="csI-q0-0u8" firstAttribute="bottom" secondItem="eHi-TG-OJb" secondAttribute="bottom" id="GFg-7M-sPe"/>
+                            <constraint firstItem="csI-q0-0u8" firstAttribute="trailing" secondItem="eHi-TG-OJb" secondAttribute="trailing" id="IrB-cj-jyJ"/>
+                            <constraint firstItem="uXp-4k-T8J" firstAttribute="leading" secondItem="csI-q0-0u8" secondAttribute="leading" id="Vy1-ne-K6E"/>
+                            <constraint firstItem="uXp-4k-T8J" firstAttribute="top" secondItem="csI-q0-0u8" secondAttribute="top" id="efh-dj-gbn"/>
+                            <constraint firstItem="csI-q0-0u8" firstAttribute="trailing" secondItem="uXp-4k-T8J" secondAttribute="trailing" id="m7s-7t-Xfx"/>
+                            <constraint firstItem="eHi-TG-OJb" firstAttribute="leading" secondItem="csI-q0-0u8" secondAttribute="leading" id="nVW-92-DwL"/>
+                            <constraint firstItem="eHi-TG-OJb" firstAttribute="top" secondItem="uXp-4k-T8J" secondAttribute="bottomMargin" constant="9" id="vVH-29-aRh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Thewavery" id="61e-6n-JWX">
+                        <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="U3M-D0-eQA">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="backPressed:" destination="HcK-Ke-sCr" id="xeu-dP-Bxf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="progressBar" destination="uXp-4k-T8J" id="zPd-YL-EcS"/>
+                        <outlet property="webView" destination="eHi-TG-OJb" id="3f0-XN-vcx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rdX-GT-IuW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="94.419642857142847"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="v2P-4t-9it">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ddN-An-PMZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" id="07t-Cv-vaf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="POX-YG-f41">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.95484608410000005" green="0.71717721219999997" blue="0.32146286959999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HcK-Ke-sCr" kind="relationship" relationship="rootViewController" id="e7J-38-nYh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Snh-16-hNe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="94.419642857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

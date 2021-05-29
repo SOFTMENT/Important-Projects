@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DOWNLOAD ON-BOARDING PACK"
+        android:textColor="#000"
+        android:textSize="15sp"
+        android:fontFamily="sans-serif-condensed-medium"
+
+        />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PLEASE CHOOSE ANY ONE OPTION"
+        android:textColor="#6D6D6D"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif-condensed"
+
+        />
+
+    <View
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#B7B7B7"
+        />
+    <TextView
+        android:id="@+id/download"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DOWNLOAD NOW"
+        android:textColor="#007AFF"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif-condensed"
+        />
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#B7B7B7"
+        />
+    <TextView
+        android:id="@+id/sendemail"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SEND TO EMAIL ADDRESS"
+        android:textColor="#007AFF"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif-condensed"
+        />
+</LinearLayout>

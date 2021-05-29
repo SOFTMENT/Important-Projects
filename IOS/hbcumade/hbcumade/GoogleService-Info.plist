@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>288627940264-b6p9k1be1sp1nhdn6rbosf6hjj3tlsf8.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.288627940264-b6p9k1be1sp1nhdn6rbosf6hjj3tlsf8</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBNYSVYgttzW92wDUIp5jPwcr0yxiAJknc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>288627940264</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>net.softment.hbcumade</string>
+	<key>PROJECT_ID</key>
+	<string>hbcumade-95f6f</string>
+	<key>STORAGE_BUCKET</key>
+	<string>hbcumade-95f6f.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:288627940264:ios:a333a669fb89966c151b9d</string>
+</dict>
+</plist>

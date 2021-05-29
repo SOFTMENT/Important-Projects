@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "664384696226",
+    "project_id": "mooveli-8aac6",
+    "storage_bucket": "mooveli-8aac6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:664384696226:android:1332876a649a31d65a4cfb",
+        "android_client_info": {
+          "package_name": "com.svenska.Mooveli"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "664384696226-ajm83u80aqsbdq14t5k1b5clrqoq042h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNlDjSpJWS1p5WSnz6iDyM3j2rplB_lk4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "664384696226-ajm83u80aqsbdq14t5k1b5clrqoq042h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

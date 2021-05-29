@@ -1,0 +1,6 @@
+framework module Pods_Bikoose {
+  umbrella header "Pods-Bikoose-umbrella.h"
+
+  export *
+  module * { export * }
+}

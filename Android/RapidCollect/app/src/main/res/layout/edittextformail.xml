@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ENTER EMAIL ADDRESS"
+        android:textColor="#6D6D6D"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-condensed"
+
+
+        />
+
+
+    <EditText android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="20dp"
+        android:inputType="textEmailAddress"
+        android:id="@+id/email"
+        android:background="@drawable/edittext_shadow"
+        />
+
+    <Button
+        android:id="@+id/send"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:text="SEND"
+        android:background="@color/colorPrimary"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif-condensed"
+        />
+</LinearLayout>

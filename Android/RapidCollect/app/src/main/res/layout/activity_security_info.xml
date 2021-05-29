@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+        app:title=" ">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/back"
+            />
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="SECURITY INFO"
+            android:textColor="#fff"
+            android:textSize="15sp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:background="@drawable/uploaddocback"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:backgroundTint="@color/charcoal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Security Information\n\n
+By Accessing Rapid Collect services by using your smart phone(s) and tablet(s) on a daily basis -anything from system access, pulling of reports, viewing transactions etc.\n\n
+Although the Rapid Collect platform is secure, here are a few tips to protect your device:"
+                android:textColor="#FF6F76"
+                android:fontFamily="@font/robo"
+                />
+
+            <TextView
+                android:autoLink="all"
+                android:textSize="14sp"
+                android:textColor="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="1.  Make a note of your device's International Mobile Equipment Identity (IMEI) number. This number identifies your device to your mobile service provider. In the event of your device being lost or stolen, it is imperative that you call us to assist on 0869 990 984 or login to https://rapidcollect.co.za on your web browser profile to change your access details immediately.
+\nStandard network rates apply.\n\n
+2.  Always keep your personal access information secure, and change your password regularly.\n\n
+3.	Never give your Rapid Collect security details, including your log in details, to anyone else and do not store these on your mobile phone or tablet.\n\n
+4.	Do not store account details, passwords, bank account numbers, card PINs or credit or debit card details on your device. These can be compromised, causing you significant inconvenience.\n\n
+5.	Never leave your device unattended while you are logged on. Always close the application when you are not using it.\n\n
+6.	Only download the application from your device application store and always verify that it is the authentic Rapid Collect application.\n\n
+7.	The public Wi-Fi that your device is connected to might not be secure. Limit your activity to browsing and avoid committing any transactions that involves your account information.\n\n
+8.	Avoid clicking on or otherwise downloading software or links from unknown sources\n\n
+9.	Be careful about opening links contained in SMS messages or emails. Remember that Rapid Collect will never contact you to ask you to disclose your security and access credentials.\n\n
+10.	If you decide to sell your smart device or trade it in, first make sure you delete the Rapid Collect App from your device. Once your Rapid Collect App has been deleted, reset your device to factory default to avoid leaving personal data on the device.\n\n
+11.	Some repair centres provide refurbished devices in exchange for your faulty device. Ensure that all personal information is removed from the device that is to be replaced.\n\n
+*	Terms and Conditions apply"
+                />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

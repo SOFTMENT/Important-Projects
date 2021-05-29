@@ -1,0 +1,601 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8B6879642658F5BE000A81BE /* AdminAddQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6879632658F5BE000A81BE /* AdminAddQuotes.swift */; };
+		8B99612B2658E56400759BC1 /* AdminHomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B99612A2658E56400759BC1 /* AdminHomeViewCell.swift */; };
+		8B99612D2658E64800759BC1 /* AdminHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B99612C2658E64800759BC1 /* AdminHomeViewController.swift */; };
+		8B99612F2658EE0E00759BC1 /* DailyInsightsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B99612E2658EE0E00759BC1 /* DailyInsightsModel.swift */; };
+		8BD12CA72656D9F400E19108 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD12CA52656D9F400E19108 /* LaunchScreen.storyboard */; };
+		8BD12CA92656DA5600E19108 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BD12CA82656DA4B00E19108 /* Assets.xcassets */; };
+		8BD12CB32656E61700E19108 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BD12CB22656E61700E19108 /* GoogleService-Info.plist */; };
+		8BD2AE692656D1720037F262 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD2AE672656D1720037F262 /* Main.storyboard */; };
+		8BED73EF2657D17E0021CBB4 /* InstagramFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BED73EE2657D17E0021CBB4 /* InstagramFeedViewController.swift */; };
+		8BED73F1265802420021CBB4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BED73F0265802420021CBB4 /* SettingsViewController.swift */; };
+		8BED73F4265831B10021CBB4 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BED73F2265831B00021CBB4 /* OverlayView.swift */; };
+		8BED73F5265831B10021CBB4 /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BED73F3265831B00021CBB4 /* OverlayView.xib */; };
+		8BED73F7265834300021CBB4 /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BED73F6265834300021CBB4 /* PresentationController.swift */; };
+		8BED73F9265840C80021CBB4 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BED73F8265840C80021CBB4 /* FavoriteViewController.swift */; };
+		8BED73FB265840F50021CBB4 /* DailyInsightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BED73FA265840F50021CBB4 /* DailyInsightsViewController.swift */; };
+		8BED73FE2658524A0021CBB4 /* StartTimeAndEndTimeOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BED73FC2658524A0021CBB4 /* StartTimeAndEndTimeOverlay.swift */; };
+		8BED73FF2658524A0021CBB4 /* StartTimeAndEndTimeOverlay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BED73FD2658524A0021CBB4 /* StartTimeAndEndTimeOverlay.xib */; };
+		8BED7401265853B70021CBB4 /* StartAndEndTimePresentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BED7400265853B70021CBB4 /* StartAndEndTimePresentationViewController.swift */; };
+		B1012155264D5F1400B08C8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1012154264D5F1400B08C8E /* AppDelegate.swift */; };
+		B1012157264D5F1400B08C8E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1012156264D5F1400B08C8E /* SceneDelegate.swift */; };
+		B1012159264D5F1400B08C8E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1012158264D5F1400B08C8E /* LoginViewController.swift */; };
+		B1ED52D4264D9A8D00164351 /* SF-Mono-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = B1ED52C8264D9A7E00164351 /* SF-Mono-Regular.otf */; };
+		B1ED52D5264D9A8D00164351 /* SF-Mono-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B1ED52C9264D9A7F00164351 /* SF-Mono-HeavyItalic.otf */; };
+		B1ED52D6264D9A8D00164351 /* SF-Mono-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = B1ED52CA264D9A8000164351 /* SF-Mono-Light.otf */; };
+		B1ED52D7264D9A8D00164351 /* SF-Mono-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B1ED52CB264D9A8200164351 /* SF-Mono-BoldItalic.otf */; };
+		B1ED52D8264D9A8D00164351 /* SF-Mono-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B1ED52CC264D9A8300164351 /* SF-Mono-Bold.otf */; };
+		B1ED52D9264D9A8D00164351 /* SF-Mono-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B1ED52CD264D9A8500164351 /* SF-Mono-RegularItalic.otf */; };
+		B1ED52DA264D9A8D00164351 /* SF-Mono-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = B1ED52CE264D9A8600164351 /* SF-Mono-Heavy.otf */; };
+		B1ED52DB264D9A8D00164351 /* SF-Mono-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B1ED52CF264D9A8700164351 /* SF-Mono-Medium.otf */; };
+		B1ED52DC264D9A8D00164351 /* SF-Mono-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B1ED52D0264D9A8900164351 /* SF-Mono-Semibold.otf */; };
+		B1ED52DD264D9A8D00164351 /* SF-Mono-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B1ED52D1264D9A8A00164351 /* SF-Mono-LightItalic.otf */; };
+		B1ED52DE264D9A8D00164351 /* SF-Mono-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B1ED52D2264D9A8B00164351 /* SF-Mono-MediumItalic.otf */; };
+		B1ED52DF264D9A8D00164351 /* SF-Mono-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B1ED52D3264D9A8D00164351 /* SF-Mono-SemiboldItalic.otf */; };
+		B1ED52E2264DD40300164351 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1ED52E1264DD40300164351 /* SignInViewController.swift */; };
+		B1ED52E5264DD55E00164351 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1ED52E4264DD55E00164351 /* Extensions.swift */; };
+		B1ED52EA264DE6F600164351 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1ED52E9264DE6F600164351 /* UserModel.swift */; };
+		B1ED52EC264DE83800164351 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1ED52EB264DE83800164351 /* HomeViewController.swift */; };
+		B1ED52EE264DEAD900164351 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1ED52ED264DEAD900164351 /* Constants.swift */; };
+		B1ED52F0264DF88100164351 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1ED52EF264DF88100164351 /* CreateViewController.swift */; };
+		B1ED52F2264E18C900164351 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1ED52F1264E18C900164351 /* TabBarController.swift */; };
+		B1ED52F4264E409B00164351 /* VideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1ED52F3264E409A00164351 /* VideosViewController.swift */; };
+		E5BD22303D5A973300AB0DB1 /* Pods_Awakening_Clarity_Now.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A8D8B435EBA90EE509C49EF /* Pods_Awakening_Clarity_Now.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6A8D8B435EBA90EE509C49EF /* Pods_Awakening_Clarity_Now.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Awakening_Clarity_Now.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B6879632658F5BE000A81BE /* AdminAddQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminAddQuotes.swift; sourceTree = "<group>"; };
+		8B99612A2658E56400759BC1 /* AdminHomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminHomeViewCell.swift; sourceTree = "<group>"; };
+		8B99612C2658E64800759BC1 /* AdminHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminHomeViewController.swift; sourceTree = "<group>"; };
+		8B99612E2658EE0E00759BC1 /* DailyInsightsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyInsightsModel.swift; sourceTree = "<group>"; };
+		8BD12CA52656D9F400E19108 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ../../../../../LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8BD12CA82656DA4B00E19108 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8BD12CB22656E61700E19108 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8BD2AE672656D1720037F262 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		8BED73ED2657AC950021CBB4 /* Awakening Clarity Now.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Awakening Clarity Now.entitlements"; sourceTree = "<group>"; };
+		8BED73EE2657D17E0021CBB4 /* InstagramFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramFeedViewController.swift; sourceTree = "<group>"; };
+		8BED73F0265802420021CBB4 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		8BED73F2265831B00021CBB4 /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
+		8BED73F3265831B00021CBB4 /* OverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
+		8BED73F6265834300021CBB4 /* PresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
+		8BED73F8265840C80021CBB4 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		8BED73FA265840F50021CBB4 /* DailyInsightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyInsightsViewController.swift; sourceTree = "<group>"; };
+		8BED73FC2658524A0021CBB4 /* StartTimeAndEndTimeOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTimeAndEndTimeOverlay.swift; sourceTree = "<group>"; };
+		8BED73FD2658524A0021CBB4 /* StartTimeAndEndTimeOverlay.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartTimeAndEndTimeOverlay.xib; sourceTree = "<group>"; };
+		8BED7400265853B70021CBB4 /* StartAndEndTimePresentationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartAndEndTimePresentationViewController.swift; sourceTree = "<group>"; };
+		95C06BF40F139314EFD87D06 /* Pods-Awakening Clarity Now.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Awakening Clarity Now.debug.xcconfig"; path = "Target Support Files/Pods-Awakening Clarity Now/Pods-Awakening Clarity Now.debug.xcconfig"; sourceTree = "<group>"; };
+		B1012151264D5F1400B08C8E /* Awakening Clarity Now.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Awakening Clarity Now.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1012154264D5F1400B08C8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B1012156264D5F1400B08C8E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B1012158264D5F1400B08C8E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B1012162264D5F1700B08C8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1ED52C8264D9A7E00164351 /* SF-Mono-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Mono-Regular.otf"; sourceTree = "<group>"; };
+		B1ED52C9264D9A7F00164351 /* SF-Mono-HeavyItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Mono-HeavyItalic.otf"; sourceTree = "<group>"; };
+		B1ED52CA264D9A8000164351 /* SF-Mono-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Mono-Light.otf"; sourceTree = "<group>"; };
+		B1ED52CB264D9A8200164351 /* SF-Mono-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Mono-BoldItalic.otf"; sourceTree = "<group>"; };
+		B1ED52CC264D9A8300164351 /* SF-Mono-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Mono-Bold.otf"; sourceTree = "<group>"; };
+		B1ED52CD264D9A8500164351 /* SF-Mono-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Mono-RegularItalic.otf"; sourceTree = "<group>"; };
+		B1ED52CE264D9A8600164351 /* SF-Mono-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Mono-Heavy.otf"; sourceTree = "<group>"; };
+		B1ED52CF264D9A8700164351 /* SF-Mono-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Mono-Medium.otf"; sourceTree = "<group>"; };
+		B1ED52D0264D9A8900164351 /* SF-Mono-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Mono-Semibold.otf"; sourceTree = "<group>"; };
+		B1ED52D1264D9A8A00164351 /* SF-Mono-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Mono-LightItalic.otf"; sourceTree = "<group>"; };
+		B1ED52D2264D9A8B00164351 /* SF-Mono-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Mono-MediumItalic.otf"; sourceTree = "<group>"; };
+		B1ED52D3264D9A8D00164351 /* SF-Mono-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Mono-SemiboldItalic.otf"; sourceTree = "<group>"; };
+		B1ED52E1264DD40300164351 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		B1ED52E4264DD55E00164351 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B1ED52E9264DE6F600164351 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		B1ED52EB264DE83800164351 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B1ED52ED264DEAD900164351 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B1ED52EF264DF88100164351 /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
+		B1ED52F1264E18C900164351 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		B1ED52F3264E409A00164351 /* VideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosViewController.swift; sourceTree = "<group>"; };
+		F60479BE5D203239F9A234BF /* Pods-Awakening Clarity Now.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Awakening Clarity Now.release.xcconfig"; path = "Target Support Files/Pods-Awakening Clarity Now/Pods-Awakening Clarity Now.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B101214E264D5F1400B08C8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5BD22303D5A973300AB0DB1 /* Pods_Awakening_Clarity_Now.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5E662030FCCEC78D2FB13895 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				95C06BF40F139314EFD87D06 /* Pods-Awakening Clarity Now.debug.xcconfig */,
+				F60479BE5D203239F9A234BF /* Pods-Awakening Clarity Now.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8BD2AE652656D0410037F262 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8BD12CA82656DA4B00E19108 /* Assets.xcassets */,
+				8BD2AE672656D1720037F262 /* Main.storyboard */,
+				8BD12CA52656D9F400E19108 /* LaunchScreen.storyboard */,
+				8BED73F2265831B00021CBB4 /* OverlayView.swift */,
+				8BED73F3265831B00021CBB4 /* OverlayView.xib */,
+				8BED73FC2658524A0021CBB4 /* StartTimeAndEndTimeOverlay.swift */,
+				8BED73FD2658524A0021CBB4 /* StartTimeAndEndTimeOverlay.xib */,
+				8B99612A2658E56400759BC1 /* AdminHomeViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8D3053273868E769173BC7EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6A8D8B435EBA90EE509C49EF /* Pods_Awakening_Clarity_Now.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B1012148264D5F1400B08C8E = {
+			isa = PBXGroup;
+			children = (
+				B1012153264D5F1400B08C8E /* Awakening Clarity Now */,
+				B1012152264D5F1400B08C8E /* Products */,
+				5E662030FCCEC78D2FB13895 /* Pods */,
+				8D3053273868E769173BC7EC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B1012152264D5F1400B08C8E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B1012151264D5F1400B08C8E /* Awakening Clarity Now.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B1012153264D5F1400B08C8E /* Awakening Clarity Now */ = {
+			isa = PBXGroup;
+			children = (
+				8BED73ED2657AC950021CBB4 /* Awakening Clarity Now.entitlements */,
+				8BD2AE652656D0410037F262 /* View */,
+				B1ED52E8264DE6AC00164351 /* Model */,
+				B1ED52C7264D9A6200164351 /* Fonts */,
+				B1ED52E3264DD54C00164351 /* Utils */,
+				B1ED52E0264DD3CE00164351 /* ViewController */,
+				B1012154264D5F1400B08C8E /* AppDelegate.swift */,
+				B1012156264D5F1400B08C8E /* SceneDelegate.swift */,
+				8BD12CB22656E61700E19108 /* GoogleService-Info.plist */,
+				B1012162264D5F1700B08C8E /* Info.plist */,
+			);
+			path = "Awakening Clarity Now";
+			sourceTree = "<group>";
+		};
+		B1ED52C7264D9A6200164351 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B1ED52CC264D9A8300164351 /* SF-Mono-Bold.otf */,
+				B1ED52CB264D9A8200164351 /* SF-Mono-BoldItalic.otf */,
+				B1ED52CE264D9A8600164351 /* SF-Mono-Heavy.otf */,
+				B1ED52C9264D9A7F00164351 /* SF-Mono-HeavyItalic.otf */,
+				B1ED52CA264D9A8000164351 /* SF-Mono-Light.otf */,
+				B1ED52D1264D9A8A00164351 /* SF-Mono-LightItalic.otf */,
+				B1ED52CF264D9A8700164351 /* SF-Mono-Medium.otf */,
+				B1ED52D2264D9A8B00164351 /* SF-Mono-MediumItalic.otf */,
+				B1ED52C8264D9A7E00164351 /* SF-Mono-Regular.otf */,
+				B1ED52CD264D9A8500164351 /* SF-Mono-RegularItalic.otf */,
+				B1ED52D0264D9A8900164351 /* SF-Mono-Semibold.otf */,
+				B1ED52D3264D9A8D00164351 /* SF-Mono-SemiboldItalic.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		B1ED52E0264DD3CE00164351 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B1012158264D5F1400B08C8E /* LoginViewController.swift */,
+				B1ED52E1264DD40300164351 /* SignInViewController.swift */,
+				B1ED52EB264DE83800164351 /* HomeViewController.swift */,
+				B1ED52EF264DF88100164351 /* CreateViewController.swift */,
+				B1ED52F1264E18C900164351 /* TabBarController.swift */,
+				B1ED52F3264E409A00164351 /* VideosViewController.swift */,
+				8BED73EE2657D17E0021CBB4 /* InstagramFeedViewController.swift */,
+				8BED73F0265802420021CBB4 /* SettingsViewController.swift */,
+				8BED73F6265834300021CBB4 /* PresentationController.swift */,
+				8BED73F8265840C80021CBB4 /* FavoriteViewController.swift */,
+				8BED73FA265840F50021CBB4 /* DailyInsightsViewController.swift */,
+				8BED7400265853B70021CBB4 /* StartAndEndTimePresentationViewController.swift */,
+				8B99612C2658E64800759BC1 /* AdminHomeViewController.swift */,
+				8B6879632658F5BE000A81BE /* AdminAddQuotes.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B1ED52E3264DD54C00164351 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B1ED52E4264DD55E00164351 /* Extensions.swift */,
+				B1ED52ED264DEAD900164351 /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B1ED52E8264DE6AC00164351 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B1ED52E9264DE6F600164351 /* UserModel.swift */,
+				8B99612E2658EE0E00759BC1 /* DailyInsightsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B1012150264D5F1400B08C8E /* Awakening Clarity Now */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1012165264D5F1700B08C8E /* Build configuration list for PBXNativeTarget "Awakening Clarity Now" */;
+			buildPhases = (
+				79B771441430C1944C7F7978 /* [CP] Check Pods Manifest.lock */,
+				B101214D264D5F1400B08C8E /* Sources */,
+				B101214E264D5F1400B08C8E /* Frameworks */,
+				B101214F264D5F1400B08C8E /* Resources */,
+				8920AE66835A56FE89FE243F /* [CP] Embed Pods Frameworks */,
+				6733DE63131041E109D33998 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Awakening Clarity Now";
+			productName = "Awakening Clarity Now";
+			productReference = B1012151264D5F1400B08C8E /* Awakening Clarity Now.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B1012149264D5F1400B08C8E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					B1012150264D5F1400B08C8E = {
+						CreatedOnToolsVersion = 12.5;
+					};
+				};
+			};
+			buildConfigurationList = B101214C264D5F1400B08C8E /* Build configuration list for PBXProject "Awakening Clarity Now" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B1012148264D5F1400B08C8E;
+			productRefGroup = B1012152264D5F1400B08C8E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B1012150264D5F1400B08C8E /* Awakening Clarity Now */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B101214F264D5F1400B08C8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1ED52D6264D9A8D00164351 /* SF-Mono-Light.otf in Resources */,
+				B1ED52DB264D9A8D00164351 /* SF-Mono-Medium.otf in Resources */,
+				8BED73F5265831B10021CBB4 /* OverlayView.xib in Resources */,
+				8BED73FF2658524A0021CBB4 /* StartTimeAndEndTimeOverlay.xib in Resources */,
+				B1ED52DF264D9A8D00164351 /* SF-Mono-SemiboldItalic.otf in Resources */,
+				B1ED52DE264D9A8D00164351 /* SF-Mono-MediumItalic.otf in Resources */,
+				B1ED52D9264D9A8D00164351 /* SF-Mono-RegularItalic.otf in Resources */,
+				8BD12CA92656DA5600E19108 /* Assets.xcassets in Resources */,
+				B1ED52D7264D9A8D00164351 /* SF-Mono-BoldItalic.otf in Resources */,
+				8BD2AE692656D1720037F262 /* Main.storyboard in Resources */,
+				B1ED52D5264D9A8D00164351 /* SF-Mono-HeavyItalic.otf in Resources */,
+				8BD12CB32656E61700E19108 /* GoogleService-Info.plist in Resources */,
+				8BD12CA72656D9F400E19108 /* LaunchScreen.storyboard in Resources */,
+				B1ED52D4264D9A8D00164351 /* SF-Mono-Regular.otf in Resources */,
+				B1ED52DA264D9A8D00164351 /* SF-Mono-Heavy.otf in Resources */,
+				B1ED52D8264D9A8D00164351 /* SF-Mono-Bold.otf in Resources */,
+				B1ED52DC264D9A8D00164351 /* SF-Mono-Semibold.otf in Resources */,
+				B1ED52DD264D9A8D00164351 /* SF-Mono-LightItalic.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6733DE63131041E109D33998 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Awakening Clarity Now/Pods-Awakening Clarity Now-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Awakening Clarity Now/Pods-Awakening Clarity Now-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Awakening Clarity Now/Pods-Awakening Clarity Now-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79B771441430C1944C7F7978 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Awakening Clarity Now-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8920AE66835A56FE89FE243F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Awakening Clarity Now/Pods-Awakening Clarity Now-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Awakening Clarity Now/Pods-Awakening Clarity Now-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Awakening Clarity Now/Pods-Awakening Clarity Now-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B101214D264D5F1400B08C8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1ED52E5264DD55E00164351 /* Extensions.swift in Sources */,
+				B1ED52E2264DD40300164351 /* SignInViewController.swift in Sources */,
+				B1ED52F4264E409B00164351 /* VideosViewController.swift in Sources */,
+				B1ED52F0264DF88100164351 /* CreateViewController.swift in Sources */,
+				B1ED52F2264E18C900164351 /* TabBarController.swift in Sources */,
+				B1012159264D5F1400B08C8E /* LoginViewController.swift in Sources */,
+				8BED73F9265840C80021CBB4 /* FavoriteViewController.swift in Sources */,
+				B1012155264D5F1400B08C8E /* AppDelegate.swift in Sources */,
+				8BED73FE2658524A0021CBB4 /* StartTimeAndEndTimeOverlay.swift in Sources */,
+				B1ED52EA264DE6F600164351 /* UserModel.swift in Sources */,
+				B1ED52EC264DE83800164351 /* HomeViewController.swift in Sources */,
+				8BED73FB265840F50021CBB4 /* DailyInsightsViewController.swift in Sources */,
+				8B99612F2658EE0E00759BC1 /* DailyInsightsModel.swift in Sources */,
+				8BED73F4265831B10021CBB4 /* OverlayView.swift in Sources */,
+				B1012157264D5F1400B08C8E /* SceneDelegate.swift in Sources */,
+				8BED7401265853B70021CBB4 /* StartAndEndTimePresentationViewController.swift in Sources */,
+				8B99612B2658E56400759BC1 /* AdminHomeViewCell.swift in Sources */,
+				8BED73F1265802420021CBB4 /* SettingsViewController.swift in Sources */,
+				B1ED52EE264DEAD900164351 /* Constants.swift in Sources */,
+				8B99612D2658E64800759BC1 /* AdminHomeViewController.swift in Sources */,
+				8BED73EF2657D17E0021CBB4 /* InstagramFeedViewController.swift in Sources */,
+				8B6879642658F5BE000A81BE /* AdminAddQuotes.swift in Sources */,
+				8BED73F7265834300021CBB4 /* PresentationController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B1012163264D5F1700B08C8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B1012164264D5F1700B08C8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B1012166264D5F1700B08C8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95C06BF40F139314EFD87D06 /* Pods-Awakening Clarity Now.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Awakening Clarity Now/Awakening Clarity Now.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H9YFNDC7S2;
+				INFOPLIST_FILE = "Awakening Clarity Now/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "in.softment.Awakening-Clarity-Now";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B1012167264D5F1700B08C8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F60479BE5D203239F9A234BF /* Pods-Awakening Clarity Now.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Awakening Clarity Now/Awakening Clarity Now.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H9YFNDC7S2;
+				INFOPLIST_FILE = "Awakening Clarity Now/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "in.softment.Awakening-Clarity-Now";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B101214C264D5F1400B08C8E /* Build configuration list for PBXProject "Awakening Clarity Now" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1012163264D5F1700B08C8E /* Debug */,
+				B1012164264D5F1700B08C8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1012165264D5F1700B08C8E /* Build configuration list for PBXNativeTarget "Awakening Clarity Now" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1012166264D5F1700B08C8E /* Debug */,
+				B1012167264D5F1700B08C8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B1012149264D5F1400B08C8E /* Project object */;
+}

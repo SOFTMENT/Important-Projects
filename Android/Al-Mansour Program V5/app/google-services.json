@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1026541448181",
+    "project_id": "tourcrib-25576",
+    "storage_bucket": "tourcrib-25576.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1026541448181:android:bdda80f11f94db7cd88ebc",
+        "android_client_info": {
+          "package_name": "in.softment.Tourcrib"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1026541448181-4566e71io2resr39h1rr46n98nehtumv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoycYGhHnUPKZjemcB6r0JffFdpZFJWXU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1026541448181-4566e71io2resr39h1rr46n98nehtumv.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1026541448181-83mpbscjthm7fcp74pva7pnt11125jb1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "in.softment.Tourcrib"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

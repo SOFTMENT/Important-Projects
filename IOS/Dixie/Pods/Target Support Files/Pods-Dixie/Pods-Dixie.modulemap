@@ -1,0 +1,6 @@
+framework module Pods_Dixie {
+  umbrella header "Pods-Dixie-umbrella.h"
+
+  export *
+  module * { export * }
+}

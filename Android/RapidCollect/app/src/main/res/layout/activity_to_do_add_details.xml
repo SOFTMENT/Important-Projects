@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+        app:title=" ">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="ADD TASK"
+            android:textColor="#fff"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_marginEnd="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Cancel"
+            android:textColor="#fff"
+            android:textSize="16sp" />
+
+    </androidx.appcompat.widget.Toolbar>
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Task Name"
+            android:layout_marginTop="35dp"
+            android:layout_marginStart="20dp"
+            android:textSize="15sp"
+            android:textColor="#000"
+            android:fontFamily="@font/robo"
+            />
+
+<EditText
+    android:textColor="#797979"
+    android:textSize="14sp"
+    android:padding="6dp"
+    android:id="@+id/name"
+    android:background="@drawable/outlinebtn"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginTop="10dp"
+    android:fontFamily="@font/robo"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+    />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Task Details"
+                android:layout_marginTop="35dp"
+                android:layout_marginStart="20dp"
+                android:textSize="15sp"
+                android:textColor="#000"
+                android:fontFamily="@font/robo"
+                />
+            <EditText
+                android:textColor="#797979"
+                android:textSize="14sp"
+                android:fontFamily="@font/robo"
+                android:padding="5dp"
+                android:gravity="start"
+                android:id="@+id/details"
+                android:background="@drawable/outlinebtn"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Task Completion Date"
+                android:layout_marginTop="35dp"
+                android:layout_marginStart="20dp"
+                android:textSize="15sp"
+                android:textColor="#000"
+                android:fontFamily="@font/robo"
+                />
+          <EditText
+              android:id="@+id/datepicker"
+             android:inputType="none"
+              android:layout_width="match_parent"
+              android:layout_height="35dp"
+              android:layout_marginTop="20dp"
+              android:layout_marginStart="20dp"
+              android:layout_marginEnd="20dp"
+              android:background="@drawable/outlinebtn"
+              android:text="Select Date And Time"
+              android:fontFamily="@font/robo"
+              android:textColor="#FFFFFF"
+                android:textSize="14sp"
+              android:textAlignment="center"
+              android:backgroundTint="#03A9F4"
+
+              />
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/sdate"
+                android:text="23/07/1996"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="8dp"
+                android:textSize="15sp"
+                android:fontFamily="@font/robo"
+                android:textAlignment="center"
+                android:textColor="#673AB7"
+                />
+
+            <Button
+
+                android:id="@+id/add"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:background="@drawable/outlinebtn"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="55dp"
+                android:text="Add"
+                android:textColor="#fff"
+                android:fontFamily="@font/robo"
+                />
+        </LinearLayout>
+</androidx.core.widget.NestedScrollView>
+</RelativeLayout>

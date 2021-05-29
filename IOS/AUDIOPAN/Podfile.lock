@@ -1,0 +1,20 @@
+PODS:
+  - lottie-ios (3.2.1)
+  - VerticalSlider (2.0.0)
+
+DEPENDENCIES:
+  - lottie-ios
+  - VerticalSlider
+
+SPEC REPOS:
+  trunk:
+    - lottie-ios
+    - VerticalSlider
+
+SPEC CHECKSUMS:
+  lottie-ios: 106e92eaf11fbed0a76590b4cdb9b5ec26123ff7
+  VerticalSlider: 655f2bc3ed062bac13e21c174f5ff93b8308571d
+
+PODFILE CHECKSUM: ee71b4e082cd3f13aa7533e04ee697307f3119cf
+
+COCOAPODS: 1.10.1

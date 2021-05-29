@@ -1,0 +1,182 @@
+[
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/drawable-xhdpi_exit.png.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/drawable-xhdpi/exit.png"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/layout_fragment_share.xml.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/layout/fragment_share.xml"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/drawable-mdpi_exit.png.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/drawable-mdpi/exit.png"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/raw_load.json.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/raw/load.json"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/drawable-xxhdpi_home.png.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/drawable-xxhdpi/home.png"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/drawable-hdpi_home.png.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/drawable-hdpi/home.png"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/drawable-anydpi_rate.xml.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/drawable-anydpi/rate.xml"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/drawable-xxhdpi_share.png.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/drawable-xxhdpi/share.png"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/drawable_ic_launcher_background.xml.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/drawable-xhdpi_share.png.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/drawable-xhdpi/share.png"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/drawable-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/drawable-mdpi_home.png.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/drawable-mdpi/home.png"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/layout_fragment_home.xml.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/layout/fragment_home.xml"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/drawable-anydpi_exit.xml.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/drawable-anydpi/exit.xml"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/layout_fragment_rate.xml.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/layout/fragment_rate.xml"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/drawable-xxhdpi_rate.png.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/drawable-xxhdpi/rate.png"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/drawable-xhdpi_home.png.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/drawable-xhdpi/home.png"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/layout_activity_main.xml.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/drawable-hdpi_rate.png.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/drawable-hdpi/rate.png"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/drawable-anydpi_share.xml.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/drawable-anydpi/share.xml"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/drawable-xxhdpi_exit.png.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/drawable-xxhdpi/exit.png"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/drawable-hdpi_share.png.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/drawable-hdpi/share.png"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/drawable-hdpi_exit.png.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/drawable-hdpi/exit.png"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/drawable-mdpi_share.png.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/drawable-mdpi/share.png"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/layout_fragment_exit.xml.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/layout/fragment_exit.xml"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/drawable-xhdpi_rate.png.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/drawable-xhdpi/rate.png"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/drawable-anydpi_home.xml.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/drawable-anydpi/home.xml"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/drawable-mdpi_rate.png.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/drawable-mdpi/rate.png"
+    },
+    {
+        "merged": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP4/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
+    }
+]

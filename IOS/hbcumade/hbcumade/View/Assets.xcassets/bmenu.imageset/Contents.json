@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "bmenu.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

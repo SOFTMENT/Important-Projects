@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="94221a3b-f273-492a-85af-6bf67d13c5ec" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP10/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP10/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP10/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP10/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP10/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP10/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP10/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP10/amit" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP10/app/release/rushsport.aab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP10/app/src/main/ic_launcher-playstore.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP10/app/src/main/java/com/rush/be/tapp/Fragment/ExitFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP10/app/src/main/java/com/rush/be/tapp/Fragment/HomeFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP10/app/src/main/java/com/rush/be/tapp/Fragment/RateFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP10/app/src/main/java/com/rush/be/tapp/Fragment/ShareFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP10/app/src/main/java/com/rush/be/tapp/Interface/RefreshCall.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP11/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP11/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP11/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP11/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP11/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP11/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP11/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP11/Udit" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP11/app/release/sporting.aab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP11/app/src/main/ic_launcher-playstore.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP11/app/src/main/res/raw/load.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP12/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP12/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP12/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP12/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP12/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP12/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP12/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP12/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP12/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP12/app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP12/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP12/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP12/app/src/main/ic_launcher-playstore.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP12/app/src/main/java/com/topaz/sportapp/MainActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP12/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP12/app/src/main/res/drawable/ic_baseline_refresh_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP12/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP12/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP12/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP12/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP12/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP12/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP12/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP12/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP12/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP12/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP12/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP12/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP12/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP12/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP12/app/src/main/res/raw/load.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP12/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP12/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP12/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP12/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP12/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP12/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP12/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP12/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP12/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP12/mona" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SKYPE/SPORTAPP12/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RapidCollect/app/src/main/java/com/originaldevelopment/rapidcollect/GenricProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RapidCollect/app/src/main/java/com/originaldevelopment/rapidcollect/GenricProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/john.jpg" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_3_API_28" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view />
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="resourceFile" />
+      </list>
+    </option>
+  </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="EXPORT_PRIVATE_KEY" value="false" />
+    <option name="KEY_STORE_PATH" value="$PROJECT_DIR$/originaldevelopment" />
+    <option name="KEY_ALIAS" value="key0" />
+    <option name="REMEMBER_PASSWORDS" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1guni16ExxOk7191eq6Y2l6TUzy" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="BundleExportedModule" value="app" />
+    <property name="ExportApk.ApkPath" value="$PROJECT_DIR$/app" />
+    <property name="ExportApk.BuildVariants" value="release" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="memory.settings.postsync.last.time.stamp" value="1598974124521" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="android.template.-949341357">
+      <recent name="com.originaldevelopment.wallpaper" />
+      <recent name="com.originaldevelopment.wallpaper.Model" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="94221a3b-f273-492a-85af-6bf67d13c5ec" name="Default Changelist" comment="" />
+      <created>1598973467988</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598973467988</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="184" y="96" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598974259109">
+      <screen x="0" y="23" width="1440" height="816" />
+    </state>
+    <state x="184" y="96" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.816@0.23.1440.816" timestamp="1598974259109" />
+    <state x="458" y="185" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598976250980">
+      <screen x="0" y="23" width="1440" height="816" />
+    </state>
+    <state x="458" y="185" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.816@0.23.1440.816" timestamp="1598976250980" />
+    <state x="308" y="193" key="AndroidCreateResourceFileDialog" timestamp="1598977267103">
+      <screen x="0" y="23" width="1440" height="816" />
+    </state>
+    <state x="308" y="193" key="AndroidCreateResourceFileDialog/0.23.1440.816@0.23.1440.816" timestamp="1598977267103" />
+    <state width="1358" height="155" key="GridCell.Tab.0.bottom" timestamp="1598977776652">
+      <screen x="0" y="23" width="1440" height="816" />
+    </state>
+    <state width="1358" height="155" key="GridCell.Tab.0.bottom/0.23.1440.816@0.23.1440.816" timestamp="1598977776652" />
+    <state width="1358" height="155" key="GridCell.Tab.0.center" timestamp="1598977776651">
+      <screen x="0" y="23" width="1440" height="816" />
+    </state>
+    <state width="1358" height="155" key="GridCell.Tab.0.center/0.23.1440.816@0.23.1440.816" timestamp="1598977776651" />
+    <state width="1358" height="155" key="GridCell.Tab.0.left" timestamp="1598977776651">
+      <screen x="0" y="23" width="1440" height="816" />
+    </state>
+    <state width="1358" height="155" key="GridCell.Tab.0.left/0.23.1440.816@0.23.1440.816" timestamp="1598977776651" />
+    <state width="1358" height="155" key="GridCell.Tab.0.right" timestamp="1598977776652">
+      <screen x="0" y="23" width="1440" height="816" />
+    </state>
+    <state width="1358" height="155" key="GridCell.Tab.0.right/0.23.1440.816@0.23.1440.816" timestamp="1598977776652" />
+    <state x="221" y="73" key="SettingsEditor" timestamp="1598974417026">
+      <screen x="0" y="23" width="1440" height="816" />
+    </state>
+    <state x="221" y="73" key="SettingsEditor/0.23.1440.816@0.23.1440.816" timestamp="1598974417026" />
+    <state x="497" y="216" key="chooseDestDirectoryDialog" timestamp="1598976442090">
+      <screen x="0" y="23" width="1440" height="816" />
+    </state>
+    <state x="497" y="216" key="chooseDestDirectoryDialog/0.23.1440.816@0.23.1440.816" timestamp="1598976442090" />
+    <state x="120" y="143" width="1200" height="576" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1598974941191">
+      <screen x="0" y="23" width="1440" height="816" />
+    </state>
+    <state x="120" y="143" width="1200" height="576" key="com.android.tools.idea.avdmanager.AvdListDialog/0.23.1440.816@0.23.1440.816" timestamp="1598974941191" />
+    <state x="369" y="263" key="com.intellij.ide.util.TipDialog" timestamp="1598974440067">
+      <screen x="0" y="23" width="1440" height="816" />
+    </state>
+    <state x="369" y="263" key="com.intellij.ide.util.TipDialog/0.23.1440.816@0.23.1440.816" timestamp="1598974440067" />
+  </component>
+</project>

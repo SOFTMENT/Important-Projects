@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aB8-aE-E5y">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Rate Us-->
+        <scene sceneID="Fmu-Om-7TP">
+            <objects>
+                <viewController id="mJg-wO-uXd" customClass="RateViewController" customModule="Healthcare_Experiences" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nuw-2g-7KS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="smg-1K-e9K">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="barTintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <items>
+                                    <navigationItem title="Rate Us" id="vGh-Z7-3lF"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="smg-1K-e9K" secondAttribute="trailing" symbolic="YES" id="F4x-pK-uAu"/>
+                            <constraint firstItem="smg-1K-e9K" firstAttribute="top" secondItem="YJ8-n3-WdL" secondAttribute="top" id="SA9-zQ-SH0"/>
+                            <constraint firstItem="smg-1K-e9K" firstAttribute="leading" secondItem="YJ8-n3-WdL" secondAttribute="leading" id="vCG-7J-wF4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YJ8-n3-WdL"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Rate Us" id="MXO-4r-TE0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NGL-B0-7e1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2674" y="1156"/>
+        </scene>
+        <!--Share App-->
+        <scene sceneID="URb-Hm-gXw">
+            <objects>
+                <viewController id="a9v-w1-n8w" customClass="ShareViewController" customModule="Healthcare_Experiences" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WoE-SV-BTI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1I7-bF-4jk">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <items>
+                                    <navigationItem title="Share" id="Hd5-RC-pum"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="KKL-2L-tu3"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Share App" id="qVL-pb-wXz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2xY-ZG-yWc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1957" y="1156"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="d5b-1W-Fky">
+            <objects>
+                <viewController id="HcK-Ke-sCr" customClass="HomeViewController" customModule="Healthcare_Experiences" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JiK-A8-GQ4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uXp-4k-T8J">
+                                <rect key="frame" x="0.0" y="44" width="414" height="2"/>
+                            </progressView>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eHi-TG-OJb">
+                                <rect key="frame" x="0.0" y="47" width="414" height="766"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="csI-q0-0u8" firstAttribute="bottom" secondItem="eHi-TG-OJb" secondAttribute="bottom" id="GFg-7M-sPe"/>
+                            <constraint firstItem="csI-q0-0u8" firstAttribute="trailing" secondItem="eHi-TG-OJb" secondAttribute="trailing" id="IrB-cj-jyJ"/>
+                            <constraint firstItem="uXp-4k-T8J" firstAttribute="leading" secondItem="csI-q0-0u8" secondAttribute="leading" id="Vy1-ne-K6E"/>
+                            <constraint firstItem="uXp-4k-T8J" firstAttribute="top" secondItem="csI-q0-0u8" secondAttribute="top" id="ckH-cK-5w6"/>
+                            <constraint firstItem="csI-q0-0u8" firstAttribute="trailing" secondItem="uXp-4k-T8J" secondAttribute="trailing" id="m7s-7t-Xfx"/>
+                            <constraint firstItem="eHi-TG-OJb" firstAttribute="leading" secondItem="csI-q0-0u8" secondAttribute="leading" id="nVW-92-DwL"/>
+                            <constraint firstItem="eHi-TG-OJb" firstAttribute="top" secondItem="uXp-4k-T8J" secondAttribute="bottomMargin" constant="9" id="vVH-29-aRh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="csI-q0-0u8"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" id="07t-Cv-vaf"/>
+                    <connections>
+                        <outlet property="progressBar" destination="uXp-4k-T8J" id="zPd-YL-EcS"/>
+                        <outlet property="webView" destination="eHi-TG-OJb" id="3f0-XN-vcx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rdX-GT-IuW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133" y="95"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="m5f-IA-eFj">
+            <objects>
+                <tabBarController id="aB8-aE-E5y" customClass="TabBarController" customModule="Healthcare_Experiences" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oI8-Rf-HfY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="HcK-Ke-sCr" kind="relationship" relationship="viewControllers" id="MAu-cT-xqs"/>
+                        <segue destination="a9v-w1-n8w" kind="relationship" relationship="viewControllers" id="oDf-oO-SJg"/>
+                        <segue destination="mJg-wO-uXd" kind="relationship" relationship="viewControllers" id="0zb-cC-nbz"/>
+                        <segue destination="OUi-Zd-WlM" kind="relationship" relationship="viewControllers" id="LmE-l7-rU2"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3z8-rn-04Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1071" y="310"/>
+        </scene>
+        <!--Exit-->
+        <scene sceneID="ZKo-cH-WLf">
+            <objects>
+                <viewController id="OUi-Zd-WlM" customClass="ExitViewController" customModule="Healthcare_Experiences" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X51-Rc-xTt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qyh-XZ-gtZ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="barTintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <items>
+                                    <navigationItem title="Exit" id="ugd-SW-ptF"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Qyh-XZ-gtZ" secondAttribute="trailing" symbolic="YES" id="3XE-RX-aXS"/>
+                            <constraint firstItem="Qyh-XZ-gtZ" firstAttribute="leading" secondItem="K9b-3L-sF2" secondAttribute="leading" id="6sN-AX-Yrq"/>
+                            <constraint firstItem="Qyh-XZ-gtZ" firstAttribute="top" secondItem="K9b-3L-sF2" secondAttribute="top" id="PkG-2G-AvS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="K9b-3L-sF2"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Exit" id="q9q-JG-teS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oh3-tB-b56" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3420" y="1139"/>
+        </scene>
+    </scenes>
+</document>

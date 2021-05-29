@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+        app:title=" ">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/back"
+            />
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="EDIT PROFILE"
+            android:textColor="#fff"
+            android:textSize="15sp" />
+
+    </androidx.appcompat.widget.Toolbar>
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/toolbar"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    <de.hdodenhof.circleimageview.CircleImageView
+
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/user"
+        app:civ_border_width="1px"
+        app:civ_border_color="#000"
+        android:id="@+id/user_profile"
+        />
+
+    <TextView
+        android:id="@+id/taptochange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_profile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/robo"
+        android:text="Tap To Change"
+        android:textColor="#F44336"
+        />
+
+        <EditText
+            android:hint="Enter First Name"
+            android:lines="1"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:drawableStart="@drawable/whitename"
+            android:background="@drawable/edittext_shadow"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_below="@+id/taptochange"
+            android:layout_marginTop="16dp"
+            android:id="@+id/firstname"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="#545454"
+            android:drawablePadding="6dp"
+            android:maxLines="1"
+            android:inputType="textEmailAddress"
+            />
+        <EditText
+            android:hint="Enter Last Name"
+            android:lines="1"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:drawableStart="@drawable/whitename"
+            android:background="@drawable/edittext_shadow"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_below="@+id/firstname"
+            android:layout_marginTop="16dp"
+            android:id="@+id/lastname"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="#545454"
+            android:drawablePadding="6dp"
+            android:maxLines="1"
+            android:inputType="textEmailAddress"
+            />
+        <EditText
+            android:hint="Enter Mobile Number"
+            android:lines="1"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:drawableStart="@drawable/whitephone"
+            android:background="@drawable/edittext_shadow"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_below="@+id/lastname"
+            android:layout_marginTop="16dp"
+            android:id="@+id/phone"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="#545454"
+            android:drawablePadding="6dp"
+            android:maxLines="1"
+            android:inputType="phone"
+            />
+
+        <TextView
+            android:id="@+id/tradingt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phone"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/robo"
+            android:text="Select Trading Type"
+            android:textColor="#F44336"
+            />
+
+        <LinearLayout
+
+            android:id="@+id/vv"
+            android:orientation="vertical"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/tradingt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/locationback"
+            android:backgroundTint="#2E2E2E"
+            android:gravity="center"
+            >
+
+
+            <RadioGroup
+                android:layout_marginTop="5dp"
+                android:id="@+id/radiogroup"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                >
+                <RadioButton
+                    android:id="@+id/sole"
+                    android:textSize="13sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sole Proprietor"
+                    android:textColor="#fff"
+                    android:buttonTint="#00BCD4"
+                    android:fontFamily="sans-serif-condensed"
+                    />
+
+                <RadioButton
+                    android:id="@+id/pty"
+                    android:textSize="13sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PTY Limited"
+                    android:textColor="#fff"
+                    android:buttonTint="#00BCD4"
+                    android:fontFamily="sans-serif-condensed"
+                    />
+                <RadioButton
+                    android:id="@+id/closed"
+                    android:textSize="13sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Closed Corporation"
+                    android:textColor="#fff"
+                    android:buttonTint="#00BCD4"
+                    android:fontFamily="sans-serif-condensed"
+                    />
+            </RadioGroup>
+            
+            <Button
+                android:id="@+id/uploadbutton"
+                android:layout_margin="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@drawable/uploaddocback"
+                android:text="Upload Documents"
+                android:textColor="#fff"
+                android:textSize="13sp"
+                android:textAllCaps="false"
+
+                />
+
+            <TextView
+                android:id="@+id/check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="10dp"
+                android:text="Check Supporting Documents"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="#CDDC39"
+                android:layout_marginBottom="10dp"
+
+                />
+
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/submit"
+            android:textColor="#fff"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Submit Documentation"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_below="@+id/vv"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:background="@drawable/locationback"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            />
+
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

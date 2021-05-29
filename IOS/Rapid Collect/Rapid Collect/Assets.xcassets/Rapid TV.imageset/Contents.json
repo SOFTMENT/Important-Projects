@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Rapid TV.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -1,0 +1,6 @@
+framework module Pods_Copacetic_Cosmetics {
+  umbrella header "Pods-Copacetic Cosmetics-umbrella.h"
+
+  export *
+  module * { export * }
+}

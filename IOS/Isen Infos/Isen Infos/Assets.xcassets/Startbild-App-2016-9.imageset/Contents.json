@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Startbild-App-2016-9.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

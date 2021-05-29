@@ -1,0 +1,6 @@
+framework module Pods_Oh_Crepe___Waffles {
+  umbrella header "Pods-Oh Crepe & Waffles-umbrella.h"
+
+  export *
+  module * { export * }
+}

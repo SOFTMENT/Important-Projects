@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<TextView
+    android:id="@+id/name"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="16dp"
+    android:text="School Time"
+    android:textColor="@color/colorPrimary"
+    android:textSize="17sp"
+    android:fontFamily="@font/robo"
+
+    />
+    <TextView
+        android:id="@+id/date"
+        android:layout_below="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="2020 JULY 19, 12:12 PM"
+        android:textColor="#000"
+        android:textSize="14sp"
+        android:fontFamily="@font/robo"
+
+        />
+
+    <TextView
+        android:id="@+id/details"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/date"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:text="2020 JULY 19, 12:12 PM"
+        android:textColor="#717171"
+        android:textSize="14sp"
+        android:fontFamily="@font/robo"
+        />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/completeCard"
+        android:layout_width="120dp"
+        android:layout_height="35dp"
+        app:cardCornerRadius="8dp"
+        android:layout_below="@+id/details"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="130dp"
+        app:cardBackgroundColor="@color/colorPrimary"
+        >
+        <TextView
+            android:id="@+id/completeText"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Complete"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:fontFamily="@font/robo"
+            />
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

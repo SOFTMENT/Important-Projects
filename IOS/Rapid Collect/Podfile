@@ -1,0 +1,25 @@
+# Uncomment the next line to define a global platform for your project
+ platform :ios, '12.0'
+
+target 'Rapid Collect' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+ # Pods for Rapid Collect
+  pod 'lottie-ios'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Messaging'
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
+  pod 'FirebaseUI/Auth'
+  pod 'TTGSnackbar'
+
+  pod 'Alamofire'
+  pod 'SwiftyJSON'
+  pod 'Kingfisher'
+  pod 'DeviceKit'
+ pod 'SwiftyGif'
+ pod 'Firebase/Crashlytics'
+ pod 'Siren', :git => 'https://github.com/ArtSabintsev/Siren.git', :branch => 'swift5.0'
+ 
+end

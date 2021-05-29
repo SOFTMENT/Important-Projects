@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#87ceeb"
+    tools:context=".MainActivity">
+<RelativeLayout
+    android:id="@+id/rr"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="#37919191"
+    >
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/importbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:text="Import Audio"
+        android:textColor="@color/white"
+        android:background="@drawable/importbuttonback"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="13sp"
+        />
+    <TextView
+
+        android:fontFamily="sans-serif-condensed"
+        android:text="AUDIOPAN"
+        android:textColor="#fff"
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        />
+
+
+</RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/mainLL"
+
+    android:layout_below="@id/rr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="2"
+    android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="6dp"
+            app:cardBackgroundColor="#87CEEB"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            >
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/animation_view1"
+                    android:layout_width="180dp"
+                    android:layout_height="80dp"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/animation"
+                     />
+                <TextView
+                    android:textColor="@color/white"
+                    android:id="@+id/title1"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textSize="16sp"
+                   android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:layout_below="@+id/animation_view1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AUDIO 1"
+                    />
+                <ImageView
+                    android:id="@+id/playpause1"
+                    android:layout_marginTop="24dp"
+                    android:layout_below="@+id/title1"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/play"
+                    android:layout_centerHorizontal="true"
+                    />
+                <LinearLayout
+                    android:id="@+id/volumnell"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+
+
+               >
+                    <in.softment.audiopan.VerticalTextView
+                        android:textColor="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                       android:layout_gravity="center_vertical"
+                        android:textSize="13sp"
+                        android:padding="4dip"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="Volumne"
+
+                         />
+                    <in.softment.audiopan.Widget.VerticalSeekBar
+                        android:id="@+id/volume1seek"
+                        android:progressTint="#f00"
+                        android:thumbTint="#f00"
+                        android:progressBackgroundTint="#fff"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="30dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        />
+                </LinearLayout>
+                <SeekBar
+                    android:id="@+id/seekbar1"
+                    android:layout_toStartOf="@+id/volumnell1"
+                    android:layout_toEndOf="@+id/volumnell"
+                    android:progressTint="#3F51B5"
+                    android:thumbTint="#3F51B5"
+                    android:progressBackgroundTint="#fff"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+
+                    android:layout_marginTop="24dp"
+                    android:layout_below="@+id/playpause1"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+
+                    />
+<TextView
+    android:id="@+id/startTime1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/seekbar1"
+    android:layout_alignStart="@id/seekbar1"
+    android:text="00:00"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="12dp"
+    android:textColor="#000000"
+    android:fontFamily="sans-serif-condensed"
+    android:textSize="11sp"
+    />
+                <TextView
+                    android:id="@+id/endTime1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/seekbar1"
+                    android:layout_alignEnd="@id/seekbar1"
+                    android:text="00:00"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="#000000"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textSize="11sp"
+                    />
+
+                <ImageView
+                    android:src="@drawable/ic_action_name"
+                    android:id="@+id/equalizer1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:text="Equalizer"
+                    android:textColor="@color/white"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/importbuttonback"
+                  android:layout_margin="16dp"
+
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textSize="13sp"
+                    />
+                <LinearLayout
+                   android:visibility="invisible"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/volumnell1"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+
+
+                    >
+                    <in.softment.audiopan.VerticalTextView
+                        android:textColor="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="13sp"
+                        android:padding="4dip"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="Volumne"
+
+                        />
+                    <in.softment.audiopan.Widget.VerticalSeekBar
+                        android:progressTint="#f00"
+                        android:thumbTint="#f00"
+                        android:progressBackgroundTint="#fff"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="30dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        />
+                </LinearLayout>
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            >
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="6dp"
+                app:cardBackgroundColor="#87CEEB"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                >
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/animation_view2"
+                        android:layout_width="180dp"
+                        android:layout_height="80dp"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/animation"
+                        />
+                    <TextView
+                        android:textColor="@color/white"
+                        android:id="@+id/title2"
+                        android:fontFamily="sans-serif-condensed"
+                        android:textSize="16sp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="16dp"
+                        android:layout_below="@+id/animation_view2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AUDIO 2"
+                        />
+                    <ImageView
+                        android:id="@+id/playpause2"
+                        android:layout_marginTop="24dp"
+                        android:layout_below="@+id/title2"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/play"
+                        android:layout_centerHorizontal="true"
+                        />
+                    <LinearLayout
+                        android:id="@+id/volumnell2"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+
+                        >
+                        <in.softment.audiopan.VerticalTextView
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:textSize="13sp"
+                            android:padding="4dip"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Volumne"
+
+                            />
+                        <in.softment.audiopan.Widget.VerticalSeekBar
+                            android:id="@+id/volume2seek"
+                            android:progressTint="#f00"
+                            android:thumbTint="#f00"
+                            android:progressBackgroundTint="#fff"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginBottom="30dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+
+                            />
+                    </LinearLayout>
+                    <SeekBar
+                        android:id="@+id/seekbar2"
+                        android:layout_toStartOf="@+id/volumnell3"
+                        android:layout_toEndOf="@+id/volumnell2"
+                        android:progressTint="#3F51B5"
+                        android:thumbTint="#3F51B5"
+                        android:progressBackgroundTint="#fff"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:progress="10"
+                        android:layout_marginTop="24dp"
+                        android:layout_below="@+id/playpause2"
+                        android:layout_width="240dp"
+                        android:layout_height="wrap_content"
+
+                        />
+                    <TextView
+                        android:id="@+id/startTime2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/seekbar2"
+                        android:layout_alignStart="@id/seekbar2"
+                        android:text="00:00"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="12dp"
+                        android:textColor="#000000"
+                        android:fontFamily="sans-serif-condensed"
+                        android:textSize="11sp"
+                        />
+                    <TextView
+                        android:id="@+id/endTime2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/seekbar2"
+                        android:layout_alignEnd="@id/seekbar2"
+                        android:text="00:00"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="#000000"
+                        android:fontFamily="sans-serif-condensed"
+                        android:textSize="11sp"
+                        />
+                    <ImageView
+                        android:id="@+id/equalizer2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="34dp"
+                        android:src="@drawable/ic_action_name"
+                        android:textColor="@color/white"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/importbuttonback"
+                        android:layout_margin="16dp"
+
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:textSize="13sp"
+                        />
+                    <LinearLayout
+                        android:visibility="invisible"
+                        android:layout_alignParentEnd="true"
+                        android:id="@+id/volumnell3"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+
+                        >
+                        <in.softment.audiopan.VerticalTextView
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:textSize="13sp"
+                            android:padding="4dip"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Volumne"
+
+                            />
+                        <in.softment.audiopan.Widget.VerticalSeekBar
+                            android:progressTint="#f00"
+                            android:thumbTint="#f00"
+                            android:progressBackgroundTint="#fff"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginBottom="30dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+
+                            />
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+
+</LinearLayout>
+</RelativeLayout>

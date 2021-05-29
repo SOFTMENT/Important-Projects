@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>887588890782-ammptd8ba1voct32c2vbka8vqgg8jj62.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.887588890782-ammptd8ba1voct32c2vbka8vqgg8jj62</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDVXAHkiO3VbJ-O9OyPr28lKwcUtvBkz40</string>
+	<key>GCM_SENDER_ID</key>
+	<string>887588890782</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>net.softment.TheBackyardBarandGrill</string>
+	<key>PROJECT_ID</key>
+	<string>the-backyard-bar-and-grill</string>
+	<key>STORAGE_BUCKET</key>
+	<string>the-backyard-bar-and-grill.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:887588890782:ios:c03b384c8aa6bf3fc5338f</string>
+</dict>
+</plist>

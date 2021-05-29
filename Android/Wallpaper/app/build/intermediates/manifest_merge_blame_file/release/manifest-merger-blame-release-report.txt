@@ -1,0 +1,142 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.originaldevelopment.wallpaper"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+8-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:5:5-67
+11-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:5:22-64
+12    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+12-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:6:5-81
+12-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:6:22-78
+13    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+13-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:7:5-80
+13-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:7:22-77
+14    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+14-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:8:5-72
+14-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:8:22-69
+15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+15-->[com.google.android.gms:play-services-ads-lite:19.3.0] /Users/vijay/.gradle/caches/transforms-2/files-2.1/b8c90336253fc36aa8e99d9912ecc1ae/jetified-play-services-ads-lite-19.3.0/AndroidManifest.xml:24:5-79
+15-->[com.google.android.gms:play-services-ads-lite:19.3.0] /Users/vijay/.gradle/caches/transforms-2/files-2.1/b8c90336253fc36aa8e99d9912ecc1ae/jetified-play-services-ads-lite-19.3.0/AndroidManifest.xml:24:22-76
+16    <uses-permission android:name="android.permission.WAKE_LOCK" />
+16-->[com.google.android.gms:play-services-measurement-sdk-api:17.1.0] /Users/vijay/.gradle/caches/transforms-2/files-2.1/845bd68b1ba204c84e676f8e37ae39ed/jetified-play-services-measurement-sdk-api-17.1.0/AndroidManifest.xml:25:5-68
+16-->[com.google.android.gms:play-services-measurement-sdk-api:17.1.0] /Users/vijay/.gradle/caches/transforms-2/files-2.1/845bd68b1ba204c84e676f8e37ae39ed/jetified-play-services-measurement-sdk-api-17.1.0/AndroidManifest.xml:25:22-65
+17
+18    <application
+18-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:10:5-49:19
+19        android:allowBackup="true"
+19-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:11:9-35
+20        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+20-->[androidx.core:core:1.2.0] /Users/vijay/.gradle/caches/transforms-2/files-2.1/4527d81fa1dab2c4adef56282f6f51b4/core-1.2.0/AndroidManifest.xml:24:18-86
+21        android:extractNativeLibs="false"
+22        android:hardwareAccelerated="true"
+22-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:12:9-43
+23        android:icon="@mipmap/ic_launcher"
+23-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:13:9-43
+24        android:label="@string/app_name"
+24-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:14:9-41
+25        android:requestLegacyExternalStorage="true"
+25-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:15:9-52
+26        android:roundIcon="@mipmap/ic_launcher_round"
+26-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:16:9-54
+27        android:supportsRtl="true"
+27-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:17:9-35
+28        android:theme="@style/AppTheme"
+28-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:18:9-40
+29        android:usesCleartextTraffic="true" >
+29-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:19:9-44
+30        <activity android:name="com.originaldevelopment.wallpaper.Welcome" >
+30-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:20:9-26:20
+30-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:20:19-42
+31            <intent-filter>
+31-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:21:13-25:29
+32                <action android:name="android.intent.action.MAIN" />
+32-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:22:17-69
+32-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:22:25-66
+33
+34                <category android:name="android.intent.category.LAUNCHER" />
+34-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:24:17-77
+34-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:24:27-74
+35            </intent-filter>
+36        </activity>
+37        <activity android:name="com.originaldevelopment.wallpaper.ShowImage" />
+37-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:27:9-47
+37-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:27:19-44
+38        <activity android:name="com.originaldevelopment.wallpaper.ShowSubCategory" />
+38-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:28:9-53
+38-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:28:19-50
+39        <activity android:name="com.originaldevelopment.wallpaper.MainActivity" />
+39-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:29:9-49
+39-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:29:19-47
+40
+41        <provider
+42            android:name="com.originaldevelopment.wallpaper.GenricFileProvider"
+42-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:32:13-47
+43            android:authorities="com.originaldevelopment.wallpaper.provider"
+43-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:33:13-60
+44            android:exported="false"
+44-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:34:13-37
+45            android:grantUriPermissions="true" >
+45-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:35:13-47
+46            <meta-data
+46-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:36:13-38:57
+47                android:name="android.support.FILE_PROVIDER_PATHS"
+47-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:37:17-67
+48                android:resource="@xml/provider_path" />
+48-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:38:17-54
+49        </provider>
+50
+51        <meta-data
+51-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:41:9-43:70
+52            android:name="com.google.android.gms.ads.APPLICATION_ID"
+52-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:42:13-69
+53            android:value="ca-app-pub-1786205224485658~6152054856" />
+53-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:43:13-67
+54
+55        <activity
+55-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:45:9-48:72
+56            android:name="com.yalantis.ucrop.UCropActivity"
+56-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:46:13-60
+57            android:screenOrientation="fullSensor"
+57-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:47:13-51
+58            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+58-->/Users/vijay/Desktop/my-important-project/Android/Wallpaper/app/src/main/AndroidManifest.xml:48:13-69
+59        <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
+60        <activity
+60-->[com.google.android.gms:play-services-ads-lite:19.3.0] /Users/vijay/.gradle/caches/transforms-2/files-2.1/b8c90336253fc36aa8e99d9912ecc1ae/jetified-play-services-ads-lite-19.3.0/AndroidManifest.xml:29:9-33:64
+61            android:name="com.google.android.gms.ads.AdActivity"
+61-->[com.google.android.gms:play-services-ads-lite:19.3.0] /Users/vijay/.gradle/caches/transforms-2/files-2.1/b8c90336253fc36aa8e99d9912ecc1ae/jetified-play-services-ads-lite-19.3.0/AndroidManifest.xml:30:13-65
+62            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+62-->[com.google.android.gms:play-services-ads-lite:19.3.0] /Users/vijay/.gradle/caches/transforms-2/files-2.1/b8c90336253fc36aa8e99d9912ecc1ae/jetified-play-services-ads-lite-19.3.0/AndroidManifest.xml:31:13-122
+63            android:exported="false"
+63-->[com.google.android.gms:play-services-ads-lite:19.3.0] /Users/vijay/.gradle/caches/transforms-2/files-2.1/b8c90336253fc36aa8e99d9912ecc1ae/jetified-play-services-ads-lite-19.3.0/AndroidManifest.xml:32:13-37
+64            android:theme="@android:style/Theme.Translucent" />
+64-->[com.google.android.gms:play-services-ads-lite:19.3.0] /Users/vijay/.gradle/caches/transforms-2/files-2.1/b8c90336253fc36aa8e99d9912ecc1ae/jetified-play-services-ads-lite-19.3.0/AndroidManifest.xml:33:13-61
+65
+66        <provider
+66-->[com.google.android.gms:play-services-ads-lite:19.3.0] /Users/vijay/.gradle/caches/transforms-2/files-2.1/b8c90336253fc36aa8e99d9912ecc1ae/jetified-play-services-ads-lite-19.3.0/AndroidManifest.xml:35:9-39:39
+67            android:name="com.google.android.gms.ads.MobileAdsInitProvider"
+67-->[com.google.android.gms:play-services-ads-lite:19.3.0] /Users/vijay/.gradle/caches/transforms-2/files-2.1/b8c90336253fc36aa8e99d9912ecc1ae/jetified-play-services-ads-lite-19.3.0/AndroidManifest.xml:36:13-76
+68            android:authorities="com.originaldevelopment.wallpaper.mobileadsinitprovider"
+68-->[com.google.android.gms:play-services-ads-lite:19.3.0] /Users/vijay/.gradle/caches/transforms-2/files-2.1/b8c90336253fc36aa8e99d9912ecc1ae/jetified-play-services-ads-lite-19.3.0/AndroidManifest.xml:37:13-73
+69            android:exported="false"
+69-->[com.google.android.gms:play-services-ads-lite:19.3.0] /Users/vijay/.gradle/caches/transforms-2/files-2.1/b8c90336253fc36aa8e99d9912ecc1ae/jetified-play-services-ads-lite-19.3.0/AndroidManifest.xml:38:13-37
+70            android:initOrder="100" />
+70-->[com.google.android.gms:play-services-ads-lite:19.3.0] /Users/vijay/.gradle/caches/transforms-2/files-2.1/b8c90336253fc36aa8e99d9912ecc1ae/jetified-play-services-ads-lite-19.3.0/AndroidManifest.xml:39:13-36
+71
+72        <meta-data
+72-->[com.google.android.gms:play-services-basement:17.0.0] /Users/vijay/.gradle/caches/transforms-2/files-2.1/294cc5ecc9001f3e94c034cd71f64fdf/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+73            android:name="com.google.android.gms.version"
+73-->[com.google.android.gms:play-services-basement:17.0.0] /Users/vijay/.gradle/caches/transforms-2/files-2.1/294cc5ecc9001f3e94c034cd71f64fdf/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+74            android:value="@integer/google_play_services_version" />
+74-->[com.google.android.gms:play-services-basement:17.0.0] /Users/vijay/.gradle/caches/transforms-2/files-2.1/294cc5ecc9001f3e94c034cd71f64fdf/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+75    </application>
+76
+77</manifest>

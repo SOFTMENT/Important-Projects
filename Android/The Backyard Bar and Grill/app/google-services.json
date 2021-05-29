@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "887588890782",
+    "project_id": "the-backyard-bar-and-grill",
+    "storage_bucket": "the-backyard-bar-and-grill.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:887588890782:android:d0a56c6b291d9619c5338f",
+        "android_client_info": {
+          "package_name": "com.softmentclient.TheBackyardBarandGrill"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "887588890782-dc15gluffc4gq53gtrv6m584mpe0b1q3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPTQBGD09InfjeSJpt_veVPooJz4wAGIs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "887588890782-dc15gluffc4gq53gtrv6m584mpe0b1q3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "887588890782-ammptd8ba1voct32c2vbka8vqgg8jj62.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "net.softment.TheBackyardBarandGrill"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

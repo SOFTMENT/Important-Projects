@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "386172058612",
+    "project_id": "tophunt-fbd84",
+    "storage_bucket": "tophunt-fbd84.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:386172058612:android:e4922b6b2e30f3d0b117a1",
+        "android_client_info": {
+          "package_name": "in.softment.tophunt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "386172058612-0p4gi8b2s1265g83pns9448k13h632el.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7jwVPHUroloit4P2jIeyOvR_IpdjM5pc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "386172058612-0p4gi8b2s1265g83pns9448k13h632el.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

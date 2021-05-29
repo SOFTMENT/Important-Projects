@@ -1,0 +1,4 @@
+#Mon Sep 21 14:55:49 IST 2020
+base.0=/Users/vijay/Desktop/my-important-project/Android/SKYPE/SPORTAPP10/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

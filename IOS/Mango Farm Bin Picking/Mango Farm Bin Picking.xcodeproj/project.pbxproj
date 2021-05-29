@@ -1,0 +1,564 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B183074926278ECC002BC588 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B183074826278ECC002BC588 /* UserModel.swift */; };
+		B183074D2627A253002BC588 /* HomeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B183074C2627A253002BC588 /* HomeNavigationController.swift */; };
+		B18307562627A5DB002BC588 /* RoundedUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18307552627A5DB002BC588 /* RoundedUIView.swift */; };
+		B183075A2627B7F7002BC588 /* MangoBinDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18307592627B7F7002BC588 /* MangoBinDetailsTableViewCell.swift */; };
+		B183075D2627C0E9002BC588 /* QRScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B183075C2627C0E9002BC588 /* QRScannerController.swift */; };
+		B18307772627D348002BC588 /* scan.json in Resources */ = {isa = PBXBuildFile; fileRef = B18307762627D347002BC588 /* scan.json */; };
+		B18307B326285BC2002BC588 /* MangoBinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18307B226285BC2002BC588 /* MangoBinModel.swift */; };
+		B183089B262971AC002BC588 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B183089A262971AC002BC588 /* GoogleService-Info.plist */; };
+		B1ABFF0A262E126400FC8A3B /* UsersAndAccessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1ABFF09262E126400FC8A3B /* UsersAndAccessTableViewCell.swift */; };
+		B1ABFF0D262E12DC00FC8A3B /* UsersAndAccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1ABFF0C262E12DC00FC8A3B /* UsersAndAccessViewController.swift */; };
+		B1ABFF10262E220800FC8A3B /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1ABFF0F262E220800FC8A3B /* CreateUserViewController.swift */; };
+		B1ABFF18262E6F5500FC8A3B /* SignInViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1ABFF17262E6F5500FC8A3B /* SignInViewController2.swift */; };
+		B1C6E1A826272FA9009E38EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C6E1A726272FA9009E38EB /* AppDelegate.swift */; };
+		B1C6E1AA26272FA9009E38EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C6E1A926272FA9009E38EB /* SceneDelegate.swift */; };
+		B1C6E1AF26272FA9009E38EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1C6E1AD26272FA9009E38EB /* Main.storyboard */; };
+		B1C6E1B126272FAC009E38EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1C6E1B026272FAC009E38EB /* Assets.xcassets */; };
+		B1C6E1B426272FAC009E38EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1C6E1B226272FAC009E38EB /* LaunchScreen.storyboard */; };
+		B1C6E1D72627331F009E38EB /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B1C6E1D426273314009E38EB /* Roboto-Medium.ttf */; };
+		B1C6E1D82627331F009E38EB /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B1C6E1D52627331A009E38EB /* Roboto-Bold.ttf */; };
+		B1C6E1D92627331F009E38EB /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B1C6E1D62627331F009E38EB /* RobotoCondensed-Regular.ttf */; };
+		B1C6E1E226273A4E009E38EB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C6E1E126273A4E009E38EB /* Constants.swift */; };
+		B1C6E20126275EBC009E38EB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C6E20026275EBC009E38EB /* HomeViewController.swift */; };
+		B1C6E2052627600B009E38EB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C6E2042627600B009E38EB /* Extensions.swift */; };
+		B1CCD0AB262D732000A9C562 /* AdminPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CCD0AA262D732000A9C562 /* AdminPanelViewController.swift */; };
+		B1CCD169262DCD2B00A9C562 /* CrewmemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CCD168262DCD2900A9C562 /* CrewmemberTableViewCell.swift */; };
+		B1CCD16C262DCDB500A9C562 /* CrewmemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CCD16B262DCDB500A9C562 /* CrewmemberViewController.swift */; };
+		E1DADD6718F4ED2B9DCE88D5 /* Pods_Mango_Farm_Bin_Picking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 875EECDF4EABE6255E67BDAB /* Pods_Mango_Farm_Bin_Picking.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		05FA0607192761777E5F1123 /* Pods-Mango Farm Bin Picking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mango Farm Bin Picking.debug.xcconfig"; path = "Target Support Files/Pods-Mango Farm Bin Picking/Pods-Mango Farm Bin Picking.debug.xcconfig"; sourceTree = "<group>"; };
+		7488B8BE5F152B53B72DA155 /* Pods-Mango Farm Bin Picking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mango Farm Bin Picking.release.xcconfig"; path = "Target Support Files/Pods-Mango Farm Bin Picking/Pods-Mango Farm Bin Picking.release.xcconfig"; sourceTree = "<group>"; };
+		875EECDF4EABE6255E67BDAB /* Pods_Mango_Farm_Bin_Picking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mango_Farm_Bin_Picking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B183074826278ECC002BC588 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		B183074C2627A253002BC588 /* HomeNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationController.swift; sourceTree = "<group>"; };
+		B18307552627A5DB002BC588 /* RoundedUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedUIView.swift; sourceTree = "<group>"; };
+		B18307592627B7F7002BC588 /* MangoBinDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangoBinDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		B183075C2627C0E9002BC588 /* QRScannerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerController.swift; sourceTree = "<group>"; };
+		B18307762627D347002BC588 /* scan.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = scan.json; sourceTree = "<group>"; };
+		B18307B226285BC2002BC588 /* MangoBinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangoBinModel.swift; sourceTree = "<group>"; };
+		B183089A262971AC002BC588 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B1ABFF09262E126400FC8A3B /* UsersAndAccessTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersAndAccessTableViewCell.swift; sourceTree = "<group>"; };
+		B1ABFF0C262E12DC00FC8A3B /* UsersAndAccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersAndAccessViewController.swift; sourceTree = "<group>"; };
+		B1ABFF0F262E220800FC8A3B /* CreateUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
+		B1ABFF17262E6F5500FC8A3B /* SignInViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController2.swift; sourceTree = "<group>"; };
+		B1C6E1A426272FA9009E38EB /* Mango Farm Bin Picking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mango Farm Bin Picking.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1C6E1A726272FA9009E38EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B1C6E1A926272FA9009E38EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B1C6E1AE26272FA9009E38EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B1C6E1B026272FAC009E38EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B1C6E1B326272FAC009E38EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B1C6E1B526272FAC009E38EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1C6E1D426273314009E38EB /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		B1C6E1D52627331A009E38EB /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		B1C6E1D62627331F009E38EB /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
+		B1C6E1E126273A4E009E38EB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B1C6E20026275EBC009E38EB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B1C6E2042627600B009E38EB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B1CCD0AA262D732000A9C562 /* AdminPanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminPanelViewController.swift; sourceTree = "<group>"; };
+		B1CCD168262DCD2900A9C562 /* CrewmemberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewmemberTableViewCell.swift; sourceTree = "<group>"; };
+		B1CCD16B262DCDB500A9C562 /* CrewmemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewmemberViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B1C6E1A126272FA9009E38EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1DADD6718F4ED2B9DCE88D5 /* Pods_Mango_Farm_Bin_Picking.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B183074726278EB6002BC588 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B183074826278ECC002BC588 /* UserModel.swift */,
+				B18307B226285BC2002BC588 /* MangoBinModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B1ABFF07262E0DB000FC8A3B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B18307552627A5DB002BC588 /* RoundedUIView.swift */,
+				B1C6E1AD26272FA9009E38EB /* Main.storyboard */,
+				B18307762627D347002BC588 /* scan.json */,
+				B1C6E1B026272FAC009E38EB /* Assets.xcassets */,
+				B1C6E1B226272FAC009E38EB /* LaunchScreen.storyboard */,
+				B18307592627B7F7002BC588 /* MangoBinDetailsTableViewCell.swift */,
+				B1CCD168262DCD2900A9C562 /* CrewmemberTableViewCell.swift */,
+				B1ABFF09262E126400FC8A3B /* UsersAndAccessTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B1ABFF08262E121200FC8A3B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B1C6E20026275EBC009E38EB /* HomeViewController.swift */,
+				B183074C2627A253002BC588 /* HomeNavigationController.swift */,
+				B183075C2627C0E9002BC588 /* QRScannerController.swift */,
+				B1CCD0AA262D732000A9C562 /* AdminPanelViewController.swift */,
+				B1CCD16B262DCDB500A9C562 /* CrewmemberViewController.swift */,
+				B1ABFF0C262E12DC00FC8A3B /* UsersAndAccessViewController.swift */,
+				B1ABFF0F262E220800FC8A3B /* CreateUserViewController.swift */,
+				B1ABFF17262E6F5500FC8A3B /* SignInViewController2.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B1C6E19B26272FA8009E38EB = {
+			isa = PBXGroup;
+			children = (
+				B1C6E1A626272FA9009E38EB /* Mango Farm Bin Picking */,
+				B1C6E1A526272FA9009E38EB /* Products */,
+				BC2FE4D71824E0BBA081DA4E /* Pods */,
+				B393CE536AFF77CAF21B496B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B1C6E1A526272FA9009E38EB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B1C6E1A426272FA9009E38EB /* Mango Farm Bin Picking.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B1C6E1A626272FA9009E38EB /* Mango Farm Bin Picking */ = {
+			isa = PBXGroup;
+			children = (
+				B1ABFF08262E121200FC8A3B /* ViewController */,
+				B1ABFF07262E0DB000FC8A3B /* View */,
+				B183074726278EB6002BC588 /* Model */,
+				B1C6E1E026273A3E009E38EB /* Utils */,
+				B1C6E1D2262732FB009E38EB /* Fonts */,
+				B1C6E1A726272FA9009E38EB /* AppDelegate.swift */,
+				B183089A262971AC002BC588 /* GoogleService-Info.plist */,
+				B1C6E1A926272FA9009E38EB /* SceneDelegate.swift */,
+				B1C6E1B526272FAC009E38EB /* Info.plist */,
+			);
+			path = "Mango Farm Bin Picking";
+			sourceTree = "<group>";
+		};
+		B1C6E1D2262732FB009E38EB /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B1C6E1D52627331A009E38EB /* Roboto-Bold.ttf */,
+				B1C6E1D426273314009E38EB /* Roboto-Medium.ttf */,
+				B1C6E1D62627331F009E38EB /* RobotoCondensed-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		B1C6E1E026273A3E009E38EB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B1C6E1E126273A4E009E38EB /* Constants.swift */,
+				B1C6E2042627600B009E38EB /* Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B393CE536AFF77CAF21B496B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				875EECDF4EABE6255E67BDAB /* Pods_Mango_Farm_Bin_Picking.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC2FE4D71824E0BBA081DA4E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				05FA0607192761777E5F1123 /* Pods-Mango Farm Bin Picking.debug.xcconfig */,
+				7488B8BE5F152B53B72DA155 /* Pods-Mango Farm Bin Picking.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B1C6E1A326272FA9009E38EB /* Mango Farm Bin Picking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1C6E1B826272FAC009E38EB /* Build configuration list for PBXNativeTarget "Mango Farm Bin Picking" */;
+			buildPhases = (
+				684BCA88F145190C0B46E697 /* [CP] Check Pods Manifest.lock */,
+				B1C6E1A026272FA9009E38EB /* Sources */,
+				B1C6E1A126272FA9009E38EB /* Frameworks */,
+				B1C6E1A226272FA9009E38EB /* Resources */,
+				21423901240F565937DAA795 /* [CP] Embed Pods Frameworks */,
+				D1F7F8452F475EFD359C408E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mango Farm Bin Picking";
+			productName = "Mango Farm Bin Picking";
+			productReference = B1C6E1A426272FA9009E38EB /* Mango Farm Bin Picking.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B1C6E19C26272FA8009E38EB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					B1C6E1A326272FA9009E38EB = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = B1C6E19F26272FA8009E38EB /* Build configuration list for PBXProject "Mango Farm Bin Picking" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B1C6E19B26272FA8009E38EB;
+			productRefGroup = B1C6E1A526272FA9009E38EB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B1C6E1A326272FA9009E38EB /* Mango Farm Bin Picking */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B1C6E1A226272FA9009E38EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1C6E1D92627331F009E38EB /* RobotoCondensed-Regular.ttf in Resources */,
+				B183089B262971AC002BC588 /* GoogleService-Info.plist in Resources */,
+				B1C6E1D72627331F009E38EB /* Roboto-Medium.ttf in Resources */,
+				B1C6E1B426272FAC009E38EB /* LaunchScreen.storyboard in Resources */,
+				B1C6E1D82627331F009E38EB /* Roboto-Bold.ttf in Resources */,
+				B1C6E1B126272FAC009E38EB /* Assets.xcassets in Resources */,
+				B1C6E1AF26272FA9009E38EB /* Main.storyboard in Resources */,
+				B18307772627D348002BC588 /* scan.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		21423901240F565937DAA795 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mango Farm Bin Picking/Pods-Mango Farm Bin Picking-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mango Farm Bin Picking/Pods-Mango Farm Bin Picking-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mango Farm Bin Picking/Pods-Mango Farm Bin Picking-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		684BCA88F145190C0B46E697 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mango Farm Bin Picking-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1F7F8452F475EFD359C408E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mango Farm Bin Picking/Pods-Mango Farm Bin Picking-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mango Farm Bin Picking/Pods-Mango Farm Bin Picking-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mango Farm Bin Picking/Pods-Mango Farm Bin Picking-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B1C6E1A026272FA9009E38EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1CCD0AB262D732000A9C562 /* AdminPanelViewController.swift in Sources */,
+				B1C6E20126275EBC009E38EB /* HomeViewController.swift in Sources */,
+				B1ABFF0A262E126400FC8A3B /* UsersAndAccessTableViewCell.swift in Sources */,
+				B18307562627A5DB002BC588 /* RoundedUIView.swift in Sources */,
+				B1ABFF18262E6F5500FC8A3B /* SignInViewController2.swift in Sources */,
+				B18307B326285BC2002BC588 /* MangoBinModel.swift in Sources */,
+				B1ABFF10262E220800FC8A3B /* CreateUserViewController.swift in Sources */,
+				B1CCD169262DCD2B00A9C562 /* CrewmemberTableViewCell.swift in Sources */,
+				B183075D2627C0E9002BC588 /* QRScannerController.swift in Sources */,
+				B1ABFF0D262E12DC00FC8A3B /* UsersAndAccessViewController.swift in Sources */,
+				B183074926278ECC002BC588 /* UserModel.swift in Sources */,
+				B183075A2627B7F7002BC588 /* MangoBinDetailsTableViewCell.swift in Sources */,
+				B1C6E2052627600B009E38EB /* Extensions.swift in Sources */,
+				B1C6E1A826272FA9009E38EB /* AppDelegate.swift in Sources */,
+				B1C6E1AA26272FA9009E38EB /* SceneDelegate.swift in Sources */,
+				B183074D2627A253002BC588 /* HomeNavigationController.swift in Sources */,
+				B1C6E1E226273A4E009E38EB /* Constants.swift in Sources */,
+				B1CCD16C262DCDB500A9C562 /* CrewmemberViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B1C6E1AD26272FA9009E38EB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B1C6E1AE26272FA9009E38EB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B1C6E1B226272FAC009E38EB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B1C6E1B326272FAC009E38EB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B1C6E1B626272FAC009E38EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B1C6E1B726272FAC009E38EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B1C6E1B926272FAC009E38EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05FA0607192761777E5F1123 /* Pods-Mango Farm Bin Picking.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 6;
+				DEVELOPMENT_TEAM = EC9SN5W46D;
+				INFOPLIST_FILE = "Mango Farm Bin Picking/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2;
+				PRODUCT_BUNDLE_IDENTIFIER = in.softment.mangofarmbinpicking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B1C6E1BA26272FAC009E38EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7488B8BE5F152B53B72DA155 /* Pods-Mango Farm Bin Picking.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 6;
+				DEVELOPMENT_TEAM = EC9SN5W46D;
+				INFOPLIST_FILE = "Mango Farm Bin Picking/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2;
+				PRODUCT_BUNDLE_IDENTIFIER = in.softment.mangofarmbinpicking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B1C6E19F26272FA8009E38EB /* Build configuration list for PBXProject "Mango Farm Bin Picking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1C6E1B626272FAC009E38EB /* Debug */,
+				B1C6E1B726272FAC009E38EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1C6E1B826272FAC009E38EB /* Build configuration list for PBXNativeTarget "Mango Farm Bin Picking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1C6E1B926272FAC009E38EB /* Debug */,
+				B1C6E1BA26272FAC009E38EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B1C6E19C26272FA8009E38EB /* Project object */;
+}

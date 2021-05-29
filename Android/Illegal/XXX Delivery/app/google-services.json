@@ -1,0 +1,107 @@
+{
+  "project_info": {
+    "project_number": "940917405073",
+    "firebase_url": "https://the-4-horsemen-a3c8c.firebaseio.com",
+    "project_id": "the-4-horsemen-a3c8c",
+    "storage_bucket": "the-4-horsemen-a3c8c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:940917405073:android:a3c8c96711935642fa9630",
+        "android_client_info": {
+          "package_name": "com.pvjsca.app.xxxdelivery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "940917405073-lqa1obganj6oallmc6800afkftlm9ma0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pvjsca.app.xxxdelivery",
+            "certificate_hash": "b2c29a9ad9c376df4ea3bef59a7a964657b681cb"
+          }
+        },
+        {
+          "client_id": "940917405073-mcbm5fnnrd2fc7m269bg33q7cvdmiuoc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC66y9UXtRzVLHGTUuo4BVtyIzYwpEcaJo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "940917405073-mcbm5fnnrd2fc7m269bg33q7cvdmiuoc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "940917405073-8cek8u3vcs6oiqrft6bh3ljphkg08mdl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.originaldevelopment.xxxdelivery"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:940917405073:android:2bc8420f904840ccfa9630",
+        "android_client_info": {
+          "package_name": "com.ss.the4horsemen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "940917405073-ln238rnn5jaah7gct8vl9brs24ha1sjr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ss.the4horsemen",
+            "certificate_hash": "e021e68974b43f651cbf72da65b0a163ed4f7acc"
+          }
+        },
+        {
+          "client_id": "940917405073-i450tjipje8aut6m9n80ouu09er55nhr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ss.the4horsemen",
+            "certificate_hash": "2a1b76308e0cc22675053a16c988c5dff46289c9"
+          }
+        },
+        {
+          "client_id": "940917405073-mcbm5fnnrd2fc7m269bg33q7cvdmiuoc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC66y9UXtRzVLHGTUuo4BVtyIzYwpEcaJo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "940917405073-mcbm5fnnrd2fc7m269bg33q7cvdmiuoc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "940917405073-8cek8u3vcs6oiqrft6bh3ljphkg08mdl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.originaldevelopment.xxxdelivery"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

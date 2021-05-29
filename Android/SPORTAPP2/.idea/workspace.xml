@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="49f4a476-aab7-4a65-9639-72b7b2d52226" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Illegal/Healthcare Experiences/app/src/main/res/font/fo.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP/app/release/app-release.aab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP/app/src/main/res/drawable/ic_baseline_refresh_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP/app/src/main/res/font/fo.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP/app/src/main/res/font/mons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP/app/src/main/res/raw/load.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP/mahesh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/akshay" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/release/app-release.aab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/ic_launcher-playstore.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_rate_review_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/raw/load.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP3/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP3/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP3/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP3/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP3/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP3/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP3/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP3/app/release/mostsport.aab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP3/app/src/main/ic_launcher-playstore.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP3/app/src/main/res/drawable/ic_baseline_exit_to_app_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP3/app/src/main/res/drawable/ic_baseline_star_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP3/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP3/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP3/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP3/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP3/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP3/app/src/main/res/raw/load.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP3/vaibhav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/release/365App.aab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/ic_launcher-playstore.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/java/com/app365/mobiles/Fragment/ExitFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/java/com/app365/mobiles/Fragment/HomeFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/java/com/app365/mobiles/Fragment/RateFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/java/com/app365/mobiles/Fragment/ShareFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/java/com/app365/mobiles/MainActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/drawable-anydpi/exit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/drawable-anydpi/home.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/drawable-anydpi/rate.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/drawable-anydpi/share.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/drawable-hdpi/exit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/drawable-hdpi/home.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/drawable-hdpi/rate.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/drawable-hdpi/share.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/drawable-mdpi/exit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/drawable-mdpi/home.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/drawable-mdpi/rate.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/drawable-mdpi/share.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/drawable-xhdpi/exit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/drawable-xhdpi/home.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/drawable-xhdpi/rate.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/drawable-xhdpi/share.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/drawable-xxhdpi/exit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/drawable-xxhdpi/home.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/drawable-xxhdpi/rate.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/drawable-xxhdpi/share.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/layout/fragment_exit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/layout/fragment_rate.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/layout/fragment_share.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/raw/load.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/kanha" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPORTAPP4/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Wallpaper/app/release/app-release.aab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Wallpaper/originaldevelopment" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Illegal/Healthcare Experiences/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Illegal/Healthcare Experiences/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Illegal/M7 Shirt - Android/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Illegal/M7 Shirt - Android/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RapidCollect/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../RapidCollect/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RapidCollect/app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../RapidCollect/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Wallpaper/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Wallpaper/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../IOS/Healthcare Experiences/Auxplay.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../IOS/Healthcare Experiences/Auxplay.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../IOS/Healthcare Experiences/Auxplay.xcworkspace/xcuserdata/originaldevelopment.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../IOS/Healthcare Experiences/Healthcare Experiences.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../IOS/Healthcare Experiences/Healthcare Experiences.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../IOS/Healthcare Experiences/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../IOS/Healthcare Experiences/Podfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../IOS/Healthcare Experiences/Pods/Manifest.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../IOS/Healthcare Experiences/Pods/Manifest.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../IOS/Healthcare Experiences/Pods/Pods.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../IOS/Healthcare Experiences/Pods/Pods.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../IOS/Healthcare Experiences/Pods/Target Support Files/Pods-Auxplay/Pods-Auxplay-Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../IOS/Healthcare Experiences/Pods/Target Support Files/Pods-Auxplay/Pods-Auxplay-acknowledgements.markdown" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../IOS/Healthcare Experiences/Pods/Target Support Files/Pods-Auxplay/Pods-Auxplay-acknowledgements.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../IOS/Healthcare Experiences/Pods/Target Support Files/Pods-Auxplay/Pods-Auxplay-dummy.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../IOS/Healthcare Experiences/Pods/Target Support Files/Pods-Auxplay/Pods-Auxplay-umbrella.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../IOS/Healthcare Experiences/Pods/Target Support Files/Pods-Auxplay/Pods-Auxplay.debug.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../IOS/Healthcare Experiences/Pods/Target Support Files/Pods-Auxplay/Pods-Auxplay.modulemap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../IOS/Healthcare Experiences/Pods/Target Support Files/Pods-Auxplay/Pods-Auxplay.release.xcconfig" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="ea1ca8f1" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view />
+      </state>
+    </system>
+  </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="EXPORT_PRIVATE_KEY" value="false" />
+    <option name="KEY_STORE_PATH" value="$PROJECT_DIR$/akshay" />
+    <option name="KEY_ALIAS" value="key0" />
+    <option name="REMEMBER_PASSWORDS" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1hRhSZzrnqNY4PdHQVymwsFJIlK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="BundleExportedModule" value="app" />
+    <property name="ExportApk.ApkPath" value="$PROJECT_DIR$/app" />
+    <property name="ExportApk.BuildVariants" value="release" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/raw" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/raw" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="49f4a476-aab7-4a65-9639-72b7b2d52226" name="Default Changelist" comment="" />
+      <created>1599979812974</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599979812974</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

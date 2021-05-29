@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1085295647751",
+    "firebase_url": "https://rincondegalicia-d8602.firebaseio.com",
+    "project_id": "rincondegalicia-d8602",
+    "storage_bucket": "rincondegalicia-d8602.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1085295647751:android:248e057935d47a018c9ea2",
+        "android_client_info": {
+          "package_name": "com.softmentclient.Restauranterincondegalicia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1085295647751-2sukbuc0ud7qg7lh8bq40ii26157i6ft.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASYqYCqFGH9w_PKPdds7ZtVJlRYNIbDy4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1085295647751-2sukbuc0ud7qg7lh8bq40ii26157i6ft.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1085295647751-p2bjv7e5gifvv0v592afbhrot82bn3s8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "rincondegalicia"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
