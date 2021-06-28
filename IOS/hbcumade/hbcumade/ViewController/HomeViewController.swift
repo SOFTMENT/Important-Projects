@@ -10,12 +10,11 @@ import Firebase
 import FirebaseStorage
 import CropViewController
 import SDWebImage
+import DropDown
 
 class HomeViewController: BaseViewController, UITextViewDelegate, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CropViewControllerDelegate{
  
-    
-    
-    
+    @IBOutlet weak var nopostavailable: UILabel!
     @IBOutlet weak var halfTextView: UITextView!
     @IBOutlet weak var whatsFullView: UIView!
     @IBOutlet weak var whatsHalfView: UIView!
@@ -32,16 +31,31 @@ class HomeViewController: BaseViewController, UITextViewDelegate, UITableViewDel
     @IBOutlet weak var plusBtn: UIImageView!
     @IBOutlet weak var postBtn: UIButton!
     @IBOutlet weak var removeImageBtn: UIButton!
-    @IBOutlet weak var viewOfImageView: UIView!
+    @IBOutlet weak var viewOfImageView: UIStackView!
     var refReg : ListenerRegistration?
+    var refRegs :Array<ListenerRegistration> = []
     var refComment : Array<ListenerRegistration> = []
     
     var cUid : String?
-    var friends = Array<FriendList>()
+    var followingFriends = Array<FriendList>()
+    var followersFriends = Array<FriendList>()
     var postIDs = Array<PostID>()
     var postids = Array<String>()
-    var posts = Array<Post>()
-    var posts_filter = Array<Post>()
+    var posts_student = [Date : Post]()
+    var posts_alumni = [Date : Post]()
+    var student : [Dictionary<Date,Post>.Element]?
+    var alumni : [Dictionary<Date,Post>.Element]?
+    
+    let group1 = DispatchGroup()
+    
+    var cellHeights = [IndexPath: CGFloat]()
+    
+
+  
+    let menu = DropDown()
+    let myMenu = DropDown()
+       
+    
     
     var tempHeight : CGFloat = 0
     var hasImageChanged : Bool = false
@@ -49,8 +63,11 @@ class HomeViewController: BaseViewController, UITextViewDelegate, UITableViewDel
     override func viewDidLoad() {
    
         cUid = Auth.auth().currentUser?.uid
-
-
+        
+        
+        self.setUploadPostImage(image: UIImage(named: "placeholder-1")!)
+       
+       
         halfTextView.delegate = self
         
         postEditField.delegate = self
@@ -64,6 +81,8 @@ class HomeViewController: BaseViewController, UITextViewDelegate, UITableViewDel
         tableView.dataSource = self
         tableView.isScrollEnabled = false
         
+        tableView.contentInsetAdjustmentBehavior = .never
+
    
         definesPresentationContext = true
 
@@ -85,13 +104,42 @@ class HomeViewController: BaseViewController, UITextViewDelegate, UITableViewDel
        
         
         
+        
+        
+        Constants.selected_classification = UserData.data?.classification ?? "student"
+        
         ProgressHUDShow(text: "Loading…")
         getMyPostsID()
-        getFriendData()
+        getFollowingFriendsData()
+        getFollowersFriendsData()
         updateUI()
-        
-        
+        updateFCMToken()
        
+        
+        menu.dataSource = ["Send Message"]
+        menu.textFont = UIFont(name: "RobotoCondensed-Regular", size: 13)!
+        menu.direction = .bottom
+        menu.setCornerBorder(color: .none, cornerRadius: 10, borderWidth: 0)
+        
+        
+        myMenu.dataSource = ["Delete"]
+        myMenu.textFont = UIFont(name: "RobotoCondensed-Regular", size: 13)!
+        myMenu.direction = .bottom
+        myMenu.setCornerBorder(color: .none, cornerRadius: 10, borderWidth: 0)
+        
+    
+     
+        
+    }
+    
+  
+    
+    
+
+   
+    
+    func updateFCMToken(){
+        Firestore.firestore().collection("Users").document(cUid!).setData(["token" : Messaging.messaging().fcmToken ?? ""], merge: true)
     }
     
 
@@ -142,6 +190,7 @@ class HomeViewController: BaseViewController, UITextViewDelegate, UITableViewDel
         
     }
     
+  
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
@@ -166,10 +215,11 @@ class HomeViewController: BaseViewController, UITextViewDelegate, UITableViewDel
         let docID = ref.document().documentID
         let time = FieldValue.serverTimestamp()
        
-        uploadImageOnFirebase { (downloadURL) in
+        uploadImageOnFirebase(postId: docID, completion: { downloadURL in
+        
                 
             let data = ["postId" : docID, "uid" : self.cUid!, "name" : UserData.data?.name ?? "Default", "classification" : UserData.data?.classification ?? "Student","image" : UserData.data?.profile ?? "", "postText" : postText, "postImage" : downloadURL,
-                        "postLike" : [] ,"postVisibility" : self.postVisibility , "postAt" : time ,"commentCount" : 0, "school": UserData.data?.school ?? ""] as [String : Any]
+                        "postLike" : [] ,"postVisibility" : self.postVisibility , "postAt" : time ,"commentCount" : 0, "school": UserData.data?.school ?? "", "token" : UserData.data?.token ?? ""] as [String : Any]
         
         ref.document(docID).setData(data) { (error) in
             self.ProgressHUDHide()
@@ -190,13 +240,16 @@ class HomeViewController: BaseViewController, UITextViewDelegate, UITableViewDel
                 self.postEditField.textColor = UIColor.lightGray
                 self.postEditField.resignFirstResponder()
                 
-                let mydata = [ "postAt" : time,"postId" : docID ] as [String : Any]
-                if self.friends.count < 499 {
+                
+            
+                
+                let mydata = [ "postAt" : time,"postId" : docID, "uid" : self.cUid!] as [String : Any]
+                if self.followersFriends.count < 499 {
                     let batch = FirebaseStoreManager.db.batch()
                     
                     let nycRef = FirebaseStoreManager.db.collection("UserPosts").document("Posts").collection(self.cUid!).document(docID)
                     batch.setData(mydata, forDocument: nycRef)
-                    for friend in self.friends {
+                    for friend in self.followersFriends {
                         let nycRef = FirebaseStoreManager.db.collection("UserPosts").document("Posts").collection(friend.uid!).document(docID)
                         batch.setData(mydata, forDocument: nycRef)
                     }
@@ -216,28 +269,53 @@ class HomeViewController: BaseViewController, UITextViewDelegate, UITableViewDel
                     
                 }
             
+                
                 self.showToast(message: "Post has been added")
             }
         }
           
-        }
+        })
         
     }
     
     
-    func getFriendData() {
-        FirebaseStoreManager.db.collection("Friends").document("narwJgQR0aUL134pm1tF").collection("MyFriends").addSnapshotListener { (snapshot, error) in
+    func getFollowingFriendsData() {
+        Firestore.firestore().collection("Users").document(Auth.auth().currentUser!.uid).collection("Following").addSnapshotListener { (snapshot, error) in
             if error != nil {
                 print("Error Retriving Friends")
             }
             else {
-                self.friends.removeAll()
+                self.followingFriends.removeAll()
                 guard let documents = snapshot?.documents else {
                            print("Error fetching documents: \(error!)")
                            return
                        }
-                self.friends = documents.map { (snapshot) -> FriendList in
+                self.followingFriends = documents.map { (snapshot) -> FriendList in
+                    
                     let friendData = try? snapshot.data(as: FriendList.self)
+                 
+                    return friendData!
+                    
+                }
+            }
+        }
+    }
+    
+    func getFollowersFriendsData() {
+        Firestore.firestore().collection("Users").document(Auth.auth().currentUser!.uid).collection("Followers").addSnapshotListener { (snapshot, error) in
+            if error != nil {
+                print("Error Retriving Friends")
+            }
+            else {
+                self.followersFriends.removeAll()
+                guard let documents = snapshot?.documents else {
+                           print("Error fetching documents: \(error!)")
+                           return
+                       }
+                self.followersFriends = documents.map { (snapshot) -> FriendList in
+                    
+                    let friendData = try? snapshot.data(as: FriendList.self)
+                 
                     return friendData!
                     
                 }
@@ -249,22 +327,26 @@ class HomeViewController: BaseViewController, UITextViewDelegate, UITableViewDel
         setProfilePic()
     }
     
-
+   
     
     func getMyPostsID() {
-        FirebaseStoreManager.db.collection("UserPosts").document("Posts").collection(cUid!).order(by: "postAt").limit(toLast: 10).addSnapshotListener { (snapshot, error) in
+      
+        FirebaseStoreManager.db.collection("UserPosts").document("Posts").collection(cUid!).order(by: "postAt",descending: true).addSnapshotListener(includeMetadataChanges: false, listener: { snapshot, error in
+            
            
+            
             if error != nil {
                 self.ProgressHUDHide()
                 self.showError(error.debugDescription)
             }
             else {
-                
+               
                 if let snapshot = snapshot {
-                    
+                   
                     let documents  = snapshot.documents
                     self.postIDs.removeAll()
                     self.postids.removeAll()
+ 
                     self.postIDs = documents.map { (snapshot) -> PostID in
                         let post = try? snapshot.data(as: PostID.self)
                         self.postids.append((post?.postId)!)
@@ -272,89 +354,154 @@ class HomeViewController: BaseViewController, UITextViewDelegate, UITableViewDel
                         
                     }
                  
-                    if !snapshot.metadata.hasPendingWrites {
+                   
+                  
                         if self.postids.count > 0 {
-                            if let reg = self.refReg{
-                                reg.remove()
+                            for re in self.refRegs {
+                                re.remove()
                             }
+                             
+                             
                             self.getPosts()
                         }
-                    }
+                        else {
+                            self.ProgressHUDHide()
+                        }
+    
+                    
                         
                       
                 }
                 else {
+                  
                     self.ProgressHUDHide()
                 }
                
               
                 
             }
-        }
+            
+        })
+        
+        
     }
     
     func getPosts()  {
+    
        
-      refReg =  FirebaseStoreManager.db.collection("AllPosts").whereField("postId", in: self.postids).order(by: "postAt", descending: true).addSnapshotListener(includeMetadataChanges: true) { (snapshot, error) in
-        
-        if error != nil {
-            
-            self.ProgressHUDHide()
-                self.showError(error!.localizedDescription)
-        }
-            else {
-                if let snapshot = snapshot {
-                    if !(snapshot.metadata.hasPendingWrites) {
-                        
-                        self.ProgressHUDHide()
-                        
-                        let documents = snapshot.documents
-                        self.posts.removeAll()
-                        
-                        self.posts = documents.map({ (snapshot) -> Post in
-                            let post = try? snapshot.data(as: Post.self)
-                            return post!
-                            
-                        })
-                        
-                        self.filterPosts()
-                           
-                        
-                    }
-                }
-                else {
-                    self.ProgressHUDHide()
-                    print("Error fetching documents: \(error!)")
-                    
-                }
-                
+        self.posts_student.removeAll()
+        self.posts_alumni.removeAll()
+        refRegs.removeAll()
 
-            }
-                
-            }
+       
+        for postId in self.postids {
+            
+           
+              
+   
+           let ref =  FirebaseStoreManager.db.collection("AllPosts").whereField("postId", isEqualTo: postId).addSnapshotListener(includeMetadataChanges: true) { (snapshot, error) in
+              
+           
+             
+              if error != nil {
+                  self.showError(error!.localizedDescription)
+              }
+                  else {
+                      if let snapshot = snapshot {
+                      
+                          if !(snapshot.metadata.hasPendingWrites) {
+                            
+                            if snapshot.isEmpty  {
+                                FirebaseStoreManager.db.collection("UserPosts").document("Posts").collection(self.cUid!).document(postId).delete()
+                            }
+                            snapshot.documentChanges.forEach { document in
+                              
+                                if let post = try? document.document.data(as: Post.self) {
+                                    
+                                    
+                                    if document.type == .removed {
+                                        
+                                        print("REMOVED")
+                                        if post.classification!.lowercased().elementsEqual("student"){
+                                            
+                                            self.posts_student.removeValue(forKey: post.postAt!)
+                                            
+                                        }
+                                        else {
+                                            self.posts_alumni.removeValue(forKey: post.postAt!)
+                                        }
+                                    }
+                                    else {
+                                        print("ADDDED, MODIFIED")
+                                      
+                                        if post.classification!.lowercased().elementsEqual("student"){
+                                            
+                                            self.posts_student[post.postAt!]  = post
+                                            
+                                        }
+                                        else {
+                                            self.posts_alumni[post.postAt!]  = post
+                                        }
+                                        
+                                      
+                                    }
+                                   
+                                }
+                                
+                               
+                                }
+                           
+                          
+                           
+                            
+                               
+                            self.ProgressHUDHide()
+                            self.reloadTableView()
+                             
+                                
+                              
+                          }
+                          
+                      }
+                      else {
+                          self.ProgressHUDHide()
+                          print("Error fetching documents: \(error!)")
+                          
+                      }
+                      
+
+                  }
+                    
+            
+           
+            
+            
+           }
+                 
+            
+            
+            
+            self.refRegs.append(ref)
+              
+        }
         
+
     }
     
     
-    func filterPosts() {
+ 
+    func reloadTableView(){
+       
         
-        self.posts_filter.removeAll()
         
-        self.posts_filter =  posts.filter { post in
-            if post.classification!.lowercased().elementsEqual(Constants.selected_classification) {
-                
-                return true
-            }
-        
-            return false
+        student = posts_student.sorted(by: {$0.value.postAt! > $1.value.postAt!} )
+        alumni = posts_alumni.sorted(by: {$0.value.postAt! > $1.value.postAt!} )
+    
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+            self.tableView.layoutIfNeeded()
         }
-        
-        print(self.posts_filter.count)
-        
-        
-        self.tableView.reloadData()
-        self.tableView.layoutIfNeeded()
-        self.tableViewHeight.constant = self.tableView.contentSize.height
+      
     }
  
     
@@ -375,25 +522,51 @@ class HomeViewController: BaseViewController, UITextViewDelegate, UITableViewDel
         }
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       
-        return posts_filter.count
-    }
-    
   
     
-
-
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+       
+        if Constants.selected_classification.lowercased().elementsEqual("alumni") {
+            if self.posts_alumni.count > 0 {
+                self.nopostavailable.isHidden = true
+                return posts_alumni.count
+               
+            }
+            else {
+                
+                self.nopostavailable.isHidden = false
+                return 0
+            }
+          
+        }
+        else {
+            if self.posts_student.count > 0 {
+                self.nopostavailable.isHidden = true
+                return posts_student.count
+            }
+            else {
+              
+                self.nopostavailable.isHidden = false
+                return 0
+            }
+        }
+        
+    }
     
     
+    
+ 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        
+        print(indexPath.row)
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "homeviewcell", for: indexPath) as? HomePageTableCell {
+            
+            
+        
            
-            
-            let post = posts_filter[indexPath.row]
-            
+            let post =  Constants.selected_classification.lowercased().elementsEqual("student") ? self.student![indexPath.row].value : self.alumni![indexPath.row].value
+         
             cell.postProfile.makeRounded()
             cell.writeACommentImage.makeRounded()
             cell.writeCommentEditField.layer.borderWidth  = 1.5
@@ -432,6 +605,25 @@ class HomeViewController: BaseViewController, UITextViewDelegate, UITableViewDel
 
             cell.likeCount.text = String.init(post.postLike!.count)
             
+            cell.shareBtn.isUserInteractionEnabled = true
+            let shareGest = MyTapPassViewGesture(target: self, action: #selector(sharePost(value:)))
+            shareGest.post = post
+            cell.shareBtn.addGestureRecognizer(shareGest)
+            
+            
+            cell.viewForViewProfile.isUserInteractionEnabled = true
+            let tappy = MyTapGesture(target: self, action: #selector(showUserProfile(tappy:)))
+            tappy.id = post.uid!
+            cell.viewForViewProfile.addGestureRecognizer(tappy)
+          
+            
+            cell.postMore.isUserInteractionEnabled = true
+            let myTapViewPass = MyTapPassViewGesture(target: self, action: #selector(postMoreClicked(view:)))
+            myTapViewPass.myview = cell.postMore
+            myTapViewPass.post = post
+            cell.postMore.addGestureRecognizer(myTapViewPass)
+            
+            
             if post.postLike!.contains(where: { (postLike) -> Bool in
                 if postLike == cUid! {
                     return true
@@ -456,12 +648,16 @@ class HomeViewController: BaseViewController, UITextViewDelegate, UITableViewDel
                 cell.postImage.isHidden = true
             }
             else {
+                cell.setCustomImage(image: UIImage(named: "placeholder-1")!)
                 cell.postImage.isHidden = false
-               
-                
-                cell.postImage.sd_setImage(with: URL(string: post.postImage!), placeholderImage: UIImage(named: "placeholder"))
-               
+              
+                cell.postImage.sd_setImage(with: URL(string: post.postImage!), placeholderImage: UIImage(named: "placeholder-1"), options: .continueInBackground)
+ 
             }
+            
+          
+
+         
             
             if post.postText == "" {
                 cell.postText.isHidden = true
@@ -472,6 +668,7 @@ class HomeViewController: BaseViewController, UITextViewDelegate, UITableViewDel
             }
             
             if post.image != "" {
+                
                 
                 cell.postProfile.sd_setImage(with: URL(string: post.image!), placeholderImage: UIImage(named: "profile-user"))
               
@@ -484,11 +681,17 @@ class HomeViewController: BaseViewController, UITextViewDelegate, UITableViewDel
             }
             
             cell.postTime.text = post.postAt?.timeAgoSinceDate()
+          
             
-           
-      
-            return cell
-            
+            let totalRow = tableView.numberOfRows(inSection: indexPath.section)
+                    if(indexPath.row == totalRow - 1)
+                    {
+                        DispatchQueue.main.async {
+                            self.updateTableViewHeight()
+                        }
+                    }
+
+           return cell
         }
         
         return HomePageTableCell()
@@ -496,10 +699,106 @@ class HomeViewController: BaseViewController, UITextViewDelegate, UITableViewDel
     }
     
     
+  
+  
+    func deletePost(postId : String, uid : String, imageURL : String){
+        self.ProgressHUDShow(text: "Deleting...")
+        Firestore.firestore().collection("AllPosts").document(postId).delete { err in
+            if err == nil {
+                
+                Firestore.firestore().collection("UserPosts").document("Posts").collection(uid).document(postId).delete()
+                if imageURL != "" {
+                    Storage.storage().reference(forURL: imageURL).delete(completion: nil)
+                }
+               
+                
+                self.ProgressHUDHide()
+            }
+            else {
+                self.showError(err!.localizedDescription)
+            }
+        }
+    }
     
+    
+    @objc func sharePost(value : MyTapPassViewGesture){
+        if let post = value.post {
+            let someText:String = post.postText ?? ""
+            let objectsToShare:URL = URL(string: post.postImage ?? "")!
+           let sharedObjects:[AnyObject] = [objectsToShare as AnyObject,someText as AnyObject]
+           let activityViewController = UIActivityViewController(activityItems : sharedObjects, applicationActivities: nil)
+           activityViewController.popoverPresentationController?.sourceView = self.view
+
+           self.present(activityViewController, animated: true, completion: nil)
+        }
+    
+    }
+    
+    @objc func showUserProfile(tappy : MyTapGesture){
+        self.ProgressHUDShow(text: "")
+        Firestore.firestore().collection("Users").document(tappy.id).getDocument { snap, err in
+            self.ProgressHUDHide()
+            if err == nil {
+                if let snap = snap {
+                    if let user = try? snap.data(as: UserData.self) {
+                        self.performSegue(withIdentifier: "viewprofileseg", sender: user)
+                    }
+                }
+            }
+            else {
+                self.showError(err!.localizedDescription)
+            }
+        }
+    }
+    
+    @objc func postMoreClicked(view : MyTapPassViewGesture){
+       
+        if let post = view.post {
+            if post.uid! == UserData.data!.uid {
+                myMenu.anchorView = view.myview
+                myMenu.bottomOffset = CGPoint(x: -80, y:(myMenu.anchorView?.plainView.bounds.height)!)
+               
+                 myMenu.selectionAction = { [unowned self] (index: Int, item: String) in
+                    if index == 0 {
+                        self.deletePost(postId: post.postId!, uid: post.uid!,imageURL: post.postImage ?? "")
+                    }
+                }
+                DispatchQueue.main.async {
+                    self.myMenu.show()
+                }
+            }
+            else {
+                menu.anchorView = view.myview
+                menu.bottomOffset = CGPoint(x: -80, y:(menu.anchorView?.plainView.bounds.height)!)
+               
+                menu.selectionAction = { [unowned self] (index: Int, item: String) in
+                    if index == 0 {
+                        self.performSegue(withIdentifier: "chatscreenseg", sender: view.post)
+                    }
+                }
+                DispatchQueue.main.async {
+                    self.menu.show()
+                }
+            }
+         
+        }
+      
+        
+    }
+    
+    
+    
+    
+    public func updateTableViewHeight(){
+       
+        self.tableViewHeight.constant = self.tableView.contentSize.height
+        self.tableView.layoutIfNeeded()
+    }
+   
     @objc func gotoCommentPage(gesture : UIGestureRecognizer) {
  
-        self.performSegue(withIdentifier: "commentseg", sender: self.posts[(gesture.view?.tag)!].postId!)
+        let post =  Constants.selected_classification.lowercased().elementsEqual("alumni") ? self.alumni![(gesture.view?.tag)!].value : self.student![(gesture.view?.tag)!].value
+        self.performSegue(withIdentifier: "commentseg", sender: post.postId)
     }
    
     
@@ -516,8 +815,25 @@ class HomeViewController: BaseViewController, UITextViewDelegate, UITableViewDel
         else if segue.identifier == "commentseg" {
             if let destination = segue.destination as? CommentViewController {
                 if let postId = sender as? String {
-                    print(postId)
+ 
                     destination.postId = postId
+                }
+            }
+        }
+        else if segue.identifier == "chatscreenseg" {
+            if let chatscreen  = segue.destination as? ChatScreenViewController {
+                if  let post  = sender as? Post {
+                    chatscreen.friendImage = post.image
+                    chatscreen.friendName = post.name
+                    chatscreen.friendUid = post.uid
+                    chatscreen.friendToken = post.token
+                }
+            }
+        }
+        else if segue.identifier == "viewprofileseg" {
+            if let mainProfileVC =  segue.destination as? MainProfile {
+                if let user = sender as? UserData {
+                    mainProfileVC.userData = user
                 }
             }
         }
@@ -527,7 +843,8 @@ class HomeViewController: BaseViewController, UITextViewDelegate, UITableViewDel
     @objc func likeButtonTapped(sender : UIGestureRecognizer) {
       
         if let btn = sender.view as? UIImageView {
-            let post = posts[btn.tag]
+            
+            let post =  Constants.selected_classification.lowercased().elementsEqual("alumni") ? self.alumni![btn.tag].value : self.student![btn.tag].value
             btn.isUserInteractionEnabled = false
             let ref = FirebaseStoreManager.db.collection("AllPosts")
             if btn.image == UIImage(named: "icons8-heart-64") {
@@ -563,24 +880,22 @@ class HomeViewController: BaseViewController, UITextViewDelegate, UITableViewDel
     }
   
     
+   
     
  
+    
 
     @objc func changeVisibility() {
         let alert = UIAlertController(title: "Select Post Visibility Option", message: "", preferredStyle: .alert)
-        let action1 = UIAlertAction(title: "Only Me", style: .default) { (action) in
-            
-            self.postVisibility = "onlyme"
-        }
+    
         
         
-        
-        let action2 = UIAlertAction(title: "Only My Friends", style: .default) { (action) in
+        let action1 = UIAlertAction(title: "Friends", style: .default) { (action) in
             self.postVisibility = "friends"
 
         }
         
-        let action3 = UIAlertAction(title: "All", style: .default) { (action) in
+        let action2 = UIAlertAction(title: "All", style: .default) { (action) in
             
             self.postVisibility = "all"
         }
@@ -592,7 +907,6 @@ class HomeViewController: BaseViewController, UITextViewDelegate, UITableViewDel
         
         alert.addAction(action1)
         alert.addAction(action2)
-        alert.addAction(action3)
         alert.addAction(action4)
         
         self.present(alert,animated: true,completion: nil)
@@ -602,9 +916,12 @@ class HomeViewController: BaseViewController, UITextViewDelegate, UITableViewDel
        
         hasImageChanged = true
         self.viewOfImageView.isHidden = false
-        beforePostImage.image = image
+        aspectConstraint = nil
+        self.setUploadPostImage(image: image)
         self.dismiss(animated: true, completion: nil)
         }
+    
+    
    
     @objc func changeImages() {
         
@@ -652,7 +969,9 @@ class HomeViewController: BaseViewController, UITextViewDelegate, UITableViewDel
             self.dismiss(animated: true) {
                 let cropViewController = CropViewController(image: editedImage)
                 cropViewController.delegate = self
-               
+                cropViewController.customAspectRatio = CGSize(width: 1, height: 1)
+                cropViewController.aspectRatioLockEnabled = true
+                cropViewController.aspectRatioPickerButtonHidden = true
                 self.present(cropViewController, animated: true, completion: nil)
             }
     
@@ -662,13 +981,13 @@ class HomeViewController: BaseViewController, UITextViewDelegate, UITableViewDel
     
     
     
-    func uploadImageOnFirebase( completion : @escaping (String) -> Void ) {
+    func uploadImageOnFirebase(postId : String, completion : @escaping (String) -> Void ) {
         
         if !hasImageChanged {
             completion("")
         }
         else {
-            let storage = Storage.storage().reference().child("Posts").child(cUid!).child("\(UUID().uuidString).png")
+            let storage = Storage.storage().reference().child("Posts").child(cUid!).child("\(postId).png")
         var downloadUrl = ""
         let uploadData = (self.beforePostImage.image?.jpegData(compressionQuality: 0.5))!
         
@@ -699,8 +1018,37 @@ class HomeViewController: BaseViewController, UITextViewDelegate, UITableViewDel
     }
     
    
+    func setUploadPostImage(image : UIImage) {
+
+      
+        let constraint = NSLayoutConstraint(item: beforePostImage!, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: beforePostImage!, attribute: NSLayoutConstraint.Attribute.height, multiplier: 1, constant: 0.0)
+         
+         constraint.priority = UILayoutPriority.init(1000)
+
+     
+        aspectConstraint = constraint
+
+        beforePostImage.image = image
+     
+        beforePostImage.layoutIfNeeded()
+      
+   
+       
+    }
+    
+    internal var aspectConstraint : NSLayoutConstraint? {
+        didSet {
+            if oldValue != nil {
+                beforePostImage.removeConstraint(oldValue!)
+            }
+            if aspectConstraint != nil {
+                beforePostImage.addConstraint(aspectConstraint!)
+            }
+        }
+    }
     
 }
+
 
 
 
@@ -713,4 +1061,15 @@ extension HomeViewController: UIViewControllerTransitioningDelegate {
     
 
 
+
+class MyTapPassViewGesture: UITapGestureRecognizer {
+    var myview = UIView()
+    var post  : Post?
+}
+class MyTapGesture: UITapGestureRecognizer {
+    
+    var index : Int = -1
+    var id : String = ""
+    
+}
 

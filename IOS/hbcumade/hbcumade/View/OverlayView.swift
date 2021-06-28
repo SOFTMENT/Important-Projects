@@ -17,11 +17,11 @@ class OverlayView: UIViewController {
     
     @IBOutlet weak var schoolName: UILabel!
     @IBOutlet weak var network: UILabel!
-    @IBOutlet weak var group: UILabel!
-    @IBOutlet weak var explore: UILabel!
-    @IBOutlet weak var conversations: UILabel!
-    @IBOutlet weak var events: UILabel!
-    
+
+    @IBOutlet weak var version: UILabel!
+    @IBOutlet weak var logout: UILabel!
+    @IBOutlet weak var privacyPolicy: UILabel!
+    @IBOutlet weak var contactUs: UILabel!
     
     
     var hasSetPointOrigin = false
@@ -34,6 +34,12 @@ class OverlayView: UIViewController {
         
         slideIdicator.roundCorners(.allCorners, radius: 10)
         
+        
+        let appVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as? String
+        
+     
+        
+        version.text  = "Version \(appVersion ?? "1.0")"
         
         
       

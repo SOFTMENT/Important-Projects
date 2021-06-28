@@ -26,7 +26,7 @@ struct Constants {
         static let accountSettingsController = "accountVC"
         static let exploreViewController = "exploreVC"
         static let eventViewController = "eventVC"
-        
+      
     }
     
     static func isPasswordValid(_ password : String) -> Bool{
@@ -40,6 +40,9 @@ struct Constants {
     public static var safeAreaHeight : CGFloat = 34.0
     public static var previousSelectedTabIndex : Int = 0
     public static var selected_classification = "student"
+    
+    
+
     
     
     

@@ -16,6 +16,9 @@ target 'hbcumade' do
    pod 'Firebase/Auth'
 
    pod 'Firebase/Storage'
+   
+   pod 'Firebase/Messaging'
+
 
    pod 'FirebaseFirestoreSwift'
 
@@ -31,5 +34,7 @@ target 'hbcumade' do
   
   pod 'IQKeyboardManagerSwift'
 
-
+  pod 'MHLoadingButton'
+  
+ pod 'DropDown'
 end

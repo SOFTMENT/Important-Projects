@@ -35,23 +35,25 @@ class ViewController: AMTabsViewController {
 
   private func setTabsControllers() {
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    let bookViewController = storyboard.instantiateViewController(withIdentifier: "bookVC")
     let aboutUsViewController = storyboard.instantiateViewController(withIdentifier: "aboutus")
+    let bookViewController = storyboard.instantiateViewController(withIdentifier: "bookVC")
     let menuViewController = storyboard.instantiateViewController(withIdentifier: "menu")
-    let eventViewController = storyboard.instantiateViewController(withIdentifier: "event")
     let chatViewController = storyboard.instantiateViewController(withIdentifier: "chatVC")
+    let eventViewController = storyboard.instantiateViewController(withIdentifier: "event")
+
  
     viewControllers = [
-        bookViewController,
+       
       aboutUsViewController,
+        bookViewController,
       menuViewController,
+        chatViewController,
       eventViewController,
-        chatViewController
+        
   
     ]
   }
 
-    
   
 }
 

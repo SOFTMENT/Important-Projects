@@ -12,11 +12,38 @@ class BaseViewController: UIViewController, TopBarDelegate {
     
     
     func searchBtnClicked() {
-        print("SearchBtnClicked")
+        if tabBarController?.selectedIndex == 1 {
+           
+            if let networkVC = self as? NetworkViewController {
+              
+                networkVC.searchEditTextActivate()
+                
+            }
+        }
+        else {
+           
+          
+         
+//            if let navigationVC = tabBarController?.viewControllers![1] as? UINavigationController {
+//                if let networkVC = navigationVC.viewControllers[0] as? NetworkViewController {
+//
+//
+//
+//
+//                }
+//
+//            }
+//
+            
+            tabBarController?.selectedIndex = 1
+           
+        }
+       
     }
     
     func messengerBtnClicked() {
-        print("MessengerBtnClicked")
+
+        tabBarController?.selectedIndex = 3
     }
     
     func classificationBtnClicked() {
@@ -24,17 +51,19 @@ class BaseViewController: UIViewController, TopBarDelegate {
         if tabBarController?.selectedIndex == 0 {
            
             if let homeVC = self as? HomeViewController {
-                homeVC.filterPosts()
+              
+                homeVC.reloadTableView()
                 
             }
         }
         else {
-            
+          
          
             if let navigationVC = tabBarController?.viewControllers![0] as? UINavigationController {
                 if let homeVC = navigationVC.viewControllers[0] as? HomeViewController {
                     
-                    homeVC.filterPosts()
+                    homeVC.reloadTableView()
+                  
                     
                     
                 }
@@ -42,6 +71,7 @@ class BaseViewController: UIViewController, TopBarDelegate {
             }
             
             tabBarController?.selectedIndex = 0
+          
           
         }
        

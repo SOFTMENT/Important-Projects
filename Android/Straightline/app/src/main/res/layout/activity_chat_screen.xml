@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:fitsSystemWindows="true"
+    android:background="@color/app_back_color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appbar"
+        android:background="@color/main_color"
+        >
+    <androidx.appcompat.widget.Toolbar
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+        android:layout_width="match_parent"
+        android:id="@+id/headerCard"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/white_back"
+                android:layout_centerVertical="true"
+
+                />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_centerVertical="true"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_toEndOf="@+id/back"
+                android:layout_marginStart="6dp"
+                android:src="@drawable/placeholder"
+                android:id="@+id/profile_image"
+                />
+
+
+            <TextView
+
+                android:layout_centerVertical="true"
+                android:id="@+id/name"
+                android:layout_marginEnd="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/profile_image"
+                android:layout_marginStart="16dp"
+                android:text="Vijay Rathore"
+                android:fontFamily="@font/sfprosemibold2"
+                android:textSize="14sp"
+                android:textColor="@color/white_color"
+                android:lines="1"
+                />
+
+            <ImageView
+                android:id="@+id/more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_more_vert_24"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="16dp"
+                />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+
+
+        android:layout_below="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerview"
+        android:layout_above="@+id/chatlayout"
+        android:scrollbars="none"
+        />
+
+
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/chatlayout"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_color"
+            >
+
+
+            <EditText
+                android:textCursorDrawable="@drawable/black_cursor"
+                android:layout_centerInParent="true"
+                android:layout_toStartOf="@+id/sent"
+                android:layout_marginStart="8dp"
+                android:maxLines="8"
+                android:id="@+id/message"
+                android:padding="6dp"
+                android:fontFamily="@font/sfpromedium2"
+                android:textSize="13sp"
+                android:backgroundTint="#fff"
+                android:background="@drawable/transparent_back"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                />
+
+            <ImageView
+                android:id="@+id/sent"
+                android:layout_width="32dp"
+                android:layout_height="44dp"
+                android:src="@drawable/ic_baseline_send_24"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                />
+
+        </RelativeLayout>
+
+
+</RelativeLayout>
+
+

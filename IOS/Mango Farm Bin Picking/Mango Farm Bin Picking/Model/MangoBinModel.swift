@@ -8,26 +8,23 @@
 import UIKit
 
 
-class MangoBinModel {
+class MangoBinModel : Codable{
     
-    var id : String = ""
-    var title : String = ""
-    var pickedByName : String = ""
-    var scannedByName : String = ""
-    var machineNumber : String = ""
-    var date : Double  = 0
-    var binNumber : Int = 0
+    var id : String?
+    var title : String?
+    var pickedByName : String?
+    var scannedByName : String?
+    var machineNumber : String?
+    var date : Double?
+    var binNumber : Int?
+    var lati : Double?
+    var long : Double?
+    var emptyDate : Double?
+    var status : String?
+    
 
     static var mangoBinModels : Array<MangoBinModel> = Array()
     
-    init(id : String, title : String,pickedByName : String,scannedByName : String, binNumber : Int, date : Double, machineNumber : String) {
-        self.id = id
-        self.title = title
-        self.pickedByName = pickedByName
-        self.scannedByName = scannedByName
-        self.binNumber = binNumber
-        self.date = date
-        self.machineNumber = machineNumber
-    }
+ 
     
 }

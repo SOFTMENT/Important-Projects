@@ -1,0 +1,6 @@
+framework module Pods_Prizey___Search__Compare {
+  umbrella header "Pods-Prizey - Search, Compare-umbrella.h"
+
+  export *
+  module * { export * }
+}

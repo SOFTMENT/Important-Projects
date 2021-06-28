@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -18,11 +18,11 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4iN-N7-8Iu">
-                    <rect key="frame" x="117" y="60" width="180" height="4"/>
+                    <rect key="frame" x="327" y="16" width="180" height="4"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="180" id="NqF-6H-5II"/>
@@ -30,49 +30,67 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Rd-Ue-30J">
-                    <rect key="frame" x="57" y="325" width="300" height="246.5"/>
+                    <rect key="frame" x="267" y="434.5" width="300" height="325"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily Clarity Insights" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tK6-Wi-Yfb">
-                            <rect key="frame" x="64.5" y="0.0" width="171.5" height="23"/>
+                            <rect key="frame" x="13" y="0.0" width="274.5" height="37"/>
                             <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="20"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="32"/>
+                            </variation>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Additional Daily Clarity Insights?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7f7-QU-U5J">
-                            <rect key="frame" x="40" y="31" width="220" height="31.5"/>
+                            <rect key="frame" x="40" y="45" width="220" height="48"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="220" id="nMl-b6-NyZ"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <color key="textColor" red="0.84762455261859704" green="0.84762455261859704" blue="0.84762455261859704" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <nil key="highlightedColor"/>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            </variation>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="blG-I7-Seh">
-                            <rect key="frame" x="95" y="142.5" width="110" height="36"/>
+                            <rect key="frame" x="60" y="173" width="180" height="60"/>
                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="110" id="ejE-GB-kwU"/>
-                                <constraint firstAttribute="height" constant="36" id="wJg-07-La2"/>
+                                <constraint firstAttribute="width" constant="110" id="ejE-GB-kwU">
+                                    <variation key="heightClass=regular-widthClass=regular" constant="180"/>
+                                </constraint>
+                                <constraint firstAttribute="height" constant="36" id="wJg-07-La2">
+                                    <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                </constraint>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <state key="normal" title="YES">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            </variation>
                             <connections>
                                 <action selector="yesBtnTapped:" destination="-1" eventType="touchUpInside" id="aSI-jU-JG4"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTb-Wg-4Y8">
-                            <rect key="frame" x="95" y="210.5" width="110" height="36"/>
+                            <rect key="frame" x="60" y="265" width="180" height="60"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="36" id="h7Q-Kf-7BJ"/>
-                                <constraint firstAttribute="width" constant="110" id="z3S-yt-c1c"/>
+                                <constraint firstAttribute="height" constant="60" id="h7Q-Kf-7BJ"/>
+                                <constraint firstAttribute="width" constant="110" id="z3S-yt-c1c">
+                                    <variation key="heightClass=regular-widthClass=regular" constant="180"/>
+                                </constraint>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <state key="normal" title="NO">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            </variation>
                             <connections>
                                 <action selector="noBtnTapped:" destination="-1" eventType="touchUpInside" id="3QG-En-1iu"/>
                             </connections>

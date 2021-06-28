@@ -23,7 +23,7 @@ class ChatViewController: UIViewController, TabItem, UITextViewDelegate {
     @IBOutlet weak var messageField: UITextView!
     @IBOutlet weak var tableView: UITableView!
     var messages = Array<MessageModel>()
-    let mydefault = UserDefaults.standard
+
     override func viewDidLoad() {
         
         tableView.estimatedRowHeight = 44
@@ -56,45 +56,13 @@ class ChatViewController: UIViewController, TabItem, UITextViewDelegate {
     
     @objc func sendMessageBtnTapped(){
       
-       
-        if let name  = mydefault.string(forKey: "name"){
+    
             
             let message = messageField.text.trimmingCharacters(in: .whitespacesAndNewlines)
             if message != "" {
-                sendMessage(name: name, message: message)
-            }
+                sendMessage(name: User.data!.name!, message: message)
             
-        }
-        else {
-            //1. Create the alert controller.
-            let alert = UIAlertController(title: "CONVERSATIONS", message: "", preferredStyle: .alert)
-
-            //2. Add the text field. You can configure it however you need.
-            alert.addTextField { (textField) in
-                textField.placeholder = "Enter Full Name"
-            }
-           
-            // 3. Grab the value from the text field, and print it when the user clicks OK.
-            alert.addAction(UIAlertAction(title: "Save", style: .default, handler: { [weak alert] (_) in
-                let textField = alert?.textFields![0].text?.trimmingCharacters(in: .whitespacesAndNewlines) // Force unwrapping because we know it exists.
-               
-                if (!textField!.isEmpty) {
-                    self.mydefault.set(textField!, forKey: "name")
-                    self.mydefault.synchronize()
-                    self.showToast(message: "All Set")
-                }
-                else {
-                    self.showToast(message: "Please Enter Full Name")
-                }
-            }))
             
-            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
-             
-                alert.dismiss(animated: true, completion: nil)
-            }))
-
-            // 4. Present the alert.
-            self.present(alert, animated: true, completion: nil)
         }
         
         

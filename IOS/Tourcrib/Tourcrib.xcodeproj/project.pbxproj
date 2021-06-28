@@ -366,14 +366,14 @@
 				CODE_SIGN_ENTITLEMENTS = Tourcrib/Tourcrib.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 64H63PPRKT;
 				INFOPLIST_FILE = Tourcrib/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2;
+				MARKETING_VERSION = 3;
 				PRODUCT_BUNDLE_IDENTIFIER = in.softment.Tourcrib;
 				PRODUCT_NAME = Tourcrib;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -390,14 +390,14 @@
 				CODE_SIGN_ENTITLEMENTS = Tourcrib/Tourcrib.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 64H63PPRKT;
 				INFOPLIST_FILE = Tourcrib/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2;
+				MARKETING_VERSION = 3;
 				PRODUCT_BUNDLE_IDENTIFIER = in.softment.Tourcrib;
 				PRODUCT_NAME = Tourcrib;
 				PROVISIONING_PROFILE_SPECIFIER = "";

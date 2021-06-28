@@ -10,8 +10,11 @@ import MBProgressHUD
 import Firebase
 import FirebaseFirestoreSwift
 import SDWebImage
+import AMTabView
 
 class MenuViewController: UIViewController, TabItem {
+    
+    @IBOutlet weak var bookCatering: UILabel!
     
     var menus = Array<MenuModel>()
     @IBOutlet weak var collectionView: UICollectionView!
@@ -23,10 +26,16 @@ class MenuViewController: UIViewController, TabItem {
     override func viewDidLoad() {
         collectionView.dataSource = self
         collectionView.delegate = self
-        
+       
         //GetMenuData
         getMenuData()
+        bookCatering.isUserInteractionEnabled = true
+        bookCatering.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(bookCateringBtnTapped)))
         
+    }
+    
+    @objc func bookCateringBtnTapped(){
+        performSegue(withIdentifier: "bookcatseg", sender: nil)
     }
     
     func getMenuData() {

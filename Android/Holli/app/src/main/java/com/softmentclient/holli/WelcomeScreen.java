@@ -19,6 +19,6 @@ public class WelcomeScreen extends AppCompatActivity {
                 startActivity(new Intent(WelcomeScreen.this, MainActivity.class));
                 finish();
             }
-        },2500);
+        },0);
     }
 }

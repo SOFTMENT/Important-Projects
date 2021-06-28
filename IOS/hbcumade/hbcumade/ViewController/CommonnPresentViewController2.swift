@@ -63,5 +63,13 @@ class CommonPresentViewController2 : BaseViewController, UINavigationControllerD
         let tabBarItems1 = tabBarController?.tabBar.items![2]
         tabBarItems1!.image = UIImage(named: "h")?.withRenderingMode(.alwaysOriginal)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "viewprofileseg" {
+            if let destinvationVC = segue.destination as? MainProfile {
+                destinvationVC.userData = UserData.data
+            }
+        }
+    }
 }
 

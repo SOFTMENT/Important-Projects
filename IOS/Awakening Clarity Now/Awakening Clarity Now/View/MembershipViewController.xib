@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad12_9" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Bold.ttf">
+            <string>Rubik-Bold</string>
+        </array>
+        <array key="Rubik-Medium.ttf">
+            <string>Rubik-Medium</string>
+        </array>
+        <array key="Rubik-Regular.ttf">
+            <string>Rubik-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MembershipViewController" customModule="Awakening_Clarity_Now" customModuleProvider="target">
+            <connections>
+                <outlet property="privacypolicy" destination="zQm-jO-dEq" id="UB9-G1-p1c"/>
+                <outlet property="purchaseButton" destination="ePf-aj-xrt" id="Yyc-z0-HOk"/>
+                <outlet property="restoreButton" destination="8IZ-lQ-bPF" id="2rG-qU-Cjf"/>
+                <outlet property="slide" destination="xGl-za-MQ5" id="gyy-CD-EhM"/>
+                <outlet property="termsofuse" destination="HKR-zR-1Ql" id="fQf-h9-6mR"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2L-Mc-qWr">
+                    <rect key="frame" x="45" y="427.5" width="933" height="140"/>
+                    <string key="text">Payment will be charged to your iTunes account at confirmation of purchase. Subscriptions will automatically renew unless auto-renew is turned off at least 24 hours before the end of the current period. Your account will be charged for renewal, in accordance with your plan, within 24 hours prior to the end of the current period. You can manage or turn off auto-renew in your Apple ID account settings anytime after purchase. Any unused portion of a free trial period, if offered, will be forfeited when the user purchases a subscription to that publication, where applicable.</string>
+                    <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="11"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="20"/>
+                    </variation>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2sz-hu-DR6">
+                    <rect key="frame" x="0.0" y="44" width="1024" height="343.5"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crown (5)" translatesAutoresizingMaskIntoConstraints="NO" id="6Zk-Bh-nVE">
+                            <rect key="frame" x="480" y="0.0" width="64" height="69.5"/>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1wZ-VB-Xk4">
+                            <rect key="frame" x="389" y="89.5" width="246.5" height="180"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upgrade To Premium" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hac-iF-Oav">
+                                    <rect key="frame" x="0.0" y="0.0" width="246.5" height="53"/>
+                                    <fontDescription key="fontDescription" name="Rubik-Bold" family="Rubik" pointSize="18"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                    <variation key="heightClass=regular-widthClass=regular">
+                                        <fontDescription key="fontDescription" name="Rubik-Bold" family="Rubik" pointSize="26"/>
+                                    </variation>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Access to daily insights." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHz-m5-Wb0">
+                                    <rect key="frame" x="0.0" y="63" width="246.5" height="53.5"/>
+                                    <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="14"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                    <variation key="heightClass=regular-widthClass=regular">
+                                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="19"/>
+                                    </variation>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get 14 Days Free Trial" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SXW-Hq-8iw">
+                                    <rect key="frame" x="0.0" y="126.5" width="246.5" height="53.5"/>
+                                    <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="12"/>
+                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                    <variation key="heightClass=regular-widthClass=regular">
+                                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
+                                    </variation>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="110" id="cCo-7Q-hmK">
+                                    <variation key="heightClass=regular-widthClass=regular" constant="180"/>
+                                </constraint>
+                            </constraints>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePf-aj-xrt">
+                            <rect key="frame" x="45" y="289.5" width="934" height="54"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="36" id="a8n-lS-GLY">
+                                    <variation key="heightClass=regular-widthClass=regular" constant="54"/>
+                                </constraint>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="14"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="$1.99 / Month">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="18"/>
+                            </variation>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="ePf-aj-xrt" secondAttribute="trailing" constant="45" id="B4g-3D-9Vh"/>
+                        <constraint firstItem="ePf-aj-xrt" firstAttribute="leading" secondItem="2sz-hu-DR6" secondAttribute="leading" constant="45" id="aAd-LN-RKJ"/>
+                    </constraints>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xGl-za-MQ5">
+                    <rect key="frame" x="462" y="26" width="100" height="2"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="DN6-tB-HUZ"/>
+                        <constraint firstAttribute="width" constant="100" id="vh1-Jw-kcZ"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="saN-QB-cIz">
+                    <rect key="frame" x="353.5" y="577.5" width="317" height="30"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms Of Use" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKR-zR-1Ql">
+                            <rect key="frame" x="0.0" y="0.0" width="109.5" height="30"/>
+                            <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="11"/>
+                            <color key="textColor" systemColor="systemBlueColor"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="18"/>
+                            </variation>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hL1-DE-4rr">
+                            <rect key="frame" x="115.5" y="0.0" width="4" height="30"/>
+                            <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="12"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="18"/>
+                            </variation>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy Policy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQm-jO-dEq">
+                            <rect key="frame" x="125.5" y="0.0" width="113" height="30"/>
+                            <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="11"/>
+                            <color key="textColor" systemColor="systemBlueColor"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="18"/>
+                            </variation>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALB-hC-QAA">
+                            <rect key="frame" x="244.5" y="0.0" width="4" height="30"/>
+                            <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="12"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="18"/>
+                            </variation>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8IZ-lQ-bPF">
+                            <rect key="frame" x="254.5" y="0.0" width="62.5" height="30"/>
+                            <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="11"/>
+                            <color key="textColor" systemColor="systemBlueColor"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="18"/>
+                            </variation>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="uHl-sI-dcQ"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="c2L-Mc-qWr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="45" id="3st-eC-oSS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2sz-hu-DR6" secondAttribute="trailing" id="AwR-Df-Da5"/>
+                <constraint firstItem="2sz-hu-DR6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="GKf-rM-o7V"/>
+                <constraint firstItem="c2L-Mc-qWr" firstAttribute="top" secondItem="2sz-hu-DR6" secondAttribute="bottom" constant="25" id="MvG-zv-hyb">
+                    <variation key="heightClass=regular-widthClass=regular" constant="40"/>
+                </constraint>
+                <constraint firstItem="xGl-za-MQ5" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="26" id="YgC-is-DkP"/>
+                <constraint firstItem="saN-QB-cIz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ZjI-uE-bG9"/>
+                <constraint firstItem="xGl-za-MQ5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="as3-Kv-iRi"/>
+                <constraint firstItem="2sz-hu-DR6" firstAttribute="top" secondItem="xGl-za-MQ5" secondAttribute="bottom" constant="16" id="fZf-uj-ALV"/>
+                <constraint firstItem="saN-QB-cIz" firstAttribute="top" secondItem="c2L-Mc-qWr" secondAttribute="bottom" constant="4" id="w9e-NI-4fE">
+                    <variation key="heightClass=regular-widthClass=regular" constant="10"/>
+                </constraint>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="c2L-Mc-qWr" secondAttribute="trailing" constant="46" id="wMW-4Y-4Bj"/>
+            </constraints>
+            <point key="canvasLocation" x="19.921875" y="91.800878477306"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="crown (5)" width="64" height="64"/>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

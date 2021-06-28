@@ -8,6 +8,7 @@
 import AMTabView
 import UIKit
 import Firebase
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         // Customize the colors
+        
+        
+        
+        IQKeyboardManager.shared.enable = true
         
         AMTabView.settings.ballColor = #colorLiteral(red: 0.9764705882, green: 0.8235294118, blue: 0.6980392157, alpha: 1)
         AMTabView.settings.tabColor = #colorLiteral(red: 0.4156862745, green: 0.09803921569, blue: 0.1176470588, alpha: 1)

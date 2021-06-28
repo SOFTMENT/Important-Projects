@@ -13,6 +13,7 @@ import FirebaseFirestoreSwift
 class PostID : NSObject, Codable{
     var postAt : Date?
     var postId : String?
+    var uid : String?
   
 
 

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>475503860193-sk3bflg21a7ki2puehetfopifqe00hjc.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.475503860193-sk3bflg21a7ki2puehetfopifqe00hjc</string>
+	<key>API_KEY</key>
+	<string>AIzaSyD0ICtETnih9V_7RDP0h3rJK9Up_xW3C2M</string>
+	<key>GCM_SENDER_ID</key>
+	<string>475503860193</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>in.softment.prizey</string>
+	<key>PROJECT_ID</key>
+	<string>prizey-63304</string>
+	<key>STORAGE_BUCKET</key>
+	<string>prizey-63304.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:475503860193:ios:f40d2e5a6d2f2e2bd2daa0</string>
+</dict>
+</plist>

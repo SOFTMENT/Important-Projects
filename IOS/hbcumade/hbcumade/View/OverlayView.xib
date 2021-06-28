@@ -16,15 +16,15 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OverlayView" customModule="hbcumade" customModuleProvider="target">
             <connections>
                 <outlet property="accountSettings" destination="0Fq-sj-bWO" id="ftL-Kk-lHo"/>
-                <outlet property="conversations" destination="9xA-fb-dT7" id="drO-k5-dTz"/>
-                <outlet property="events" destination="DfH-Ki-GpO" id="nbC-6J-xnz"/>
-                <outlet property="explore" destination="1VF-Vr-TwO" id="cMf-YK-1dE"/>
-                <outlet property="group" destination="8fH-OJ-VW5" id="TsK-4h-bwC"/>
+                <outlet property="contactUs" destination="tbi-CA-EhL" id="Bni-NJ-DfP"/>
+                <outlet property="logout" destination="LBw-0Y-PU6" id="82d-DL-emm"/>
                 <outlet property="name" destination="FIA-WT-pKD" id="KHg-Kq-pd9"/>
                 <outlet property="network" destination="TbX-ZZ-YZh" id="gM8-m3-ADt"/>
+                <outlet property="privacyPolicy" destination="HfT-zM-qba" id="AJO-dW-6L0"/>
                 <outlet property="profilePicture" destination="N9r-Sb-G8I" id="Nlx-zu-Zlf"/>
                 <outlet property="schoolName" destination="isE-QZ-D2T" id="NLP-t4-pLo"/>
                 <outlet property="slideIdicator" destination="R22-KD-mS4" id="zol-kp-Ioz"/>
+                <outlet property="version" destination="7Z8-QW-W0h" id="7bQ-qi-vdI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewProfile" destination="mIs-yW-pP3" id="ZHS-9n-74r"/>
             </connections>
@@ -85,30 +85,6 @@
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Network" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TbX-ZZ-YZh">
                             <rect key="frame" x="0.0" y="114.5" width="314" height="114.5"/>
-                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="13"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1VF-Vr-TwO">
-                            <rect key="frame" x="0.0" y="229" width="314" height="0.0"/>
-                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="13"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Groups" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fH-OJ-VW5">
-                            <rect key="frame" x="0.0" y="229" width="314" height="0.0"/>
-                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="13"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conversations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xA-fb-dT7">
-                            <rect key="frame" x="0.0" y="229" width="314" height="0.0"/>
-                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="13"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DfH-Ki-GpO">
-                            <rect key="frame" x="0.0" y="229" width="314" height="0.0"/>
                             <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="13"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>

@@ -12,7 +12,6 @@ anim abc_slide_out_top
 anim abc_tooltip_enter
 anim abc_tooltip_exit
 anim anim
-anim bounce
 anim btn_checkbox_to_checked_box_inner_merged_animation
 anim btn_checkbox_to_checked_box_outer_merged_animation
 anim btn_checkbox_to_checked_icon_null_animation
@@ -1039,7 +1038,6 @@ color foreground_material_dark
 color foreground_material_light
 color highlighted_text_material_dark
 color highlighted_text_material_light
-color ic_launcher_background
 color material_blue_grey_800
 color material_blue_grey_900
 color material_blue_grey_950
@@ -1737,7 +1735,6 @@ drawable sixg
 drawable sixgg
 drawable smalltran
 drawable sone
-drawable splash
 drawable sseven
 drawable ssix
 drawable sthree
@@ -2140,6 +2137,7 @@ id snackbar_text
 id snap
 id snapMargins
 id spacer
+id splash
 id spline
 id split_action_bar
 id spread
@@ -2301,7 +2299,6 @@ layout abc_tooltip
 layout activity_main
 layout activity_show_image
 layout activity_show_sub_category
-layout activity_welcome
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout custom_dialog

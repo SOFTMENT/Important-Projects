@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8BB238F3267689F800F09C9B /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB238F2267689F800F09C9B /* SignInViewController.swift */; };
+		8BB238F526768A0A00F09C9B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB238F426768A0A00F09C9B /* SignUpViewController.swift */; };
+		8BB238F7267741D700F09C9B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB238F6267741D700F09C9B /* User.swift */; };
+		8BB238F92677425600F09C9B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB238F82677425600F09C9B /* Constants.swift */; };
+		8BB238FB26774F6800F09C9B /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8BB238FA26774F6800F09C9B /* RobotoCondensed-Regular.ttf */; };
 		B148A0E7342051DD25217110 /* Pods_Oh_Crepe___Waffles.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F70842CD8859E05CA0595AD /* Pods_Oh_Crepe___Waffles.framework */; };
 		B1693E152646866E000E2282 /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1693E142646866E000E2282 /* MenuModel.swift */; };
 		B1693E1D2646B31E000E2282 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1693E1C2646B31E000E2282 /* EventModel.swift */; };
@@ -24,14 +29,12 @@
 		B169B9652645E65E00F33A4A /* SF-Pro-Text-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B169B9542645E64200F33A4A /* SF-Pro-Text-SemiboldItalic.otf */; };
 		B169B9662645E65E00F33A4A /* OpenSansCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B169B9552645E64400F33A4A /* OpenSansCondensed-Bold.ttf */; };
 		B169B9672645E65E00F33A4A /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B169B9562645E64600F33A4A /* Rubik-Light.ttf */; };
-		B169B9682645E65E00F33A4A /* RobotoCondensed-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B169B9572645E64800F33A4A /* RobotoCondensed-LightItalic.ttf */; };
 		B169B9692645E65E00F33A4A /* SF-Pro-Text-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B169B9582645E64900F33A4A /* SF-Pro-Text-RegularItalic.otf */; };
 		B169B96A2645E65E00F33A4A /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B169B9592645E64B00F33A4A /* Rubik-Bold.ttf */; };
 		B169B96B2645E65E00F33A4A /* OpenSansCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B169B95A2645E64D00F33A4A /* OpenSansCondensed-Light.ttf */; };
 		B169B96C2645E65E00F33A4A /* Rubik-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B169B95B2645E64E00F33A4A /* Rubik-Italic.ttf */; };
 		B169B96D2645E65E00F33A4A /* Rubik-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B169B95C2645E65000F33A4A /* Rubik-BoldItalic.ttf */; };
 		B169B96E2645E65E00F33A4A /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B169B95D2645E65100F33A4A /* Rubik-MediumItalic.ttf */; };
-		B169B96F2645E65E00F33A4A /* RobotoCondensed-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B169B95E2645E65300F33A4A /* RobotoCondensed-Italic.ttf */; };
 		B169B9702645E65E00F33A4A /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B169B95F2645E65500F33A4A /* Rubik-Regular.ttf */; };
 		B169B9712645E65E00F33A4A /* OpenSansCondensed-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B169B9602645E65700F33A4A /* OpenSansCondensed-LightItalic.ttf */; };
 		B169B9722645E65E00F33A4A /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B169B9612645E65900F33A4A /* Rubik-Black.ttf */; };
@@ -50,6 +53,11 @@
 		2C0A301019AA9D3BC44A189B /* Pods-Oh Crepe & Waffles.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Oh Crepe & Waffles.release.xcconfig"; path = "Target Support Files/Pods-Oh Crepe & Waffles/Pods-Oh Crepe & Waffles.release.xcconfig"; sourceTree = "<group>"; };
 		3BF914F9546ABABBE8738132 /* Pods-Oh Crepe & Waffles.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Oh Crepe & Waffles.debug.xcconfig"; path = "Target Support Files/Pods-Oh Crepe & Waffles/Pods-Oh Crepe & Waffles.debug.xcconfig"; sourceTree = "<group>"; };
 		5F70842CD8859E05CA0595AD /* Pods_Oh_Crepe___Waffles.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Oh_Crepe___Waffles.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BB238F2267689F800F09C9B /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		8BB238F426768A0A00F09C9B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		8BB238F6267741D700F09C9B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8BB238F82677425600F09C9B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8BB238FA26774F6800F09C9B /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-Regular.ttf"; path = "../../../Mango Farm Bin Picking/Mango Farm Bin Picking/Fonts/RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
 		B1693E142646866E000E2282 /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
 		B1693E1C2646B31E000E2282 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		B169B90D2644318400F33A4A /* Oh Crepe & Waffles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Oh Crepe & Waffles.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,14 +76,12 @@
 		B169B9542645E64200F33A4A /* SF-Pro-Text-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-SemiboldItalic.otf"; sourceTree = "<group>"; };
 		B169B9552645E64400F33A4A /* OpenSansCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSansCondensed-Bold.ttf"; sourceTree = "<group>"; };
 		B169B9562645E64600F33A4A /* Rubik-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Light.ttf"; sourceTree = "<group>"; };
-		B169B9572645E64800F33A4A /* RobotoCondensed-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-LightItalic.ttf"; sourceTree = "<group>"; };
 		B169B9582645E64900F33A4A /* SF-Pro-Text-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-RegularItalic.otf"; sourceTree = "<group>"; };
 		B169B9592645E64B00F33A4A /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
 		B169B95A2645E64D00F33A4A /* OpenSansCondensed-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSansCondensed-Light.ttf"; sourceTree = "<group>"; };
 		B169B95B2645E64E00F33A4A /* Rubik-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Italic.ttf"; sourceTree = "<group>"; };
 		B169B95C2645E65000F33A4A /* Rubik-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BoldItalic.ttf"; sourceTree = "<group>"; };
 		B169B95D2645E65100F33A4A /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
-		B169B95E2645E65300F33A4A /* RobotoCondensed-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Italic.ttf"; sourceTree = "<group>"; };
 		B169B95F2645E65500F33A4A /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
 		B169B9602645E65700F33A4A /* OpenSansCondensed-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSansCondensed-LightItalic.ttf"; sourceTree = "<group>"; };
 		B169B9612645E65900F33A4A /* Rubik-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Black.ttf"; sourceTree = "<group>"; };
@@ -174,6 +180,8 @@
 				B169B92C26444E3100F33A4A /* EventViewController.swift */,
 				B1A0224A264EFD9000C90E78 /* BookCateringViewController.swift */,
 				B1A0224C264EFDA200C90E78 /* ChatViewController.swift */,
+				8BB238F2267689F800F09C9B /* SignInViewController.swift */,
+				8BB238F426768A0A00F09C9B /* SignUpViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -195,6 +203,8 @@
 			isa = PBXGroup;
 			children = (
 				B169B931264576E100F33A4A /* Extensions.swift */,
+				8BB238F6267741D700F09C9B /* User.swift */,
+				8BB238F82677425600F09C9B /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -202,11 +212,10 @@
 		B169B9532645E63300F33A4A /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				8BB238FA26774F6800F09C9B /* RobotoCondensed-Regular.ttf */,
 				B169B9552645E64400F33A4A /* OpenSansCondensed-Bold.ttf */,
 				B169B95A2645E64D00F33A4A /* OpenSansCondensed-Light.ttf */,
 				B169B9602645E65700F33A4A /* OpenSansCondensed-LightItalic.ttf */,
-				B169B95E2645E65300F33A4A /* RobotoCondensed-Italic.ttf */,
-				B169B9572645E64800F33A4A /* RobotoCondensed-LightItalic.ttf */,
 				B169B9612645E65900F33A4A /* Rubik-Black.ttf */,
 				B169B9622645E65B00F33A4A /* Rubik-BlackItalic.ttf */,
 				B169B9592645E64B00F33A4A /* Rubik-Bold.ttf */,
@@ -287,7 +296,6 @@
 				B169B9732645E65E00F33A4A /* Rubik-BlackItalic.ttf in Resources */,
 				B169B96D2645E65E00F33A4A /* Rubik-BoldItalic.ttf in Resources */,
 				B169B96A2645E65E00F33A4A /* Rubik-Bold.ttf in Resources */,
-				B169B96F2645E65E00F33A4A /* RobotoCondensed-Italic.ttf in Resources */,
 				B169B9672645E65E00F33A4A /* Rubik-Light.ttf in Resources */,
 				B169B9692645E65E00F33A4A /* SF-Pro-Text-RegularItalic.otf in Resources */,
 				B169B9712645E65E00F33A4A /* OpenSansCondensed-LightItalic.ttf in Resources */,
@@ -298,10 +306,10 @@
 				B169B96E2645E65E00F33A4A /* Rubik-MediumItalic.ttf in Resources */,
 				B169B91A2644318700F33A4A /* Assets.xcassets in Resources */,
 				B169B9742645E65E00F33A4A /* Rubik-LightItalic.ttf in Resources */,
-				B169B9682645E65E00F33A4A /* RobotoCondensed-LightItalic.ttf in Resources */,
 				B169B9702645E65E00F33A4A /* Rubik-Regular.ttf in Resources */,
 				B169B9182644318500F33A4A /* Main.storyboard in Resources */,
 				B169B9752645E65E00F33A4A /* Rubik-Medium.ttf in Resources */,
+				8BB238FB26774F6800F09C9B /* RobotoCondensed-Regular.ttf in Resources */,
 				B169B9792646630700F33A4A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,10 +364,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1A0224B264EFD9000C90E78 /* BookCateringViewController.swift in Sources */,
+				8BB238F92677425600F09C9B /* Constants.swift in Sources */,
 				B169B9772645EA8F00F33A4A /* EventTableViewCell.swift in Sources */,
 				B169B92926444DC400F33A4A /* AboutUsViewController.swift in Sources */,
 				B1693E152646866E000E2282 /* MenuModel.swift in Sources */,
 				B169B92B26444DFD00F33A4A /* MenuViewController.swift in Sources */,
+				8BB238F526768A0A00F09C9B /* SignUpViewController.swift in Sources */,
 				B169B92F2645687400F33A4A /* MenuTableViewCell.swift in Sources */,
 				B169B932264576E200F33A4A /* Extensions.swift in Sources */,
 				B169B9152644318400F33A4A /* ViewController.swift in Sources */,
@@ -367,6 +377,8 @@
 				B1A0224D264EFDA200C90E78 /* ChatViewController.swift in Sources */,
 				B1A02252264F217F00C90E78 /* MessageModel.swift in Sources */,
 				B169B9112644318400F33A4A /* AppDelegate.swift in Sources */,
+				8BB238F3267689F800F09C9B /* SignInViewController.swift in Sources */,
+				8BB238F7267741D700F09C9B /* User.swift in Sources */,
 				B169B9132644318400F33A4A /* SceneDelegate.swift in Sources */,
 				B169B92D26444E3100F33A4A /* EventViewController.swift in Sources */,
 				B1A02250264F17FF00C90E78 /* MessageCell.swift in Sources */,
@@ -519,7 +531,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Oh Crepe & Waffles/Oh Crepe & Waffles.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = KSX845G76A;
 				INFOPLIST_FILE = "Oh Crepe & Waffles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
@@ -527,7 +539,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 6;
+				MARKETING_VERSION = 7;
 				PRODUCT_BUNDLE_IDENTIFIER = "in.softment.Oh-Crepe---Waffles";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -543,7 +555,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Oh Crepe & Waffles/Oh Crepe & Waffles.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = KSX845G76A;
 				INFOPLIST_FILE = "Oh Crepe & Waffles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
@@ -551,7 +563,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 6;
+				MARKETING_VERSION = 7;
 				PRODUCT_BUNDLE_IDENTIFIER = "in.softment.Oh-Crepe---Waffles";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

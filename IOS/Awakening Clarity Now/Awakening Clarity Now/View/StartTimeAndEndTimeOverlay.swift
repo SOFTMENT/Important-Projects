@@ -22,8 +22,10 @@ class StartTimeAndEndTimeOverlay: UIViewController, UITextFieldDelegate {
     let standard = UserDefaults.standard
     var hasSetPointOrigin = false
     var pointOrigin: CGPoint?
-    
     var settingVC : SettingsViewController?
+    
+    var isStartDatePickerChanged = false
+    var isEndDatePickerChangeed = false
     
     public func initializeSettingVC(settingVC : SettingsViewController){
         self.settingVC = settingVC
@@ -48,9 +50,34 @@ class StartTimeAndEndTimeOverlay: UIViewController, UITextFieldDelegate {
         if let sStartTime = standard.object(forKey: "starttime") as? Date {
             startTime.text = convertTimeFormater(sStartTime)
         }
+        else {
+            let calendar = Calendar.current
+            let now = Date()
+            let eight_today = calendar.date(
+              bySettingHour: 8,
+              minute: 0,
+              second: 0,
+              of: now)!
+            standard.set(eight_today, forKey: "starttime")
+            standard.synchronize()
+            startTime.text = convertTimeFormater(eight_today)
+        }
         if let sEndTime = standard.object(forKey: "endtime") as? Date {
             endTime.text = convertTimeFormater(sEndTime)
         }
+        else {
+            let calendar = Calendar.current
+            let now = Date()
+            let eight_evening = calendar.date(
+              bySettingHour: 20,
+              minute: 0,
+              second: 0,
+              of: now)!
+            standard.set(eight_evening, forKey: "endtime")
+            standard.synchronize()
+            endTime.text = convertTimeFormater(eight_evening)
+        }
+        
         
         saveBtn.layer.cornerRadius = 12
     
@@ -89,13 +116,10 @@ class StartTimeAndEndTimeOverlay: UIViewController, UITextFieldDelegate {
     
     @objc func doneBtnTapped() {
         view.endEditing(true)
+        self.isStartDatePickerChanged = true
         let date = datePicker.date
         startTime.text = convertTimeFormater(date)
       
-        
-      
-   
-        
     
         
     }
@@ -129,57 +153,69 @@ class StartTimeAndEndTimeOverlay: UIViewController, UITextFieldDelegate {
     @IBAction func saveBtnClicked(_ sender: Any) {
         
         showToast(message: "Saved")
-        let startD = datePicker.date
+        var count = standard.integer(forKey: "alertvalue")
+        if count <= 0 {
+            count = 1
+        }
+        settingVC?.clearAllNotifications()
         
-        let hour = Calendar.current.component(.hour, from: startD)
-        let min = Calendar.current.component(.minute, from: startD)
+        if isStartDatePickerChanged {
+            standard.set(datePicker.date, forKey: "starttime")
+            standard.synchronize()
+            isStartDatePickerChanged = false
             
-     
-        
-        
-         let endD = datePicker2.date
-        
-          let hour1 = Calendar.current.component(.hour, from: endD)
-          let min1 = Calendar.current.component(.minute, from:endD)
-        
-       
-        standard.set(startD, forKey: "starttime")
-        standard.set(endD, forKey: "endtime")
-        
-        standard.synchronize()
-        
-        
-        
-        if let alertvalue = standard.string(forKey: "alertvalue") {
-            if alertvalue == "1x" {
-                settingVC?.scheduleNotification(hours: hour, minutes: min, shouldClear: true)
-            }
-            else if alertvalue == "2x" {
-                settingVC?.scheduleNotification(hours: hour, minutes: min, shouldClear: true)
-                settingVC?.scheduleNotification(hours: hour1, minutes: min1, shouldClear: false)
-            }
-            else if alertvalue == "3x" {
-                settingVC?.scheduleNotification(hours: hour, minutes: min, shouldClear: true)
-                settingVC?.scheduleNotification(hours: hour1, minutes: min1, shouldClear: false)
-                
-                let hours2 = (hour1 + hour) / 2
-                let min2  = (min1 + min) / 2
-                
-                settingVC?.scheduleNotification(hours: hours2, minutes: min2, shouldClear: false)
-                
-            }
-        }
-        else {
-            settingVC?.scheduleNotification(hours: hour, minutes: min, shouldClear: true)
-            settingVC?.scheduleNotification(hours: hour1, minutes: min1, shouldClear: false)
+            
         }
         
+        if isEndDatePickerChangeed {
+
+            standard.set(datePicker2.date, forKey: "endtime")
+            standard.synchronize()
+            isEndDatePickerChangeed = false
+            
+        }
+        
+        
+        
+        if let sStartTime = standard.object(forKey: "starttime") as? Date {
+            let sEndTime = standard.object(forKey: "endtime") as? Date
+      
+            let diffSeconds = sEndTime!.seconds(from: sStartTime )
+            let dividedSec = diffSeconds / (count + 1)
+            var newDate = sStartTime
+           
+            for i in 1...count {
+                newDate = newDate.addingTimeInterval(TimeInterval(dividedSec))
+                let hour = Calendar.current.component(.hour, from: newDate)
+                let min = Calendar.current.component(.minute, from: newDate)
+                
+                if let status = standard.string(forKey: "claritystatus") {
+                    if status == "yes" {
+                        
+                    
+                    var value = i - 1
+                    print(value)
+                        if value >= settingVC?.clarityData.count ?? 0 {
+                       value = 0
+                    }
+                        let message = (self.settingVC?.clarityData[value].clarity)!
+                    self.settingVC?.scheduleNotification(hours: hour, minutes: min,message: message)
+                    }
+                    else {
+                        self.settingVC?.scheduleNotification(hours: hour, minutes: min,message: "Check Daily Insight")
+                    }
+                }
+                else {
+                    self.settingVC?.scheduleNotification(hours: hour, minutes: min,message: "Check Daily Insight")
+                }
+            }
+        }
     }
     
     @objc func doneBtnTapped1() {
         view.endEditing(true)
         let date = datePicker2.date
-        
+        self.isEndDatePickerChangeed = true
         endTime.text = convertTimeFormater(date)
        
         

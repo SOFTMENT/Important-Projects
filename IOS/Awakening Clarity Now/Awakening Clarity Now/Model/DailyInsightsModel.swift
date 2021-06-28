@@ -10,6 +10,7 @@ import UIKit
 class DailyInsightsModel : NSObject, Codable {
     
     var quotes : String = ""
-    var date : Date = Date()
-    var id : String = ""
+    var image : String = ""
+    var id : Int = 1
+    
 }

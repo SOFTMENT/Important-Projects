@@ -11,7 +11,9 @@ import Firebase
 
 
 
-class Post : NSObject, Codable {
+class Post : NSObject, Codable{
+   
+    
     
     var postId : String?
     var uid : String?
@@ -26,7 +28,7 @@ class Post : NSObject, Codable {
     var postVisibility : String?
     var postComment : Comment?
     var commentCount : Int?
-
+    var token : String?
     private static var postData : Post?
     
     static var data : Post? {

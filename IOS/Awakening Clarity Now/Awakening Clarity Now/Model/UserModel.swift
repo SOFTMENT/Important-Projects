@@ -14,6 +14,8 @@ class UserModel: NSObject, Codable{
     var name : String = ""
     var mobileNumber : String = ""
     var emailAddress : String = ""
+    var lastQuotesId : Int?
+    var lastQuotesDate : Date?
     var registrationDate : Date = Date()
     
     private static var userData : UserModel?

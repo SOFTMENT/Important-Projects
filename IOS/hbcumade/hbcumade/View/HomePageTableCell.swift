@@ -10,7 +10,10 @@ import UIKit
 
 class HomePageTableCell : UITableViewCell, UITextFieldDelegate {
   
+    
    
+    @IBOutlet weak var viewForViewProfile: UIView!
+    @IBOutlet weak var postMore: UIImageView!
     @IBOutlet weak var writeCommentEditField: UITextField!
     @IBOutlet weak var writeACommentImage: UIImageView!
     @IBOutlet weak var postProfile: UIImageView!
@@ -25,7 +28,47 @@ class HomePageTableCell : UITableViewCell, UITextFieldDelegate {
     @IBOutlet weak var commentBtn: UIImageView!
     @IBOutlet weak var likeCount: UILabel!
     @IBOutlet weak var likeBtn: UIImageView!
+    var count = 0
+    
+
+      internal var aspectConstraint : NSLayoutConstraint? {
+          didSet {
+              if oldValue != nil {
+                  postImage.removeConstraint(oldValue!)
+              }
+              if aspectConstraint != nil {
+                  postImage.addConstraint(aspectConstraint!)
+              }
+          }
+      }
+
+      override func prepareForReuse() {
+          super.prepareForReuse()
+          aspectConstraint = nil
+            
+         
+      }
    
+
+      func setCustomImage(image : UIImage) {
+      
+        
+        //let aspect = image.size.width / image.size.height
+         let constraint = NSLayoutConstraint(item: postImage!, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: postImage, attribute: NSLayoutConstraint.Attribute.height, multiplier: 1, constant: 0.0)
+           
+        constraint.priority = UILayoutPriority.init(999)
+  
+       
+          aspectConstraint = constraint
+
+          postImage.image = image
+       
+          postImage.layoutIfNeeded()
+        
+       
+            
+         
+      }
     
     override func awakeFromNib() {
         super.awakeFromNib()

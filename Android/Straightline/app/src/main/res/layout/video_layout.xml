@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout android:layout_margin="4dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/transparent_back"
+    android:backgroundTint="@color/button_block_color"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+        <TextView
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saturday Night Race"
+            android:id="@+id/title"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:fontFamily="@font/sfpromedium"
+            />
+        <LinearLayout
+            android:layout_below="@+id/title"
+            android:id="@+id/timeLL"
+            android:gravity="center_vertical"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/time"
+                app:tint="#4A4A4A"
+                />
+            <TextView
+                android:layout_marginStart="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="23-July-2021, 01:10 PM"
+                android:id="@+id/time"
+                android:textSize="12sp"
+                android:fontFamily="@font/sfpromedium2"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/placeLL"
+            android:gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/timeLL"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_gravity="top"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/pin"
+                app:tint="#4A4A4A"
+                />
+            <TextView
+                android:lineSpacingExtra="3dp"
+                android:layout_marginStart="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Near Shiv Shree Takiz, Totla Marg, Tarana"
+                android:id="@+id/place"
+                android:textSize="12sp"
+                android:fontFamily="@font/sfpromedium2"
+                />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="16dp"
+            android:layout_below="@+id/placeLL"
+            android:weightSum="2"
+            >
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_weight="1"
+                android:id="@+id/watch"
+                android:textSize="13sp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/transparent_back"
+                android:text="Watch"
+                android:backgroundTint="#5C6BC0"
+                android:textColor="@color/white_color"
+                android:fontFamily="@font/sfpromedium2"
+                android:textAllCaps="false"
+                android:layout_marginEnd="4dp"
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </RelativeLayout>
+
+

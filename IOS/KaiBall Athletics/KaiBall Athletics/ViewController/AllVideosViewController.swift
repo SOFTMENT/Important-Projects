@@ -126,7 +126,7 @@ extension AllVideosViewController : UITableViewDelegate, UITableViewDataSource {
             if hasMebership {
                 cell.lockImg.isHidden = true
             }
-            else if cat_index == 0 && indexPath.row == 0 {
+            else if indexPath.row == 0 || indexPath.row == 1 {
                 cell.lockImg.isHidden = true
             }
             else {

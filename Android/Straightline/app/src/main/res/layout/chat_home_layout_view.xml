@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout android:layout_margin="4dp"
+    android:id="@+id/chat_rr"
+    android:background="@drawable/transparent_back"
+    android:layout_width="match_parent"
+    android:layout_height="74dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/placeholder"
+        android:padding="1dp"
+        app:riv_corner_radius="6dp"
+        android:id="@+id/profile_image"
+        />
+
+    <LinearLayout
+        android:layout_alignTop="@id/profile_image"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_toEndOf="@+id/profile_image"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_alignBottom="@+id/profile_image"
+        >
+    <TextView
+
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vijay Rathore"
+        android:fontFamily="@font/sfprosemibold"
+        android:textSize="13sp"
+        android:textColor="#414141"
+        android:lines="1"
+
+        />
+
+    <TextView
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="I need some most famouse Gadagets Please Contact me.I need Now"
+        android:fontFamily="@font/sfprosemibold2"
+        android:textSize="11sp"
+        android:lines="1"
+
+        />
+
+    <TextView
+        android:textColor="#42A5F5"
+
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="04:20 PM"
+        android:fontFamily="@font/sfprosemibold2"
+        android:textSize="10sp"
+        android:lines="1"
+
+
+        />
+    </LinearLayout>
+
+</RelativeLayout>

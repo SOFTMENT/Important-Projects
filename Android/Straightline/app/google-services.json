@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "385607704862",
+    "project_id": "straightline-c2d86",
+    "storage_bucket": "straightline-c2d86.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:385607704862:android:5ffa1da4f3ce0009cce90f",
+        "android_client_info": {
+          "package_name": "in.softment.straightline"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "385607704862-9gpblj3f8hhr124lstq8ek6b85183cut.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "in.softment.straightline",
+            "certificate_hash": "c93c30f083a9b1a76f680ba8177ac35e0e4a3568"
+          }
+        },
+        {
+          "client_id": "385607704862-kv515pjljti2pg22em84vun6fe6heon8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQnidLcdKvtHKfaiIk-Dr7vZ3B5Y3fclE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "385607704862-kv515pjljti2pg22em84vun6fe6heon8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

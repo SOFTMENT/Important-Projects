@@ -22,6 +22,8 @@ class VideosViewController: UIViewController {
     @IBOutlet weak var homecomingPlay: UIImageView!
     override func viewDidLoad() {
         
+      
+        
         homecoming.layer.cornerRadius = 12
         selfInquery.layer.cornerRadius = 12
         lookingGlass.layer.cornerRadius = 12
@@ -37,6 +39,19 @@ class VideosViewController: UIViewController {
         //SettingsBtn
         settingsBtn.isUserInteractionEnabled = true
         settingsBtn.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(settingsBtnClicked)))
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let hasMebership = self.checkMembershipStatus(currentDate: TabBarController.date,identifier: TabBarController.productIds.first!)
+        
+        if UserModel.data!.emailAddress != "support@softment.in"  && !hasMebership {
+            if let tabVC = tabBarController as? TabBarController {
+                tabVC.selectedIndex = 0
+                tabVC.showMembershipController()
+                
+            }
+        }
     }
     
     @objc func settingsBtnClicked(){

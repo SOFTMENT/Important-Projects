@@ -35,6 +35,12 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>$(PRODUCT_NAME) need your camera access to scan QR Code</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>$(PRODUCT_NAME) need your location access to fetch your location for mango bin report</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>$(PRODUCT_NAME) need your location access to fetch your location for mango bin report</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>$(PRODUCT_NAME) need your location access to fetch your location for mango bin report</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

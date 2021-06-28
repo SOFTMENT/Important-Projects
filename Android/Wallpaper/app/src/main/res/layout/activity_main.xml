@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/oneg"
+    tools:context=".MainActivity">
+
+
+    <com.originaldevelopment.wallpaper.KKViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:foregroundGravity="center"
+        android:overScrollMode="never"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/rr"
+        android:background="#39FFFFFF"
+        >
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:text="PIXTURES"
+            android:textColor="#fff"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textSize="18sp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="#FFFFFF"
+            android:alpha="0.5"
+            />
+    </RelativeLayout>
+
+
+
+    <TextView
+
+        android:shadowRadius="5"
+        android:shadowColor="#000000"
+        android:shadowDy="3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rr"
+        android:layout_marginStart="26dp"
+        android:text="STOCK"
+        android:textColor="#fff"
+        android:layout_marginTop="46dp"
+        android:textSize="38sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/amit"
+        android:id="@+id/categoryname"
+        />
+
+    <ImageView
+android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/john"
+        android:id="@+id/splash"
+        />
+
+</RelativeLayout>

@@ -11,6 +11,7 @@ import GoogleSignIn
 import MBProgressHUD
 import FirebaseAuth
 import Firebase
+import FirebaseFirestoreSwift
 import SystemConfiguration
 
 extension Data {
@@ -49,29 +50,41 @@ extension Data {
 extension UIViewController {
     
     
-    func extractDataFromSnashot(snapshot : DataSnapshot) {
-        if snapshot.exists() {
+    func extractDataFromSnashotForMachineStatus(snapshot : QuerySnapshot?) {
+        if let snapshot = snapshot {
+            
+        
+        if !snapshot.isEmpty {
+            
+            var machineStatusModels =  Array<MachineStatusModel>()
+            for snap in snapshot.documents {
+                
+                if let s = try? snap.data(as: MachineStatusModel.self) {
+                    machineStatusModels.append(s)
+                }
+            }
+            self.createCSV2(from:machineStatusModels)
+        }
+        else {
+            self.showError("No Report Available")
+        }
+    }
+        else {
+            self.showError("No Report Available")
+        }
+    }
+    
+    func extractDataFromSnashot(snapshot : QuerySnapshot?) {
+        if let snapshot = snapshot {
+            
+        
+        if !snapshot.isEmpty {
             
             var mangoBinsModels =  Array<MangoBinModel>()
-            for snap in snapshot.children {
+            for snap in snapshot.documents {
                 
-                if let s = snap as? DataSnapshot {
-                    if  let data = s.value as? [String : Any] {
-                        
-             
-                        let id = data["id"] as? String
-                        let title = data["title"] as? String
-                        let pickedByName = data["pickedByName"] as? String
-                        let scannedByName = data["scannedByName"] as? String
-                        let date = data["date"] as? Double
-                        let binNumber = data["binNumber"] as? Int
-                        let machineNumber = data["machineNumber"] as? String
-                        
-                        let mangoBinModel = MangoBinModel(id: id!, title: title!, pickedByName: pickedByName!, scannedByName: scannedByName!, binNumber: binNumber!, date: date!, machineNumber: machineNumber!)
-                        
-                        mangoBinsModels.append(mangoBinModel)
-                        
-                    }
+                if let s = try? snap.data(as: MangoBinModel.self) {
+                    mangoBinsModels.append(s)
                 }
             }
             self.createCSV(from: mangoBinsModels)
@@ -80,14 +93,59 @@ extension UIViewController {
             self.showError("No Report Available")
         }
     }
-    
-    func createCSV(from recArray:Array<MangoBinModel>) {
+        else {
+            self.showError("No Report Available")
+        }
+    }
+    func createCSV2(from recArray:Array<MachineStatusModel>) {
         
-           var csvString = "\("SN"),\("Bin Number"),\("Title"),\("Picker Name"),\("Scanner Name"),\("Machine Number"),\("Time")\n\n"
+           var csvString = "\("SN"),\("Machine Number"),\("Time"),\("Status")\n\n"
            var i = 0;
            for dct in recArray {
             i = i + 1
-            csvString = csvString.appending("\(String(describing: i)),\(String(describing: dct.binNumber)) ,\(String(describing: dct.title)),\(String(describing: dct.pickedByName)),\(String(describing: dct.scannedByName)),\(String(describing: dct.machineNumber)),\(self.convertTODateAndTime(dateValue: dct.date))\n")
+            csvString = csvString.appending("\(String(describing: i)),\(String(describing: dct.machine!)) ,\(String(describing: self.convertTODateAndTime(dateValue: dct.time!))),\(String(describing: dct.status ?? "Not Available"))\n")
+           }
+
+           let fileManager = FileManager.default
+           do {
+               let path = try fileManager.url(for: .documentDirectory, in: .allDomainsMask, appropriateFor: nil, create: false)
+            let fileURL = path.appendingPathComponent("\(convertTODateAndTime(dateValue: Date().timeIntervalSince1970)).csv")
+            print(fileURL)
+            try csvString.write(to: fileURL, atomically: true, encoding: .utf8)
+            
+            // the Data you want to share as a file
+           // let data = Data()
+            
+            // Write the data into a filepath and return the filepath in NSURL
+            // Change the file-extension to specify the filetype (.txt, .json, .pdf, .png, .jpg, .tiff...)
+           // let fileURL1 = data.dataToFile(fileName: "REPORTVIJAY.csv")
+
+            // Create the Array which includes the files you want to share
+            var filesToShare = [Any]()
+
+            // Add the path of the file to the Array
+            filesToShare.append(fileURL)
+
+            // Make the activityViewContoller which shows the share-view
+            let activityViewController = UIActivityViewController(activityItems: filesToShare, applicationActivities: nil)
+
+            // Show the share-view
+            self.present(activityViewController, animated: true, completion: nil)
+            
+            
+           } catch {
+            print(error.localizedDescription)
+           }
+
+       }
+    
+    func createCSV(from recArray:Array<MangoBinModel>) {
+        
+           var csvString = "\("SN"),\("Bin Number"),\("Title"),\("Picker Name"),\("Scanner Name"),\("Machine Number"),\("Full Time")\n\n"
+           var i = 0;
+           for dct in recArray {
+            i = i + 1
+            csvString = csvString.appending("\(String(describing: i)),\(String(describing: dct.binNumber!)) ,\(String(describing: dct.title!)),\(String(describing: dct.pickedByName ?? "Not Available")),\(String(describing: dct.scannedByName ?? "Not Available")),\(String(describing: dct.machineNumber!)),\(self.convertTODateAndTime(dateValue: dct.date!))\n")
            }
 
            let fileManager = FileManager.default

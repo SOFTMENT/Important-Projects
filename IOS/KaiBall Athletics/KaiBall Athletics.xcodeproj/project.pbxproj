@@ -563,7 +563,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "KaiBall Athletics/KaiBall Athletics.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = KZBZ8AMQB6;
 				INFOPLIST_FILE = "KaiBall Athletics/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -571,7 +571,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 6;
+				MARKETING_VERSION = 7;
 				PRODUCT_BUNDLE_IDENTIFIER = "in.softment.KaiBall-Athletics";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -587,7 +587,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "KaiBall Athletics/KaiBall Athletics.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = KZBZ8AMQB6;
 				INFOPLIST_FILE = "KaiBall Athletics/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -595,7 +595,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 6;
+				MARKETING_VERSION = 7;
 				PRODUCT_BUNDLE_IDENTIFIER = "in.softment.KaiBall-Athletics";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

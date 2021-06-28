@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:padding="10dp"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:background="@color/button_border_color"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<TextView
+    android:id="@+id/title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="15sp"
+    android:fontFamily="sans-serif-condensed"
+    android:textStyle="bold"
+    android:text="Update Profile Picture"
+    android:textColor="#141414"
+    />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#C5C5C5"
+        android:layout_marginTop="8dp"
+        />
+
+    <TextView
+        android:id="@+id/camera"
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Using Camera"
+        android:textColor="#117FD6"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#C5C5C5"
+        android:layout_marginTop="8dp"
+        />
+
+    <TextView
+        android:id="@+id/gallery"
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="From Gallery"
+        android:textColor="#117FD6"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#C5C5C5"
+        android:layout_marginTop="8dp"
+        />
+
+    <TextView
+        android:id="@+id/cancel"
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Cancel"
+        android:textStyle="bold"
+        android:textColor="#117FD6"
+        />
+</LinearLayout>

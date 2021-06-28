@@ -117,6 +117,11 @@ extension Date {
 
 extension UIViewController {
     
+    func generateRef() -> String {
+        return  String.init(arc4random_uniform(900000) + 100000) 
+        
+    }
+    
     func ProgressHUDShow(text : String) {
         let loading = MBProgressHUD.showAdded(to: self.view, animated: true)
         loading.mode = .indeterminate
@@ -185,13 +190,27 @@ extension UIViewController {
             }
             else {
                 
-                if let user = try? snapshot?.data(as: UserData.self) {
+               
+                do {
+                if let user = try snapshot?.data(as: UserData.self) {
                     UserData.data = user
                     if showIntroScreen {
                         self.beRootScreen(mIdentifier: Constants.StroyBoard.verifiedIntroViewController)
                     }
-                    else if user.isMobVerified! || user.regiType != "custom" {
-                        self.beRootScreen(mIdentifier: Constants.StroyBoard.tabBarViewController)
+                    else if user.isMobVerified ?? false || user.regiType != "custom" {
+                        if let school = user.school {
+                            if school != "" {
+                                self.beRootScreen(mIdentifier: Constants.StroyBoard.tabBarViewController)
+                            }
+                            else {
+                                self.performSegue(withIdentifier: "updateseg", sender: nil)
+                            }
+                        }
+                        else {
+                            print("VIJAY BHAI")
+                            self.performSegue(withIdentifier: "updateseg", sender: nil)
+                        }
+                        
                     }
                     else {
                         self.beRootScreen(mIdentifier: Constants.StroyBoard.mobVeriVC)
@@ -207,6 +226,10 @@ extension UIViewController {
                     self.showError("Your record has been deleted")
                 }
                 
+                }
+                catch {
+                    print(error)
+                }
                 
             }
         }
@@ -225,7 +248,10 @@ extension UIViewController {
     
     func myPerformSegue(mIdentifier : String)  {
         performSegue(withIdentifier: mIdentifier, sender: nil)
+       
     }
+    
+
     
     func getViewControllerUsingIdentifier(mIdentifier : String) -> UIViewController{
     
@@ -303,7 +329,7 @@ extension UIViewController {
   
   
     
-    func convertDateFormater(_ date: Date) -> String
+    func convertDateAndTimeFormater(_ date: Date) -> String
         {
         let df = DateFormatter()
         df.dateFormat = "dd-MMM-yyyy hh:mm a"
@@ -312,6 +338,16 @@ extension UIViewController {
         return df.string(from: date)
 
         }
+    
+    func convertDateFormater(_ date: Date) -> String
+        {
+        let df = DateFormatter()
+        df.dateFormat = "dd-MMM-yyyy"
+        df.timeZone = TimeZone(abbreviation: "UTC")
+        df.timeZone = TimeZone.current
+        return df.string(from: date)
+
+    }
     
     func handleError(error: Error) {
         if let errorCode = AuthErrorCode(rawValue: error._code) {
@@ -343,7 +379,7 @@ extension UIViewController {
     }
     
     
-    func authWithFirebase(credential : AuthCredential, type : String) {
+    func authWithFirebase(credential : AuthCredential, type : String,displayName : String) {
         
        ProgressHUDShow(text: "Loading...")
         
@@ -370,23 +406,32 @@ extension UIViewController {
                                 
                                 var profilepic = ""
                                 var emailId = ""
+                               
                                 let provider =  user.providerData
+                                var name = ""
                                 for firUserInfo in provider {
                                     if let email = firUserInfo.email {
                                         emailId = email
                                     }
                                 }
                                
+                                if type == "apple" {
+                                    name = displayName
+                                }
+                                else {
+                                    name = user.displayName!.capitalized
+                                }
+                                
                                 if type == "twitter" {
                                     profilepic = (user.photoURL?.absoluteString.replacingOccurrences(of: "_normal", with: ""))!
                                 }
                                 else if type == "facebook" {
                                     profilepic = user.photoURL!.absoluteString + "?type=large"
                                 }
-                                else {
+                                else if type == "google"{
                                     profilepic = user.photoURL!.absoluteString.replacingOccurrences(of: "s96-c", with: "s512-c")
                                 }
-                                let data = ["name" : user.displayName!.capitalized, "email" : emailId,"classification" : "Student","school":"Howard University", "uid" :  user.uid, "registredAt" :  user.metadata.creationDate!,"profile" : profilepic, "isMobVerified" : false,"regiType" : type] as [String : Any]
+                                let data = ["name" : name, "email" : emailId,"classification" : "","school":"", "uid" :  user.uid, "registredAt" :  user.metadata.creationDate!,"profile" : profilepic, "isMobVerified" : false,"regiType" : type] as [String : Any]
                                 self.addUserData(data:data , uid: user.uid, type: type)
                             }
                         }
@@ -417,7 +462,7 @@ extension UIViewController {
                 self.showError(error!.localizedDescription)
             }
             if credential != nil {
-                self.authWithFirebase(credential: credential!, type: "twitter")
+                self.authWithFirebase(credential: credential!, type: "twitter",displayName: "")
             }
         }
     }
@@ -438,7 +483,7 @@ extension UIViewController {
               { if((AccessToken.current) != nil){
                
                 let credential = FacebookAuthProvider.credential(withAccessToken: AccessToken.current!.tokenString)
-                self.authWithFirebase(credential: credential,type: "facebook")
+                self.authWithFirebase(credential: credential,type: "facebook",displayName: "")
               }
                 
               }
@@ -451,6 +496,15 @@ extension UIViewController {
     
     }
     
+    public func logout(){
+        do {
+            try Auth.auth().signOut()
+            self.beRootScreen(mIdentifier: Constants.StroyBoard.signInViewController)
+        }
+        catch {
+            
+        }
+    }
 
 }
 
@@ -483,6 +537,17 @@ extension UIImageView {
 
 
 extension UIView {
+    func dropShadow(scale: Bool = true) {
+        layer.masksToBounds = false
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOpacity = 0.2
+        layer.shadowOffset = .zero
+        
+        layer.shadowRadius = 1
+        layer.shouldRasterize = true
+        layer.rasterizationScale = scale ? UIScreen.main.scale : 1
+    }
+    
     public var safeAreaFrame: CGFloat {
         if #available(iOS 13.0, *) {
             let window = UIApplication.shared.windows[0]

@@ -25,8 +25,7 @@ class PresentationController: UIPresentationController{
           blurEffectView.backgroundColor = UIColor.clear
       
 
-    
-    tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissController(r:)))
+      tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissController(r:)))
      
       blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
       self.blurEffectView.isUserInteractionEnabled = true
@@ -39,36 +38,41 @@ class PresentationController: UIPresentationController{
 
     @objc func viewProfileClicked() {
         
-        gotoAnotherController(identifier: "profileVC")
+        gotoAnotherController(identifier: "viewprofileseg")
     }
     
     @objc func networkClicked() {
      
-        tabBarController?.selectedIndex = 1
+            
+            Constants.previousSelectedTabIndex = 1
+            dismissController(r: UITapGestureRecognizer())
         
-        dismissController(r: UITapGestureRecognizer())
+        
     }
     
     @objc func accountSettingsClicked() {
-        gotoAnotherController(identifier: Constants.StroyBoard.accountSettingsController)
+            Constants.previousSelectedTabIndex = 4
+            dismissController(r: UITapGestureRecognizer())
+            
+        
     }
     
-    @objc func exploreClicked() {
-        gotoAnotherController(identifier: Constants.StroyBoard.exploreViewController)
+    @objc func logoutBtnPressed() {
+        tabBarController?.logout()
     }
     
-    @objc func eventClicked() {
-        gotoAnotherController(identifier: Constants.StroyBoard.eventViewController)
-    }
+   
     
     func gotoAnotherController(identifier : String) {
         if let tabBarController = tabBarController {
          
+            
           let vc =  tabBarController.viewControllers![2]
             if let nav = vc as? UINavigationController  {
                 if nav.topViewController is CommonPresentViewController2 {
                     let nvc = nav.topViewController as! CommonPresentViewController2
                     nvc.myPerformSegue(mIdentifier: identifier)
+                
                    
                 }
                 else {
@@ -89,14 +93,28 @@ class PresentationController: UIPresentationController{
     }
     
     
+    @objc func redirectToContactUs() {
+        dismissController(r: UITapGestureRecognizer())
+        let email = "info@hbcumade.app"
+        if let url = URL(string: "mailto:\(email)") {
+          if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url)
+          } else {
+            UIApplication.shared.openURL(url)
+          }
+        }
+    }
     
-    
-  
+    @objc func redirectToPrivacyPolicy() {
+       
+        dismissController(r: UITapGestureRecognizer())
+        guard let url = URL(string: "https://www.hbcumade.app/privacypolicy") else { return}
+        UIApplication.shared.open(url)
+    }
+
     
   override var frameOfPresentedViewInContainerView: CGRect {
-    
-   
-   
+
     return CGRect(origin: CGPoint(x: 0, y: self.containerView!.frame.height * 0.5 - (Constants.safeAreaHeight + Constants.tabBarHeight)),
              size: CGSize(width: self.containerView!.frame.width, height: self.containerView!.frame.height *
               0.5))
@@ -115,22 +133,29 @@ class PresentationController: UIPresentationController{
         tabBarController.slideVC.accountSettings.isUserInteractionEnabled = true
         tabBarController.slideVC.accountSettings.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(accountSettingsClicked)))
         
-        tabBarController.slideVC.explore.isUserInteractionEnabled = true
-        tabBarController.slideVC.explore.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(exploreClicked)))
-        
-        tabBarController.slideVC.events.isUserInteractionEnabled = true
-        tabBarController.slideVC.events.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(eventClicked)))
-  
+       
+        tabBarController.slideVC.logout.isUserInteractionEnabled = true
+        tabBarController.slideVC.logout.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(logoutBtnPressed)))
 
         tabBarController.slideVC.profilePicture.makeRounded()
        
          if let profileImageLink = UserData.data?.profile {
-         
-            tabBarController.slideVC.profilePicture.sd_setImage(with: URL(string: profileImageLink), placeholderImage: UIImage(named: "profile-user"))
+            if profileImageLink != "" {
+                tabBarController.slideVC.profilePicture.sd_setImage(with: URL(string: profileImageLink), placeholderImage: UIImage(named: "profile-user"))
+            }
            
          }
         
+        tabBarController.slideVC.contactUs.isUserInteractionEnabled = true
+        tabBarController.slideVC.contactUs.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(redirectToContactUs)))
+        
+        
+        tabBarController.slideVC.privacyPolicy.isUserInteractionEnabled = true
+        tabBarController.slideVC.privacyPolicy.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(redirectToPrivacyPolicy)))
+        
+        
         tabBarController.slideVC.schoolName.text = UserData.data?.school
+        tabBarController.slideVC.name.text = UserData.data?.name!
     
     }
   

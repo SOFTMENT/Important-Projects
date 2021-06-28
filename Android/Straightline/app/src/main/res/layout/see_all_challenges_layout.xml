@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout android:background="@drawable/transparent_back"
+
+    android:backgroundTint="@color/button_block_color"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+
+
+            <LinearLayout
+                android:id="@+id/profileLL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                >
+                <de.hdodenhof.circleimageview.CircleImageView
+                    app:civ_border_width="0.4dp"
+                    app:civ_border_color="#a3a3a3"
+                    android:layout_margin="16dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/placeholder"
+                    android:id="@+id/profilePicture"
+                    />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    >
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vijay Rathore"
+                        android:id="@+id/name"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/sfpromedium2"
+                        />
+                    <TextView
+                        android:textColorLink="#42A5F5"
+                        android:autoLink="email"
+                        android:layout_marginTop="2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="iamvijay67@gmail.com"
+                        android:id="@+id/email"
+                        android:textColor="#AFAFAF"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/sfpromedium2"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/ic_baseline_more_vert_24"
+                app:tint="#222" />
+            <TextView
+
+                android:layout_marginTop="2dp"
+                android:layout_below="@+id/profileLL"
+                android:layout_marginStart="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saturday Night Race"
+                android:id="@+id/title"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:fontFamily="@font/sfpromedium"
+                />
+            <LinearLayout
+                android:layout_below="@+id/title"
+                android:id="@+id/timeLL"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="horizontal"
+                >
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/time"
+                    app:tint="#4A4A4A"
+                    />
+                <TextView
+                    android:layout_marginStart="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="23-July-2021, 01:10 PM"
+                    android:id="@+id/time"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/sfpromedium2"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/placeLL"
+                android:gravity="center_vertical"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/timeLL"
+                android:orientation="horizontal"
+                >
+                <ImageView
+                    android:layout_gravity="top"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/pin"
+                    app:tint="#4A4A4A"
+                    />
+                <TextView
+                    android:lineSpacingExtra="3dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Near Shiv Shree Takiz, Totla Marg, Tarana"
+                    android:id="@+id/place"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/sfpromedium2"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:id="@+id/infoLL"
+                android:gravity="center_vertical"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/placeLL"
+                android:orientation="horizontal"
+                >
+                <ImageView
+                    android:layout_gravity="top"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/info"
+                    app:tint="#4A4A4A"
+                    />
+                <TextView
+
+                    android:layout_gravity="top"
+                    android:lineSpacingExtra="3dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hello Everyone, My name is vijay Rathore and i am challanging all of you. Please accept if you have guts."
+                    android:id="@+id/message"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/sfpromedium"
+                    />
+
+            </LinearLayout>
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        app:riv_corner_radius="8dp"
+        android:layout_below="@+id/infoLL"
+        android:id="@+id/vehicleImage"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:src="@drawable/placeholder1"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+
+        />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/acceptChallenge"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/vehicleImage"
+                android:layout_margin="16dp"
+                android:background="@drawable/accept_btn_bg"
+                android:text="Accept Challenge"
+                android:textSize="13sp"
+                android:textColor="@color/white_color"
+                android:fontFamily="@font/sfpromedium2"
+                android:textAllCaps="false"
+                />
+        </RelativeLayout>
+
+

@@ -94,8 +94,13 @@ class LoginViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
         if Auth.auth().currentUser != nil {
-            if Auth.auth().currentUser!.isEmailVerified || Auth.auth().currentUser?.email == "support@acn.com"{
+            var providerID = ""
+            if let providerId = Auth.auth().currentUser!.providerData.first?.providerID {
+                providerID = providerId
+            }
+            if providerID != "password" || Auth.auth().currentUser!.isEmailVerified || Auth.auth().currentUser?.email == "support@acn.com" {
                 self.getUserData(uid: Auth.auth().currentUser!.uid)
             }
             else{

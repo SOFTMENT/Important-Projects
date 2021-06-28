@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import FirebaseFirestoreSwift
+import SDWebImage
 
 class AdminHomeViewController: UIViewController {
 
@@ -43,7 +44,7 @@ class AdminHomeViewController: UIViewController {
     }
     func getDailyInsights(){
         ProgressHUDShow(text: "Loading...")
-        Firestore.firestore().collection("DailyInsights").order(by: "date", descending: true).addSnapshotListener { snap, err in
+        Firestore.firestore().collection("DailyInsights").order(by: "id", descending: true).addSnapshotListener { snap, err in
             self.ProgressHUDHide()
             if err == nil {
                 self.dailyInsightsModels.removeAll()
@@ -65,7 +66,7 @@ class AdminHomeViewController: UIViewController {
     }
     
     @objc func deleteBtnTapped(myTap : MyTapGesture){
-        Firestore.firestore().collection("DailyInsights").document(myTap.docId).delete()
+        Firestore.firestore().collection("DailyInsights").document(String(myTap.docId)).delete()
         showToast(message: "Deleted")
         
     }
@@ -83,24 +84,15 @@ extension AdminHomeViewController : UITableViewDelegate, UITableViewDataSource {
             
             cell.myview.layer.cornerRadius = 8
             
-        if indexPath.row % 3 == 0 {
-            cell.image_quote.image = #imageLiteral(resourceName: "tree_insight")
-        }
-        else if indexPath.row % 3 == 1 {
-            cell.image_quote.image = #imageLiteral(resourceName: "beach")
-        }
-        else if indexPath.row % 3 == 2 {
-            cell.image_quote.image = #imageLiteral(resourceName: "desert_tab")
-        }
+     
       
         let dailyInsight = dailyInsightsModels[indexPath.row]
-        let day = Calendar.current.component(.day, from: dailyInsight.date)
-        let month = Calendar.current.monthSymbols[Calendar.current.component(.month, from: dailyInsight.date) - 1]
-        let year = Calendar.current.component(.year, from: dailyInsight.date)
         
-        cell.day.text = String(day)
-        cell.month.text = month
-        cell.year.text = String(year)
+        
+        
+        
+        cell.image_quote.sd_setImage(with: URL(string: dailyInsight.image), placeholderImage: UIImage(named: "beach"), options: .continueInBackground, completed: nil)
+       
         
         cell.quotes.text = dailyInsight.quotes
         
@@ -123,6 +115,6 @@ extension AdminHomeViewController : UITableViewDelegate, UITableViewDataSource {
 
 class MyTapGesture: UITapGestureRecognizer {
 
-    var docId = ""
+    var docId = 0
     
 }

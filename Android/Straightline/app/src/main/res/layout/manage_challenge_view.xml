@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.cardview.widget.CardView android:id="@+id/ac"
+    app:cardBackgroundColor="@color/button_block_color"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="4dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+        <TextView
+
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saturday Night Race"
+            android:id="@+id/title"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:fontFamily="@font/sfpromedium"
+            />
+        <LinearLayout
+            android:layout_below="@+id/title"
+            android:id="@+id/timeLL"
+            android:gravity="center_vertical"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/time"
+                app:tint="#4A4A4A"
+                />
+            <TextView
+                android:layout_marginStart="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="23-July-2021, 01:10 PM"
+                android:id="@+id/time"
+                android:textSize="13sp"
+                android:fontFamily="@font/sfpromedium"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/placeLL"
+            android:gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/timeLL"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_gravity="top"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/pin"
+                app:tint="#4A4A4A"
+                />
+            <TextView
+                android:lineSpacingExtra="3dp"
+                android:layout_marginStart="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Near Shiv Shree Takiz, Totla Marg, Tarana"
+                android:id="@+id/place"
+                android:textSize="13sp"
+                android:fontFamily="@font/sfpromedium"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="8dp"
+            android:id="@+id/infoLL"
+            android:gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/placeLL"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_gravity="top"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/info"
+                app:tint="#4A4A4A"
+                />
+            <TextView
+
+                android:layout_gravity="top"
+                android:lineSpacingExtra="3dp"
+                android:layout_marginStart="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hello Everyone, My name is vijay Rathore and i am challanging all of you. Please accept if you have guts."
+                android:id="@+id/message"
+                android:textSize="13sp"
+                android:fontFamily="@font/sfpromedium"
+                />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="16dp"
+            android:layout_below="@+id/infoLL"
+            android:weightSum="2"
+            >
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_weight="1"
+            android:id="@+id/addVideo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/transparent_back"
+            android:text="Add Video"
+            android:backgroundTint="#5C6BC0"
+            android:textColor="@color/white_color"
+            android:fontFamily="@font/sfpromedium2"
+            android:textAllCaps="false"
+            android:layout_marginEnd="4dp"
+            />
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:id="@+id/delete"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/transparent_back"
+                android:backgroundTint="#EF5350"
+                android:text="Delete "
+                android:textColor="@color/white_color"
+                android:fontFamily="@font/sfpromedium2"
+                android:textAllCaps="false"
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+

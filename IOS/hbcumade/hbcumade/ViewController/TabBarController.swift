@@ -41,8 +41,8 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         tabBarItems.selectedImage = selectedImage3
         
         
-        let selectedImage11 = UIImage(named: "icons8-facebook-messenger-96-2")?.withRenderingMode(.alwaysOriginal)
-        let deSelectedImage11 = UIImage(named: "icons8-facebook-messenger-96")?.withRenderingMode(.alwaysOriginal)
+        let selectedImage11 = UIImage(named: "comment-4")?.withRenderingMode(.alwaysOriginal)
+        let deSelectedImage11 = UIImage(named: "comment-2")?.withRenderingMode(.alwaysOriginal)
         tabBarItems = self.tabBar.items![3]
         tabBarItems.image = deSelectedImage11
         tabBarItems.selectedImage = selectedImage11
@@ -71,7 +71,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
             
         }
         else if item == self.tabBar.items![3] {
-            item.selectedImage = UIImage(named: "icons8-facebook-messenger-96-2")?.withRenderingMode(.alwaysOriginal)
+            item.selectedImage = UIImage(named: "comment-4")?.withRenderingMode(.alwaysOriginal)
             Constants.previousSelectedTabIndex = 3
 
         }

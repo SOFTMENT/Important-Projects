@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_color"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+   >
+
+    <in.softment.straightline.Utils.NonSwipeAbleViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomBar"
+        android:id="@+id/viewpager"
+        />
+
+    <me.ibrahimsn.lib.SmoothBottomBar
+
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:backgroundColor="@color/main_color"
+        app:menu="@menu/bottom_menu"/>
+</RelativeLayout>

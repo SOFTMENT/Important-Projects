@@ -8,35 +8,19 @@
 import UIKit
 
 
-class UserModel {
-    var email : String = ""
-    var machineNumber : String = ""
-    var pId : String = ""
-    var name : String = ""
-    var designation : String = ""
+class UserModel : Codable {
+    var email : String?
+    var machineNumber : String?
+    var pId : String?
+    var name : String?
+    var designation : String?
 
 
-    init(email : String,machineNumber : String, name : String, designation : String, pid : String) {
-      
-        self.email = email
-        self.machineNumber = machineNumber
-        self.name = name
-        self.designation = designation
-        self.pId = pid
-       
-       
-    }
+
   
-    private static var userData : UserModel?
+    public static var userData : UserModel = UserModel()
     
-    static var data : UserModel? {
-        set(userData) {
-            self.userData = userData
-        }
-        get {
-            return userData
-        }
-    }
+   
 }
 
 

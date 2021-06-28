@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate  {
         GIDSignIn.sharedInstance().delegate = self
         
         //OFFLINE SUPPORT
-        Database.database().isPersistenceEnabled = true
+        
         IQKeyboardManager.shared.enable = true
         return true
     }

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/app_back_color"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".CreateChallange">
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:id="@+id/back"
+            android:padding="10dp"
+            android:background="@drawable/button_shape_dark_black"
+            android:paddingStart="15dp"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+
+            />
+
+
+        <TextView
+            android:layout_marginStart="10dp"
+            android:id="@+id/signintext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:text="Create Challenge"
+            android:textSize="20sp"
+            android:fontFamily="@font/sfprobold"
+            android:textColor="#040404"
+            />
+    </LinearLayout>
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Your challange will immediately show on home page."
+        android:textSize="12sp"
+        android:fontFamily="@font/sfpromedium"
+        android:textColor="@color/text_gray"
+        />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="#040404"
+        android:text="Challange Title"
+        android:textSize="13sp"
+        android:fontFamily="@font/sfpromedium2"
+        />
+
+    <EditText
+        android:textCursorDrawable="@drawable/black_cursor"
+        android:maxLength="36"
+        android:inputType="text"
+        android:id="@+id/title"
+        android:fontFamily="@font/sfpromedium2"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/edit_text_bg"
+        android:textColor="#040404"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textSize="13sp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="#040404"
+        android:text="Choose Date"
+        android:textSize="13sp"
+        android:fontFamily="@font/sfpromedium2"
+        />
+
+    <EditText
+        android:textCursorDrawable="@drawable/black_cursor"
+        android:focusableInTouchMode="false"
+        android:id="@+id/date"
+        android:fontFamily="@font/sfpromedium2"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/edit_text_bg"
+        android:textColor="#040404"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textSize="13sp"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="#040404"
+        android:text="Place"
+        android:textSize="13sp"
+        android:fontFamily="@font/sfpromedium2"
+        />
+
+    <EditText
+        android:textCursorDrawable="@drawable/black_cursor"
+        android:inputType="text"
+        android:id="@+id/place"
+        android:fontFamily="@font/sfpromedium2"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/edit_text_bg"
+        android:textColor="#040404"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textSize="13sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="#040404"
+        android:text="Message"
+        android:textSize="13sp"
+        android:fontFamily="@font/sfpromedium2"
+        />
+
+    <EditText
+        android:textCursorDrawable="@drawable/black_cursor"
+        android:maxLength="999"
+        android:gravity="top|start"
+        android:id="@+id/message"
+        android:fontFamily="@font/sfpromedium2"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/edit_text_bg"
+        android:textColor="#040404"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textSize="13sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="#040404"
+        android:text="Upload Vehicle Image"
+        android:textSize="13sp"
+        android:fontFamily="@font/sfpromedium2"
+        />
+
+    <LinearLayout
+
+        android:layout_margin="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+        <com.makeramen.roundedimageview.RoundedImageView
+            app:riv_corner_radius="4dp"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:padding="4dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/transparent_back"
+            android:id="@+id/oneImage"
+            />
+        <LinearLayout
+            android:id="@+id/oneLL"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="320dp"
+            android:background="@drawable/dot_back_view"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/picture"
+                />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#64B5F6"
+                android:background="@drawable/edittext_back"
+                android:hint="Click here to upload image"
+                android:fontFamily="@font/sfprosemibold"
+                android:textSize="11sp"
+
+                />
+        </LinearLayout>
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:padding="4dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/transparent_back"
+            android:id="@+id/twoImage"
+            app:riv_corner_radius="4dp"
+            />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_marginBottom="16dp"
+        android:id="@+id/createChallenge"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/gradient_button"
+        android:text="Create Challenge"
+        android:fontFamily="@font/sfpromedium2"
+        android:textSize="14sp"
+        android:textAllCaps="false"
+        android:textColor="@color/white_color"
+        />
+
+</LinearLayout>
+
+</ScrollView>

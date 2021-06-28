@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B469725267C5B2B00A44921 /* MachineStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B469724267C5B2B00A44921 /* MachineStatusModel.swift */; };
 		B183074926278ECC002BC588 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B183074826278ECC002BC588 /* UserModel.swift */; };
 		B183074D2627A253002BC588 /* HomeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B183074C2627A253002BC588 /* HomeNavigationController.swift */; };
 		B18307562627A5DB002BC588 /* RoundedUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18307552627A5DB002BC588 /* RoundedUIView.swift */; };
@@ -16,8 +17,6 @@
 		B18307B326285BC2002BC588 /* MangoBinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18307B226285BC2002BC588 /* MangoBinModel.swift */; };
 		B183089B262971AC002BC588 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B183089A262971AC002BC588 /* GoogleService-Info.plist */; };
 		B1ABFF0A262E126400FC8A3B /* UsersAndAccessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1ABFF09262E126400FC8A3B /* UsersAndAccessTableViewCell.swift */; };
-		B1ABFF0D262E12DC00FC8A3B /* UsersAndAccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1ABFF0C262E12DC00FC8A3B /* UsersAndAccessViewController.swift */; };
-		B1ABFF10262E220800FC8A3B /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1ABFF0F262E220800FC8A3B /* CreateUserViewController.swift */; };
 		B1ABFF18262E6F5500FC8A3B /* SignInViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1ABFF17262E6F5500FC8A3B /* SignInViewController2.swift */; };
 		B1C6E1A826272FA9009E38EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C6E1A726272FA9009E38EB /* AppDelegate.swift */; };
 		B1C6E1AA26272FA9009E38EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C6E1A926272FA9009E38EB /* SceneDelegate.swift */; };
@@ -32,7 +31,6 @@
 		B1C6E2052627600B009E38EB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C6E2042627600B009E38EB /* Extensions.swift */; };
 		B1CCD0AB262D732000A9C562 /* AdminPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CCD0AA262D732000A9C562 /* AdminPanelViewController.swift */; };
 		B1CCD169262DCD2B00A9C562 /* CrewmemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CCD168262DCD2900A9C562 /* CrewmemberTableViewCell.swift */; };
-		B1CCD16C262DCDB500A9C562 /* CrewmemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CCD16B262DCDB500A9C562 /* CrewmemberViewController.swift */; };
 		E1DADD6718F4ED2B9DCE88D5 /* Pods_Mango_Farm_Bin_Picking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 875EECDF4EABE6255E67BDAB /* Pods_Mango_Farm_Bin_Picking.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +38,7 @@
 		05FA0607192761777E5F1123 /* Pods-Mango Farm Bin Picking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mango Farm Bin Picking.debug.xcconfig"; path = "Target Support Files/Pods-Mango Farm Bin Picking/Pods-Mango Farm Bin Picking.debug.xcconfig"; sourceTree = "<group>"; };
 		7488B8BE5F152B53B72DA155 /* Pods-Mango Farm Bin Picking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mango Farm Bin Picking.release.xcconfig"; path = "Target Support Files/Pods-Mango Farm Bin Picking/Pods-Mango Farm Bin Picking.release.xcconfig"; sourceTree = "<group>"; };
 		875EECDF4EABE6255E67BDAB /* Pods_Mango_Farm_Bin_Picking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mango_Farm_Bin_Picking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B469724267C5B2B00A44921 /* MachineStatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineStatusModel.swift; sourceTree = "<group>"; };
 		B183074826278ECC002BC588 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		B183074C2627A253002BC588 /* HomeNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationController.swift; sourceTree = "<group>"; };
 		B18307552627A5DB002BC588 /* RoundedUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedUIView.swift; sourceTree = "<group>"; };
@@ -49,8 +48,6 @@
 		B18307B226285BC2002BC588 /* MangoBinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangoBinModel.swift; sourceTree = "<group>"; };
 		B183089A262971AC002BC588 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B1ABFF09262E126400FC8A3B /* UsersAndAccessTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersAndAccessTableViewCell.swift; sourceTree = "<group>"; };
-		B1ABFF0C262E12DC00FC8A3B /* UsersAndAccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersAndAccessViewController.swift; sourceTree = "<group>"; };
-		B1ABFF0F262E220800FC8A3B /* CreateUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
 		B1ABFF17262E6F5500FC8A3B /* SignInViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController2.swift; sourceTree = "<group>"; };
 		B1C6E1A426272FA9009E38EB /* Mango Farm Bin Picking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mango Farm Bin Picking.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1C6E1A726272FA9009E38EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,7 +64,6 @@
 		B1C6E2042627600B009E38EB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B1CCD0AA262D732000A9C562 /* AdminPanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminPanelViewController.swift; sourceTree = "<group>"; };
 		B1CCD168262DCD2900A9C562 /* CrewmemberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewmemberTableViewCell.swift; sourceTree = "<group>"; };
-		B1CCD16B262DCDB500A9C562 /* CrewmemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewmemberViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +83,7 @@
 			children = (
 				B183074826278ECC002BC588 /* UserModel.swift */,
 				B18307B226285BC2002BC588 /* MangoBinModel.swift */,
+				8B469724267C5B2B00A44921 /* MachineStatusModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -113,9 +110,6 @@
 				B183074C2627A253002BC588 /* HomeNavigationController.swift */,
 				B183075C2627C0E9002BC588 /* QRScannerController.swift */,
 				B1CCD0AA262D732000A9C562 /* AdminPanelViewController.swift */,
-				B1CCD16B262DCDB500A9C562 /* CrewmemberViewController.swift */,
-				B1ABFF0C262E12DC00FC8A3B /* UsersAndAccessViewController.swift */,
-				B1ABFF0F262E220800FC8A3B /* CreateUserViewController.swift */,
 				B1ABFF17262E6F5500FC8A3B /* SignInViewController2.swift */,
 			);
 			path = ViewController;
@@ -334,18 +328,16 @@
 				B18307562627A5DB002BC588 /* RoundedUIView.swift in Sources */,
 				B1ABFF18262E6F5500FC8A3B /* SignInViewController2.swift in Sources */,
 				B18307B326285BC2002BC588 /* MangoBinModel.swift in Sources */,
-				B1ABFF10262E220800FC8A3B /* CreateUserViewController.swift in Sources */,
 				B1CCD169262DCD2B00A9C562 /* CrewmemberTableViewCell.swift in Sources */,
 				B183075D2627C0E9002BC588 /* QRScannerController.swift in Sources */,
-				B1ABFF0D262E12DC00FC8A3B /* UsersAndAccessViewController.swift in Sources */,
 				B183074926278ECC002BC588 /* UserModel.swift in Sources */,
 				B183075A2627B7F7002BC588 /* MangoBinDetailsTableViewCell.swift in Sources */,
 				B1C6E2052627600B009E38EB /* Extensions.swift in Sources */,
 				B1C6E1A826272FA9009E38EB /* AppDelegate.swift in Sources */,
 				B1C6E1AA26272FA9009E38EB /* SceneDelegate.swift in Sources */,
+				8B469725267C5B2B00A44921 /* MachineStatusModel.swift in Sources */,
 				B183074D2627A253002BC588 /* HomeNavigationController.swift in Sources */,
 				B1C6E1E226273A4E009E38EB /* Constants.swift in Sources */,
-				B1CCD16C262DCDB500A9C562 /* CrewmemberViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,7 +487,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = EC9SN5W46D;
 				INFOPLIST_FILE = "Mango Farm Bin Picking/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -503,7 +495,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2;
+				MARKETING_VERSION = 5;
 				PRODUCT_BUNDLE_IDENTIFIER = in.softment.mangofarmbinpicking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -520,7 +512,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = EC9SN5W46D;
 				INFOPLIST_FILE = "Mango Farm Bin Picking/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -528,7 +520,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2;
+				MARKETING_VERSION = 5;
 				PRODUCT_BUNDLE_IDENTIFIER = in.softment.mangofarmbinpicking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

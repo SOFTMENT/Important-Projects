@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="ipad12_9" orientation="portrait" layout="fullscreen" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="P6a-Zr-3tT">
+    <device id="ipad10_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -9,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="RobotoCondensed-Regular.ttf">
+            <string>RobotoCondensed-Regular</string>
+        </array>
         <array key="Rubik-Bold.ttf">
             <string>Rubik-Bold</string>
         </array>
@@ -20,35 +24,337 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Sign In View Controller-->
+        <scene sceneID="cvV-KK-G4d">
+            <objects>
+                <viewController storyboardIdentifier="signInVC" id="P6a-Zr-3tT" customClass="SignInViewController" customModule="Oh_Crepe___Waffles" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LNo-zT-L0h">
+                        <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Email Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLm-vb-oZE">
+                                <rect key="frame" x="45" y="313.5" width="119.5" height="18"/>
+                                <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="15"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N4A-SE-6xq">
+                                <rect key="frame" x="45" y="433.5" width="730" height="40"/>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="eLK-OZ-pfd"/>
+                                </constraints>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="je6-Jk-z9r">
+                                <rect key="frame" x="45" y="403.5" width="92.5" height="18"/>
+                                <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="15"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzx-ox-9xD">
+                                <rect key="frame" x="45" y="513.5" width="730" height="40"/>
+                                <color key="backgroundColor" red="0.41568627450980389" green="0.098039215686274508" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Vpv-LA-GHG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="14"/>
+                                <state key="normal" title="LOGIN">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="P6a-Zr-3tT" eventType="touchUpInside" id="oqo-vP-ldu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By Clicking On Login Button You're Accepting Our Term's And Conditions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ct-RX-b7e">
+                                <rect key="frame" x="60" y="1123.5" width="700" height="16.5"/>
+                                <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="14"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in to continue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sor-Eo-3QS">
+                                <rect key="frame" x="45" y="256" width="132" height="21.5"/>
+                                <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="18"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GMW-Tn-0JD">
+                                <rect key="frame" x="45" y="343.5" width="730" height="40"/>
+                                <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="e1U-iy-Qkf"/>
+                                </constraints>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Oh Crepe _ Waffles 2 color.ai-ai" translatesAutoresizingMaskIntoConstraints="NO" id="UoH-1h-IMz">
+                                <rect key="frame" x="310" y="30" width="200" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="bDs-dZ-5lt"/>
+                                    <constraint firstAttribute="height" constant="150" id="qum-RY-pqO"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4k-rT-7lV">
+                                <rect key="frame" x="45" y="215" width="107.5" height="33"/>
+                                <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="28"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="yTS-Jr-U2y">
+                                <rect key="frame" x="45" y="561.5" width="730" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WcK-rb-wcv">
+                                        <rect key="frame" x="0.0" y="0.0" width="127" height="40"/>
+                                        <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="14"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yi4-Ok-XBm">
+                                        <rect key="frame" x="687.5" y="0.0" width="42.5" height="40"/>
+                                        <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="14"/>
+                                        <color key="textColor" systemColor="linkColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="fH2-Ml-bs2"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qUy-k5-PKb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="N4A-SE-6xq" firstAttribute="leading" secondItem="qUy-k5-PKb" secondAttribute="leading" constant="45" id="3oa-m5-Wf3"/>
+                            <constraint firstItem="W4k-rT-7lV" firstAttribute="leading" secondItem="qUy-k5-PKb" secondAttribute="leading" constant="45" id="3qx-kN-Ndw"/>
+                            <constraint firstItem="qLm-vb-oZE" firstAttribute="leading" secondItem="Sor-Eo-3QS" secondAttribute="leading" id="9tu-bi-2mJ"/>
+                            <constraint firstItem="je6-Jk-z9r" firstAttribute="leading" secondItem="qUy-k5-PKb" secondAttribute="leading" constant="45" id="Ba5-91-9TL"/>
+                            <constraint firstItem="qUy-k5-PKb" firstAttribute="trailing" secondItem="8Ct-RX-b7e" secondAttribute="trailing" constant="60" id="C0B-Jv-QfK"/>
+                            <constraint firstItem="xzx-ox-9xD" firstAttribute="leading" secondItem="qUy-k5-PKb" secondAttribute="leading" constant="45" id="Dsz-2c-9qW"/>
+                            <constraint firstAttribute="trailing" secondItem="GMW-Tn-0JD" secondAttribute="trailing" constant="45" id="F5h-Dm-Edd"/>
+                            <constraint firstItem="yTS-Jr-U2y" firstAttribute="leading" secondItem="xzx-ox-9xD" secondAttribute="leading" id="Fmh-Jo-Y6g"/>
+                            <constraint firstItem="qLm-vb-oZE" firstAttribute="top" secondItem="Sor-Eo-3QS" secondAttribute="bottom" constant="36" id="H2W-20-uHN"/>
+                            <constraint firstItem="xzx-ox-9xD" firstAttribute="top" secondItem="N4A-SE-6xq" secondAttribute="bottom" constant="40" id="J5R-7x-Qc5"/>
+                            <constraint firstItem="UoH-1h-IMz" firstAttribute="centerX" secondItem="LNo-zT-L0h" secondAttribute="centerX" id="JEP-4X-aaJ"/>
+                            <constraint firstItem="UoH-1h-IMz" firstAttribute="top" secondItem="qUy-k5-PKb" secondAttribute="top" constant="30" id="LNb-OS-tx0"/>
+                            <constraint firstItem="GMW-Tn-0JD" firstAttribute="top" secondItem="qLm-vb-oZE" secondAttribute="bottom" constant="12" id="LyM-5m-T4n"/>
+                            <constraint firstAttribute="trailing" secondItem="xzx-ox-9xD" secondAttribute="trailing" constant="45" id="LyX-Qm-1AT"/>
+                            <constraint firstItem="Sor-Eo-3QS" firstAttribute="top" secondItem="W4k-rT-7lV" secondAttribute="bottom" constant="8" id="QIK-De-UKV"/>
+                            <constraint firstItem="Sor-Eo-3QS" firstAttribute="leading" secondItem="qUy-k5-PKb" secondAttribute="leading" constant="45" id="WfQ-n7-dlV"/>
+                            <constraint firstAttribute="trailing" secondItem="N4A-SE-6xq" secondAttribute="trailing" constant="45" id="agr-UL-E9r"/>
+                            <constraint firstItem="yTS-Jr-U2y" firstAttribute="top" secondItem="xzx-ox-9xD" secondAttribute="bottom" constant="8" id="i1R-CU-bEg"/>
+                            <constraint firstItem="N4A-SE-6xq" firstAttribute="top" secondItem="je6-Jk-z9r" secondAttribute="bottom" constant="12" id="igt-ys-jdG"/>
+                            <constraint firstItem="je6-Jk-z9r" firstAttribute="top" secondItem="GMW-Tn-0JD" secondAttribute="bottom" constant="20" id="lZH-fe-f9T"/>
+                            <constraint firstItem="qUy-k5-PKb" firstAttribute="bottom" secondItem="8Ct-RX-b7e" secondAttribute="bottom" constant="20" id="mD6-0e-FJp"/>
+                            <constraint firstItem="GMW-Tn-0JD" firstAttribute="leading" secondItem="qUy-k5-PKb" secondAttribute="leading" constant="45" id="mTJ-yE-d5v"/>
+                            <constraint firstItem="W4k-rT-7lV" firstAttribute="top" secondItem="UoH-1h-IMz" secondAttribute="bottom" constant="35" id="mme-ok-liJ"/>
+                            <constraint firstItem="yTS-Jr-U2y" firstAttribute="trailing" secondItem="xzx-ox-9xD" secondAttribute="trailing" id="wcG-hK-uWf"/>
+                            <constraint firstItem="8Ct-RX-b7e" firstAttribute="leading" secondItem="qUy-k5-PKb" secondAttribute="leading" constant="60" id="whH-sL-WoN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailAddress" destination="GMW-Tn-0JD" id="f7R-lk-Pdr"/>
+                        <outlet property="loginButton" destination="xzx-ox-9xD" id="raC-uJ-Wo8"/>
+                        <outlet property="password" destination="N4A-SE-6xq" id="0jt-Jb-BOw"/>
+                        <outlet property="signUpBtn" destination="yi4-Ok-XBm" id="WgO-YI-hXD"/>
+                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="signupseg" id="PIj-CR-30N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2sB-l8-axL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2761" y="819"/>
+        </scene>
         <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Oh_Crepe___Waffles" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SignUpViewController" customModule="Oh_Crepe___Waffles" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="995.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Email Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7FU-HZ-USU">
+                                <rect key="frame" x="45" y="403.5" width="119.5" height="18"/>
+                                <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="15"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gz8-rk-bsA">
+                                <rect key="frame" x="45" y="523.5" width="614" height="40"/>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="k47-7e-rX1"/>
+                                </constraints>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Xv-8D-tsq">
+                                <rect key="frame" x="45" y="493.5" width="92.5" height="18"/>
+                                <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="15"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3El-Dx-Vgm">
+                                <rect key="frame" x="45" y="603.5" width="614" height="40"/>
+                                <color key="backgroundColor" red="0.41568627450000001" green="0.098039215690000001" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="TSh-Uu-YNj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="14"/>
+                                <state key="normal" title="CREATE ACCOUNT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="createAccountBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="beD-pa-7hx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up to continue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PxQ-le-sWM">
+                                <rect key="frame" x="45" y="256" width="136.5" height="21.5"/>
+                                <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="18"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fqr-S4-f9j">
+                                <rect key="frame" x="45" y="433.5" width="614" height="40"/>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Qnz-LL-lxr"/>
+                                </constraints>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Oh Crepe _ Waffles 2 color.ai-ai" translatesAutoresizingMaskIntoConstraints="NO" id="xsx-9X-5xd">
+                                <rect key="frame" x="252" y="30" width="200" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="d8D-Cx-ayo"/>
+                                    <constraint firstAttribute="width" constant="200" id="lTg-5I-8MC"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Account," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogw-ib-srD">
+                                <rect key="frame" x="45" y="215" width="614" height="33"/>
+                                <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="28"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHd-BE-UPC">
+                                <rect key="frame" x="45" y="313.5" width="69" height="18"/>
+                                <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="15"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hmu-Te-1M7">
+                                <rect key="frame" x="45" y="343.5" width="614" height="40"/>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="4dR-LJ-H4L"/>
+                                </constraints>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="vxF-ST-cbE">
+                                <rect key="frame" x="45" y="651.5" width="614" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UfW-1J-dl7">
+                                        <rect key="frame" x="0.0" y="0.0" width="141" height="40"/>
+                                        <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="14"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vna-nL-iiw">
+                                        <rect key="frame" x="583" y="0.0" width="31" height="40"/>
+                                        <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="14"/>
+                                        <color key="textColor" systemColor="linkColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="c8F-j3-tIY"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ogw-ib-srD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="0vC-E9-Aw4"/>
+                            <constraint firstItem="xsx-9X-5xd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3tl-Au-lTa"/>
+                            <constraint firstItem="vxF-ST-cbE" firstAttribute="trailing" secondItem="3El-Dx-Vgm" secondAttribute="trailing" id="3xK-QJ-8Vy"/>
+                            <constraint firstItem="hmu-Te-1M7" firstAttribute="top" secondItem="kHd-BE-UPC" secondAttribute="bottom" constant="12" id="55S-Zf-eG5"/>
+                            <constraint firstItem="fqr-S4-f9j" firstAttribute="top" secondItem="7FU-HZ-USU" secondAttribute="bottom" constant="12" id="6Se-gG-f4n"/>
+                            <constraint firstItem="kHd-BE-UPC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="8us-HY-bXe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ogw-ib-srD" secondAttribute="trailing" constant="45" id="9iW-TO-V5p"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fqr-S4-f9j" secondAttribute="trailing" constant="45" id="9w5-sE-N6b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gz8-rk-bsA" secondAttribute="trailing" constant="45" id="9xQ-QV-2Ki"/>
+                            <constraint firstItem="ogw-ib-srD" firstAttribute="top" secondItem="xsx-9X-5xd" secondAttribute="bottom" constant="35" id="Bxn-0y-nPb"/>
+                            <constraint firstItem="1Xv-8D-tsq" firstAttribute="top" secondItem="fqr-S4-f9j" secondAttribute="bottom" constant="20" id="Dk7-aZ-T4S"/>
+                            <constraint firstItem="PxQ-le-sWM" firstAttribute="top" secondItem="ogw-ib-srD" secondAttribute="bottom" constant="8" id="EXc-rf-vFj"/>
+                            <constraint firstItem="gz8-rk-bsA" firstAttribute="top" secondItem="1Xv-8D-tsq" secondAttribute="bottom" constant="12" id="GS5-Iw-Zfw"/>
+                            <constraint firstItem="1Xv-8D-tsq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="GtW-mh-qjN"/>
+                            <constraint firstItem="7FU-HZ-USU" firstAttribute="top" secondItem="hmu-Te-1M7" secondAttribute="bottom" constant="20" id="KzT-g6-Jhm"/>
+                            <constraint firstItem="PxQ-le-sWM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="RwY-Od-5zc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3El-Dx-Vgm" secondAttribute="trailing" constant="45" id="Sd0-dA-F8M"/>
+                            <constraint firstItem="7FU-HZ-USU" firstAttribute="leading" secondItem="PxQ-le-sWM" secondAttribute="leading" id="Sf3-Fh-SI2"/>
+                            <constraint firstItem="gz8-rk-bsA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="VDd-df-iFZ"/>
+                            <constraint firstItem="vxF-ST-cbE" firstAttribute="top" secondItem="3El-Dx-Vgm" secondAttribute="bottom" constant="8" id="YdG-it-K0x"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hmu-Te-1M7" secondAttribute="trailing" constant="45" id="bfI-1K-Y5J"/>
+                            <constraint firstItem="hmu-Te-1M7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="e7x-1P-WXA"/>
+                            <constraint firstItem="3El-Dx-Vgm" firstAttribute="top" secondItem="gz8-rk-bsA" secondAttribute="bottom" constant="40" id="g4p-Ge-F0M"/>
+                            <constraint firstItem="vxF-ST-cbE" firstAttribute="leading" secondItem="3El-Dx-Vgm" secondAttribute="leading" id="ipo-lC-2cK"/>
+                            <constraint firstItem="3El-Dx-Vgm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="o70-LD-51s"/>
+                            <constraint firstItem="xsx-9X-5xd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="pWq-1j-EO1"/>
+                            <constraint firstItem="kHd-BE-UPC" firstAttribute="top" secondItem="PxQ-le-sWM" secondAttribute="bottom" constant="36" id="q7R-dH-xtw"/>
+                            <constraint firstItem="fqr-S4-f9j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="tLV-Ry-VpA"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="Qgb-cZ-im1"/>
+                    <connections>
+                        <outlet property="createAccountBtn" destination="3El-Dx-Vgm" id="F02-RR-1r7"/>
+                        <outlet property="emailaddress" destination="fqr-S4-f9j" id="8T5-1D-rv2"/>
+                        <outlet property="loginbtn" destination="vna-nL-iiw" id="4Eb-cy-d0m"/>
+                        <outlet property="name" destination="hmu-Te-1M7" id="ent-YG-vIx"/>
+                        <outlet property="password" destination="gz8-rk-bsA" id="MoS-rh-03S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-767" y="822"/>
+            <point key="canvasLocation" x="-1802" y="820"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Qdm-ix-WeP">
+            <objects>
+                <viewController storyboardIdentifier="homeVC" id="x3F-lo-PTX" customClass="ViewController" customModule="Oh_Crepe___Waffles" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3HA-y3-koy">
+                        <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="94s-bt-Ipf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cao-Xe-PtH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-908" y="821"/>
         </scene>
         <!--Book Catering View Controller-->
         <scene sceneID="LQR-3o-rNp">
             <objects>
                 <viewController storyboardIdentifier="bookVC" id="24k-GX-9Nc" customClass="BookCateringViewController" customModule="Oh_Crepe___Waffles" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bCS-2w-XXo">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="995.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytj-fD-xgq">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                                <rect key="frame" x="0.0" y="0.0" width="704" height="995.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z33-jR-Ehv">
-                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1217"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="704" height="1217"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book Catering" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MWT-Ua-MpS">
                                                 <rect key="frame" x="10" y="16" width="306" height="74"/>
@@ -69,7 +375,7 @@
                                                 </variation>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XSZ-NE-rVF">
-                                                <rect key="frame" x="10" y="143" width="1004" height="55"/>
+                                                <rect key="frame" x="10" y="143" width="684" height="55"/>
                                                 <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="Q4h-Ip-Fiz">
@@ -92,7 +398,7 @@
                                                 </variation>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vmm-O1-4yp">
-                                                <rect key="frame" x="10" y="247" width="1004" height="55"/>
+                                                <rect key="frame" x="10" y="247" width="684" height="55"/>
                                                 <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="HUS-U8-32S">
@@ -115,7 +421,7 @@
                                                 </variation>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zcA-cp-RNr">
-                                                <rect key="frame" x="10" y="351" width="1004" height="55"/>
+                                                <rect key="frame" x="10" y="351" width="684" height="55"/>
                                                 <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="zoC-M7-Pme">
@@ -138,7 +444,7 @@
                                                 </variation>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OhH-x7-OTv">
-                                                <rect key="frame" x="10" y="455" width="1004" height="55"/>
+                                                <rect key="frame" x="10" y="455" width="684" height="55"/>
                                                 <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="9UK-9o-WOF">
@@ -161,7 +467,7 @@
                                                 </variation>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Ac-rp-XDu">
-                                                <rect key="frame" x="10" y="559" width="1004" height="55"/>
+                                                <rect key="frame" x="10" y="559" width="684" height="55"/>
                                                 <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="mpU-K0-0h2">
@@ -184,7 +490,7 @@
                                                 </variation>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OeB-E9-19D">
-                                                <rect key="frame" x="10" y="663" width="1004" height="55"/>
+                                                <rect key="frame" x="10" y="663" width="684" height="55"/>
                                                 <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="5hw-bd-2yD">
@@ -207,7 +513,7 @@
                                                 </variation>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nsI-el-7co">
-                                                <rect key="frame" x="10" y="767" width="1004" height="55"/>
+                                                <rect key="frame" x="10" y="767" width="684" height="55"/>
                                                 <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="5uS-NR-3Qb">
@@ -221,7 +527,7 @@
                                                 </variation>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PLd-fP-OYp">
-                                                <rect key="frame" x="10" y="862" width="1004" height="55"/>
+                                                <rect key="frame" x="10" y="862" width="684" height="55"/>
                                                 <color key="backgroundColor" red="0.41568627450980389" green="0.098039215686274508" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="c5t-zF-h25">
@@ -308,6 +614,7 @@
                             <constraint firstItem="Ce4-04-DbB" firstAttribute="trailing" secondItem="ytj-fD-xgq" secondAttribute="trailing" id="s6l-El-KzO"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="lyd-Ty-HtY"/>
                     <connections>
                         <outlet property="book" destination="PLd-fP-OYp" id="teI-mT-SoM"/>
                         <outlet property="dateAndTime" destination="1Ac-rp-XDu" id="J9G-qP-t3a"/>
@@ -328,17 +635,17 @@
             <objects>
                 <viewController storyboardIdentifier="aboutus" id="Rxe-I8-28M" customClass="AboutUsViewController" customModule="Oh_Crepe___Waffles" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BJA-m9-Laq">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bus" translatesAutoresizingMaskIntoConstraints="NO" id="aTR-fM-RcL">
-                                <rect key="frame" x="10" y="533" width="1004" height="300"/>
+                                <rect key="frame" x="10" y="440" width="800" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="Gef-dj-2ME"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6DT-cP-kd0">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                                <rect key="frame" x="0.0" y="0.0" width="820" height="1160"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l52-L2-j3c">
                                         <rect key="frame" x="10" y="16" width="195" height="74"/>
@@ -350,7 +657,7 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Dr-LN-REx">
-                                        <rect key="frame" x="10" y="166" width="1004" height="190"/>
+                                        <rect key="frame" x="10" y="166" width="800" height="237"/>
                                         <string key="text">Locally owned food truck bringing French street food to the 315 area. French-style crepes and Belgium waffles made with an American twist! Savory and sweet to cater to any craving you may have! Have a neighborhood event, birthday party, wedding, or want a food truck at your job? Call us today to see if we can bring the food truck to you!
 
 Located out of Vernon NY, we go to Madison and Oneida counties along with all the surrounding areas as well. Crepes and Waffles are great for any occasion and can be made for any type of day as well! Breakfast, lunch, dinner, and dessert, we’re here to make your event unique!</string>
@@ -371,7 +678,7 @@ Located out of Vernon NY, we go to Madison and Oneida counties along with all th
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTJ-Pf-adp">
-                                        <rect key="frame" x="10" y="391" width="146" height="31"/>
+                                        <rect key="frame" x="10" y="438" width="146" height="31"/>
                                         <fontDescription key="fontDescription" name="Rubik-Bold" family="Rubik" pointSize="20"/>
                                         <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
@@ -380,7 +687,7 @@ Located out of Vernon NY, we go to Madison and Oneida counties along with all th
                                         </variation>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HxF-WL-u8X">
-                                        <rect key="frame" x="10" y="442" width="1004" height="30"/>
+                                        <rect key="frame" x="10" y="489" width="800" height="30"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="email-3" translatesAutoresizingMaskIntoConstraints="NO" id="3QL-mK-97R">
                                                 <rect key="frame" x="0.0" y="1" width="28" height="28"/>
@@ -394,7 +701,7 @@ Located out of Vernon NY, we go to Madison and Oneida counties along with all th
                                                 </constraints>
                                             </imageView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="Email : Ohcrepecny@gmail.com " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fat-6X-gdI">
-                                                <rect key="frame" x="34" y="0.0" width="970" height="30"/>
+                                                <rect key="frame" x="34" y="0.0" width="766" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="jhq-vg-bgJ"/>
                                                 </constraints>
@@ -417,7 +724,7 @@ Located out of Vernon NY, we go to Madison and Oneida counties along with all th
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version : 1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0I-iB-0gF">
-                                        <rect key="frame" x="455" y="1262" width="114" height="24"/>
+                                        <rect key="frame" x="353" y="1056" width="114" height="24"/>
                                         <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="13"/>
                                         <color key="textColor" red="0.41176470588235292" green="0.41176470588235292" blue="0.41176470588235292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -426,7 +733,7 @@ Located out of Vernon NY, we go to Madison and Oneida counties along with all th
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed By : SOFTMENT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IKK-hN-6a0">
-                                        <rect key="frame" x="386.5" y="1228" width="251" height="24"/>
+                                        <rect key="frame" x="284.5" y="1022" width="251" height="24"/>
                                         <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="13"/>
                                         <color key="textColor" systemColor="linkColor"/>
                                         <nil key="highlightedColor"/>
@@ -435,7 +742,7 @@ Located out of Vernon NY, we go to Madison and Oneida counties along with all th
                                         </variation>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4P6-LW-UBU">
-                                        <rect key="frame" x="10" y="492" width="1004" height="30"/>
+                                        <rect key="frame" x="10" y="539" width="800" height="30"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="alr-ej-fVI">
                                                 <rect key="frame" x="0.0" y="1" width="28" height="28"/>
@@ -449,7 +756,7 @@ Located out of Vernon NY, we go to Madison and Oneida counties along with all th
                                                 </constraints>
                                             </imageView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="Phone : +1-315-813-3377" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="50D-gf-aEq">
-                                                <rect key="frame" x="34" y="0.0" width="970" height="30"/>
+                                                <rect key="frame" x="34" y="0.0" width="766" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="9Ic-LC-o7Y"/>
                                                 </constraints>
@@ -472,7 +779,7 @@ Located out of Vernon NY, we go to Madison and Oneida counties along with all th
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Va3-rf-ZPP">
-                                        <rect key="frame" x="10" y="542" width="1004" height="30"/>
+                                        <rect key="frame" x="10" y="589" width="800" height="30"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="browser" translatesAutoresizingMaskIntoConstraints="NO" id="Xxe-Pt-VIn">
                                                 <rect key="frame" x="0.0" y="1" width="28" height="28"/>
@@ -486,7 +793,7 @@ Located out of Vernon NY, we go to Madison and Oneida counties along with all th
                                                 </constraints>
                                             </imageView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="Website : www.ohcrepecny.com " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QU6-Ej-Hfz">
-                                                <rect key="frame" x="34" y="0.0" width="970" height="30"/>
+                                                <rect key="frame" x="34" y="0.0" width="766" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="wti-g1-Wzb"/>
                                                 </constraints>
@@ -509,7 +816,7 @@ Located out of Vernon NY, we go to Madison and Oneida counties along with all th
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4e7-um-B3U">
-                                        <rect key="frame" x="10" y="592" width="1004" height="30"/>
+                                        <rect key="frame" x="10" y="639" width="800" height="30"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instagram" translatesAutoresizingMaskIntoConstraints="NO" id="0od-4d-VbR">
                                                 <rect key="frame" x="0.0" y="1" width="28" height="28"/>
@@ -523,7 +830,7 @@ Located out of Vernon NY, we go to Madison and Oneida counties along with all th
                                                 </constraints>
                                             </imageView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="@ohcrepecny" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kir-WZ-PEw">
-                                                <rect key="frame" x="34" y="0.0" width="970" height="30"/>
+                                                <rect key="frame" x="34" y="0.0" width="766" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="QSo-EA-0pM"/>
                                                 </constraints>
@@ -546,7 +853,7 @@ Located out of Vernon NY, we go to Madison and Oneida counties along with all th
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uKC-XK-Ecw">
-                                        <rect key="frame" x="10" y="642" width="1004" height="30"/>
+                                        <rect key="frame" x="10" y="689" width="800" height="30"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="DaU-Hk-LSH">
                                                 <rect key="frame" x="0.0" y="1" width="28" height="28"/>
@@ -560,7 +867,7 @@ Located out of Vernon NY, we go to Madison and Oneida counties along with all th
                                                 </constraints>
                                             </imageView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="@ohcrepecny" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sGW-io-GNk">
-                                                <rect key="frame" x="34" y="0.0" width="970" height="30"/>
+                                                <rect key="frame" x="34" y="0.0" width="766" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="ShD-zf-GAx"/>
                                                 </constraints>
@@ -649,14 +956,14 @@ Located out of Vernon NY, we go to Madison and Oneida counties along with all th
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vPN-ss-GUD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-81.159420289855078" y="148.66071428571428"/>
+            <point key="canvasLocation" x="-804" y="145"/>
         </scene>
         <!--Item-->
         <scene sceneID="Stu-Pa-49e">
             <objects>
                 <viewController storyboardIdentifier="menu" id="uaC-g4-ZIR" customClass="MenuViewController" customModule="Oh_Crepe___Waffles" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ugo-nd-Os1">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Our Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQh-tH-AtH">
@@ -669,7 +976,7 @@ Located out of Vernon NY, we go to Madison and Oneida counties along with all th
                                 </variation>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jfb-dQ-ugU">
-                                <rect key="frame" x="10" y="100" width="1004" height="1250"/>
+                                <rect key="frame" x="10" y="100" width="800" height="1044"/>
                                 <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="Y7x-wA-YSb">
                                     <size key="itemSize" width="172" height="250"/>
@@ -747,6 +1054,15 @@ Located out of Vernon NY, we go to Madison and Oneida counties along with all th
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book Catering" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZv-rS-cuv">
+                                <rect key="frame" x="604" y="28.5" width="204" height="49.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="18"/>
+                                <color key="textColor" systemColor="linkColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="36"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VuO-3O-zfm"/>
                         <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -755,13 +1071,17 @@ Located out of Vernon NY, we go to Madison and Oneida counties along with all th
                             <constraint firstItem="ZQh-tH-AtH" firstAttribute="leading" secondItem="VuO-3O-zfm" secondAttribute="leading" constant="12" id="B5D-Ae-5tG"/>
                             <constraint firstItem="VuO-3O-zfm" firstAttribute="bottom" secondItem="jfb-dQ-ugU" secondAttribute="bottom" constant="16" id="BRk-2a-cc4"/>
                             <constraint firstItem="jfb-dQ-ugU" firstAttribute="leading" secondItem="VuO-3O-zfm" secondAttribute="leading" constant="10" id="JbF-Wt-HFf"/>
+                            <constraint firstAttribute="trailing" secondItem="SZv-rS-cuv" secondAttribute="trailing" constant="12" id="Oh9-gY-YHj"/>
                             <constraint firstItem="VuO-3O-zfm" firstAttribute="trailing" secondItem="jfb-dQ-ugU" secondAttribute="trailing" constant="10" id="UFm-RY-foE"/>
                             <constraint firstItem="jfb-dQ-ugU" firstAttribute="top" secondItem="ZQh-tH-AtH" secondAttribute="bottom" constant="10" id="aVG-5p-39Z"/>
+                            <constraint firstItem="SZv-rS-cuv" firstAttribute="centerY" secondItem="ZQh-tH-AtH" secondAttribute="centerY" id="lOu-Cn-kBM"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="pGX-To-s5o"/>
                     <connections>
+                        <outlet property="bookCatering" destination="SZv-rS-cuv" id="i2r-5B-XKX"/>
                         <outlet property="collectionView" destination="jfb-dQ-ugU" id="3m0-jS-E8Y"/>
+                        <segue destination="24k-GX-9Nc" kind="show" identifier="bookcatseg" id="3Zg-Md-HHR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yKy-Uj-2ep" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -773,7 +1093,7 @@ Located out of Vernon NY, we go to Madison and Oneida counties along with all th
             <objects>
                 <viewController storyboardIdentifier="event" id="OJN-mB-Qh9" customClass="EventViewController" customModule="Oh_Crepe___Waffles" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hra-Sf-PZE">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x2f-Ng-B5a">
@@ -786,21 +1106,21 @@ Located out of Vernon NY, we go to Madison and Oneida counties along with all th
                                 </variation>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UQk-qQ-MRn">
-                                <rect key="frame" x="10" y="100" width="1004" height="1250"/>
+                                <rect key="frame" x="10" y="100" width="800" height="1044"/>
                                 <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="eventcell" id="jVf-4t-Scx" customClass="EventTableViewCell" customModule="Oh_Crepe___Waffles" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="1004" height="161.5"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="800" height="161.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jVf-4t-Scx" id="Yfg-7I-j83">
-                                            <rect key="frame" x="0.0" y="0.0" width="1004" height="161.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="800" height="161.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4fU-SG-Ec8">
-                                                    <rect key="frame" x="4" y="8" width="996" height="145.5"/>
+                                                    <rect key="frame" x="4" y="8" width="792" height="145.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Event Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JV5-8W-awb">
-                                                            <rect key="frame" x="10" y="10" width="976" height="26.5"/>
+                                                            <rect key="frame" x="10" y="10" width="772" height="26.5"/>
                                                             <fontDescription key="fontDescription" name="Rubik-Bold" family="Rubik" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -809,7 +1129,7 @@ Located out of Vernon NY, we go to Madison and Oneida counties along with all th
                                                             </variation>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dwc-Cb-hQV">
-                                                            <rect key="frame" x="10" y="44.5" width="976" height="25"/>
+                                                            <rect key="frame" x="10" y="44.5" width="772" height="25"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location" translatesAutoresizingMaskIntoConstraints="NO" id="w4C-he-gjw">
                                                                     <rect key="frame" x="0.0" y="4.5" width="16" height="16"/>
@@ -838,7 +1158,7 @@ Located out of Vernon NY, we go to Madison and Oneida counties along with all th
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="diB-34-Gkk">
-                                                            <rect key="frame" x="10" y="77.5" width="976" height="25"/>
+                                                            <rect key="frame" x="10" y="77.5" width="772" height="25"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar (1)" translatesAutoresizingMaskIntoConstraints="NO" id="jmn-Ug-ODt">
                                                                     <rect key="frame" x="0.0" y="4.5" width="16" height="16"/>
@@ -867,7 +1187,7 @@ Located out of Vernon NY, we go to Madison and Oneida counties along with all th
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QbO-0V-KDG">
-                                                            <rect key="frame" x="10" y="110.5" width="976" height="25"/>
+                                                            <rect key="frame" x="10" y="110.5" width="772" height="25"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chronometer" translatesAutoresizingMaskIntoConstraints="NO" id="dpZ-1l-lkQ">
                                                                     <rect key="frame" x="0.0" y="4.5" width="16" height="16"/>
@@ -957,18 +1277,18 @@ Located out of Vernon NY, we go to Madison and Oneida counties along with all th
             <objects>
                 <viewController storyboardIdentifier="chatVC" id="TRg-sR-3sz" customClass="ChatViewController" customModule="Oh_Crepe___Waffles" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tGV-fw-CoI">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="crM-Vn-mtf">
-                                <rect key="frame" x="0.0" y="100" width="1024" height="1158"/>
+                                <rect key="frame" x="0.0" y="100" width="820" height="952"/>
                                 <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="messagecell" id="sSX-tO-qOg" customClass="MessagesCell" customModule="Oh_Crepe___Waffles" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="1024" height="109.5"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="820" height="109.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sSX-tO-qOg" id="AxT-sX-vuk">
-                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="109.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="820" height="109.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e3M-W6-fdO">
@@ -1047,10 +1367,10 @@ Located out of Vernon NY, we go to Madison and Oneida counties along with all th
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tcs-M7-EuD">
-                                <rect key="frame" x="0.0" y="1258" width="1024" height="48"/>
+                                <rect key="frame" x="0.0" y="1052" width="820" height="48"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ba7-UN-msO">
-                                        <rect key="frame" x="974" y="8" width="50" height="24"/>
+                                        <rect key="frame" x="770" y="8" width="50" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="oZE-Cy-zQv"/>
                                         </constraints>
@@ -1059,7 +1379,7 @@ Located out of Vernon NY, we go to Madison and Oneida counties along with all th
                                         </state>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EGb-hx-0pY">
-                                        <rect key="frame" x="16" y="8" width="958" height="24"/>
+                                        <rect key="frame" x="16" y="8" width="754" height="24"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1088,7 +1408,7 @@ Located out of Vernon NY, we go to Madison and Oneida counties along with all th
                                 </variation>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5VX-MT-12y">
-                                <rect key="frame" x="0.0" y="1306" width="1024" height="60"/>
+                                <rect key="frame" x="0.0" y="1100" width="820" height="60"/>
                                 <color key="backgroundColor" red="0.082352941176470587" green="0.20000000000000001" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>

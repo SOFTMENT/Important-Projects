@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "475503860193",
+    "project_id": "prizey-63304",
+    "storage_bucket": "prizey-63304.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:475503860193:android:e4b27fbbc30f4e5ad2daa0",
+        "android_client_info": {
+          "package_name": "in.softment.prizey"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "475503860193-u1vvjuop31lrlebd8rrn34jpr4r1o7da.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB27qbWUX9u1W8mLhdU6FNZNIeFmBZJWgw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "475503860193-u1vvjuop31lrlebd8rrn34jpr4r1o7da.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

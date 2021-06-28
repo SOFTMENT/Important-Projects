@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B120955266AC2FC00C7D535 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B120953266AC2FC00C7D535 /* ProfileView.swift */; };
+		8B120956266AC2FC00C7D535 /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B120954266AC2FC00C7D535 /* ProfileView.xib */; };
+		8B120958266AC48800C7D535 /* ProfilePresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B120957266AC48800C7D535 /* ProfilePresentationController.swift */; };
+		8B12095A266ACD0A00C7D535 /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B120959266ACD0A00C7D535 /* IAPManager.swift */; };
+		8B12095D266AD17300C7D535 /* MembershipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B12095B266AD17300C7D535 /* MembershipViewController.swift */; };
+		8B12095E266AD17300C7D535 /* MembershipViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B12095C266AD17300C7D535 /* MembershipViewController.xib */; };
+		8B120960266AD5CE00C7D535 /* MembershipPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B12095F266AD5CE00C7D535 /* MembershipPresentationController.swift */; };
+		8B120962266AD76B00C7D535 /* Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B120961266AD76B00C7D535 /* Root.swift */; };
+		8B120964266ADD5600C7D535 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B120963266ADD5600C7D535 /* StoreKit.framework */; };
+		8B120966266CE32900C7D535 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B120965266CE32900C7D535 /* FavoriteCell.swift */; };
+		8B120968266D05CA00C7D535 /* FavoriteInsightsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B120967266D05CA00C7D535 /* FavoriteInsightsModel.swift */; };
+		8B12096C266D93B300C7D535 /* ClarityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B12096B266D93B300C7D535 /* ClarityModel.swift */; };
 		8B6879642658F5BE000A81BE /* AdminAddQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6879632658F5BE000A81BE /* AdminAddQuotes.swift */; };
 		8B99612B2658E56400759BC1 /* AdminHomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B99612A2658E56400759BC1 /* AdminHomeViewCell.swift */; };
 		8B99612D2658E64800759BC1 /* AdminHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B99612C2658E64800759BC1 /* AdminHomeViewController.swift */; };
@@ -53,6 +65,18 @@
 
 /* Begin PBXFileReference section */
 		6A8D8B435EBA90EE509C49EF /* Pods_Awakening_Clarity_Now.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Awakening_Clarity_Now.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B120953266AC2FC00C7D535 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		8B120954266AC2FC00C7D535 /* ProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
+		8B120957266AC48800C7D535 /* ProfilePresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresentationController.swift; sourceTree = "<group>"; };
+		8B120959266ACD0A00C7D535 /* IAPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
+		8B12095B266AD17300C7D535 /* MembershipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembershipViewController.swift; sourceTree = "<group>"; };
+		8B12095C266AD17300C7D535 /* MembershipViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MembershipViewController.xib; sourceTree = "<group>"; };
+		8B12095F266AD5CE00C7D535 /* MembershipPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembershipPresentationController.swift; sourceTree = "<group>"; };
+		8B120961266AD76B00C7D535 /* Root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Root.swift; sourceTree = "<group>"; };
+		8B120963266ADD5600C7D535 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		8B120965266CE32900C7D535 /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
+		8B120967266D05CA00C7D535 /* FavoriteInsightsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteInsightsModel.swift; sourceTree = "<group>"; };
+		8B12096B266D93B300C7D535 /* ClarityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClarityModel.swift; sourceTree = "<group>"; };
 		8B6879632658F5BE000A81BE /* AdminAddQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminAddQuotes.swift; sourceTree = "<group>"; };
 		8B99612A2658E56400759BC1 /* AdminHomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminHomeViewCell.swift; sourceTree = "<group>"; };
 		8B99612C2658E64800759BC1 /* AdminHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminHomeViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5BD22303D5A973300AB0DB1 /* Pods_Awakening_Clarity_Now.framework in Frameworks */,
+				8B120964266ADD5600C7D535 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +158,11 @@
 				8BED73FC2658524A0021CBB4 /* StartTimeAndEndTimeOverlay.swift */,
 				8BED73FD2658524A0021CBB4 /* StartTimeAndEndTimeOverlay.xib */,
 				8B99612A2658E56400759BC1 /* AdminHomeViewCell.swift */,
+				8B120953266AC2FC00C7D535 /* ProfileView.swift */,
+				8B120954266AC2FC00C7D535 /* ProfileView.xib */,
+				8B12095B266AD17300C7D535 /* MembershipViewController.swift */,
+				8B12095C266AD17300C7D535 /* MembershipViewController.xib */,
+				8B120965266CE32900C7D535 /* FavoriteCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -140,6 +170,7 @@
 		8D3053273868E769173BC7EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8B120963266ADD5600C7D535 /* StoreKit.framework */,
 				6A8D8B435EBA90EE509C49EF /* Pods_Awakening_Clarity_Now.framework */,
 			);
 			name = Frameworks;
@@ -216,6 +247,8 @@
 				8BED7400265853B70021CBB4 /* StartAndEndTimePresentationViewController.swift */,
 				8B99612C2658E64800759BC1 /* AdminHomeViewController.swift */,
 				8B6879632658F5BE000A81BE /* AdminAddQuotes.swift */,
+				8B120957266AC48800C7D535 /* ProfilePresentationController.swift */,
+				8B12095F266AD5CE00C7D535 /* MembershipPresentationController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -225,6 +258,7 @@
 			children = (
 				B1ED52E4264DD55E00164351 /* Extensions.swift */,
 				B1ED52ED264DEAD900164351 /* Constants.swift */,
+				8B120959266ACD0A00C7D535 /* IAPManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -234,6 +268,9 @@
 			children = (
 				B1ED52E9264DE6F600164351 /* UserModel.swift */,
 				8B99612E2658EE0E00759BC1 /* DailyInsightsModel.swift */,
+				8B120961266AD76B00C7D535 /* Root.swift */,
+				8B120967266D05CA00C7D535 /* FavoriteInsightsModel.swift */,
+				8B12096B266D93B300C7D535 /* ClarityModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -310,6 +347,8 @@
 				8BD2AE692656D1720037F262 /* Main.storyboard in Resources */,
 				B1ED52D5264D9A8D00164351 /* SF-Mono-HeavyItalic.otf in Resources */,
 				8BD12CB32656E61700E19108 /* GoogleService-Info.plist in Resources */,
+				8B12095E266AD17300C7D535 /* MembershipViewController.xib in Resources */,
+				8B120956266AC2FC00C7D535 /* ProfileView.xib in Resources */,
 				8BD12CA72656D9F400E19108 /* LaunchScreen.storyboard in Resources */,
 				B1ED52D4264D9A8D00164351 /* SF-Mono-Regular.otf in Resources */,
 				B1ED52DA264D9A8D00164351 /* SF-Mono-Heavy.otf in Resources */,
@@ -394,6 +433,8 @@
 				8BED73F9265840C80021CBB4 /* FavoriteViewController.swift in Sources */,
 				B1012155264D5F1400B08C8E /* AppDelegate.swift in Sources */,
 				8BED73FE2658524A0021CBB4 /* StartTimeAndEndTimeOverlay.swift in Sources */,
+				8B120962266AD76B00C7D535 /* Root.swift in Sources */,
+				8B120968266D05CA00C7D535 /* FavoriteInsightsModel.swift in Sources */,
 				B1ED52EA264DE6F600164351 /* UserModel.swift in Sources */,
 				B1ED52EC264DE83800164351 /* HomeViewController.swift in Sources */,
 				8BED73FB265840F50021CBB4 /* DailyInsightsViewController.swift in Sources */,
@@ -401,11 +442,18 @@
 				8BED73F4265831B10021CBB4 /* OverlayView.swift in Sources */,
 				B1012157264D5F1400B08C8E /* SceneDelegate.swift in Sources */,
 				8BED7401265853B70021CBB4 /* StartAndEndTimePresentationViewController.swift in Sources */,
+				8B120958266AC48800C7D535 /* ProfilePresentationController.swift in Sources */,
+				8B120955266AC2FC00C7D535 /* ProfileView.swift in Sources */,
 				8B99612B2658E56400759BC1 /* AdminHomeViewCell.swift in Sources */,
 				8BED73F1265802420021CBB4 /* SettingsViewController.swift in Sources */,
+				8B12096C266D93B300C7D535 /* ClarityModel.swift in Sources */,
+				8B12095A266ACD0A00C7D535 /* IAPManager.swift in Sources */,
+				8B12095D266AD17300C7D535 /* MembershipViewController.swift in Sources */,
 				B1ED52EE264DEAD900164351 /* Constants.swift in Sources */,
 				8B99612D2658E64800759BC1 /* AdminHomeViewController.swift in Sources */,
 				8BED73EF2657D17E0021CBB4 /* InstagramFeedViewController.swift in Sources */,
+				8B120960266AD5CE00C7D535 /* MembershipPresentationController.swift in Sources */,
+				8B120966266CE32900C7D535 /* FavoriteCell.swift in Sources */,
 				8B6879642658F5BE000A81BE /* AdminAddQuotes.swift in Sources */,
 				8BED73F7265834300021CBB4 /* PresentationController.swift in Sources */,
 			);
@@ -538,6 +586,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Awakening Clarity Now/Awakening Clarity Now.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = H9YFNDC7S2;
 				INFOPLIST_FILE = "Awakening Clarity Now/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -545,6 +594,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 6;
 				PRODUCT_BUNDLE_IDENTIFIER = "in.softment.Awakening-Clarity-Now";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -560,6 +610,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Awakening Clarity Now/Awakening Clarity Now.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = H9YFNDC7S2;
 				INFOPLIST_FILE = "Awakening Clarity Now/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -567,6 +618,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 6;
 				PRODUCT_BUNDLE_IDENTIFIER = "in.softment.Awakening-Clarity-Now";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

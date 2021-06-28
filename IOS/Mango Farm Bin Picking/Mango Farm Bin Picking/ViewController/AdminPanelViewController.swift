@@ -32,7 +32,9 @@ class AdminPanelViewController: UIViewController, CalendarDateRangePickerViewCon
     @IBOutlet weak var machineNumber: UITextField!
     @IBOutlet weak var dateBtn: UIButton!
     @IBOutlet weak var binBtn: UIButton!
+    @IBOutlet weak var machineStatusBtn: UIButton!
     
+ 
     
     override func viewDidLoad() {
         
@@ -56,6 +58,9 @@ class AdminPanelViewController: UIViewController, CalendarDateRangePickerViewCon
         crewMemberBtn.layer.cornerRadius = 4
         machineNumber.layer.cornerRadius = 4
         binBtn.layer.cornerRadius = 4
+        machineStatusBtn.layer.cornerRadius = 4
+        machineStatusBtn.isUserInteractionEnabled = true
+        machineStatusBtn.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(machineStatusClicked(_:))))
         dateBtn.layer.cornerRadius = 4
         
         
@@ -100,6 +105,16 @@ class AdminPanelViewController: UIViewController, CalendarDateRangePickerViewCon
          
         }))
         
+        // 3. Grab the value from the text field, and print it when the user clicks OK.
+        alert.addAction(UIAlertAction(title: "Download All", style: .default, handler: { [weak alert] (_) in
+            
+                self.getReportBasedOnAllMachines()
+                
+           
+            
+         
+        }))
+        
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
             alert.dismiss(animated: true, completion: nil)
         }))
@@ -132,6 +147,18 @@ class AdminPanelViewController: UIViewController, CalendarDateRangePickerViewCon
             else {
                 self.showToast(message: "Please Enter Crew Member Name")
             }
+            
+          
+        }))
+        
+        // 3. Grab the value from the text field, and print it when the user clicks OK.
+        alert.addAction(UIAlertAction(title: "Download All Members Report", style: .default, handler: { [weak alert] (_) in
+         
+            
+            
+                self.getReportBasedOnAllCrewMembers()
+                
+           
             
           
         }))
@@ -173,6 +200,17 @@ class AdminPanelViewController: UIViewController, CalendarDateRangePickerViewCon
          
         }))
         
+        // 3. Grab the value from the text field, and print it when the user clicks OK.
+        alert.addAction(UIAlertAction(title: "Download All Bin Report", style: .default, handler: { [weak alert] (_) in
+            
+           
+                self.getReportBasedOnAllBinNumber()
+                
+            
+        }))
+        
+        
+        
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
             alert.dismiss(animated: true, completion: nil)
         }))
@@ -184,39 +222,84 @@ class AdminPanelViewController: UIViewController, CalendarDateRangePickerViewCon
     
     func getReportBasedOnMachineNumber(machineNumber : String) {
         ProgressHUDShow(text: "Downloading...")
-        Database.database().reference().child("MangoFarm").child("BinInfo").queryOrdered(byChild: "machineNumber").queryEqual(toValue: machineNumber).observeSingleEvent(of: .value) { (snapshot) in
+        Constants.getFirestoreDB().collection("BinInfo").whereField("machineNumber", isEqualTo: machineNumber).getDocuments(completion: { snapshot, err in
+            MBProgressHUD.hide(for: self.view, animated: true)
+        
+            self.extractDataFromSnashot(snapshot: snapshot)
+        })
+ 
+    }
+    
+    func getReportBasedOnAllMachines()  {
+        ProgressHUDShow(text: "Downloading...")
+        Constants.getFirestoreDB().collection("BinInfo").getDocuments(completion: { snapshot, err in
             MBProgressHUD.hide(for: self.view, animated: true)
             self.extractDataFromSnashot(snapshot: snapshot)
-           
-        }
+        })
     }
     
     func getReportBasedOnCrewMember(crewName : String) {
         ProgressHUDShow(text: "Downloading...")
-        Database.database().reference().child("MangoFarm").child("BinInfo").queryOrdered(byChild: "scannedByName").queryEqual(toValue: crewName).observeSingleEvent(of: .value) { (snapshot) in
+       
+        
+        Constants.getFirestoreDB().collection("BinInfo").whereField("scannedByName", isEqualTo: crewName).getDocuments(completion: { snapshot, err in
             MBProgressHUD.hide(for: self.view, animated: true)
             self.extractDataFromSnashot(snapshot: snapshot)
-           
-        }
+        })
+    }
+    
+    func getReportBasedOnAllCrewMembers(){
+        ProgressHUDShow(text: "Downloading...")
+       
+        
+        Constants.getFirestoreDB().collection("BinInfo").getDocuments(completion: { snapshot, err in
+            MBProgressHUD.hide(for: self.view, animated: true)
+            self.extractDataFromSnashot(snapshot: snapshot)
+        })
     }
     
     func getReportBasedOBinNumber(binNumber : Int) {
         ProgressHUDShow(text: "Downloading...")
-        Database.database().reference().child("MangoFarm").child("BinInfo").queryOrdered(byChild: "binNumber").queryEqual(toValue: binNumber).observeSingleEvent(of: .value) { (snapshot) in
+       
+        Constants.getFirestoreDB().collection("BinInfo").whereField("binNumber", isEqualTo: binNumber).getDocuments(completion: { snapshot, err in
             MBProgressHUD.hide(for: self.view, animated: true)
             self.extractDataFromSnashot(snapshot: snapshot)
-           
-        }
+        })
     }
     
+    
+    func getReportBasedOnAllBinNumber() {
+        ProgressHUDShow(text: "Downloading...")
+       
+        Constants.getFirestoreDB().collection("BinInfo").getDocuments(completion: { snapshot, err in
+            MBProgressHUD.hide(for: self.view, animated: true)
+            self.extractDataFromSnashot(snapshot: snapshot)
+        })
+    }
     
     func getReportsBasedOnDate(startDate : Double, endDate : Double) {
         ProgressHUDShow(text: "Downloading...")
-        Database.database().reference().child("MangoFarm").child("BinInfo").queryOrdered(byChild: "date").queryStarting(atValue: startDate).queryEnding(atValue: endDate).observeSingleEvent(of: .value) { (snapshot) in
+       
+        Constants.getFirestoreDB().collection("BinInfo").whereField("date", isGreaterThanOrEqualTo: startDate).whereField("date", isLessThanOrEqualTo : endDate).getDocuments(completion: { snapshot, err in
             MBProgressHUD.hide(for: self.view, animated: true)
             self.extractDataFromSnashot(snapshot: snapshot)
-        }
+        })
     }
+    
+    
+    
+    
+    @objc func machineStatusClicked(_ sender: Any) {
+        
+        print("HELLO")
+        ProgressHUDShow(text: "Downloading...")
+       
+        Constants.getFirestoreDB().collection("MachineStatus").getDocuments(completion: { snapshot, err in
+            MBProgressHUD.hide(for: self.view, animated: true)
+            self.extractDataFromSnashotForMachineStatus(snapshot: snapshot)
+        })
+    }
+    
     
    
     

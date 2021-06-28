@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:id="@+id/rr"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+
+        android:id="@+id/imageview"
+        />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/progressbar"
+        android:indeterminateTint="#fff"
+        />
+
+`
+
+        <LinearLayout
+
+            android:id="@+id/premiumuser"
+            android:background="@drawable/transparent"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+
+            
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+                <ImageView
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:src="@drawable/miscellaneous"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Only For Premium Users"
+                    android:textSize="15sp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:textColor="#fff"
+                    android:layout_marginStart="6dp"
+                    />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="If you Want to Download this Wallpaper.\nWatch a Video Ads."
+                android:textSize="12sp"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textColor="#fff"
+                android:layout_margin="15dp"
+                />
+            <androidx.cardview.widget.CardView
+android:id="@+id/unlock"
+                android:layout_width="140dp"
+                android:layout_height="36dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="10dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:textSize="13sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Watch"
+                        android:layout_marginEnd="5dp"
+                        android:textColor="#000000"
+                        android:fontFamily="sans-serif-condensed"
+
+                        />
+                    <ImageView
+                        android:layout_marginStart="5dp"
+                        android:layout_width="24dp"
+                        android:src="@drawable/electronics"
+                        android:layout_height="24dp"/>
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+<LinearLayout
+    android:visibility="gone"
+    android:id="@+id/shareanddownload"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    android:gravity="center"
+    android:layout_alignParentBottom="true"
+    >
+    
+    <androidx.cardview.widget.CardView
+        android:layout_width="155dp"
+        android:layout_height="40dp"
+        app:cardCornerRadius="12dp"
+        android:layout_marginEnd="10dp"
+        android:id="@+id/share"
+
+        >
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <ImageView
+            android:layout_marginEnd="3dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/shareblack"
+
+            />
+        <TextView
+            android:textSize="13sp"
+            android:layout_marginStart="3dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="#000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Share"
+            />
+
+        </LinearLayout>
+        
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginStart="10dp"
+        android:layout_width="155dp"
+        android:layout_height="40dp"
+        app:cardCornerRadius="12dp"
+        android:id="@+id/downloadandset"
+
+        >
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_marginEnd="3dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/downloadimage"
+
+                />
+            <TextView
+                android:textSize="13sp"
+                android:layout_marginStart="3dp"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="#000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Download &amp; Set"
+                />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
+
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/setwallpaper"
+        android:background="@drawable/transparent"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFF700"
+            android:text="Choose where to set the wallpaper"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="14sp"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="165dp"
+            android:layout_height="38dp"
+             app:cardCornerRadius="12dp"
+           android:layout_marginTop="12dp"
+            android:id="@+id/homescreen"
+
+            >
+
+          <TextView
+              android:textSize="13sp"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:text="Home Screen"
+              android:fontFamily="sans-serif-condensed"
+              android:textColor="#000"
+              />
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="165dp"
+            android:layout_height="38dp"
+            app:cardCornerRadius="12dp"
+            android:layout_marginTop="12dp"
+            android:id="@+id/lockscreen"
+
+            >
+
+            <TextView
+                android:textSize="13sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Lock Screen"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="#000"
+                />
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="165dp"
+            android:layout_height="38dp"
+            app:cardCornerRadius="12dp"
+            android:layout_marginTop="12dp"
+            android:id="@+id/both"
+
+            >
+
+            <TextView
+                android:textSize="13sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Both"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="#000"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+<RelativeLayout
+    android:id="@+id/options"
+    android:visibility="gone"
+    android:layout_width="310dp"
+    android:layout_height="140dp"
+    android:layout_centerInParent="true"
+    android:background="@drawable/rec"
+    >
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/backwhite"
+        />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Share With Your Friends"
+       android:textColor="#fff"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+android:fontFamily="sans-serif-condensed-medium"
+        android:textSize="16sp"
+        android:id="@+id/tt"
+        />
+<LinearLayout
+    android:weightSum="5"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/tt"
+    android:layout_margin="10dp"
+    android:orientation="horizontal"
+>
+    <LinearLayout
+        android:id="@+id/instagram"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        >
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/instagram"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Instagram"
+            android:textColor="#fff"
+            android:layout_marginTop="4dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="10sp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/facebook"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        >
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/facebook"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Facebook"
+            android:textColor="#fff"
+            android:layout_marginTop="4dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="10sp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/messenger"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        >
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/messenger"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Messenger"
+            android:textColor="#fff"
+            android:layout_marginTop="4dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="10sp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/whatsapp"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        >
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/whatsapp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WhatsApp"
+            android:textColor="#fff"
+            android:layout_marginTop="4dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="10sp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/more"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        >
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/options"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="More"
+            android:textColor="#fff"
+            android:layout_marginTop="4dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="10sp"
+            />
+    </LinearLayout>
+</LinearLayout>
+</RelativeLayout>
+
+</RelativeLayout>

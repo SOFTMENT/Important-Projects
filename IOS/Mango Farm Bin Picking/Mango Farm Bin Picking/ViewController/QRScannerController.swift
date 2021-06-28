@@ -9,9 +9,10 @@ import UIKit
 import AVFoundation
 import Lottie
 import Firebase
+import CoreLocation
 
 
-class QRScannerController: UIViewController {
+class QRScannerController: UIViewController, CLLocationManagerDelegate {
    
 
    
@@ -22,8 +23,11 @@ class QRScannerController: UIViewController {
     var captureSession = AVCaptureSession()
     
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
-    
-    
+    var mBinNumber = "-1"
+    var mId = "-1"
+    var locationManager = CLLocationManager()
+    var lati : Double = 0.0
+    var long : Double = 0.0
   
     private let supportedCodeTypes = [AVMetadataObject.ObjectType.upce,
                                       AVMetadataObject.ObjectType.code39,
@@ -62,6 +66,8 @@ class QRScannerController: UIViewController {
         super.viewDidLoad()
         
        
+       requestUserLocation()
+    
          
         NotificationCenter.default.addObserver(self, selector: #selector(self.update), name: UIApplication.willEnterForegroundNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.update), name: UIApplication.didBecomeActiveNotification, object: nil)
@@ -109,6 +115,38 @@ class QRScannerController: UIViewController {
       
         
       
+    }
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+
+    manager.desiredAccuracy = 1000 // 1km accuracy
+
+    if locations.last!.horizontalAccuracy > manager.desiredAccuracy {
+        // This location is inaccurate. Throw it away and wait for the next call to the delegate.
+        print("i don't want this location")
+        return;
+    }
+
+        if let location = manager.location {
+            self.lati = location.coordinate.latitude
+            self.long = location.coordinate.longitude
+            print(lati)
+            print(long)
+            print("OK")
+        }
+       
+        guard locations.last != nil else {
+        print("error getting user location")
+        return
+    }
+    }
+    
+    func requestUserLocation(){
+        
+        self.locationManager.delegate = self
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        self.locationManager.distanceFilter = kCLDistanceFilterNone
+        self.locationManager.requestWhenInUseAuthorization()
+        self.locationManager.startUpdatingLocation()
     }
 
     override func didReceiveMemoryWarning() {
@@ -170,7 +208,7 @@ extension QRScannerController: AVCaptureMetadataOutputObjectsDelegate {
             // If the found metadata is equal to the QR code metadata (or barcode) then update the status label's text and set the bounds
             let barCodeObject = videoPreviewLayer?.transformedMetadataObject(for: metadataObj)
             scannerView.frame = barCodeObject!.bounds
-            if UserModel.data?.designation != "admin" {
+            if UserModel.userData.designation != "admin" {
              
             
             if metadataObj.stringValue != nil {
@@ -179,7 +217,7 @@ extension QRScannerController: AVCaptureMetadataOutputObjectsDelegate {
              
                 let number = Int(metadataObj.stringValue!) ?? 0
                 if number > 0 {
-                    showAlertForInput(number: number)
+                    showAlertForFillInput(number: number)
                     
                 }
                 else {
@@ -205,79 +243,144 @@ extension QRScannerController: AVCaptureMetadataOutputObjectsDelegate {
     
  
 
-    func showAlertForInput(number : Int) {
-    
-    //1. Create the alert controller.
-    let alert = UIAlertController(title: "Mango Bin \(number)", message: "", preferredStyle: .alert)
+    func showAlertForFillInput(number : Int) {
+        
+        if mBinNumber != "-1" {
+            if String(number) != mBinNumber {
+                showError("Wrong QR Code.")
+            }
+            else {
+                //1. Create the alert controller.
+                let alert = UIAlertController(title: "Empty Mango Bin \(number)", message: "", preferredStyle: .alert)
 
-    //2. Add the text field. You can configure it however you need.
-    alert.addTextField { (textField) in
-        textField.placeholder = "Picker Name"
-    }
-        
-        //2. Add the text field. You can configure it however you need.
-    alert.addTextField { (textField) in
-        textField.placeholder = "Scanner Name"
-    }
-        
-    
+            //    //2. Add the text field. You can configure it however you need.
+            //    alert.addTextField { (textField) in
+            //        textField.placeholder = "Picker Name"
+            //    }
+                    
+                    //2. Add the text field. You can configure it however you need.
+                alert.addTextField { (textField) in
+                    textField.placeholder = "Picker Name"
+                }
+                    
+                
+                    
+                // 3. Grab the value from the text field, and print it when the user clicks OK.
+                alert.addAction(UIAlertAction(title: "Add", style: .default, handler: { [weak alert] (_) in
+                 //   let pickername = alert?.textFields![0].text?.trimmingCharacters(in: .whitespacesAndNewlines) // Force unwrapping because we know it exists.
+                    let pickerName = alert?.textFields![0].text?.trimmingCharacters(in: .whitespacesAndNewlines)
+                    
+                    if (!pickerName!.isEmpty) {
+                       
+                        
+                        self.updateBin(id: self.mId, pickerName: pickerName!)
+                        
+                    }
+                    else {
+                        self.showToast(message: "Please Enter Picker Name")
+                    }
+                    
+                    self.navigationController?.popViewController(animated: true)
+                }))
+                
+                alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
+                    self.captureSession.startRunning()
+                    alert.dismiss(animated: true, completion: nil)
+                }))
 
-        
-        
-    // 3. Grab the value from the text field, and print it when the user clicks OK.
-    alert.addAction(UIAlertAction(title: "Add", style: .default, handler: { [weak alert] (_) in
-        let pickername = alert?.textFields![0].text?.trimmingCharacters(in: .whitespacesAndNewlines) // Force unwrapping because we know it exists.
-        let scannerName = alert?.textFields![1].text?.trimmingCharacters(in: .whitespacesAndNewlines)
-        
-        if (!pickername!.isEmpty && !scannerName!.isEmpty) {
-            let id = String(self.getCurrentMillis())
-            let title = "Mango Bin Number \(number)"
-    
-            self.addDataToFirebase(id: id, machineNumber: UserModel.data!.machineNumber, title: title, pickedByName: pickername!, scannedByName: scannerName!, binNumber: number)
-            
+                // 4. Present the alert.
+                self.present(alert, animated: true, completion: nil)
+                
+            }
         }
         else {
-            self.showToast(message: "Please Fill All Fields")
-        }
-        
-        self.navigationController?.popViewController(animated: true)
-    }))
-    
-    alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
-        self.captureSession.startRunning()
-        alert.dismiss(animated: true, completion: nil)
-    }))
+            //1. Create the alert controller.
+            let alert = UIAlertController(title: "Fill Mango Bin \(number)", message: "", preferredStyle: .alert)
 
-    // 4. Present the alert.
-    self.present(alert, animated: true, completion: nil)
-    
-    }
+        //    //2. Add the text field. You can configure it however you need.
+        //    alert.addTextField { (textField) in
+        //        textField.placeholder = "Picker Name"
+        //    }
+                
+                //2. Add the text field. You can configure it however you need.
+            alert.addTextField { (textField) in
+                textField.placeholder = "Scanner Name"
+            }
+                
+            
+
+                
+                
+            // 3. Grab the value from the text field, and print it when the user clicks OK.
+            alert.addAction(UIAlertAction(title: "Add", style: .default, handler: { [weak alert] (_) in
+             //   let pickername = alert?.textFields![0].text?.trimmingCharacters(in: .whitespacesAndNewlines) // Force unwrapping because we know it exists.
+                let scannerName = alert?.textFields![0].text?.trimmingCharacters(in: .whitespacesAndNewlines)
+                
+                if (!scannerName!.isEmpty) {
+                    let id = String(self.getCurrentMillis())
+                    let title = "Mango Bin Number \(number)"
+            
+                    self.addDataToFirebase(id: id, machineNumber: UserModel.userData.machineNumber ?? "-1", title: title,  scannedByName: scannerName!, binNumber: number)
+                    
+                }
+                else {
+                    self.showToast(message: "Please Enter Scanner Name")
+                }
+                
+                self.navigationController?.popViewController(animated: true)
+            }))
+            
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
+                self.captureSession.startRunning()
+                alert.dismiss(animated: true, completion: nil)
+            }))
+
+            // 4. Present the alert.
+            self.present(alert, animated: true, completion: nil)
+            
+        }
     
    
+    }
     
-    func addDataToFirebase(id : String,machineNumber : String,title : String, pickedByName :String,scannedByName : String, binNumber : Int ) {
+    func updateBin(id : String, pickerName : String) {
+        
+        let mangoBinUpdateData = ["status" : "empty", "emptyDate" : Date().timeIntervalSince1970,
+                                  "pickedByName" :pickerName
+        ] as [String : Any]
+        
+        Constants.getFirestoreDB().collection("BinInfo").document(id).setData(mangoBinUpdateData,merge: true, completion: { err in
+            if err != nil {
+                self.showError(err!.localizedDescription)
+            }
+        })
+    }
+   
+    
+    func addDataToFirebase(id : String,machineNumber : String,title : String,scannedByName : String, binNumber : Int ) {
         
         
        
-      
+       
         
        let mangoBinData =   ["id": id,
                              "title" : title,
-                            "pickedByName": pickedByName,
                             "scannedByName" : scannedByName,
                             "date" : Date().timeIntervalSince1970,
                             "binNumber" : binNumber,
-                            "machineNumber" : machineNumber
+                            "lati" : self.lati,
+                            "long" : self.long,
+                            "machineNumber" : machineNumber,
+                            "status" : "full"
                             ] as [String : Any]
         
-        Database.database().reference().child("MangoFarm").child("BinInfo").child(id).setValue(mangoBinData) { (error, databaseRef) in
-            if error != nil {
-                self.showError(error.debugDescription)
+        Constants.getFirestoreDB().collection("BinInfo").document(id).setData(mangoBinData, completion: { err in
+            if err != nil {
+                self.showError(err!.localizedDescription)
             }
-            else {
-               
-            }
-        }
+        })
+            
+            
         
     
     }

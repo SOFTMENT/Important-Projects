@@ -179,6 +179,7 @@ public class RegistrationActivity extends AppCompatActivity {
 
         profile_image = findViewById(R.id.user_profile);
         TextView taptochange = findViewById(R.id.taptochange);
+
         taptochange.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -433,6 +434,7 @@ public class RegistrationActivity extends AppCompatActivity {
         }
 
     }
+
     private File createImageFile() throws IOException {
         // Create an image file name
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/app_back_color"
+
+    tools:context=".SignInActivity">
+
+    <LinearLayout
+       android:gravity="center_vertical"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+            <ImageView
+                android:id="@+id/back"
+                android:padding="10dp"
+                android:background="@drawable/button_shape"
+                android:paddingStart="15dp"
+                android:src="@drawable/ic_baseline_arrow_back_ios_24"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+
+                />
+
+
+        <TextView
+            android:layout_marginStart="10dp"
+            android:id="@+id/signintext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:text="Sign in"
+            android:textSize="28sp"
+            android:fontFamily="@font/sfprobold"
+            android:textColor="#040404"
+            />
+    </LinearLayout>
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Sign in with one of the following options."
+            android:textSize="12sp"
+            android:fontFamily="@font/sfpromedium"
+            android:textColor="@color/text_gray"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:weightSum="2"
+            >
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_shape"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp" >
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/google"
+                    android:layout_centerInParent="true"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_shape"
+                android:layout_weight="1" >
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/fb"
+                    android:layout_centerInParent="true"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textColor="#040404"
+            android:text="Email"
+            android:textSize="13sp"
+            android:fontFamily="@font/sfpromedium2"
+            />
+
+        <EditText
+            android:textCursorDrawable="@drawable/black_cursor"
+            android:id="@+id/email"
+            android:inputType="textEmailAddress"
+            android:fontFamily="@font/sfpromedium2"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/edit_text_bg"
+            android:textColor="#040404"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textSize="13sp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textColor="#040404"
+            android:text="Password"
+            android:textSize="13sp"
+            android:fontFamily="@font/sfpromedium2"
+            />
+
+        <EditText
+            android:textCursorDrawable="@drawable/black_cursor"
+            android:id="@+id/password"
+            android:inputType="textPassword"
+            android:fontFamily="@font/sfpromedium2"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/edit_text_bg"
+            android:textColor="#040404"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textSize="13sp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            android:gravity="end"
+            >
+            <TextView
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forgot Password?"
+                android:textColor="@color/text_gray"
+                android:fontFamily="@font/sfpromedium"
+                android:layout_marginEnd="3dp"
+                />
+            <TextView
+                android:id="@+id/reset"
+                android:textSize="12sp"
+                android:layout_marginStart="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reset"
+                android:textColor="#040404"
+                android:fontFamily="@font/sfpromedium"
+                />
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/signIn"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/gradient_button"
+            android:text="Log in"
+            android:fontFamily="@font/sfpromedium2"
+            android:textSize="14sp"
+            android:textAllCaps="false"
+            android:textColor="@color/white_color"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            >
+            <TextView
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Don't have an account?"
+                android:textColor="@color/text_gray"
+                android:fontFamily="@font/sfpromedium"
+                android:layout_marginEnd="3dp"
+                />
+            <TextView
+                android:id="@+id/signup"
+                android:textSize="12sp"
+                android:layout_marginStart="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign up"
+                android:textColor="#040404"
+                android:fontFamily="@font/sfpromedium"
+                />
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="bottom|center_horizontal"
+        >
+        <TextView
+            android:textSize="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Version 1.0"
+            android:textColor="#040404"
+            android:fontFamily="@font/sfpromedium"
+            android:layout_marginEnd="3dp"
+            />
+
+    </LinearLayout>
+    </LinearLayout>

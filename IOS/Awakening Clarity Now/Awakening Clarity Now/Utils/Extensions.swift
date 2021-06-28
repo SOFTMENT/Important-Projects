@@ -13,6 +13,7 @@ import GoogleSignIn
 import FBSDKLoginKit
 import FirebaseFirestoreSwift
 
+
 extension UITextField {
     func setLeftPaddingPoints(_ amount:CGFloat){
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: amount, height: self.frame.size.height))
@@ -218,6 +219,48 @@ extension UIViewController {
 
     }
     
+    
+    
+    
+    func dayDifference(from date : Date) -> String
+    {
+        let calendar = Calendar.current
+        
+        if calendar.isDateInYesterday(date) { return "Yesterday" }
+        else if calendar.isDateInToday(date) { return "Today" }
+        else if calendar.isDateInTomorrow(date) { return "Tomorrow" }
+        else {
+            let startOfNow = calendar.startOfDay(for: Date())
+            let startOfTimeStamp = calendar.startOfDay(for: date)
+            let components = calendar.dateComponents([.day], from: startOfNow, to: startOfTimeStamp)
+            let day = components.day!
+            if day < 1 { return "\(-day) days ago" }
+            else { return "In \(day) days" }
+        }
+    }
+    
+    func membershipDaysLeft(currentDate : Date,identifier : String) -> Int {
+        let expireDate = IAPManager.shared.expirationDateFor(identifier)
+        if expireDate != nil {
+          
+            return Calendar.current.dateComponents([.day], from: currentDate, to: expireDate!).day!
+        }
+        
+        return 0
+    }
+    func checkMembershipStatus(currentDate : Date,identifier : String) -> Bool{
+        let expireDate = IAPManager.shared.expirationDateFor(identifier)
+        if expireDate != nil {
+           
+            print(convertDateFormater(expireDate!))
+            if currentDate < expireDate! {
+                
+                return true
+            }
+        }
+        return false
+    }
+    
     func getViewControllerUsingIdentifier(mIdentifier : String) -> UIViewController{
 
         let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
@@ -254,6 +297,9 @@ extension UIViewController {
                               completion: nil)
 
     }
+    
+
+
     func convertDateFormater(_ date: Date) -> String
         {
         let df = DateFormatter()
@@ -338,5 +384,48 @@ extension UIViewController {
         MBProgressHUD.hide(for: self.view, animated: true)
     }
 
+}
+
+
+extension UIImageView {
+    func makeRounded() {
+        
+        //self.layer.borderWidth = 1
+        self.layer.masksToBounds = false
+       // self.layer.borderColor = UIColor.gray.cgColor
+        self.layer.cornerRadius = self.frame.height / 2
+        self.clipsToBounds = true
+        
+    }
+    
+    
+    
+    
+}
+extension URL {
+    static let timeIP = URL(string: "http://worldtimeapi.org/api/ip")!
+    static func asyncTime(completion: @escaping ((Date?, TimeZone?, Error?)-> Void)) {
+        URLSession.shared.dataTask(with: .timeIP) { data, response, error in
+            guard let data = data else {
+                completion(nil, nil, error)
+                return
+            }
+            do {
+                let decoder = JSONDecoder()
+                decoder.dateDecodingStrategy = .secondsSince1970
+                let root = try decoder.decode(Root.self, from: data)
+                completion(root.unixtime, TimeZone(identifier: root.timezone), nil)
+            } catch {
+                completion(nil, nil, error)
+            }
+        }.resume()
+    }
+}
+
+
+extension Date {
+    func seconds(from date: Date) -> Int {
+            return Calendar.current.dateComponents([.second], from: date, to: self).second ?? 0
+        }
 }
 

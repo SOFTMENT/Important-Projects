@@ -9,6 +9,7 @@ import UIKit
 import FirebaseAuth
 import GoogleSignIn
 import Firebase
+import FirebaseFirestoreSwift
 import MBProgressHUD
 
 class SignInViewController2: UIViewController, UITextFieldDelegate {
@@ -166,7 +167,7 @@ class SignInViewController2: UIViewController, UITextFieldDelegate {
             }
             
             
-            print("HELLO VIJAY \(isMachine)")
+         
             
             
             Auth.auth().signIn(withEmail: sEmail!, password: sPassword!) { auth, err in
@@ -178,11 +179,18 @@ class SignInViewController2: UIViewController, UITextFieldDelegate {
                         self.standard.setValue(self.uid, forKey: "machinenumber")
                         self.standard.setValue("machine", forKey: "designation")
                         self.standard.synchronize()
-                        let userData = UserModel(email : sEmail!, machineNumber: self.uid, name: "Machine \(self.uid)", designation: "machine", pid: self.uid)
-                    
-                         UserModel.data = userData
+                       
+                  
                         
-                        print("HELLO VIJAY")
+                        UserModel.userData.email =  sEmail!
+                        UserModel.userData.machineNumber = self.uid
+                        UserModel.userData.name = "Machine \(self.uid)"
+                        UserModel.userData.pId = self.uid
+                        UserModel.userData.designation = "machine"
+                         
+                      
+                        
+                       
                          self.beRootScreen(mIdentifier: Constants.StroyBoard.homeViewController)
                     }
                     else {
@@ -206,56 +214,25 @@ class SignInViewController2: UIViewController, UITextFieldDelegate {
     
     func getUserDataFromServer(uid : String) {
         
-        ProgressHUDShow(text: "Loading...")
-        let dbRef = Database.database().reference().child("MangoFarm").child("Users")
-        dbRef.keepSynced(true)
-        dbRef.child(uid).observeSingleEvent(of: .value) { (snapshot) in
+        ProgressHUDShow(text: "")
+        
+        Constants.getFirestoreDB().collection("Users").document(uid).getDocument { snapshot, error in
             MBProgressHUD.hide(for: self.view, animated: true)
-            if snapshot.exists() {
-               
-             
-                        if let data =  snapshot.value as? [String : Any] {
-                            
-                            guard let sEmail = data["email"] as? String else {
-                                return
-                            }
-                            
-                            guard let sMachine = data["machineNumber"] as? String else {
-                                return
-                            }
-                            guard let sName = data["name"] as? String else {
-                                return
-                            }
-                            guard let sDesignation = data["designation"] as? String else {
-                                return
-                            }
-                        
-                            guard let sPid = data["pId"] as? String else {
-                                return
-                            }
-                            
-                          
-                            let userData = UserModel(email : sEmail, machineNumber: sMachine, name: sName, designation: sDesignation, pid: sPid)
-                            
-                            UserModel.data = userData
-                            
-                            self.beRootScreen(mIdentifier: Constants.StroyBoard.homeViewController)
-                            
-                        
+            if error == nil {
+                if let snap = snapshot {
+                    if let userData = try? snap.data(as: UserModel.self) {
+                        UserModel.userData = userData
+                        self.beRootScreen(mIdentifier: Constants.StroyBoard.homeViewController)
                     }
-                    else {
-                        print("BVIJAY")
-                    }
-                   
-                
-               
-               
+                }
             }
-         
-           
             
-          
         }
+       
+        
+      
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -266,11 +243,15 @@ class SignInViewController2: UIViewController, UITextFieldDelegate {
                 
                 if designation == "machine" {
                     
+                
                     if let uid = standard.string(forKey: "machinenumber") {
                        
-                        let userData = UserModel(email : "\(uid)@mangobin.com", machineNumber: self.uid, name: "Machine \(self.uid)", designation: "machine", pid: self.uid)
-                    
-                         UserModel.data = userData
+        
+                        UserModel.userData.email = "\(uid)@mangobin.com"
+                        UserModel.userData.machineNumber = uid
+                        UserModel.userData.name = "Machine \(uid)"
+                        UserModel.userData.pId = uid
+                        UserModel.userData.designation = "machine"
                         
                         DispatchQueue.main.async {
                             self.beRootScreen(mIdentifier: Constants.StroyBoard.homeViewController)

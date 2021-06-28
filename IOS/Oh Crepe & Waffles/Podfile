@@ -9,6 +9,8 @@ target 'Oh Crepe & Waffles' do
 
   pod 'AMTabView'
   
+  pod 'Firebase/Auth'
+  
   pod 'Firebase/Messaging'
   
   pod 'Firebase/Firestore'
@@ -18,5 +20,7 @@ target 'Oh Crepe & Waffles' do
   pod 'MBProgressHUD', '~> 1.2.0'
   
   pod 'SDWebImage', '~> 4.0'
+  
+  pod 'IQKeyboardManagerSwift'
   
 end

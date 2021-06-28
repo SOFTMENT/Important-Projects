@@ -10,11 +10,17 @@ import Firebase
 import FirebaseAuth
 import GoogleSignIn
 import MBProgressHUD
+import AuthenticationServices
+import CryptoKit
+
 
 
 class SignUpController : UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     let preferences = UserDefaults.standard
     @IBOutlet weak var chooseClassification: UITextField!
+    @IBOutlet weak var designation: UITextField!
+    @IBOutlet weak var inviteCode: UITextField!
+    
     @IBOutlet weak var chooseSchool: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var signUpButton: UIButton!
@@ -26,6 +32,7 @@ class SignUpController : UIViewController, UITextFieldDelegate, UIPickerViewDele
     var activeField: UITextField?
     var pickerView = UIPickerView()
     var pickerView2 = UIPickerView()
+    fileprivate var currentNonce: String?
     
     let schools = ["Clark Atlanta University",
                    "Florida A&M University",
@@ -53,6 +60,7 @@ class SignUpController : UIViewController, UITextFieldDelegate, UIPickerViewDele
 
         self.signUpEmailTextField.layer.cornerRadius = 8
         
+        self.designation.layer.cornerRadius = 8
 
         self.signUpPasswordTextField.layer.cornerRadius = 8
         
@@ -67,12 +75,18 @@ class SignUpController : UIViewController, UITextFieldDelegate, UIPickerViewDele
         self.signUpEmailTextField.delegate = self
         self.signUpPasswordTextField.delegate = self
         self.signUpRepeatPasswordTextField.delegate = self
-        
+        self.designation.delegate = self
         self.signUpNameTextField.setRightPaddingPoints(10)
         self.signUpNameTextField.setLeftPaddingPoints(10)
         
         self.signUpEmailTextField.setRightPaddingPoints(10)
         self.signUpEmailTextField.setLeftPaddingPoints(10)
+        
+        
+        self.inviteCode.setRightPaddingPoints(10)
+        self.inviteCode.setLeftPaddingPoints(10)
+        self.inviteCode.delegate = self
+        self.inviteCode.layer.cornerRadius = 8
         
         //SCHOOL
         chooseSchool.delegate = self
@@ -81,6 +95,9 @@ class SignUpController : UIViewController, UITextFieldDelegate, UIPickerViewDele
         
         chooseSchool.setLeftPaddingPoints(10)
         chooseSchool.setRightPaddingPoints(10)
+        
+        designation.setRightPaddingPoints(10)
+        designation.setLeftPaddingPoints(10)
         
        
         
@@ -151,34 +168,55 @@ class SignUpController : UIViewController, UITextFieldDelegate, UIPickerViewDele
         let cleanedEmail = signUpEmailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         let cleanedName = signUpNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         let cleanedPassword = signUpPasswordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let designation = designation.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         let schoolText = chooseSchool.text
-        
         let classificationText = chooseClassification.text
             
-           
+            let inviteCode = inviteCode.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            Firestore.firestore().collection("InviteCode").document(inviteCode!).getDocument { document, err in
+                if err == nil {
+                    if let doc = document {
+                        if doc.exists {
+                            
+                            Firestore.firestore().collection("InviteCode").document(inviteCode!).delete()
+                            self.ProgressHUDShow(text: "Creating An Account...")
+                                
+                                
+                            Auth.auth().createUser(withEmail: cleanedEmail, password: cleanedPassword) { (result, error) in
+                                MBProgressHUD.hide(for: self.view, animated: true)
+                                if error != nil {
+                                    self.handleError(error: error!)      // use the handleError method
+                                    return
+                                }
+                                else {
+                                 
+                                    let data = ["name" : cleanedName, "email" : cleanedEmail, "uid" :  result!.user.uid,"school":schoolText!, "registredAt" :  result!.user.metadata.creationDate!,"profile" : "","classification" : classificationText! ,"isMobVerified" : true,"regiType" : "custom" , "designation" : designation] as [String : Any]
+                                    
+                                    self.preferences.setValue(schoolText, forKey: "school")
+                                    self.preferences.synchronize()
+                                    self.addUserData(data: data, uid: result!.user.uid, type: "custom")
+                                }
+                            }
+                        }
+                        else {
+                            self.showError("Invite code is not valid or already used.")
+                        }
+                    }
+                    else {
+                        self.showError("Invite code is not valid or already used.")
+                    }
+                }
+                else {
+                    self.showError(err!.localizedDescription)
+                }
+            }
 
-        ProgressHUDShow(text: "Creating An Account...")
-            
-            
-        Auth.auth().createUser(withEmail: cleanedEmail, password: cleanedPassword) { (result, error) in
-            MBProgressHUD.hide(for: self.view, animated: true)
-            if error != nil {
-                self.handleError(error: error!)      // use the handleError method
-                return
-            }
-            else {
-             
-                let data = ["name" : cleanedName, "email" : cleanedEmail, "uid" :  result!.user.uid,"school":schoolText!, "registredAt" :  result!.user.metadata.creationDate!,"profile" : "","classification" : classificationText! ,"isMobVerified" : true,"regiType" : "custom"] as [String : Any]
-                
-                self.preferences.setValue(schoolText, forKey: "school")
-                self.preferences.synchronize()
-                self.addUserData(data: data, uid: result!.user.uid, type: "custom")
-            }
-        }
     }
         
     }
     
+   
     
    
 
@@ -194,7 +232,9 @@ class SignUpController : UIViewController, UITextFieldDelegate, UIPickerViewDele
         if  (signUpNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             signUpEmailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             signUpPasswordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            signUpRepeatPasswordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "")
+            signUpRepeatPasswordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            designation.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
+                || inviteCode.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "")
             {
                 return "Please fill in all fields."
             }
@@ -253,6 +293,7 @@ class SignUpController : UIViewController, UITextFieldDelegate, UIPickerViewDele
     }
     
     @IBAction func twitterSignIn(_ sender: Any) {
+      //  self.startSignInWithAppleFlow()
         self.loginWithTwitter()
     }
   
@@ -289,5 +330,112 @@ class SignUpController : UIViewController, UITextFieldDelegate, UIPickerViewDele
             chooseClassification.resignFirstResponder()
         }
     }
+    
+    private func randomNonceString(length: Int = 32) -> String {
+      precondition(length > 0)
+      let charset: Array<Character> =
+          Array("0123456789ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyz-._")
+      var result = ""
+      var remainingLength = length
+
+      while remainingLength > 0 {
+        let randoms: [UInt8] = (0 ..< 16).map { _ in
+          var random: UInt8 = 0
+          let errorCode = SecRandomCopyBytes(kSecRandomDefault, 1, &random)
+          if errorCode != errSecSuccess {
+            fatalError("Unable to generate nonce. SecRandomCopyBytes failed with OSStatus \(errorCode)")
+          }
+          return random
+        }
+
+        randoms.forEach { random in
+          if remainingLength == 0 {
+            return
+          }
+
+          if random < charset.count {
+            result.append(charset[Int(random)])
+            remainingLength -= 1
+          }
+        }
+      }
+
+      return result
+    }
+ 
+
+    @available(iOS 13, *)
+    func startSignInWithAppleFlow() {
+      let nonce = randomNonceString()
+      currentNonce = nonce
+      let appleIDProvider = ASAuthorizationAppleIDProvider()
+      let request = appleIDProvider.createRequest()
+        request.requestedScopes = [.fullName, .email]
+      request.nonce = sha256(nonce)
+
+      let authorizationController = ASAuthorizationController(authorizationRequests: [request])
+      authorizationController.delegate = self
+     // authorizationController.presentationContextProvider = self
+      authorizationController.performRequests()
+    }
+
+    @available(iOS 13, *)
+    private func sha256(_ input: String) -> String {
+      let inputData = Data(input.utf8)
+      let hashedData = SHA256.hash(data: inputData)
+      let hashString = hashedData.compactMap {
+        return String(format: "%02x", $0)
+      }.joined()
+
+      return hashString
+    }
+}
+
+
+@available(iOS 13.0, *)
+extension SignUpController: ASAuthorizationControllerDelegate {
+
+  func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+   
+    if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
+      guard let nonce = currentNonce else {
+        fatalError("Invalid state: A login callback was received, but no login request was sent.")
+      }
+      guard let appleIDToken = appleIDCredential.identityToken else {
+        print("Unable to fetch identity token")
+        return
+      }
+      guard let idTokenString = String(data: appleIDToken, encoding: .utf8) else {
+        print("Unable to serialize token string from data: \(appleIDToken.debugDescription)")
+        return
+      }
+      // Initialize a Firebase credential.
+      let credential = OAuthProvider.credential(withProviderID: "apple.com",
+                                                idToken: idTokenString,
+                                                rawNonce: nonce)
+      
+        var displayName = "ACN"
+        if let fullName = appleIDCredential.fullName {
+            if let firstName = fullName.givenName {
+                displayName = firstName
+            }
+            if let lastName = fullName.familyName {
+                displayName = "\(displayName) \(lastName)"
+            }
+        }
+      
+        authWithFirebase(credential: credential, type: "apple",displayName: displayName)
+        // User is signed in to Firebase with Apple.
+        // ...
+      
+    }
+  }
+
+  func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+    // Handle error.
+    
+    print("Sign in with Apple errored: \(error)")
+  }
+
 }
 

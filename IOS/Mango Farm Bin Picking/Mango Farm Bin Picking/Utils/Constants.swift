@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import FirebaseFirestoreSwift
+import Firebase
 
 
 public class Constants {
@@ -19,5 +21,15 @@ public class Constants {
   
 
     public static let kNotification = Notification.Name("kNotification")
+    
+    public static func getFirestoreDB() -> Firestore {
+        let settings = FirestoreSettings()
+        settings.isPersistenceEnabled = true
+    
+        let dbRef = Firestore.firestore()
+        dbRef.settings = settings
+        
+        return dbRef
+    }
 
 }

@@ -28,5 +28,7 @@ target 'Awakening Clarity Now' do
    
    pod 'GoogleSignIn'
    
+   pod 'SDWebImage', '~> 4.0'
+   
    
 end

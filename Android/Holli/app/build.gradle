@@ -5,6 +5,7 @@ plugins {
 apply plugin: 'com.google.gms.google-services'
 
 android {
+    useLibrary 'org.apache.http.legacy'
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
 
@@ -45,4 +46,17 @@ dependencies {
     implementation 'com.google.firebase:firebase-messaging:22.0.0'
     implementation 'com.android.volley:volley:1.2.0'
     implementation 'com.google.code.gson:gson:2.8.6'
+
+
+    // retrofit library
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+
+    // Retrofit API Interceptor for Debuging
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.0.1'
+    implementation 'com.squareup.retrofit2:converter-jackson:2.1.0'
+    implementation 'org.jsoup:jsoup:1.10.2'
+
+
 }

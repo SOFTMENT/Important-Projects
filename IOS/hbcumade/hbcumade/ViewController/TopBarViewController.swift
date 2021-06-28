@@ -24,7 +24,14 @@ class TopBarViewController: UIViewController {
          
         classificationBtn.isUserInteractionEnabled = true
         classificationBtn.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(classificationBtnTapped)))
+        
+        messengerBtn.isUserInteractionEnabled = true
+        messengerBtn.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(messengerbtnClicked)))
       
+        
+        searchBtn.isUserInteractionEnabled = true
+        searchBtn.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(searchBtnClicked)))
+        
 //        self.searchTextField.setLeftPaddingPoints(10)
 //        self.searchTextField.setRightPaddingPoints(10)
 //        self.searchTextField.attributedPlaceholder = NSAttributedString(string: "Search...",
@@ -48,7 +55,7 @@ class TopBarViewController: UIViewController {
     
     
     @objc func classificationBtnTapped(){
-        if Constants.selected_classification == "student" {
+        if Constants.selected_classification.lowercased() == "student" {
             Constants.selected_classification = "alumni"
             classificationBtn.image = UIImage(named: "reading-book")
             loadViewIfNeeded()
@@ -68,8 +75,16 @@ class TopBarViewController: UIViewController {
      
     }
     
+    @objc func searchBtnClicked() {
+        classificationDelegate?.searchBtnClicked()
+    }
+    
+    @objc func messengerbtnClicked(){
+        classificationDelegate?.messengerBtnClicked()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
-        if Constants.selected_classification == "student" {
+        if Constants.selected_classification.lowercased() == "student" {
            
             classificationBtn.image = UIImage(named: "graduate-cap")
             loadViewIfNeeded()

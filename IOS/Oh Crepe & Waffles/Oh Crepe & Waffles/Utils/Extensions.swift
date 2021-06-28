@@ -11,7 +11,7 @@ import UIKit
 import Firebase
 import MBProgressHUD
 import FirebaseFirestoreSwift
-
+import FirebaseAuth
 
 
 extension UITextField {
@@ -32,6 +32,91 @@ extension UITextField {
 
 
 extension UIViewController {
+    
+    func beRootScreen(mIdentifier : String) {
+
+
+        guard let window = self.view.window else {
+            self.view.window?.rootViewController = getViewControllerUsingIdentifier(mIdentifier: mIdentifier)
+            self.view.window?.makeKeyAndVisible()
+                return
+            }
+
+            window.rootViewController = getViewControllerUsingIdentifier(mIdentifier: mIdentifier)
+            window.makeKeyAndVisible()
+            UIView.transition(with: window,
+                              duration: 0.3,
+                              options: .transitionCrossDissolve,
+                              animations: nil,
+                              completion: nil)
+
+    }
+    
+    func getViewControllerUsingIdentifier(mIdentifier : String) -> UIViewController{
+
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        switch mIdentifier {
+        case Constants.StroyBoard.signInViewController:
+            return mainStoryboard.instantiateViewController(identifier: mIdentifier)
+            
+        case Constants.StroyBoard.homeViewController:
+            return (mainStoryboard.instantiateViewController(identifier: mIdentifier))
+     
+
+        default:
+            return (mainStoryboard.instantiateViewController(identifier: Constants.StroyBoard.signInViewController) as? SignInViewController)!
+        }
+    }
+    
+    
+    
+    
+    func getUserData(uid : String)  {
+        ProgressHUDShow(text: "")
+        Firestore.firestore().collection("Users").document(uid).getDocument { (snapshot, error) in
+            MBProgressHUD.hide(for: self.view, animated: true)
+            if error != nil {
+                self.showError(error!.localizedDescription)
+            }
+            else {
+                if let user = try? snapshot?.data(as: User.self) {
+                    User.data = user
+                    
+                    self.beRootScreen(mIdentifier: Constants.StroyBoard.homeViewController)
+                }
+                else {
+                    do {
+                    try Auth.auth().signOut()
+                    }
+                    catch {
+                        
+                    }
+                    self.showError("Your record has been deleted")
+                }
+            }
+        }
+
+    }
+    
+    func addUserData(data : [String : String], uid : String) {
+
+        ProgressHUDShow(text: "")
+        Firestore.firestore().collection("Users").document(uid).setData(data) { (error) in
+            MBProgressHUD.hide(for: self.view, animated: true)
+           
+            if error == nil {
+                User.data?.email = data["email"]
+                User.data?.name = data["name"]
+                User.data?.uid = data["uid"]
+                self.beRootScreen(mIdentifier: Constants.StroyBoard.homeViewController)
+            }
+            else {
+                self.showError(error!.localizedDescription)
+            }
+
+        }
+    }
+    
     
     func ProgressHUDShow(text : String) {
         let loading = MBProgressHUD.showAdded(to: self.view, animated: true)

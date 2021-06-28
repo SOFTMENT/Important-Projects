@@ -99,6 +99,7 @@ class SignInViewController: UIViewController {
                        
                     }
                     else {
+                        self.ProgressHUDHide()
                         self.handleError(error: error!)
                     }
                 }

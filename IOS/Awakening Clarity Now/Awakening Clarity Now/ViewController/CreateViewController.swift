@@ -130,6 +130,7 @@ class CreateViewController: UIViewController {
                     Auth.auth().currentUser?.sendEmailVerification(completion: { error in
                         self.ProgressHUDHide()
                         self.showMessage(title: "VERIFY EMAIL ADDRESS", message: "We have sent verification link on your mail address")
+                        
                     })
                 }
                 else {
