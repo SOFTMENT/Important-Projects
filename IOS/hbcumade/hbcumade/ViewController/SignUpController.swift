@@ -34,17 +34,18 @@ class SignUpController : UIViewController, UITextFieldDelegate, UIPickerViewDele
     var pickerView2 = UIPickerView()
     fileprivate var currentNonce: String?
     
-    let schools = ["Clark Atlanta University",
+    var schools = ["Clark Atlanta University",
                    "Florida A&M University",
                    "Hampton University",
                    "Howard University",
                    "Morehouse College",
+                   "Tennessee State University",
                    "Morgan State University",
                    "Norfolk State University",
                    "Spelman College",
                    "Virginia State University"]
     
-    let classification = ["Student","Alumni"]
+    let classification = ["Alumni","Student"]
     
 
     
@@ -53,6 +54,8 @@ class SignUpController : UIViewController, UITextFieldDelegate, UIPickerViewDele
     override func viewDidLoad() {
         
     
+        
+        schools.sort()
         
 
         self.signUpNameTextField.layer.cornerRadius = 8

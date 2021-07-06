@@ -20,7 +20,7 @@ class SplashScreen2: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         let count = UserDefaults.standard.integer(forKey: "launchCount")
        
-        if count % 3 == 0 {
+        if count % 4 == 0 {
 
              splashImage.image = UIImage(named: "sp2")
              
@@ -31,7 +31,7 @@ class SplashScreen2: UIViewController {
          
             
         }
-        else if count % 3  == 1 {
+        else if count % 4  == 1 {
 
             splashImage.image = UIImage(named: "sp3")
             sleep(2)
@@ -41,9 +41,18 @@ class SplashScreen2: UIViewController {
         
            
         }
-        else if count % 3 == 2 {
+        else if count % 4 == 2 {
      
             splashImage.image = UIImage(named: "sp4")
+            sleep(2)
+            DispatchQueue.main.async {
+                self.beRootScreen(mIdentifier: Constants.StroyBoard.signInViewController)
+            }
+           
+        }
+        else if count % 4 == 3 {
+     
+            splashImage.image = UIImage(named: "sp5")
             sleep(2)
             DispatchQueue.main.async {
                 self.beRootScreen(mIdentifier: Constants.StroyBoard.signInViewController)

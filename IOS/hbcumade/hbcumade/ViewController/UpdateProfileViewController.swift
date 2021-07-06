@@ -55,15 +55,17 @@ class UpdateProfileViewController: UIViewController,UITextFieldDelegate, UIPicke
     
     var pickerView = UIPickerView()
     var pickerView2 = UIPickerView()
-    let schools = ["Clark Atlanta University",
+    var schools = ["Clark Atlanta University",
                    "Florida A&M University",
                    "Hampton University",
+                   "Tennessee State University",
                    "Howard University",
                    "Morehouse College",
                    "Morgan State University",
                    "Norfolk State University",
                    "Spelman College",
                    "Virginia State University"]
+    
     
     let classificationList = ["Student","Alumni"]
     override func viewDidLoad() {
@@ -74,6 +76,7 @@ class UpdateProfileViewController: UIViewController,UITextFieldDelegate, UIPicke
         
         //SCHOOL
         school.delegate = self
+        schools.sort()
    
         school.layer.cornerRadius = 8
         
@@ -146,9 +149,10 @@ class UpdateProfileViewController: UIViewController,UITextFieldDelegate, UIPicke
             showToast(message: "Enter Invite Code")
         }
         else {
-            
+            ProgressHUDShow(text: "")
             
             Firestore.firestore().collection("InviteCode").document(sInviteCode!).getDocument { document, err in
+                self.ProgressHUDHide()
                 if err == nil {
                     if let doc = document {
                         if doc.exists {
@@ -158,7 +162,7 @@ class UpdateProfileViewController: UIViewController,UITextFieldDelegate, UIPicke
                             Firestore.firestore().collection("Users").document(Auth.auth().currentUser!.uid).setData(["classification" : sClassification!,"school": sSchool!,"designation" : sDesignation!], merge: true) { error in
                                 self.ProgressHUDHide()
                                 if error == nil {
-                                    self.getUserData(uid: Auth.auth().currentUser!.uid, showIntroScreen: false)
+                                    self.performSegue(withIdentifier: "updateprofileseg", sender: nil)
                                 }
                                 else {
                                     self.showError(error!.localizedDescription)

@@ -2,7 +2,7 @@
 //  AccountSettingsViewController.swift
 //  hbcumade
 //
-//  Created by Vijay on 08/04/21.
+//  Created by Vijay on 04/04/21.
 //
 
 import UIKit
@@ -103,11 +103,12 @@ class AccountSettingsViewController  : BaseViewController, UIPickerViewDataSourc
     var pickerView = UIPickerView()
     var pickerView2 = UIPickerView()
     
-    let schoolList = ["Clark Atlanta University",
+    var schoolList = ["Clark Atlanta University",
                    "Florida A&M University",
                    "Hampton University",
                    "Howard University",
                    "Morehouse College",
+                   "Tennessee State University",
                    "Morgan State University",
                    "Norfolk State University",
                    "Spelman College",
@@ -117,49 +118,52 @@ class AccountSettingsViewController  : BaseViewController, UIPickerViewDataSourc
     
     override func viewDidLoad() {
         
-        personalInfoTextView.layer.cornerRadius = 8
+        
+        schoolList.sort()
+        
+        personalInfoTextView.layer.cornerRadius = 4
         personalInfoTextView.layer.borderWidth = 1.2
         personalInfoTextView.layer.borderColor = UIColor.black.cgColor
         personalInfoTextView.contentInset = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10); 
         
-        firstNameTextField.layer.cornerRadius = 8
+        firstNameTextField.layer.cornerRadius = 4
         firstNameTextField.layer.borderWidth = 1.2
         firstNameTextField.layer.borderColor = UIColor.black.cgColor
         firstNameTextField.setRightPaddingPoints(10)
         firstNameTextField.setLeftPaddingPoints(10)
         
-        lastNameEditField.layer.cornerRadius = 8
+        lastNameEditField.layer.cornerRadius = 4
         lastNameEditField.layer.borderWidth = 1.2
         lastNameEditField.layer.borderColor = UIColor.black.cgColor
         lastNameEditField.setRightPaddingPoints(10)
         lastNameEditField.setLeftPaddingPoints(10)
         
-        birthDayEditField.layer.cornerRadius = 8
+        birthDayEditField.layer.cornerRadius = 4
         birthDayEditField.layer.borderWidth = 1.2
         birthDayEditField.layer.borderColor = UIColor.black.cgColor
         birthDayEditField.setRightPaddingPoints(10)
         birthDayEditField.setLeftPaddingPoints(10)
         
         
-        phoneNumberEditField.layer.cornerRadius = 8
+        phoneNumberEditField.layer.cornerRadius = 4
         phoneNumberEditField.layer.borderWidth = 1.2
         phoneNumberEditField.layer.borderColor = UIColor.black.cgColor
         phoneNumberEditField.setRightPaddingPoints(10)
         phoneNumberEditField.setLeftPaddingPoints(10)
         
-        instagramUsername.layer.cornerRadius = 8
+        instagramUsername.layer.cornerRadius = 4
         instagramUsername.layer.borderWidth = 1.2
         instagramUsername.layer.borderColor = UIColor.black.cgColor
         instagramUsername.setRightPaddingPoints(10)
         instagramUsername.setLeftPaddingPoints(10)
         
-        twitterUsername.layer.cornerRadius = 8
+        twitterUsername.layer.cornerRadius = 4
         twitterUsername.layer.borderWidth = 1.2
         twitterUsername.layer.borderColor = UIColor.black.cgColor
         twitterUsername.setRightPaddingPoints(10)
         twitterUsername.setLeftPaddingPoints(10)
      
-        schoolName.layer.cornerRadius = 8
+        schoolName.layer.cornerRadius = 4
         schoolName.layer.borderWidth = 1.2
         schoolName.layer.borderColor = UIColor.black.cgColor
         schoolName.setRightPaddingPoints(10)
@@ -171,19 +175,19 @@ class AccountSettingsViewController  : BaseViewController, UIPickerViewDataSourc
       
         schoolName.inputView = pickerView
         
-        designation.layer.cornerRadius = 8
+        designation.layer.cornerRadius = 4
         designation.layer.borderWidth = 1.2
         designation.layer.borderColor = UIColor.black.cgColor
         designation.setRightPaddingPoints(10)
         designation.setLeftPaddingPoints(10)
         
-        major.layer.cornerRadius = 8
+        major.layer.cornerRadius = 4
         major.layer.borderWidth = 1.2
         major.layer.borderColor = UIColor.black.cgColor
         major.setRightPaddingPoints(10)
         major.setLeftPaddingPoints(10)
         
-        classification.layer.cornerRadius = 8
+        classification.layer.cornerRadius = 4
         classification.layer.borderWidth = 1.2
         classification.layer.borderColor = UIColor.black.cgColor
         classification.setRightPaddingPoints(10)
@@ -195,39 +199,39 @@ class AccountSettingsViewController  : BaseViewController, UIPickerViewDataSourc
       
         classification.inputView = pickerView2
         
-        graduationDate.layer.cornerRadius = 8
+        graduationDate.layer.cornerRadius = 4
         graduationDate.layer.borderWidth = 1.2
         graduationDate.layer.borderColor = UIColor.black.cgColor
         graduationDate.setRightPaddingPoints(10)
         graduationDate.setLeftPaddingPoints(10)
         
         
-        primaryEmail.layer.cornerRadius = 8
+        primaryEmail.layer.cornerRadius = 4
         primaryEmail.layer.borderWidth = 1.2
         primaryEmail.layer.borderColor = UIColor.black.cgColor
         primaryEmail.setLeftPaddingPoints(10)
         primaryEmail.setRightPaddingPoints(10)
                                         
         
-        secondaryEmail.layer.cornerRadius = 8
+        secondaryEmail.layer.cornerRadius = 4
         secondaryEmail.layer.borderWidth = 1.2
         secondaryEmail.layer.borderColor = UIColor.black.cgColor
         secondaryEmail.setRightPaddingPoints(10)
         secondaryEmail.setLeftPaddingPoints(10)
         
-        currentPassword.layer.cornerRadius = 8
+        currentPassword.layer.cornerRadius = 4
         currentPassword.layer.borderWidth = 1.2
         currentPassword.layer.borderColor = UIColor.black.cgColor
         currentPassword.setRightPaddingPoints(10)
         currentPassword.setLeftPaddingPoints(10)
         
-        newPassword.layer.cornerRadius = 8
+        newPassword.layer.cornerRadius = 4
         newPassword.layer.borderWidth = 1.2
         newPassword.layer.borderColor = UIColor.black.cgColor
         newPassword.setRightPaddingPoints(10)
         newPassword.setLeftPaddingPoints(10)
         
-        repeatPassword.layer.cornerRadius = 8
+        repeatPassword.layer.cornerRadius = 4
         repeatPassword.layer.borderWidth = 1.2
         repeatPassword.layer.borderColor = UIColor.black.cgColor
         repeatPassword.setRightPaddingPoints(10)

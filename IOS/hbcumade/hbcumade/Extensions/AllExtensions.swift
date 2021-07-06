@@ -200,14 +200,25 @@ extension UIViewController {
                     else if user.isMobVerified ?? false || user.regiType != "custom" {
                         if let school = user.school {
                             if school != "" {
-                                self.beRootScreen(mIdentifier: Constants.StroyBoard.tabBarViewController)
+                                if let profilePic = user.profile {
+                                    if profilePic != "" {
+                                        self.beRootScreen(mIdentifier: Constants.StroyBoard.tabBarViewController)
+                                    }
+                                    else {
+                                        self.performSegue(withIdentifier: "updateprofileseg", sender: nil)
+                                    }
+                                }
+                                else {
+                                    self.performSegue(withIdentifier: "updateprofileseg", sender: nil)
+                                }
+                               
                             }
                             else {
                                 self.performSegue(withIdentifier: "updateseg", sender: nil)
                             }
                         }
                         else {
-                            print("VIJAY BHAI")
+                         
                             self.performSegue(withIdentifier: "updateseg", sender: nil)
                         }
                         

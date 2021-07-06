@@ -384,9 +384,14 @@ class NetworkViewController: BaseViewController, UICollectionViewDataSource, UIC
         
 
         let used  =  UserData.data!.referralUsed ?? 0
-        let left = 5 - used;
         
-        if left > 0 {
+        var left = 5 - used;
+        
+        if UserData.data?.email == "sflorestal@gmail.com" {
+            left = 99999
+        }
+        
+        if (left > 0) {
             let alert = UIAlertController(title: "Invite Friends", message: "You have total \(left) invite link left. Do you want to generate new invite link?", preferredStyle: .alert)
            
             alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in

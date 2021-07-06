@@ -23,6 +23,7 @@
 		8B98F2D72671DD830008866B /* NetworkSingleViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B98F2D52671DD820008866B /* NetworkSingleViewCell.xib */; };
 		8B9B2C7E266697B9000CEAE6 /* ChatScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9B2C7D266697B8000CEAE6 /* ChatScreenViewController.swift */; };
 		8BAC38592686480A000FAD8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BAC3858268647F3000FAD8E /* Assets.xcassets */; };
+		8BB85BB8268D1B960053FD0A /* UpdatePicturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB85BB7268D1B960053FD0A /* UpdatePicturesViewController.swift */; };
 		8BD3F9F72668282500BF790E /* UpdateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD3F9F62668282500BF790E /* UpdateProfileViewController.swift */; };
 		B14B77F7261E4F2A00316A21 /* AccountSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14B77F6261E4F2A00316A21 /* AccountSettingsViewController.swift */; };
 		B14B781A261E8DC100316A21 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14B7819261E8DC000316A21 /* ExploreViewController.swift */; };
@@ -108,6 +109,7 @@
 		8B98F2D52671DD820008866B /* NetworkSingleViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NetworkSingleViewCell.xib; sourceTree = "<group>"; };
 		8B9B2C7D266697B8000CEAE6 /* ChatScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreenViewController.swift; sourceTree = "<group>"; };
 		8BAC3858268647F3000FAD8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8BB85BB7268D1B960053FD0A /* UpdatePicturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePicturesViewController.swift; sourceTree = "<group>"; };
 		8BD3F9F62668282500BF790E /* UpdateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileViewController.swift; sourceTree = "<group>"; };
 		B14B77F6261E4F2A00316A21 /* AccountSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsViewController.swift; sourceTree = "<group>"; };
 		B14B7819261E8DC000316A21 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
@@ -341,6 +343,7 @@
 				8B4CC87C2663C3F300A2CDEB /* ChatHomePageViewController.swift */,
 				8B9B2C7D266697B8000CEAE6 /* ChatScreenViewController.swift */,
 				8BD3F9F62668282500BF790E /* UpdateProfileViewController.swift */,
+				8BB85BB7268D1B960053FD0A /* UpdatePicturesViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -599,6 +602,7 @@
 				B19130952609433F007793C1 /* SplashScreen2.swift in Sources */,
 				8B7F721E267205830013221E /* NetworkTrippleViewCell.swift in Sources */,
 				B191309826095D3F007793C1 /* VerifiedIntroController.swift in Sources */,
+				8BB85BB8268D1B960053FD0A /* UpdatePicturesViewController.swift in Sources */,
 				8B4CC87F2663F61D00A2CDEB /* HomeChatTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -741,7 +745,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = hbcumade/hbcumade.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 12;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = D55T9ZSDKH;
 				INFOPLIST_FILE = hbcumade/Info.plist;
@@ -750,7 +754,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.05;
+				MARKETING_VERSION = 1.07;
 				PRODUCT_BUNDLE_IDENTIFIER = net.softment.hbcumade;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -766,7 +770,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = hbcumade/hbcumade.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = D55T9ZSDKH;
 				INFOPLIST_FILE = hbcumade/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -774,7 +778,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.05;
+				MARKETING_VERSION = 1.07;
 				PRODUCT_BUNDLE_IDENTIFIER = net.softment.hbcumade;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

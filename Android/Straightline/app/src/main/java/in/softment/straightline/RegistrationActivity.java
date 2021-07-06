@@ -57,12 +57,7 @@ public class RegistrationActivity extends AppCompatActivity {
         Services.fullScreen(this);
 
         mAuth = FirebaseAuth.getInstance();
-        if (mAuth.getCurrentUser() != null) {
-            if (mAuth.getCurrentUser().isEmailVerified()) {
-                Services.getCurrentUserData(this,mAuth.getCurrentUser().getUid());
-            }
 
-        }
 
         emailAddress = findViewById(R.id.email);
         name = findViewById(R.id.name);

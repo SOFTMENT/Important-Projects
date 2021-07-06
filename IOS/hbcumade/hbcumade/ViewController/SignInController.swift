@@ -188,16 +188,7 @@ class SignInController : UIViewController, UITextFieldDelegate{
     }
     // get current number of times app has been launched
    
-    
 
-    
-
-    
-  
-    
-    
-    
-    
     func validatedFields() -> String? {
         if  (signInTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             signInPasswordField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "")
