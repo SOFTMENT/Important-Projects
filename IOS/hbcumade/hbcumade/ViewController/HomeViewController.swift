@@ -60,6 +60,8 @@ class HomeViewController: BaseViewController, UITextViewDelegate, UITableViewDel
     var tempHeight : CGFloat = 0
     var hasImageChanged : Bool = false
     var postVisibility : String = "all"
+    let standard = UserDefaults.standard
+    
     override func viewDidLoad() {
    
         cUid = Auth.auth().currentUser?.uid
@@ -106,6 +108,8 @@ class HomeViewController: BaseViewController, UITextViewDelegate, UITableViewDel
         
         
         
+        
+        
         Constants.selected_classification = UserData.data?.classification ?? "student"
         
         ProgressHUDShow(text: "Loading…")
@@ -129,6 +133,29 @@ class HomeViewController: BaseViewController, UITextViewDelegate, UITableViewDel
         
     
      
+        let _ =  try? isUpdateAvailable { isUpdate,version,releaseNotes, error in
+            if error != nil {
+                print(error!.localizedDescription)
+            }
+            else if let update = isUpdate{
+                
+                
+                if update {
+                    DispatchQueue.main.async {
+                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                        if let myAlert = storyboard.instantiateViewController(withIdentifier: "alert") as? NewUpdateAlertController {
+                            myAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+                            myAlert.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+                            myAlert.sMessage = releaseNotes
+                            myAlert.version = version
+                            self.present(myAlert, animated: true, completion: nil)
+                        }
+                    }
+                   
+                   
+                }
+            }
+        }
         
     }
     
@@ -471,16 +498,10 @@ class HomeViewController: BaseViewController, UITextViewDelegate, UITableViewDel
                       
 
                   }
-                    
-            
-           
-            
+
             
            }
-                 
-            
-            
-            
+        
             self.refRegs.append(ref)
               
         }
@@ -489,11 +510,8 @@ class HomeViewController: BaseViewController, UITextViewDelegate, UITableViewDel
     }
     
     
- 
-    func reloadTableView(){
-       
-        
-        
+    func reloadTableView() {
+
         student = posts_student.sorted(by: {$0.value.postAt! > $1.value.postAt!} )
         alumni = posts_alumni.sorted(by: {$0.value.postAt! > $1.value.postAt!} )
     
@@ -577,8 +595,11 @@ class HomeViewController: BaseViewController, UITextViewDelegate, UITableViewDel
            
             cell.self.writeCommentEditField.setRightPaddingPoints(10)
             cell.self.writeCommentEditField.setLeftPaddingPoints(10)
+            
             let recog = UITapGestureRecognizer(target: self, action: #selector(self.gotoCommentPage(gesture:)))
+            
             let recog1 = UITapGestureRecognizer(target: self, action: #selector(self.gotoCommentPage(gesture:)))
+            
             cell.commentBtn.tag = indexPath.row
             cell.commentBtn.isUserInteractionEnabled = true
             cell.commentBtn.addGestureRecognizer(recog1)
@@ -724,8 +745,14 @@ class HomeViewController: BaseViewController, UITextViewDelegate, UITableViewDel
     @objc func sharePost(value : MyTapPassViewGesture){
         if let post = value.post {
             let someText:String = post.postText ?? ""
-            let objectsToShare:URL = URL(string: post.postImage ?? "")!
-           let sharedObjects:[AnyObject] = [objectsToShare as AnyObject,someText as AnyObject]
+            var sharedObjects:[AnyObject] = [someText as AnyObject]
+            if let imageURL = post.postImage {
+                if imageURL != "" {
+                    let objectsToShare:URL = URL(string: imageURL)!
+                    sharedObjects = [objectsToShare as AnyObject,someText as AnyObject]
+                }
+            }
+           
            let activityViewController = UIActivityViewController(activityItems : sharedObjects, applicationActivities: nil)
            activityViewController.popoverPresentationController?.sourceView = self.view
 
@@ -883,6 +910,41 @@ class HomeViewController: BaseViewController, UITextViewDelegate, UITableViewDel
    
     
  
+    
+    func isUpdateAvailable(completion: @escaping (Bool?,String,String?, Error?) -> Void) throws -> URLSessionDataTask {
+        guard let info = Bundle.main.infoDictionary,
+            let currentVersion = info["CFBundleShortVersionString"] as? String,
+            let _ = info["CFBundleIdentifier"] as? String,
+            let url = URL(string: "http://itunes.apple.com/lookup?bundleId=net.softment.hbcumade") else {
+                throw VersionError.invalidBundleInfo
+        }
+      
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            do {
+                if let error = error { throw error }
+                guard let data = data else { throw VersionError.invalidResponse }
+                let json = try JSONSerialization.jsonObject(with: data, options: [.allowFragments]) as? [String: Any]
+                guard let result = (json?["results"] as? [Any])?.first as? [String: Any],
+                      let version = result["version"] as? String else {
+                    throw VersionError.invalidResponse
+                }
+                
+                let releaseNotes = result["releaseNotes"] as? String
+                
+                var isUpdate = version != currentVersion
+                let updated = self.standard.bool(forKey: version)
+                if updated {
+                    isUpdate = false
+                }
+                
+                completion(isUpdate,version, releaseNotes, nil )
+            } catch {
+                completion(nil,"1",nil, error)
+            }
+        }
+        task.resume()
+        return task
+    }
     
 
     @objc func changeVisibility() {
@@ -1073,3 +1135,6 @@ class MyTapGesture: UITapGestureRecognizer {
     
 }
 
+enum VersionError: Error {
+    case invalidResponse, invalidBundleInfo
+}

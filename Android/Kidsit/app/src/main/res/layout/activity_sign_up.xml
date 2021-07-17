@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".SignUpActivity">
+    <TextView
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="S'inscrire"
+        android:layout_marginTop="30dp"
+        android:textSize="24sp"
+        android:fontFamily="@font/quicksand_bold"
+        android:textColor="@color/text_head_color"
+        android:id="@+id/head_title"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        app:boxStrokeColor="#f85f6a"
+        app:hintTextColor="#f85f6a"
+        android:id="@+id/etFullNameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:cursorVisible="false"
+            android:background="@android:color/transparent"
+            android:id="@+id/etFullname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nom complet"
+            android:textSize="14sp"
+            android:textIsSelectable="false"
+            android:fontFamily="@font/asap_medium"
+            android:inputType="textPersonName"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        app:boxStrokeColor="#f85f6a"
+        app:hintTextColor="#f85f6a"
+        android:id="@+id/etPasswordLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        app:passwordToggleEnabled="true"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:cursorVisible="false"
+            android:background="@android:color/transparent"
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mot de passe"
+            android:textSize="14sp"
+            android:textIsSelectable="false"
+            android:fontFamily="@font/asap_medium"
+            android:inputType="textPassword"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        app:boxStrokeColor="#f85f6a"
+        app:hintTextColor="#f85f6a"
+        android:id="@+id/etEmailLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:cursorVisible="false"
+            android:background="@android:color/transparent"
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:textSize="14sp"
+            android:textIsSelectable="false"
+            android:fontFamily="@font/asap_medium"
+            android:inputType="textEmailAddress"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        app:boxStrokeColor="#f85f6a"
+        app:hintTextColor="#f85f6a"
+        android:id="@+id/etPhoneLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:cursorVisible="false"
+            android:background="@android:color/transparent"
+            android:id="@+id/etPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Télephone"
+            android:textSize="14sp"
+            android:textIsSelectable="false"
+            android:fontFamily="@font/asap_medium"
+            android:inputType="phone"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        app:boxStrokeColor="#f85f6a"
+        app:hintTextColor="#f85f6a"
+        android:id="@+id/etAddressLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:cursorVisible="false"
+            android:background="@android:color/transparent"
+            android:id="@+id/etAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Address (Optionnel)"
+            android:textSize="14sp"
+            android:textIsSelectable="false"
+            android:fontFamily="@font/asap_medium"
+            android:inputType="textPostalAddress"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        app:boxStrokeColor="#f85f6a"
+        app:hintTextColor="#f85f6a"
+        android:id="@+id/etNumberOfChildrenLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:cursorVisible="false"
+            android:background="@android:color/transparent"
+            android:id="@+id/etNumberOfChildren"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre d'enfants (Optionnel)"
+            android:textSize="14sp"
+            android:textIsSelectable="false"
+            android:fontFamily="@font/asap_medium"
+            android:inputType="number"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        app:boxStrokeColor="#f85f6a"
+        app:hintTextColor="#f85f6a"
+        android:id="@+id/etCityLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        >
+
+        <AutoCompleteTextView
+            android:imeOptions="actionDone"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:cursorVisible="false"
+            android:background="@android:color/transparent"
+            android:id="@+id/etCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="24dp"
+            android:paddingBottom="6dp"
+            android:hint="Ville"
+            android:textSize="14sp"
+            android:textIsSelectable="false"
+            android:fontFamily="@font/asap_medium"
+            android:inputType="textNoSuggestions"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:layout_marginStart="40dp"
+       android:layout_marginEnd="40dp"
+       android:layout_marginTop="30dp"
+       >
+       <CheckBox
+           android:id="@+id/checkBox"
+           android:gravity="top"
+           android:layout_gravity="top"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:buttonTint="#f85f6a"
+
+           />
+
+       <RelativeLayout
+           android:layout_gravity="top"
+           android:orientation="horizontal"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+       <TextView
+          android:id="@+id/one"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="J'accepte les"
+           android:fontFamily="@font/asap_regular"
+           android:textSize="13sp"
+           />
+
+       <TextView
+           android:layout_toEndOf="@id/one"
+           android:id="@+id/conditions"
+           android:textColor="#ff6624"
+           android:gravity="top"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text=" conditions d'utilisation"
+           android:fontFamily="@font/asap_semibold"
+           android:textSize="13sp"
+           />
+       <TextView
+           android:id="@+id/two"
+           android:layout_below="@+id/one"
+           android:gravity="top"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="et la"
+           android:fontFamily="@font/asap_regular"
+           android:textSize="13sp"
+           />
+           <TextView
+               android:layout_marginTop="2dp"
+               android:id="@+id/privacy_poilicy"
+               android:layout_below="@+id/one"
+               android:layout_toEndOf="@+id/two"
+               android:textColor="#ff6624"
+               android:gravity="top"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text=" politique de confidentialité"
+               android:fontFamily="@font/asap_semibold"
+               android:textSize="13sp"
+               />
+       </RelativeLayout>
+
+   </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/signUpCard"
+        app:cardBackgroundColor="#f85f6a"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="6dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="40dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/asap_semibold"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:text="Continuer"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:padding="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vous avez déjà un compte?"
+                android:textSize="14sp"
+                android:fontFamily="@font/asap_medium"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+
+            android:layout_alignParentEnd="true"
+            android:padding="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/signInText"
+                android:textColor="#f85f6a"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Se connecter"
+                android:textSize="15sp"
+                android:fontFamily="@font/asap_medium"
+                />
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
+
+</ScrollView>

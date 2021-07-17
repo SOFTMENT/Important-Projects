@@ -312,7 +312,7 @@ class NetworkViewController: BaseViewController, UICollectionViewDataSource, UIC
     }
     
     public func getAllUsers(){
-        Firestore.firestore().collection("Users").order(by: "registredAt", descending: false).addSnapshotListener { snapshot, error in
+        Firestore.firestore().collection("Users").order(by: "registredAt", descending: false).whereField("hasApproved", isEqualTo: true).addSnapshotListener { snapshot, error in
             if error == nil {
                 
                 self.allUserData.removeAll()
@@ -480,8 +480,9 @@ class NetworkViewController: BaseViewController, UICollectionViewDataSource, UIC
             cell.profilePic.makeRounded()
             cell.name.text = userData.name
             cell.status.text = userData.school
+            cell.profilePic.sd_cancelCurrentImageLoad()
             
-            if userData.profile != "" {
+            if userData.profile != nil && userData.profile != "" {
                 
                 cell.profilePic.sd_setImage(with: URL(string: userData.profile ?? ""), placeholderImage: UIImage(named: "profile-user"), options: .continueInBackground, completed: nil)
             

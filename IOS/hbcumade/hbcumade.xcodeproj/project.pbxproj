@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		49B99DA039994A101705D0C5 /* Pods_hbcumade.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ACA712419631C90300E8117 /* Pods_hbcumade.framework */; };
 		8B0C4988266771EF00C4AF2A /* PushNotificationSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0C4987266771EF00C4AF2A /* PushNotificationSender.swift */; };
+		8B4A9B99269F20EA00FD0BFA /* NewUpdateAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4A9B98269F20EA00FD0BFA /* NewUpdateAlertController.swift */; };
+		8B4A9B9B269F3D4800FD0BFA /* Schools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4A9B9A269F3D4700FD0BFA /* Schools.swift */; };
+		8B4A9B9D269F497100FD0BFA /* SchoolWaitListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4A9B9C269F497100FD0BFA /* SchoolWaitListController.swift */; };
 		8B4CC87D2663C3F300A2CDEB /* ChatHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4CC87C2663C3F300A2CDEB /* ChatHomePageViewController.swift */; };
 		8B4CC87F2663F61D00A2CDEB /* HomeChatTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4CC87E2663F61C00A2CDEB /* HomeChatTableCell.swift */; };
 		8B4CC8812663FCF900A2CDEB /* LastMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4CC8802663FCF900A2CDEB /* LastMessage.swift */; };
@@ -24,6 +27,10 @@
 		8B9B2C7E266697B9000CEAE6 /* ChatScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9B2C7D266697B8000CEAE6 /* ChatScreenViewController.swift */; };
 		8BAC38592686480A000FAD8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BAC3858268647F3000FAD8E /* Assets.xcassets */; };
 		8BB85BB8268D1B960053FD0A /* UpdatePicturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB85BB7268D1B960053FD0A /* UpdatePicturesViewController.swift */; };
+		8BD15B3A269D812300B31911 /* EnterInviteCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD15B39269D812300B31911 /* EnterInviteCodeController.swift */; };
+		8BD15B3C269DC5CC00B31911 /* AdminHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD15B3B269DC5CC00B31911 /* AdminHomeController.swift */; };
+		8BD15B3E269DCD8200B31911 /* WaitListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD15B3D269DCD8200B31911 /* WaitListController.swift */; };
+		8BD15B41269DD76A00B31911 /* WaitlistViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD15B40269DD76A00B31911 /* WaitlistViewCell.swift */; };
 		8BD3F9F72668282500BF790E /* UpdateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD3F9F62668282500BF790E /* UpdateProfileViewController.swift */; };
 		B14B77F7261E4F2A00316A21 /* AccountSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14B77F6261E4F2A00316A21 /* AccountSettingsViewController.swift */; };
 		B14B781A261E8DC100316A21 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14B7819261E8DC000316A21 /* ExploreViewController.swift */; };
@@ -95,6 +102,9 @@
 		1A292FEE4F9E7303A6065CAF /* Pods-hbcumade.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hbcumade.debug.xcconfig"; path = "Target Support Files/Pods-hbcumade/Pods-hbcumade.debug.xcconfig"; sourceTree = "<group>"; };
 		2ACA712419631C90300E8117 /* Pods_hbcumade.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hbcumade.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B0C4987266771EF00C4AF2A /* PushNotificationSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationSender.swift; sourceTree = "<group>"; };
+		8B4A9B98269F20EA00FD0BFA /* NewUpdateAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUpdateAlertController.swift; sourceTree = "<group>"; };
+		8B4A9B9A269F3D4700FD0BFA /* Schools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schools.swift; sourceTree = "<group>"; };
+		8B4A9B9C269F497100FD0BFA /* SchoolWaitListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolWaitListController.swift; sourceTree = "<group>"; };
 		8B4CC87C2663C3F300A2CDEB /* ChatHomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHomePageViewController.swift; sourceTree = "<group>"; };
 		8B4CC87E2663F61C00A2CDEB /* HomeChatTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChatTableCell.swift; sourceTree = "<group>"; };
 		8B4CC8802663FCF900A2CDEB /* LastMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastMessage.swift; sourceTree = "<group>"; };
@@ -110,6 +120,10 @@
 		8B9B2C7D266697B8000CEAE6 /* ChatScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreenViewController.swift; sourceTree = "<group>"; };
 		8BAC3858268647F3000FAD8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8BB85BB7268D1B960053FD0A /* UpdatePicturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePicturesViewController.swift; sourceTree = "<group>"; };
+		8BD15B39269D812300B31911 /* EnterInviteCodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterInviteCodeController.swift; sourceTree = "<group>"; };
+		8BD15B3B269DC5CC00B31911 /* AdminHomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminHomeController.swift; sourceTree = "<group>"; };
+		8BD15B3D269DCD8200B31911 /* WaitListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitListController.swift; sourceTree = "<group>"; };
+		8BD15B40269DD76A00B31911 /* WaitlistViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitlistViewCell.swift; sourceTree = "<group>"; };
 		8BD3F9F62668282500BF790E /* UpdateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileViewController.swift; sourceTree = "<group>"; };
 		B14B77F6261E4F2A00316A21 /* AccountSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsViewController.swift; sourceTree = "<group>"; };
 		B14B7819261E8DC000316A21 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
@@ -202,6 +216,16 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		8BD15B3F269DCD8B00B31911 /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				8BD15B3B269DC5CC00B31911 /* AdminHomeController.swift */,
+				8BD15B3D269DCD8200B31911 /* WaitListController.swift */,
+				8B4A9B9C269F497100FD0BFA /* SchoolWaitListController.swift */,
+			);
+			path = Admin;
+			sourceTree = "<group>";
+		};
 		B1CCCFCC262C27F600A9C562 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +283,7 @@
 				8B7F72152671EF5D0013221E /* NetworkDoubleViewCell.xib */,
 				8B7F721C267205830013221E /* NetworkTrippleViewCell.swift */,
 				8B7F721D267205830013221E /* NetworkTrippleViewCell.xib */,
+				8BD15B40269DD76A00B31911 /* WaitlistViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -276,6 +301,7 @@
 				B1AC1FDB2620B19D00055E70 /* Group.swift */,
 				8B4CC8802663FCF900A2CDEB /* LastMessage.swift */,
 				8B4CC8842666354600A2CDEB /* Messages.swift */,
+				8B4A9B9A269F3D4700FD0BFA /* Schools.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -320,6 +346,7 @@
 		FECC43B625AC50A600B7E8F1 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8BD15B3F269DCD8B00B31911 /* Admin */,
 				FECC43B725AC50DB00B7E8F1 /* SignInController.swift */,
 				FECC43BB25ACE5BB00B7E8F1 /* SignUpController.swift */,
 				FECC43C325ACEC8900B7E8F1 /* RecoveryController.swift */,
@@ -344,6 +371,8 @@
 				8B9B2C7D266697B8000CEAE6 /* ChatScreenViewController.swift */,
 				8BD3F9F62668282500BF790E /* UpdateProfileViewController.swift */,
 				8BB85BB7268D1B960053FD0A /* UpdatePicturesViewController.swift */,
+				8BD15B39269D812300B31911 /* EnterInviteCodeController.swift */,
+				8B4A9B98269F20EA00FD0BFA /* NewUpdateAlertController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -557,9 +586,11 @@
 				B14B783C262062B600316A21 /* EventUpcomingCell.swift in Sources */,
 				8B4CC8812663FCF900A2CDEB /* LastMessage.swift in Sources */,
 				B19C7F08261A66280074A546 /* MainProfile.swift in Sources */,
+				8B4A9B9B269F3D4800FD0BFA /* Schools.swift in Sources */,
 				FECC43BC25ACE5BB00B7E8F1 /* SignUpController.swift in Sources */,
 				FECC43C725ACEFCE00B7E8F1 /* VerifyNumberController.swift in Sources */,
 				B14B782F262056D000316A21 /* EventViewController.swift in Sources */,
+				8BD15B3E269DCD8200B31911 /* WaitListController.swift in Sources */,
 				B191309126087CDC007793C1 /* AllExtensions.swift in Sources */,
 				FED76E3925C1FE4C00F955A0 /* CommentPageTableCell.swift in Sources */,
 				8BD3F9F72668282500BF790E /* UpdateProfileViewController.swift in Sources */,
@@ -569,12 +600,15 @@
 				8B4CC87D2663C3F300A2CDEB /* ChatHomePageViewController.swift in Sources */,
 				B19130A72609FC87007793C1 /* OverlayView.swift in Sources */,
 				8B50B373266167DF004EAB77 /* BaseViewController.swift in Sources */,
+				8B4A9B99269F20EA00FD0BFA /* NewUpdateAlertController.swift in Sources */,
 				FEB56B3A25BB5A04005D74ED /* TopBarViewController.swift in Sources */,
 				B14B77F7261E4F2A00316A21 /* AccountSettingsViewController.swift in Sources */,
 				FEB56B5525BDFF6E005D74ED /* FriendList.swift in Sources */,
 				8B7F72162671EF5D0013221E /* NetworkDoubleViewCell.swift in Sources */,
+				8BD15B3A269D812300B31911 /* EnterInviteCodeController.swift in Sources */,
 				FECC43CA25ACF80300B7E8F1 /* EnterVerificationCodeController.swift in Sources */,
 				B14B78792620AEEC00316A21 /* Peoples.swift in Sources */,
+				8BD15B3C269DC5CC00B31911 /* AdminHomeController.swift in Sources */,
 				B14B782C2620477600316A21 /* ExplorePeopleToFollowCell.swift in Sources */,
 				B1CCD067262C6E4200A9C562 /* CommentViewController.swift in Sources */,
 				B191309F2609FBD8007793C1 /* PresentationController.swift in Sources */,
@@ -590,6 +624,7 @@
 				FECC440B25AF111200B7E8F1 /* FirebaseStoreManager.swift in Sources */,
 				FEB56B4E25BD897D005D74ED /* Post.swift in Sources */,
 				FE39C40C25BF3CF000329B9D /* HomePageTableCell.swift in Sources */,
+				8B4A9B9D269F497100FD0BFA /* SchoolWaitListController.swift in Sources */,
 				FED76EA825C3466900F955A0 /* GroupPageCell.swift in Sources */,
 				8B9B2C7E266697B9000CEAE6 /* ChatScreenViewController.swift in Sources */,
 				FEB56B5125BD8E8F005D74ED /* Comment.swift in Sources */,
@@ -598,6 +633,7 @@
 				8B98F2D62671DD830008866B /* NetworkSingleViewCell.swift in Sources */,
 				FECC439F25AC3A4A00B7E8F1 /* SceneDelegate.swift in Sources */,
 				B14B781A261E8DC100316A21 /* ExploreViewController.swift in Sources */,
+				8BD15B41269DD76A00B31911 /* WaitlistViewCell.swift in Sources */,
 				FEAA59B725B38CC400CB0310 /* HomeViewController.swift in Sources */,
 				B19130952609433F007793C1 /* SplashScreen2.swift in Sources */,
 				8B7F721E267205830013221E /* NetworkTrippleViewCell.swift in Sources */,
@@ -745,7 +781,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = hbcumade/hbcumade.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 14;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = D55T9ZSDKH;
 				INFOPLIST_FILE = hbcumade/Info.plist;
@@ -754,7 +790,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.07;
+				MARKETING_VERSION = 2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = net.softment.hbcumade;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -770,7 +806,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = hbcumade/hbcumade.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = D55T9ZSDKH;
 				INFOPLIST_FILE = hbcumade/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -778,7 +814,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.07;
+				MARKETING_VERSION = 2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = net.softment.hbcumade;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

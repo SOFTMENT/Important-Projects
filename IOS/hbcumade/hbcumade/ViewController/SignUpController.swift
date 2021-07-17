@@ -19,7 +19,6 @@ class SignUpController : UIViewController, UITextFieldDelegate, UIPickerViewDele
     let preferences = UserDefaults.standard
     @IBOutlet weak var chooseClassification: UITextField!
     @IBOutlet weak var designation: UITextField!
-    @IBOutlet weak var inviteCode: UITextField!
     
     @IBOutlet weak var chooseSchool: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -34,16 +33,7 @@ class SignUpController : UIViewController, UITextFieldDelegate, UIPickerViewDele
     var pickerView2 = UIPickerView()
     fileprivate var currentNonce: String?
     
-    var schools = ["Clark Atlanta University",
-                   "Florida A&M University",
-                   "Hampton University",
-                   "Howard University",
-                   "Morehouse College",
-                   "Tennessee State University",
-                   "Morgan State University",
-                   "Norfolk State University",
-                   "Spelman College",
-                   "Virginia State University"]
+    var schools = [Schools]()
     
     let classification = ["Alumni","Student"]
     
@@ -55,7 +45,7 @@ class SignUpController : UIViewController, UITextFieldDelegate, UIPickerViewDele
         
     
         
-        schools.sort()
+      
         
 
         self.signUpNameTextField.layer.cornerRadius = 8
@@ -86,11 +76,7 @@ class SignUpController : UIViewController, UITextFieldDelegate, UIPickerViewDele
         self.signUpEmailTextField.setLeftPaddingPoints(10)
         
         
-        self.inviteCode.setRightPaddingPoints(10)
-        self.inviteCode.setLeftPaddingPoints(10)
-        self.inviteCode.delegate = self
-        self.inviteCode.layer.cornerRadius = 8
-        
+     
         //SCHOOL
         chooseSchool.delegate = self
    
@@ -113,6 +99,8 @@ class SignUpController : UIViewController, UITextFieldDelegate, UIPickerViewDele
                                      attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
        
         
+        
+        
         //CLASSFICATION
         chooseClassification.delegate = self
 
@@ -133,6 +121,7 @@ class SignUpController : UIViewController, UITextFieldDelegate, UIPickerViewDele
        
         
         
+        
         self.signUpPasswordTextField.setRightPaddingPoints(10)
         self.signUpPasswordTextField.setLeftPaddingPoints(10)
         
@@ -141,7 +130,32 @@ class SignUpController : UIViewController, UITextFieldDelegate, UIPickerViewDele
         
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyBoard))
         view.addGestureRecognizer(tapRecognizer)
+        
+        getSchools()
+        
       
+    }
+    
+    
+    func getSchools(){
+        ProgressHUDShow(text: "")
+        Firestore.firestore().collection("Schools").order(by: "name", descending: false).addSnapshotListener { snapshot, error in
+            self.ProgressHUDHide()
+            if error == nil {
+                if let snapshot = snapshot {
+                    self.schools.removeAll()
+                    for qds in snapshot.documents {
+                        if let school = try? qds.data(as: Schools.self) {
+                         
+                            self.schools.append(school)
+                            
+                        }
+                    }
+                    self.pickerView.reloadAllComponents()
+                }
+            }
+        }
+        
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -174,15 +188,7 @@ class SignUpController : UIViewController, UITextFieldDelegate, UIPickerViewDele
         let designation = designation.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         let schoolText = chooseSchool.text
         let classificationText = chooseClassification.text
-            
-            let inviteCode = inviteCode.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-            
-            Firestore.firestore().collection("InviteCode").document(inviteCode!).getDocument { document, err in
-                if err == nil {
-                    if let doc = document {
-                        if doc.exists {
-                            
-                            Firestore.firestore().collection("InviteCode").document(inviteCode!).delete()
+  
                             self.ProgressHUDShow(text: "Creating An Account...")
                                 
                                 
@@ -202,20 +208,10 @@ class SignUpController : UIViewController, UITextFieldDelegate, UIPickerViewDele
                                 }
                             }
                         }
-                        else {
-                            self.showError("Invite code is not valid or already used.")
-                        }
-                    }
-                    else {
-                        self.showError("Invite code is not valid or already used.")
-                    }
-                }
-                else {
-                    self.showError(err!.localizedDescription)
-                }
-            }
+                        
+            
 
-    }
+    
         
     }
     
@@ -236,8 +232,7 @@ class SignUpController : UIViewController, UITextFieldDelegate, UIPickerViewDele
             signUpEmailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             signUpPasswordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             signUpRepeatPasswordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            designation.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
-                || inviteCode.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "")
+            designation.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "")
             {
                 return "Please fill in all fields."
             }
@@ -315,7 +310,7 @@ class SignUpController : UIViewController, UITextFieldDelegate, UIPickerViewDele
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView == self.pickerView {
-            return schools[row]
+            return schools[row].name
         }
         else {
             return classification[row]
@@ -325,7 +320,7 @@ class SignUpController : UIViewController, UITextFieldDelegate, UIPickerViewDele
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         if pickerView == self.pickerView {
-            chooseSchool.text = schools[row]
+            chooseSchool.text = schools[row].name
             chooseSchool.resignFirstResponder()
         }
         else {

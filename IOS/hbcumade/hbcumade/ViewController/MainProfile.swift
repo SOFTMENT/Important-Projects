@@ -28,10 +28,19 @@ class MainProfile: BaseViewController, UIImagePickerControllerDelegate , CropVie
 
     var userData : UserData?
     override func viewDidLoad() {
+        
+       
+     
+        
+        
         profilePic.makeRounded()
         followBtn.layer.cornerRadius = 4
         followBtn.showLoader(userInteraction: false)
        
+        
+        if userData == nil {
+            userData = UserData.data
+        }
         
         guard let userData = userData else {
             self.dismiss(animated: true, completion: nil)
@@ -43,16 +52,23 @@ class MainProfile: BaseViewController, UIImagePickerControllerDelegate , CropVie
         }
         
         
-        messageBtnStack.isHidden = true
+       
         followBtn.isHidden = true
         
         if userData.uid != currentUser.uid {
-            messageBtnStack.isHidden = false
+           
             followBtn.isHidden = false
-            messageBtn.layer.cornerRadius = 4
-            messageBtn.dropShadow()
+          
+           
         
         }
+        else {
+            messageBtn.setTitle("Edit Profile")
+        }
+        
+        messageBtn.layer.cornerRadius = 4
+        messageBtn.dropShadow()
+
         
         if let coverImage = userData.coverImage {
             if coverImage != "" {
@@ -405,7 +421,13 @@ class MainProfile: BaseViewController, UIImagePickerControllerDelegate , CropVie
     }
     
     @IBAction func messageClicked(_ sender: Any) {
-        performSegue(withIdentifier: "chatscreenseg", sender: nil)
+        if Auth.auth().currentUser!.uid == userData?.uid {
+            performSegue(withIdentifier: "editprofileseg", sender: nil)
+        }
+        else {
+            performSegue(withIdentifier: "chatscreenseg", sender: nil)
+        }
+       
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

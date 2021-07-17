@@ -22,13 +22,13 @@ class CommonPresentViewController2 : BaseViewController, UINavigationControllerD
                 if let nav = vc as? UINavigationController  {
                   
                     if (nav.topViewController is CommonPresentViewController2) {
-                        print("WOW_0101")
+                      
                         if (Constants.previousSelectedTabIndex == 2){
-                            print("NOT WOW 0")
+                          
                             nav.popToRootViewController(animated: false)
                         }
                         else {
-                            print("WOW1")
+                          
                         }
                        
                     }

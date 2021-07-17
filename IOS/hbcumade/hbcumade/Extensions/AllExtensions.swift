@@ -117,6 +117,9 @@ extension Date {
 
 extension UIViewController {
     
+    
+
+    
     func generateRef() -> String {
         return  String.init(arc4random_uniform(900000) + 100000) 
         
@@ -167,11 +170,11 @@ extension UIViewController {
             }
             else {
                 if type == "custom" {
-                    self.getUserData(uid: uid, showIntroScreen: false)
+                    self.getUserData(uid: uid, showProgress: true)
                     
                 }
                 else {
-                    self.getUserData(uid: uid, showIntroScreen: false)
+                    self.getUserData(uid: uid, showProgress: true)
                 }
               
             }
@@ -180,10 +183,16 @@ extension UIViewController {
     }
 
     
-    func getUserData(uid : String, showIntroScreen : Bool)  {
-        ProgressHUDShow(text: "Loading...")
+    func getUserData(uid : String, showProgress : Bool)  {
+        if showProgress {
+            ProgressHUDShow(text: "Loading...")
+        }
+       
         FirebaseStoreManager.db.collection("Users").document(uid).getDocument { (snapshot, error) in
-            MBProgressHUD.hide(for: self.view, animated: true)
+            if showProgress {
+                MBProgressHUD.hide(for: self.view, animated: true)
+            }
+           
             if error != nil {
                 
                 self.showError(error!.localizedDescription)
@@ -194,15 +203,26 @@ extension UIViewController {
                 do {
                 if let user = try snapshot?.data(as: UserData.self) {
                     UserData.data = user
-                    if showIntroScreen {
-                        self.beRootScreen(mIdentifier: Constants.StroyBoard.verifiedIntroViewController)
-                    }
-                    else if user.isMobVerified ?? false || user.regiType != "custom" {
+                   if user.isMobVerified ?? false || user.regiType != "custom" {
                         if let school = user.school {
                             if school != "" {
-                                if let profilePic = user.profile {
-                                    if profilePic != "" {
-                                        self.beRootScreen(mIdentifier: Constants.StroyBoard.tabBarViewController)
+                                
+                                if let coverPic = user.coverImage {
+                                    
+                                   
+                                    if coverPic != "" {
+                                        if let hasApproved  = user.hasApproved{
+                                            if hasApproved {
+                                                self.beRootScreen(mIdentifier: Constants.StroyBoard.tabBarViewController)
+                                            }
+                                            else {
+                                                self.beRootScreen(mIdentifier: Constants.StroyBoard.enterInviteCodeController)
+                                            }
+                                        }
+                                        else {
+                                            self.beRootScreen(mIdentifier: Constants.StroyBoard.enterInviteCodeController)
+                                        }
+                                
                                     }
                                     else {
                                         self.performSegue(withIdentifier: "updateprofileseg", sender: nil)
@@ -214,12 +234,35 @@ extension UIViewController {
                                
                             }
                             else {
-                                self.performSegue(withIdentifier: "updateseg", sender: nil)
+                                if let customSchoolName = user.customSchoolName {
+                                    if customSchoolName != "" {
+                                        self.showMessage(title: "Pending", message: "You're account is still pending. We will notify you once your account is approved.")
+                                    }
+                                    else {
+                                        self.performSegue(withIdentifier: "updateseg", sender: nil)
+                                    }
+                                    
+                                }
+                                else {
+                                    self.performSegue(withIdentifier: "updateseg", sender: nil)
+                                }
+                                
                             }
                         }
                         else {
                          
-                            self.performSegue(withIdentifier: "updateseg", sender: nil)
+                            if let customSchoolName = user.customSchoolName {
+                                if customSchoolName != "" {
+                                    self.showMessage(title: "Pending", message: "YYou're account is still pending. We will notify you once your account is approved.")
+                                }
+                                else {
+                                    self.performSegue(withIdentifier: "updateseg", sender: nil)
+                                }
+                                
+                            }
+                            else {
+                                self.performSegue(withIdentifier: "updateseg", sender: nil)
+                            }
                         }
                         
                     }
@@ -313,7 +356,11 @@ extension UIViewController {
         case Constants.StroyBoard.eventViewController :
             return (mainStoryboard.instantiateViewController(identifier: mIdentifier) as? EventViewController)!
             
+        case Constants.StroyBoard.enterInviteCodeController :
+            return (mainStoryboard.instantiateViewController(identifier: mIdentifier) as? EnterInviteCodeController)!
+            
     
+            
         default:
             return (mainStoryboard.instantiateViewController(identifier: Constants.StroyBoard.signInViewController) as? SignInController)!
         }
@@ -381,10 +428,14 @@ extension UIViewController {
     func showMessage(title : String,message : String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
 
-        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        let okAction = UIAlertAction(title: "Ok", style: .default) { alert in
+            if title == "Thank You" {
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
 
         alert.addAction(okAction)
-
+        
         self.present(alert, animated: true, completion: nil)
 
     }
@@ -410,14 +461,13 @@ extension UIViewController {
                     else {
                         if let doc = snapshot {
                             if doc.exists {
-                                self.getUserData(uid: user.uid, showIntroScreen: false)
+                                self.getUserData(uid: user.uid, showProgress: true)
                                 
                             }
                             else {
                                 
                                 var profilepic = ""
                                 var emailId = ""
-                               
                                 let provider =  user.providerData
                                 var name = ""
                                 for firUserInfo in provider {

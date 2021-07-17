@@ -73,7 +73,8 @@ class ChatScreenViewController : UIViewController, UITableViewDelegate,  UITable
         
 
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight =  300
+        tableView.estimatedRowHeight = 300
+        
         
         
        
@@ -111,13 +112,9 @@ class ChatScreenViewController : UIViewController, UITableViewDelegate,  UITable
 
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if messages[indexPath.row].type == "text" {
+       
         return UITableView.automaticDimension
-        }
-        else {
-            return 300
-            
-        }
+       
     }
     
 
@@ -128,7 +125,7 @@ class ChatScreenViewController : UIViewController, UITableViewDelegate,  UITable
                
                let indexPath = IndexPath(row: messages.count - 1, section: 0)
                
-               tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+               tableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
            }
        }
        
@@ -165,7 +162,7 @@ class ChatScreenViewController : UIViewController, UITableViewDelegate,  UITable
   
     
     @objc func dismissKeyboard() {
-         print("KEYBOARD")
+       
         view.endEditing(true)
      }
     
@@ -264,14 +261,14 @@ class ChatScreenViewController : UIViewController, UITableViewDelegate,  UITable
         Firestore.firestore().collection("Chats").document(userData.uid!).collection(friendUid).order(by: "dateandtime").addSnapshotListener { snapshot, error in
             self.ProgressHUDHide()
             if error == nil {
-                print("HELLO1")
+               
                 self.messages.removeAll()
                 if let snapshot = snapshot {
-                    print("HELLO2")
+                   
                     for snap in snapshot.documents {
-                        print("HELLO3")
+                        
                         if let message = try? snap.data(as: Messages.self) {
-                            print("HELLO4")
+                           
                             self.messages.append(message)
                         }
                     }
@@ -285,6 +282,13 @@ class ChatScreenViewController : UIViewController, UITableViewDelegate,  UITable
             
         }
         
+    }
+    
+    
+    
+
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
     }
    
     
@@ -302,10 +306,12 @@ class ChatScreenViewController : UIViewController, UITableViewDelegate,  UITable
         if let cell = tableView.dequeueReusableCell(withIdentifier: "messagecell", for: indexPath) as? MessagesCell {
 
             cell.config(message: message, uid: userData.uid!,image: friendImage!)
+           
             return cell
 
         }
         
+
     
         return MessagesCell()
         

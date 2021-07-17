@@ -16,6 +16,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OverlayView" customModule="hbcumade" customModuleProvider="target">
             <connections>
                 <outlet property="accountSettings" destination="0Fq-sj-bWO" id="ftL-Kk-lHo"/>
+                <outlet property="admin" destination="LfX-fM-Qja" id="FwF-uS-Isd"/>
                 <outlet property="contactUs" destination="tbi-CA-EhL" id="Bni-NJ-DfP"/>
                 <outlet property="logout" destination="LBw-0Y-PU6" id="82d-DL-emm"/>
                 <outlet property="name" destination="FIA-WT-pKD" id="KHg-Kq-pd9"/>
@@ -79,6 +80,12 @@
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="School Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isE-QZ-D2T">
                             <rect key="frame" x="0.0" y="0.0" width="314" height="114.5"/>
+                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="13"/>
+                            <color key="textColor" red="0.89411764709999997" green="0.20000000000000001" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Admin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LfX-fM-Qja">
+                            <rect key="frame" x="0.0" y="114.5" width="314" height="0.0"/>
                             <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="13"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>

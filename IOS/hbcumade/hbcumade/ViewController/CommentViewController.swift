@@ -73,7 +73,8 @@ class CommentViewController: UIViewController, UITextViewDelegate, UITableViewDa
             
             self.myEditField.text = ""
             self.showToast(message: "Comment has been added")
-            let comment = Comment(commentID: id, uid: cUid, name: UserData.data?.name ?? "Default", image: UserData.data?.profile ?? "", classification: UserData.data?.classification ?? "Student", commentText: commentText, commentAt: Date(), commentLike: 0, commentCount: 0, school: UserData.data?.school ?? "HBCU MADE")
+           
+            let comment = Comment(commentID: id, uid: cUid, name: UserData.data?.name ?? "Default", image: UserData.data?.profile ?? "", classification: UserData.data?.classification ?? "Student", commentText: commentText, commentAt: Date(), commentLike: Array<String>(), commentCount: 0, school: UserData.data?.school ?? "HBCU MADE")
             
            
             self.comments.append(comment)
@@ -121,12 +122,21 @@ class CommentViewController: UIViewController, UITextViewDelegate, UITableViewDa
                     if !(snapshot.metadata.hasPendingWrites) {
                         let documents = snapshot.documents
                         self.comments.removeAll()
+                    
                         
-                        self.comments = documents.map({ (snapshot) -> Comment in
-                        let comment = try? snapshot.data(as: Comment.self)
-                        return comment!
-                            
-                        })
+                        for snap in documents {
+                           
+                            do {
+                                if let comment = try snap.data(as: Comment.self) {
+                                    self.comments.append(comment)
+                                }
+                            }
+                            catch let err{
+                                print(err.localizedDescription)
+                        
+                            }
+                        }
+                        
                         
                         self.comments.reverse()
                         self.tableView.reloadData()
@@ -134,6 +144,7 @@ class CommentViewController: UIViewController, UITextViewDelegate, UITableViewDa
                             self.scrollToBottom()
                         }
                     
+                     
                         
                     }
                 }
@@ -151,9 +162,61 @@ class CommentViewController: UIViewController, UITextViewDelegate, UITableViewDa
     }
     
 
-  
-
     
+      @objc func likeButtonTapped(sender : UIGestureRecognizer) {
+        
+          if let btn = sender.view as? UIImageView {
+              
+            
+            let comment = comments[btn.tag]
+            var commentLike = comment.commentLike ?? Array<String>()
+            
+                
+                
+                btn.isUserInteractionEnabled = false
+              let ref = FirebaseStoreManager.db.collection("AllPosts").document(postId).collection("Comments")
+                
+              if btn.image == UIImage(named: "icons8-heart-64") {
+                btn.image = UIImage(named: "icons8-heart-48")
+                    
+                  commentLike.append(cUid)
+                   
+                }
+                else {
+                    btn.image = UIImage(named: "icons8-heart-64")
+                    let index =  commentLike.firstIndex { (postLike) -> Bool in
+                    if postLike == cUid {
+                        return true
+                    }
+                    return false
+                  
+                   }
+                    if let index = index {
+                        commentLike.remove(at: index)
+                    }
+                  
+                }
+                
+            ref.document(comment.commentID!).setData(["commentLike" : commentLike], merge: true) { (error) in
+                    btn.isUserInteractionEnabled = true
+                    if (error != nil) {
+                        self.showError(error!.localizedDescription)
+                    }
+                }
+            }
+            
+
+          else {
+             
+          }
+      }
+    
+      
+     
+
+    @objc func showKeyboard(){
+        myEditField.becomeFirstResponder()
+    }
     @objc func dismissKeyboard() {
         view.endEditing(true)
      }
@@ -167,6 +230,7 @@ class CommentViewController: UIViewController, UITextViewDelegate, UITableViewDa
         if let cell = tableView.dequeueReusableCell(withIdentifier: "commentCell", for: indexPath) as? CommentPageTableCell {
             
             let comment = comments[indexPath.row]
+            
             cell.prrofilePic.makeRounded()
             if comment.image != "" {
                 cell.prrofilePic.sd_setImage(with: URL(string: comment.image!), placeholderImage: UIImage(named: "profile-user"))
@@ -175,7 +239,28 @@ class CommentViewController: UIViewController, UITextViewDelegate, UITableViewDa
             cell.name.text = comment.name
             cell.commentText.text = comment.commentText!
             cell.commentCount.text = String.init(comment.commentCount!)
-            cell.likeCount.text = String.init(comment.commentLike!)
+          
+            if let commentLike = comment.commentLike {
+                cell.likeCount.text = String.init(commentLike.count)
+                
+                if commentLike.contains(where: { (commentLike) -> Bool in
+                    if commentLike == cUid {
+                        return true
+                    }
+                    return false
+                })
+                {
+                    cell.likeImage.image = UIImage(named: "icons8-heart-48")
+                }
+              
+                else {
+                    cell.likeImage.image = UIImage(named: "icons8-heart-64")
+                }
+            }
+            else {
+                cell.likeCount.text = "0"
+            }
+           
             
             if (comment.classification?.caseInsensitiveCompare("Alumni") == .orderedSame) {
                 cell.classificationImage.image = UIImage(named: "icons8-graduation-cap-50")
@@ -186,7 +271,14 @@ class CommentViewController: UIViewController, UITextViewDelegate, UITableViewDa
             
             cell.universityName.text = comment.school
             cell.time.text = comment.commentAt?.timeAgoSinceDate()
-       
+            
+            cell.likeImage.tag = indexPath.row
+            cell.likeImage.isUserInteractionEnabled = true
+            cell.likeImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(likeButtonTapped(sender:))))
+            
+          
+            cell.replyBtn.isUserInteractionEnabled = true
+            cell.replyBtn.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showKeyboard)))
             
             return cell
         }

@@ -20,7 +20,8 @@ class NetworkSingleViewCell: UICollectionViewCell {
     
     
     override func prepareForReuse() {
-        profilePic.image = nil
+        super.prepareForReuse()
+        profilePic.image = UIImage(named: "profile-user")
     }
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:src="@drawable/home_image"
+        android:scaleType="centerCrop"
+        android:id="@+id/topImage"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:background="#6BFFFFFF"
+        />
+
+
+    <TextView
+
+        android:layout_marginStart="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topImage"
+        android:text="Nos services :"
+        android:layout_marginTop="16dp"
+        android:textSize="24sp"
+        android:fontFamily="@font/quicksand_bold"
+        android:textColor="@color/text_head_color"
+        android:id="@+id/head_title"
+        />
+
+    <androidx.cardview.widget.CardView
+
+        app:cardBackgroundColor="#F9F9F9"
+        app:cardCornerRadius="12dp"
+        android:layout_margin="16dp"
+        android:layout_below="@+id/head_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="5"
+            >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+
+            >
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/ic_baseline_home_24"
+                android:id="@+id/image1"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/image1"
+                android:layout_marginStart="16dp"
+                android:text="Babysitting à l'intérieur"
+                android:fontFamily="@font/asap_medium"
+                android:textSize="14sp"
+            />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="100 Dhs"
+                android:fontFamily="@font/asap_medium"
+                android:textSize="14sp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="16dp"
+                />
+        </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+
+                >
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_baseline_nature_24"
+                    android:id="@+id/image2"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/image2"
+                    android:layout_marginStart="16dp"
+                    android:text="Babysitting à l'extérieur"
+                    android:fontFamily="@font/asap_medium"
+                    android:textSize="14sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="100 Dhs"
+                    android:fontFamily="@font/asap_medium"
+                    android:textSize="14sp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="16dp"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+
+                >
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_baseline_directions_bus_24"
+                    android:id="@+id/image3"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/image3"
+                    android:layout_marginStart="16dp"
+                    android:text="Après l'école"
+                    android:fontFamily="@font/asap_medium"
+                    android:textSize="14sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="100 Dhs"
+                    android:fontFamily="@font/asap_medium"
+                    android:textSize="14sp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="16dp"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+
+                >
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_baseline_nights_stay_24"
+                    android:id="@+id/image4"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/image4"
+                    android:layout_marginStart="16dp"
+                    android:text="Babysitting de nuit"
+                    android:fontFamily="@font/asap_medium"
+                    android:textSize="14sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="100 Dhs"
+                    android:fontFamily="@font/asap_medium"
+                    android:textSize="14sp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="16dp"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+
+                >
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_baseline_flight_takeoff_24"
+                    android:id="@+id/image5"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/image5"
+                    android:layout_marginStart="16dp"
+                    android:text="Garderie de voyage"
+                    android:fontFamily="@font/asap_medium"
+                    android:textSize="14sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="100 Dhs"
+                    android:fontFamily="@font/asap_medium"
+                    android:textSize="14sp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="16dp"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+<ImageView
+    android:id="@+id/menu"
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    android:layout_margin="16dp"
+    android:src="@drawable/ic_baseline_menu_24"
+    />
+</RelativeLayout>
+    
+    <LinearLayout
+        android:id="@+id/navigationVIEW"
+        android:layout_gravity="start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#92121212"
+        >
+        
+        <LinearLayout
+            android:background="#F5F6FA"
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <ImageView
+                android:id="@+id/closeBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_close_24"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                />
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/logo"
+                android:layout_gravity="center"
+                />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Vijay Rathore"
+                android:textColor="#35424a"
+                android:fontFamily="@font/quicksand_bold"
+                android:textSize="16sp"
+                />
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_marginTop="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="support@softment.in"
+                android:textColor="#b3b3ba"
+                android:fontFamily="@font/quicksand_bold"
+                android:textSize="14sp"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <LinearLayout
+                    android:layout_margin="16dp"
+                    android:weightSum="6"
+                    android:layout_centerInParent="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="304dp"
+                    android:orientation="vertical"
+                    >
+                    <RelativeLayout
+                        android:id="@+id/home"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        >
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:id="@+id/nimg1"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/ic_baseline_home_24_gray"
+                            />
+                        <TextView
+                          android:layout_centerVertical="true"
+                            android:layout_toEndOf="@+id/nimg1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="Accueil"
+                            android:textSize="15sp"
+                            android:fontFamily="@font/asap_medium"
+                            />
+
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/ic_baseline_keyboard_arrow_right_24_gray"
+                            />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/booking"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        >
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:id="@+id/nimg2"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/ic_baseline_account_box_24"
+                            />
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@+id/nimg2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="Demandes"
+                            android:textSize="15sp"
+                            android:fontFamily="@font/asap_medium"
+                            />
+
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/ic_baseline_keyboard_arrow_right_24_gray"
+                            />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        >
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:id="@+id/nimg3"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/ic_baseline_insert_chart_24"
+                            />
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@+id/nimg3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="Historique"
+                            android:textSize="15sp"
+                            android:fontFamily="@font/asap_medium"
+                            />
+
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/ic_baseline_keyboard_arrow_right_24_gray"
+                            />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        >
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:id="@+id/nimg4"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/ic_baseline_favorite_24"
+                            />
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@+id/nimg4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="Favoris"
+                            android:textSize="15sp"
+                            android:fontFamily="@font/asap_medium"
+                            />
+
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/ic_baseline_keyboard_arrow_right_24_gray"
+                            />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    >
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:id="@+id/nimg5"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@drawable/ic_baseline_help_24"
+                        />
+                    <TextView
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/nimg5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="FAQs"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/asap_medium"
+                        />
+
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_right_24_gray"
+                        />
+
+                </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/logout"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        >
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:id="@+id/nimg7"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/ic_baseline_exit_to_app_24"
+                            />
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@+id/nimg7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="Logout"
+                            android:textSize="15sp"
+                            android:fontFamily="@font/asap_medium"
+                            />
+
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/ic_baseline_keyboard_arrow_right_24_gray"
+                            />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                   android:layout_margin="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    >
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:id="@+id/nimg6"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@drawable/ic_baseline_settings_24"
+                        />
+                    <TextView
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/nimg6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="Paramétres"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/asap_medium"
+                        />
+
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_right_24_gray"
+                        />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+        
+    </LinearLayout>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

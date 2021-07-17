@@ -24,28 +24,39 @@ class MessagesCell: UITableViewCell {
     @IBOutlet weak var dateandtime: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        
         myimage.makeRounded()
         myView.layer.cornerRadius = 6
         senderView.layer.cornerRadius = 6
+        
         senderLabel.text = ""
+        senderMesssage.text = ""
         myLabel.text = ""
+        maindateandtime.text = "a moment ago"
+        dateandtime.text = "a moment ago"
+        
+        
+        
+        
     }
+    
+  
+    
 
   
     
     override func prepareForReuse() {
         super.prepareForReuse()
+        
         myLabel.text = ""
         senderLabel.text = ""
-       
+        senderMesssage.text = ""
+        
+        
 //        messageImage.image = nil
 //        leftmessageimage.image = nil
    
- 
-    
-       
-       
-        
     }
     
     
@@ -58,11 +69,12 @@ class MessagesCell: UITableViewCell {
     func config(message : Messages, uid : String, image :  String) {
         self.message  = message
        
-        
+       
         if message.sender == uid {
-            maindateandtime.text = message.dateandtime?.timeAgoSinceDate()
+            maindateandtime.text = message.dateandtime.timeAgoSinceDate()
             if message.type == "text" {
                 myLabel.text = message.message
+               
          
             }
             else if message.type == "image"{
@@ -71,19 +83,17 @@ class MessagesCell: UITableViewCell {
              //  leftmessageimage.sd_setImage(with: URL(string: message.message ?? ""), completed: nil)
             
             }
-        
+            myView.isHidden = false
             myimage.isHidden = true
             senderView.isHidden = true
-            myView.isHidden = false
-            
-            
-            
+
         }
         else {
+          
             
             myimage.isHidden = false
             myimage.sd_setImage(with: URL(string: image), completed: nil)
-            dateandtime.text = message.dateandtime?.timeAgoSinceDate()
+            dateandtime.text = message.dateandtime.timeAgoSinceDate()
             if message.type == "text" {
                 senderLabel.text = message.name
              

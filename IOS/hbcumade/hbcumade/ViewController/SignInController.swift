@@ -30,44 +30,49 @@ class SignInController : UIViewController, UITextFieldDelegate{
     
     override func viewDidLoad() {
 
+        
 
-        if userDefaults.value(forKey: "appFirstTimeOpend") == nil {
-            //if app is first time opened then it will be nil
-            userDefaults.setValue(true, forKey: "appFirstTimeOpend")
-            // signOut from FIRAuth
-            do {
-                try Auth.auth().signOut()
-            }catch {
-
-            }
-            // go to beginning of app
-        }
+ 
+        
+//        Firestore.firestore().collection("Users").getDocuments { snapshot, err in
+//            if err == nil {
+//
+//
+//                if let snapshot = snapshot {
+//                    for qds in snapshot.documents {
+//                        if let network = try? qds.data(as: UserData.self){
+//
+//
+//                            if let school = network.school {
+//                                if school != "" {
+//                                    Firestore.firestore().collection("Users").document(network.uid!).setData(["hasApproved": true], merge: true)
+//                                }
+//                                else {
+//                                    Firestore.firestore().collection("Users").document(network.uid!).setData(["hasApproved": false], merge: true)
+//                                }
+//                            }
+//                            else {
+//                                Firestore.firestore().collection("Users").document(network.uid!).setData(["hasApproved": false], merge: true)
+//                            }
+//
+//                        }
+//
+//                    }
+//
+//                }
+//
+//
+//
+//            }
+//            else {
+//                self.showError(err!.localizedDescription)
+//            }
+//        }
         
 
       
         
-        if Auth.auth().currentUser != nil {
-            
-            if Auth.auth().currentUser != nil {
-                var providerID = ""
-                if let providerId = Auth.auth().currentUser!.providerData.first?.providerID {
-                    providerID = providerId
-                }
-                if providerID != "password"  {
-                    self.getUserData(uid: Auth.auth().currentUser!.uid,showIntroScreen: false)
-                }
-                else{
-                    if let provider = Auth.auth().currentUser?.providerData.first?.providerID {
-                        if provider == "apple.com" {
-                            self.getUserData(uid: Auth.auth().currentUser!.uid,showIntroScreen: false)
-                        }
-                    }
-                }
-                
-                
-            }
-         
-        }
+       
 
         
         let screensize: CGRect = UIScreen.main.bounds
@@ -171,15 +176,13 @@ class SignInController : UIViewController, UITextFieldDelegate{
             
             
             ProgressHUDShow(text: "Loading...")
-            
-            
             Auth.auth().signIn(withEmail: email!, password: password!) { (result, error) in
                 MBProgressHUD.hide(for: self.view, animated: true)
                 if error != nil {
                     self.handleError(error: error!)
                 }
                 else {
-                    self.getUserData(uid: Auth.auth().currentUser!.uid, showIntroScreen: false)
+                    self.getUserData(uid: Auth.auth().currentUser!.uid, showProgress: true)
                 }
             }
             
@@ -188,7 +191,6 @@ class SignInController : UIViewController, UITextFieldDelegate{
     }
     // get current number of times app has been launched
    
-
     func validatedFields() -> String? {
         if  (signInTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             signInPasswordField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "")
@@ -219,14 +221,7 @@ class SignInController : UIViewController, UITextFieldDelegate{
     }
     
  
-    override func viewWillAppear(_ animated: Bool) {
-        // get current number of times app has been launched
-        let count = UserDefaults.standard.integer(forKey: "launchCount")
-
-        // increment received number by one
-        UserDefaults.standard.set(count + 1, forKey:"launchCount")
-
-    }
+ 
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)

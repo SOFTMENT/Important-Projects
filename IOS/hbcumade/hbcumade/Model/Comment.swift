@@ -21,7 +21,7 @@ class Comment : NSObject, Codable{
     var classification : String?
     var commentText : String?
     var commentAt : Date?
-    var commentLike : Int?
+    var commentLike : Array<String>?
     var commentCount : Int?
     var school : String?
 
@@ -37,7 +37,7 @@ class Comment : NSObject, Codable{
         }
     }
     
-    init(commentID : String, uid : String, name : String, image : String, classification : String, commentText : String, commentAt : Date, commentLike : Int, commentCount : Int, school : String) {
+    init(commentID : String, uid : String, name : String, image : String, classification : String, commentText : String, commentAt : Date, commentLike : Array<String>, commentCount : Int, school : String) {
         
         self.commentID = commentID
         self.uid = uid

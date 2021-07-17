@@ -10,6 +10,7 @@ import Firebase
 import FirebaseAuth
 import FirebaseFirestoreSwift
 import CropViewController
+import SDWebImage
 
 class UpdatePicturesViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate, CropViewControllerDelegate {
     @IBOutlet weak var updateBtn: UIButton!
@@ -29,6 +30,13 @@ class UpdatePicturesViewController: UIViewController, UIImagePickerControllerDel
         coverPicImage.isUserInteractionEnabled = true
         coverPicImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(changeCoverPic)))
         
+        
+        if let profilePicUrl = UserData.data?.profile {
+            if profilePicUrl != "" {
+                isProfilePicChanged = true
+                profilePicImage.sd_setImage(with: URL(string: profilePicUrl), placeholderImage: UIImage(named: "profile-placeholder"), options: .refreshCached, completed: nil)
+            }
+        }
     }
     
     @IBAction func updateBtnClicked(_ sender: Any) {
@@ -39,7 +47,7 @@ class UpdatePicturesViewController: UIViewController, UIImagePickerControllerDel
             showToast(message: "Upload Cover Picture")
         }
         else {
-            self.getUserData(uid: Auth.auth().currentUser!.uid, showIntroScreen: false)
+            self.getUserData(uid: Auth.auth().currentUser!.uid, showProgress: true)
         }
     }
     

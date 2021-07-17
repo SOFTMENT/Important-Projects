@@ -22,6 +22,13 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         self.delegate  = self
    
 
+        // increment received number by one
+        let standard = UserDefaults.standard
+        var count  = standard.integer(forKey: "launchCount")
+        count = count + 1
+        standard.set(count, forKey:"launchCount")
+        standard.synchronize()
+        
         let selectedImage1 = UIImage(named: "icons8-home-100-3")?.withRenderingMode(.alwaysOriginal)
         let deSelectedImage1 = UIImage(named: "icons8-home-100")?.withRenderingMode(.alwaysOriginal)
         tabBarItems = self.tabBar.items![0]

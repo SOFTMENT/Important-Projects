@@ -16,8 +16,9 @@ import Foundation
     var registredAt : Date?
     var regiType : String?
     var school : String?
+    var customSchoolName : String?
     var uid : String?
-    
+    var hasApproved : Bool?
     var totalFollowing : Int?
     var totalFollowers : Int?
     var designation : String?

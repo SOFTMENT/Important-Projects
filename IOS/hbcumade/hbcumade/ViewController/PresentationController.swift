@@ -38,7 +38,14 @@ class PresentationController: UIPresentationController{
 
     @objc func viewProfileClicked() {
         
-        gotoAnotherController(identifier: "viewprofileseg")
+        Constants.previousSelectedTabIndex = 4
+        dismissController(r: UITapGestureRecognizer())
+        
+    
+    }
+    
+    @objc func adminClicked(){
+        gotoAnotherController(identifier: "adminhomeseg")
     }
     
     @objc func networkClicked() {
@@ -51,9 +58,8 @@ class PresentationController: UIPresentationController{
     }
     
     @objc func accountSettingsClicked() {
-            Constants.previousSelectedTabIndex = 4
-            dismissController(r: UITapGestureRecognizer())
-            
+        
+        gotoAnotherController(identifier: "editprofileseg")
         
     }
     
@@ -64,6 +70,7 @@ class PresentationController: UIPresentationController{
    
     
     func gotoAnotherController(identifier : String) {
+      
         if let tabBarController = tabBarController {
          
             
@@ -86,10 +93,9 @@ class PresentationController: UIPresentationController{
             }
         }
         
-      
- 
-        Constants.previousSelectedTabIndex = 2
         dismissController(r: UITapGestureRecognizer())
+        Constants.previousSelectedTabIndex = 2
+        
     }
     
     
@@ -152,6 +158,9 @@ class PresentationController: UIPresentationController{
         
         tabBarController.slideVC.privacyPolicy.isUserInteractionEnabled = true
         tabBarController.slideVC.privacyPolicy.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(redirectToPrivacyPolicy)))
+        
+        tabBarController.slideVC.admin.isUserInteractionEnabled = true
+        tabBarController.slideVC.admin.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(adminClicked)))
         
         
         tabBarController.slideVC.schoolName.text = UserData.data?.school

@@ -14,10 +14,9 @@ class OverlayView: UIViewController {
     @IBOutlet weak var viewProfile: UILabel!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var slideIdicator: UIView!
-    
+    @IBOutlet weak var admin: UILabel!
     @IBOutlet weak var schoolName: UILabel!
     @IBOutlet weak var network: UILabel!
-
     @IBOutlet weak var version: UILabel!
     @IBOutlet weak var logout: UILabel!
     @IBOutlet weak var privacyPolicy: UILabel!
@@ -34,15 +33,18 @@ class OverlayView: UIViewController {
         
         slideIdicator.roundCorners(.allCorners, radius: 10)
         
-        
         let appVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as? String
-        
-     
-        
         version.text  = "Version \(appVersion ?? "1.0")"
         
         
-      
+       // sflorestal@gmail.com
+        if UserData.data?.email == "vijay.ajay70111@gmail.com" || UserData.data?.email == "sflorestal@gmail.com"{
+            admin.isHidden = false
+        }
+        else {
+            admin.isHidden = true
+        }
+  
     }
     
     
@@ -52,6 +54,7 @@ class OverlayView: UIViewController {
             pointOrigin = self.view.frame.origin
         }
     }
+    
     @objc func panGestureRecognizerAction(sender: UIPanGestureRecognizer) {
         let translation = sender.translation(in: view)
         

@@ -197,7 +197,7 @@ class EnterVerificationCodeController : UIViewController, UITextFieldDelegate {
                     //WILL ADD LATER
                 }
                 else {
-                    self.getUserData(uid: Auth.auth().currentUser!.uid,showIntroScreen: true)
+                    self.getUserData(uid: Auth.auth().currentUser!.uid,showProgress: true)
                 }
             }
            

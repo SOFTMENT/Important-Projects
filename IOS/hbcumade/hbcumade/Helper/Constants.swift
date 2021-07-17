@@ -26,6 +26,8 @@ struct Constants {
         static let accountSettingsController = "accountVC"
         static let exploreViewController = "exploreVC"
         static let eventViewController = "eventVC"
+        static let enterInviteCodeController = "enterInviteCodeVC"
+        
       
     }
     

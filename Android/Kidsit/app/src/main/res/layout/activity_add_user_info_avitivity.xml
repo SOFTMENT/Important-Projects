@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".AddUserInfoAvitivity">
+        <TextView
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Profil de configuration"
+            android:layout_marginTop="30dp"
+            android:textSize="24sp"
+            android:fontFamily="@font/quicksand_bold"
+            android:textColor="@color/text_head_color"
+            android:id="@+id/head_title"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            app:boxStrokeColor="#f85f6a"
+            app:hintTextColor="#f85f6a"
+            android:id="@+id/etPhoneLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:cursorVisible="false"
+                android:background="@android:color/transparent"
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Télephone"
+                android:textSize="14sp"
+                android:textIsSelectable="false"
+                android:fontFamily="@font/asap_medium"
+                android:inputType="phone"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            app:boxStrokeColor="#f85f6a"
+            app:hintTextColor="#f85f6a"
+            android:id="@+id/etAddressLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:cursorVisible="false"
+                android:background="@android:color/transparent"
+                android:id="@+id/etAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Address (Optionnel)"
+                android:textSize="14sp"
+                android:textIsSelectable="false"
+                android:fontFamily="@font/asap_medium"
+                android:inputType="textPostalAddress"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            app:boxStrokeColor="#f85f6a"
+            app:hintTextColor="#f85f6a"
+            android:id="@+id/etNumberOfChildrenLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:cursorVisible="false"
+                android:background="@android:color/transparent"
+                android:id="@+id/etNumberOfChildren"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre d'enfants (Optionnel)"
+                android:textSize="14sp"
+                android:textIsSelectable="false"
+                android:fontFamily="@font/asap_medium"
+                android:inputType="number"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            app:boxStrokeColor="#f85f6a"
+            app:hintTextColor="#f85f6a"
+            android:id="@+id/etCityLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            >
+
+            <AutoCompleteTextView
+                android:imeOptions="actionDone"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:cursorVisible="false"
+                android:background="@android:color/transparent"
+                android:id="@+id/etCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="24dp"
+                android:paddingBottom="6dp"
+                android:hint="Ville"
+                android:textSize="14sp"
+                android:textIsSelectable="false"
+                android:fontFamily="@font/asap_medium"
+                android:inputType="textNoSuggestions"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginBottom="16dp"
+            android:id="@+id/signUpCard"
+            app:cardBackgroundColor="#f85f6a"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            app:cardCornerRadius="6dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/asap_semibold"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:text="Continuer"
+                />
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+

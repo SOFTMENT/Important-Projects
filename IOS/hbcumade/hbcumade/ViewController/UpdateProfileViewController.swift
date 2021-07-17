@@ -13,59 +13,18 @@ import FirebaseFirestoreSwift
 class UpdateProfileViewController: UIViewController,UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
    
     
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if pickerView == self.pickerView {
-            return schools.count
-        }
-        else {
-            return classificationList.count
-        }
-        
-    }
+
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if pickerView == self.pickerView {
-            return schools[row]
-        }
-        else {
-            return classificationList[row]
-        }
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
-        if pickerView == self.pickerView {
-           school.text = schools[row]
-            school.resignFirstResponder()
-        }
-        else {
-            classification.text = classificationList[row]
-            classification.resignFirstResponder()
-        }
-    }
-    
-    @IBOutlet weak var inviteCode: UITextField!
     @IBOutlet weak var school: UITextField!
     @IBOutlet weak var classification: UITextField!
     @IBOutlet weak var designation: UITextField!
     @IBOutlet weak var update: UIButton!
+    @IBOutlet weak var submit: UIButton!
+    @IBOutlet weak var customSchoolName: UITextField!
     
     var pickerView = UIPickerView()
     var pickerView2 = UIPickerView()
-    var schools = ["Clark Atlanta University",
-                   "Florida A&M University",
-                   "Hampton University",
-                   "Tennessee State University",
-                   "Howard University",
-                   "Morehouse College",
-                   "Morgan State University",
-                   "Norfolk State University",
-                   "Spelman College",
-                   "Virginia State University"]
-    
+    var schools = [Schools]()
     
     let classificationList = ["Student","Alumni"]
     override func viewDidLoad() {
@@ -76,7 +35,7 @@ class UpdateProfileViewController: UIViewController,UITextFieldDelegate, UIPicke
         
         //SCHOOL
         school.delegate = self
-        schools.sort()
+        
    
         school.layer.cornerRadius = 8
         
@@ -87,10 +46,7 @@ class UpdateProfileViewController: UIViewController,UITextFieldDelegate, UIPicke
         designation.setLeftPaddingPoints(10)
         self.designation.layer.cornerRadius = 8
        
-        inviteCode.setLeftPaddingPoints(10)
-        inviteCode.setRightPaddingPoints(10)
-        inviteCode.layer.cornerRadius = 8
-        inviteCode.delegate = self
+   
         
         pickerView.dataSource = self
         pickerView.delegate = self
@@ -109,7 +65,11 @@ class UpdateProfileViewController: UIViewController,UITextFieldDelegate, UIPicke
         classification.setLeftPaddingPoints(10)
         classification.setRightPaddingPoints(10)
         
-       
+        customSchoolName.delegate = self
+        customSchoolName.layer.cornerRadius = 8
+        customSchoolName.setLeftPaddingPoints(10)
+        customSchoolName.setRightPaddingPoints(10)
+        
         
         pickerView2.dataSource = self
         pickerView2.delegate = self
@@ -120,13 +80,67 @@ class UpdateProfileViewController: UIViewController,UITextFieldDelegate, UIPicke
                                      attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         
         update.layer.cornerRadius = 6
+        submit.layer.cornerRadius = 6
         
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyBoard))
         view.addGestureRecognizer(tapRecognizer)
         
+        getSchools()
     }
+    
+    
+    func getSchools(){
+        ProgressHUDShow(text: "")
+        Firestore.firestore().collection("Schools").order(by: "name", descending: false).addSnapshotListener { snapshot, error in
+            self.ProgressHUDHide()
+            if error == nil {
+                if let snapshot = snapshot {
+                    self.schools.removeAll()
+                    for qds in snapshot.documents {
+                        if let school = try? qds.data(as: Schools.self) {
+                         
+                            self.schools.append(school)
+                            
+                        }
+                    }
+                    self.pickerView.reloadAllComponents()
+                }
+            }
+        }
+        
+    }
+    
     @objc func hideKeyBoard() {
         self.view.endEditing(true)
+    }
+    
+    
+    @IBAction func submitBtnPressed(_ sender: Any) {
+        let sCustomSchoolName = customSchoolName.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        let sClassification = classification.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        let sDesignation = designation.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+       
+        if sCustomSchoolName == "" {
+            showToast(message: "Enter Your School Name")
+        }
+        else if sClassification == "" {
+            showToast(message: "Choose Classification")
+        }
+        else if sDesignation == "" {
+            showToast(message: "Enter Career")
+        }
+        else {
+            ProgressHUDShow(text: "")
+            Firestore.firestore().collection("Users").document(Auth.auth().currentUser!.uid).setData(["hasApproved": false,"customSchoolName" : sCustomSchoolName!,"classification" : sClassification!,"designation" : sDesignation!],merge: true) { error in
+                self.ProgressHUDHide()
+                if error == nil {
+                    self.showMessage(title: "Thank You", message: "We have received your request. We will notify you once your account is approved.")
+                }
+                else {
+                    self.showError(error!.localizedDescription)
+                }
+            }
+        }
     }
     
     
@@ -135,7 +149,7 @@ class UpdateProfileViewController: UIViewController,UITextFieldDelegate, UIPicke
         let sClassification = classification.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         let sSchool = school.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         let sDesignation = designation.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-        let sInviteCode = inviteCode.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        
         if sSchool == "" {
             showToast(message: "Select School")
         }
@@ -143,23 +157,13 @@ class UpdateProfileViewController: UIViewController,UITextFieldDelegate, UIPicke
             showToast(message: "Select Classification")
         }
         else if sDesignation == "" {
-            showToast(message: "Enter Designation")
+            showToast(message: "Enter Career")
         }
-        else if sInviteCode == "" {
-            showToast(message: "Enter Invite Code")
-        }
+        
         else {
             ProgressHUDShow(text: "")
-            
-            Firestore.firestore().collection("InviteCode").document(sInviteCode!).getDocument { document, err in
-                self.ProgressHUDHide()
-                if err == nil {
-                    if let doc = document {
-                        if doc.exists {
-                            
-                            Firestore.firestore().collection("InviteCode").document(sInviteCode!).delete()
-                            self.ProgressHUDShow(text: "Updating...")
-                            Firestore.firestore().collection("Users").document(Auth.auth().currentUser!.uid).setData(["classification" : sClassification!,"school": sSchool!,"designation" : sDesignation!], merge: true) { error in
+            self.ProgressHUDShow(text: "Updating...")
+            Firestore.firestore().collection("Users").document(Auth.auth().currentUser!.uid).setData(["classification" : sClassification!,"school": sSchool!,"designation" : sDesignation!], merge: true) { error in
                                 self.ProgressHUDHide()
                                 if error == nil {
                                     self.performSegue(withIdentifier: "updateprofileseg", sender: nil)
@@ -168,25 +172,9 @@ class UpdateProfileViewController: UIViewController,UITextFieldDelegate, UIPicke
                                     self.showError(error!.localizedDescription)
                                 }
                             }
-                        }
-                        else {
-                            self.showError("Invite code is not valid or already used.")
-                        }
-                    }
-                    else {
-                        self.showError("Invite code is not valid or already used.")
-                    }
-                }
-                else {
-                    self.showError(err!.localizedDescription)
-                }
             }
-            
-                
-           
-              
-            
-        }
+   
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -194,5 +182,41 @@ class UpdateProfileViewController: UIViewController,UITextFieldDelegate, UIPicke
         return true
     }
     
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if pickerView == self.pickerView {
+            return schools.count
+        }
+        else {
+            return classificationList.count
+        }
+        
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if pickerView == self.pickerView {
+            return schools[row].name
+        }
+        else {
+            return classificationList[row]
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        if pickerView == self.pickerView {
+            school.text = schools[row].name
+            school.resignFirstResponder()
+        }
+        else {
+            classification.text = classificationList[row]
+            classification.resignFirstResponder()
+        }
+    }
     
 }
+
+
+

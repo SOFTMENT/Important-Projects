@@ -27,7 +27,7 @@ class AccountSettingsViewController  : BaseViewController, UIPickerViewDataSourc
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView == self.pickerView {
-            return schoolList[row]
+            return schoolList[row].name
         }
         else {
             return classificationList[row]
@@ -37,7 +37,7 @@ class AccountSettingsViewController  : BaseViewController, UIPickerViewDataSourc
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         if pickerView == self.pickerView {
-            schoolName.text = schoolList[row]
+            schoolName.text = schoolList[row].name
             schoolName.resignFirstResponder()
         }
         else {
@@ -96,6 +96,9 @@ class AccountSettingsViewController  : BaseViewController, UIPickerViewDataSourc
     
     
     @IBOutlet weak var passwordView: UIView!
+    @IBOutlet weak var backBtn: UIImageView!
+    
+    
     
     let dobPicker = UIDatePicker()
     let graduationPicker = UIDatePicker()
@@ -103,23 +106,14 @@ class AccountSettingsViewController  : BaseViewController, UIPickerViewDataSourc
     var pickerView = UIPickerView()
     var pickerView2 = UIPickerView()
     
-    var schoolList = ["Clark Atlanta University",
-                   "Florida A&M University",
-                   "Hampton University",
-                   "Howard University",
-                   "Morehouse College",
-                   "Tennessee State University",
-                   "Morgan State University",
-                   "Norfolk State University",
-                   "Spelman College",
-                   "Virginia State University"]
+    var schoolList = [Schools]()
     
     let classificationList = ["Student","Alumni"]
     
     override func viewDidLoad() {
         
         
-        schoolList.sort()
+       
         
         personalInfoTextView.layer.cornerRadius = 4
         personalInfoTextView.layer.borderWidth = 1.2
@@ -289,7 +283,43 @@ class AccountSettingsViewController  : BaseViewController, UIPickerViewDataSourc
             passwordView.isHidden = false
         }
         
+        //BackBtnPressed
+        backBtn.isUserInteractionEnabled = true
+        backBtn.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(backBtnPressed)))
         
+        getSchools()
+        
+    }
+    
+    
+    func getSchools(){
+        ProgressHUDShow(text: "")
+        Firestore.firestore().collection("Schools").order(by: "name", descending: false).addSnapshotListener { snapshot, error in
+            self.ProgressHUDHide()
+            if error == nil {
+                if let snapshot = snapshot {
+                    self.schoolList.removeAll()
+                    for qds in snapshot.documents {
+                        if let school = try? qds.data(as: Schools.self) {
+                         
+                            self.schoolList.append(school)
+                            
+                        }
+                    }
+                    self.pickerView.reloadAllComponents()
+                }
+            }
+        }
+        
+    }
+    
+    @objc func backBtnPressed(){
+        if let navigation = self.navigationController {
+            navigation.popViewController(animated: true)
+        }
+        else {
+            self.dismiss(animated: true, completion: nil)
+        }
         
     }
     

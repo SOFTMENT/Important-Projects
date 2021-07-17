@@ -5,6 +5,7 @@
     tools:openDrawer="start"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -45,10 +46,12 @@
     </androidx.appcompat.widget.Toolbar>
 
     <androidx.core.widget.NestedScrollView
+
         android:layout_below="@+id/toolbar"
         android:layout_width="match_parent"
     android:layout_height="match_parent">
     <RelativeLayout
+
         android:background="#E5E5EA"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -707,6 +710,7 @@
     </RelativeLayout>
     </androidx.core.widget.NestedScrollView>
     </RelativeLayout>
+
     <androidx.core.widget.NestedScrollView
 
         android:layout_marginTop="?actionBarSize"

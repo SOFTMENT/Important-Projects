@@ -19,7 +19,7 @@ class Messages : NSObject, Codable {
     var image : String?
     var name : String?
     var messageId : String?
-    var dateandtime : Date?
+    var dateandtime : Date = Date()
     
     private static var message  : Messages?
     

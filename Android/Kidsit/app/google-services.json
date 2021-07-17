@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "43817850975",
+    "project_id": "kidsit-acf7f",
+    "storage_bucket": "kidsit-acf7f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:43817850975:android:86727d2a2692cacb1ba3ea",
+        "android_client_info": {
+          "package_name": "in.softment.kidsit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "43817850975-cbln6rv1ujgp4o938t2kj4f3s2muohhs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9Na0vcbv7rg6r9fYm60Z2S_uqj5GUru4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "43817850975-cbln6rv1ujgp4o938t2kj4f3s2muohhs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

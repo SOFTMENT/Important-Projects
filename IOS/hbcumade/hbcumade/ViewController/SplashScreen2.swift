@@ -6,61 +6,92 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseFirestoreSwift
 
 class SplashScreen2: UIViewController {
    
    
+    let userDefaults = UserDefaults.standard
     var isLock = false
     @IBOutlet weak var splashImage: UIImageView!
     override func viewDidLoad() {
   
+ 
     }
     
-    
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
         let count = UserDefaults.standard.integer(forKey: "launchCount")
        
+        print("VijayRathore \(count)")
         if count % 4 == 0 {
 
              splashImage.image = UIImage(named: "sp2")
-             
-            sleep(2)
-            DispatchQueue.main.async {
-                self.beRootScreen(mIdentifier: Constants.StroyBoard.signInViewController)
-            }
-         
-            
+    
         }
         else if count % 4  == 1 {
 
             splashImage.image = UIImage(named: "sp3")
-            sleep(2)
-            DispatchQueue.main.async {
-                self.beRootScreen(mIdentifier: Constants.StroyBoard.signInViewController)
-            }
+           
         
            
         }
         else if count % 4 == 2 {
      
             splashImage.image = UIImage(named: "sp4")
-            sleep(2)
-            DispatchQueue.main.async {
-                self.beRootScreen(mIdentifier: Constants.StroyBoard.signInViewController)
-            }
-           
+            
         }
-        else if count % 4 == 3 {
+        else {
      
             splashImage.image = UIImage(named: "sp5")
-            sleep(2)
-            DispatchQueue.main.async {
-                self.beRootScreen(mIdentifier: Constants.StroyBoard.signInViewController)
-            }
            
         }
+        
+        loadViewIfNeeded()
+        
+        if userDefaults.value(forKey: "appFirstTimeOpend") == nil {
+            //if app is first time opened then it will be nil
+            userDefaults.setValue(true, forKey: "appFirstTimeOpend")
+            // signOut from FIRAuth
+            do {
+                try Auth.auth().signOut()
+            }catch {
+
+            }
+            // go to beginning of app
+        }
+        
+        
+             if Auth.auth().currentUser != nil {
+                 var providerID = ""
+                 if let providerId = Auth.auth().currentUser!.providerData.first?.providerID {
+                     providerID = providerId
+                 }
+                
+                 if providerID != "password"  {
+                    self.getUserData(uid: Auth.auth().currentUser!.uid,showProgress: false)
+                 }
+                 else{
+                     if let provider = Auth.auth().currentUser?.providerData.first?.providerID {
+                         if provider == "apple.com" {
+                            self.getUserData(uid: Auth.auth().currentUser!.uid,showProgress: false)
+                         }
+                     }
+                     else {
+                        DispatchQueue.main.async {
+                            self.beRootScreen(mIdentifier: Constants.StroyBoard.signInViewController)
+                        }
+                     }
+                 }
+                 
+                 
+             }
+             else {
+                DispatchQueue.main.async {
+                    self.beRootScreen(mIdentifier: Constants.StroyBoard.signInViewController)
+                }
+             }
     }
-    
-    
    
 }
