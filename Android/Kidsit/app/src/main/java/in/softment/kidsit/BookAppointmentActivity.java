@@ -39,7 +39,7 @@ public class BookAppointmentActivity extends AppCompatActivity {
 
         MaterialDatePicker.Builder<Pair<Long, Long>> materialDateBuilder = MaterialDatePicker.Builder.dateRangePicker();
 
-        materialDateBuilder.setTitleText("SELECT A DATE RANGE");
+        materialDateBuilder.setTitleText("SÉLECTIONNER UNE PLAGE DE DATES");
         materialDateBuilder.setSelection(Pair.create((new Date().getTime() + 86400000),(new Date().getTime() + 604800000)));
         final MaterialDatePicker<Pair<Long, Long>> materialDatePicker = materialDateBuilder.build();
 
@@ -64,7 +64,7 @@ public class BookAppointmentActivity extends AppCompatActivity {
                         startTime.setText( String.format("%02d", selectedHour) + ":" + String.format("%02d", selectedMinute));
                     }
                 }, hour, minute, true);//Yes 24 hour time
-                mTimePicker.setTitle("Select Start Time");
+                mTimePicker.setTitle("Sélectionnez l'heure de début");
                 mTimePicker.show();
             }
         });

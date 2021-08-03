@@ -59,11 +59,12 @@ class ProfilePresentationController: UIPresentationController{
     }
     
     @objc func redirectToPrivacyPolicy() {
-       
+        
         dismissController(r: UITapGestureRecognizer())
-        guard let url = URL(string: "https://www.privacypolicies.com/live/5469f36c-7492-43fa-ba1a-0c0212fc8ed9") else { return}
+        guard let url = URL(string: "https://freddavis.app/privacy.html") else { return}
         UIApplication.shared.open(url)
-    }
+        
+  }
     
     
     @objc func shareApp() {

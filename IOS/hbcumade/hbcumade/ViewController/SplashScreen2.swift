@@ -69,20 +69,14 @@ class SplashScreen2: UIViewController {
                      providerID = providerId
                  }
                 
-                 if providerID != "password"  {
+           
+                 if providerID == "password"  {
                     self.getUserData(uid: Auth.auth().currentUser!.uid,showProgress: false)
                  }
                  else{
-                     if let provider = Auth.auth().currentUser?.providerData.first?.providerID {
-                         if provider == "apple.com" {
-                            self.getUserData(uid: Auth.auth().currentUser!.uid,showProgress: false)
-                         }
-                     }
-                     else {
-                        DispatchQueue.main.async {
-                            self.beRootScreen(mIdentifier: Constants.StroyBoard.signInViewController)
-                        }
-                     }
+                     
+                    self.getUserData(uid: Auth.auth().currentUser!.uid,showProgress: false)
+                     
                  }
                  
                  

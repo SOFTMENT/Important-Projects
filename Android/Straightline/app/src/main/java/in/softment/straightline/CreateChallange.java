@@ -197,6 +197,8 @@ public class CreateChallange extends AppCompatActivity {
         map.put("cid",cid);
         map.put("token",UserModel.data.token);
         map.put("email",UserModel.data.emailAddress);
+        map.put("latitude",UserModel.data.latitude);
+        map.put("longitude",UserModel.data.longitude);
 
         uploadImageOnFirebase(this,map, cid);
 
@@ -274,7 +276,7 @@ public class CreateChallange extends AppCompatActivity {
                 }
                 else{
                     ProgressHud.dialog.dismiss();
-                    Services.showDialog(context,"ERROR",task.getException().getLocalizedMessage());
+                    Services.showDialog(context,"ERROR", Objects.requireNonNull(task.getException()).getLocalizedMessage());
 
                 }
 

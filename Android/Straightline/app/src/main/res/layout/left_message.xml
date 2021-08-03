@@ -46,7 +46,7 @@
             android:paddingBottom="4dp"
             android:paddingStart="8dp"
             android:textSize="13sp"
-            android:fontFamily="@font/sfprobold2"
+            android:fontFamily="@font/sfprosemibold2"
             />
         <TextView
             android:id="@+id/message"
@@ -57,7 +57,7 @@
             android:paddingEnd="8dp"
             android:paddingStart="8dp"
             android:textSize="12sp"
-            android:fontFamily="@font/sfproregular"
+            android:fontFamily="@font/sfpromedium2"
             />
 
         <TextView

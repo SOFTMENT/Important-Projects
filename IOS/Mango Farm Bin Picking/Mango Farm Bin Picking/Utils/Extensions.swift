@@ -141,11 +141,11 @@ extension UIViewController {
     
     func createCSV(from recArray:Array<MangoBinModel>) {
         
-           var csvString = "\("SN"),\("Bin Number"),\("Title"),\("Picker Name"),\("Scanner Name"),\("Machine Number"),\("Full Time")\n\n"
+           var csvString = "\("SN"),\("Bin Number"),\("Title"),\("Picker Name"),\("Machine Number"),\("Full Time")\n\n"
            var i = 0;
            for dct in recArray {
             i = i + 1
-            csvString = csvString.appending("\(String(describing: i)),\(String(describing: dct.binNumber!)) ,\(String(describing: dct.title!)),\(String(describing: dct.pickedByName ?? "Not Available")),\(String(describing: dct.scannedByName ?? "Not Available")),\(String(describing: dct.machineNumber!)),\(self.convertTODateAndTime(dateValue: dct.date!))\n")
+            csvString = csvString.appending("\(String(describing: i)),\(String(describing: dct.binNumber!)) ,\(String(describing: dct.title!)),\(String(describing: dct.pickedByName ?? "Not Available")),\(String(describing: dct.machineNumber!)),\(self.convertTODateAndTime(dateValue: dct.date!))\n")
            }
 
            let fileManager = FileManager.default

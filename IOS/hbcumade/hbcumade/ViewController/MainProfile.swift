@@ -35,6 +35,7 @@ class MainProfile: BaseViewController, UIImagePickerControllerDelegate , CropVie
         
         profilePic.makeRounded()
         followBtn.layer.cornerRadius = 4
+        followBtn.indicator = BallPulseSyncIndicator(color: UIColor(red: 66/255, green: 103/255, blue: 178/255, alpha: 1))
         followBtn.showLoader(userInteraction: false)
        
         

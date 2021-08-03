@@ -32,9 +32,12 @@ class DailyInsightsViewController : UIViewController {
         
         //GetInsight
         let hasMebership = self.checkMembershipStatus(currentDate: TabBarController.date,identifier: TabBarController.productIds.first!)
-        if UserModel.data!.emailAddress == "support@softment.in" || hasMebership {
+      
+        
+        if (UserModel.data!.emailAddress == "fredsdavis@gmail.com" || UserModel.data!.emailAddress == "jeffreykgross@gmail.com" || UserModel.data!.emailAddress == "iamvijay67@gmail.com")  ||  hasMebership {
             getDailyInsight()
         }
+       
        
         
         //Share
@@ -81,7 +84,7 @@ class DailyInsightsViewController : UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         let hasMebership = self.checkMembershipStatus(currentDate: TabBarController.date,identifier: TabBarController.productIds.first!)
         
-        if UserModel.data!.emailAddress != "support@softment.in" && UserModel.data!.emailAddress != "support@softment.in"  && !hasMebership {
+        if (UserModel.data!.emailAddress != "fredsdavis@gmail.com" && UserModel.data!.emailAddress != "jeffreykgross@gmail.com" && UserModel.data!.emailAddress != "iamvijay67@gmail.com")  && !hasMebership {
             if let tabVC = tabBarController as? TabBarController {
                 tabVC.selectedIndex = 0
                 tabVC.showMembershipController()

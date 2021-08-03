@@ -1,0 +1,648 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C24864FC7AC55CA037E8C6C6 /* Pods_eventkreyol.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFAD850075376758A1CCEF8A /* Pods_eventkreyol.framework */; };
+		FE090B8826A8EC0300A8F9FF /* Event_DateandTime_Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE090B8726A8EC0300A8F9FF /* Event_DateandTime_Cell.swift */; };
+		FE11AA5F26A816A7004B8330 /* Top_Organiser_Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE11AA5E26A816A7004B8330 /* Top_Organiser_Cell.swift */; };
+		FE11AA6126A837C0004B8330 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE11AA6026A837C0004B8330 /* EventViewController.swift */; };
+		FE1207A426AF2A6400132704 /* TicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1207A326AF2A6400132704 /* TicketsViewController.swift */; };
+		FE20BE8E26A43E6C0018543C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE20BE8D26A43E6B0018543C /* GoogleService-Info.plist */; };
+		FE20BE9126A46E690018543C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE20BE9026A46E690018543C /* SignUpViewController.swift */; };
+		FE22B43026A813300032A049 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE9BFF3426A3021F004375A7 /* Main.storyboard */; };
+		FE3F1D9426A963ED008462CA /* Tag_Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3F1D9326A963ED008462CA /* Tag_Cell.swift */; };
+		FE5A3EDC26A7B0AB00B15991 /* Event_View_Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5A3EDB26A7B0AB00B15991 /* Event_View_Cell.swift */; };
+		FE76EAFD26AF39D90064F35A /* UpcomingTicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE76EAFC26AF39D90064F35A /* UpcomingTicketsViewController.swift */; };
+		FE76EAFF26AF3B390064F35A /* PastTicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE76EAFE26AF3B390064F35A /* PastTicketsViewController.swift */; };
+		FE76EB0126AFBD160064F35A /* Ticket_View_Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE76EB0026AFBD150064F35A /* Ticket_View_Cell.swift */; };
+		FE8DDD0726A3242100C28604 /* SF-Pro-Display-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = FE8DDD0126A3240F00C28604 /* SF-Pro-Display-Heavy.otf */; };
+		FE8DDD0826A3242100C28604 /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FE8DDD0226A3241300C28604 /* SF-Pro-Display-Semibold.otf */; };
+		FE8DDD0926A3242100C28604 /* SF-Pro-Display-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = FE8DDD0326A3241600C28604 /* SF-Pro-Display-Black.otf */; };
+		FE8DDD0A26A3242100C28604 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FE8DDD0426A3241A00C28604 /* SF-Pro-Display-Bold.otf */; };
+		FE8DDD0B26A3242100C28604 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FE8DDD0526A3241D00C28604 /* SF-Pro-Display-Regular.otf */; };
+		FE8DDD0C26A3242100C28604 /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = FE8DDD0626A3242100C28604 /* SF-Pro-Display-Medium.otf */; };
+		FE8DDD1126A3595E00C28604 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FE8DDD0E26A3595500C28604 /* SF-Pro-Text-Regular.otf */; };
+		FE8DDD1226A3595E00C28604 /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = FE8DDD0F26A3595A00C28604 /* SF-Pro-Text-Medium.otf */; };
+		FE8DDD1326A3595E00C28604 /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FE8DDD1026A3595E00C28604 /* SF-Pro-Text-Bold.otf */; };
+		FE8DDD1D26A35F5700C28604 /* MyExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8DDD1C26A35F5700C28604 /* MyExtensions.swift */; };
+		FE8DDD6726A3FA7200C28604 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8DDD6626A3FA7200C28604 /* Constants.swift */; };
+		FE8DDDD726A404E100C28604 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8DDDD626A404E100C28604 /* UserData.swift */; };
+		FE9BFF2F26A3021F004375A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9BFF2E26A3021F004375A7 /* AppDelegate.swift */; };
+		FE9BFF3126A3021F004375A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9BFF3026A3021F004375A7 /* SceneDelegate.swift */; };
+		FE9BFF3326A3021F004375A7 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9BFF3226A3021F004375A7 /* SignInViewController.swift */; };
+		FE9BFF3826A30225004375A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE9BFF3726A30225004375A7 /* Assets.xcassets */; };
+		FE9BFF3B26A30225004375A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE9BFF3926A30225004375A7 /* LaunchScreen.storyboard */; };
+		FECDA9D126AFE122005F82F6 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECDA9D026AFE122005F82F6 /* FavouritesViewController.swift */; };
+		FECDA9D326AFE156005F82F6 /* EventFavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECDA9D226AFE156005F82F6 /* EventFavouritesViewController.swift */; };
+		FECDA9D526AFE19A005F82F6 /* OrganiserFavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECDA9D426AFE19A005F82F6 /* OrganiserFavouritesViewController.swift */; };
+		FECDA9D726B00005005F82F6 /* FavouriteOrganiserViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECDA9D626B00005005F82F6 /* FavouriteOrganiserViewCell.swift */; };
+		FECDA9D926B02408005F82F6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECDA9D826B02408005F82F6 /* ProfileViewController.swift */; };
+		FEF4849826A4A823003A88B0 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEF4849726A4A823003A88B0 /* RobotoCondensed-Regular.ttf */; };
+		FEF4849A26A4B8F1003A88B0 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF4849926A4B8F1003A88B0 /* WelcomeViewController.swift */; };
+		FEF4849C26A4C1EE003A88B0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF4849B26A4C1EE003A88B0 /* HomeViewController.swift */; };
+		FEF484B426A4F17E003A88B0 /* BubbleTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF484AE26A4F17E003A88B0 /* BubbleTabBar.swift */; };
+		FEF484B526A4F17E003A88B0 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = FEF484AF26A4F17E003A88B0 /* .gitkeep */; };
+		FEF484B626A4F17E003A88B0 /* BubbleTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF484B026A4F17E003A88B0 /* BubbleTabBarController.swift */; };
+		FEF484B726A4F17E003A88B0 /* CBTabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF484B126A4F17E003A88B0 /* CBTabBarButton.swift */; };
+		FEF484BA26A698C5003A88B0 /* Categories_View_Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF484B926A698C5003A88B0 /* Categories_View_Cell.swift */; };
+		FEF484BC26A69CE2003A88B0 /* CategorisModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF484BB26A69CE2003A88B0 /* CategorisModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		684238781D058888E8FDD745 /* Pods-eventkreyol.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eventkreyol.debug.xcconfig"; path = "Target Support Files/Pods-eventkreyol/Pods-eventkreyol.debug.xcconfig"; sourceTree = "<group>"; };
+		7D297ACCB0674E87A08109A3 /* Pods-eventkreyol.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eventkreyol.release.xcconfig"; path = "Target Support Files/Pods-eventkreyol/Pods-eventkreyol.release.xcconfig"; sourceTree = "<group>"; };
+		CFAD850075376758A1CCEF8A /* Pods_eventkreyol.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eventkreyol.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE090B8726A8EC0300A8F9FF /* Event_DateandTime_Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event_DateandTime_Cell.swift; sourceTree = "<group>"; };
+		FE11AA5E26A816A7004B8330 /* Top_Organiser_Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Top_Organiser_Cell.swift; sourceTree = "<group>"; };
+		FE11AA6026A837C0004B8330 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		FE1207A326AF2A6400132704 /* TicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsViewController.swift; sourceTree = "<group>"; };
+		FE20BE8D26A43E6B0018543C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FE20BE8F26A43F060018543C /* eventkreyol.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = eventkreyol.entitlements; sourceTree = "<group>"; };
+		FE20BE9026A46E690018543C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		FE3F1D9326A963ED008462CA /* Tag_Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag_Cell.swift; sourceTree = "<group>"; };
+		FE5A3EDB26A7B0AB00B15991 /* Event_View_Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event_View_Cell.swift; sourceTree = "<group>"; };
+		FE76EAFC26AF39D90064F35A /* UpcomingTicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingTicketsViewController.swift; sourceTree = "<group>"; };
+		FE76EAFE26AF3B390064F35A /* PastTicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastTicketsViewController.swift; sourceTree = "<group>"; };
+		FE76EB0026AFBD150064F35A /* Ticket_View_Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket_View_Cell.swift; sourceTree = "<group>"; };
+		FE8DDD0126A3240F00C28604 /* SF-Pro-Display-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Heavy.otf"; sourceTree = "<group>"; };
+		FE8DDD0226A3241300C28604 /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
+		FE8DDD0326A3241600C28604 /* SF-Pro-Display-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Black.otf"; sourceTree = "<group>"; };
+		FE8DDD0426A3241A00C28604 /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
+		FE8DDD0526A3241D00C28604 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
+		FE8DDD0626A3242100C28604 /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
+		FE8DDD0E26A3595500C28604 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
+		FE8DDD0F26A3595A00C28604 /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
+		FE8DDD1026A3595E00C28604 /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
+		FE8DDD1C26A35F5700C28604 /* MyExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyExtensions.swift; sourceTree = "<group>"; };
+		FE8DDD6626A3FA7200C28604 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FE8DDDD626A404E100C28604 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		FE9BFF2B26A3021F004375A7 /* eventkreyol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eventkreyol.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE9BFF2E26A3021F004375A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FE9BFF3026A3021F004375A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FE9BFF3226A3021F004375A7 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		FE9BFF3526A3021F004375A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FE9BFF3726A30225004375A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FE9BFF3A26A30225004375A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FE9BFF3C26A30225004375A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FECDA9D026AFE122005F82F6 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
+		FECDA9D226AFE156005F82F6 /* EventFavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventFavouritesViewController.swift; sourceTree = "<group>"; };
+		FECDA9D426AFE19A005F82F6 /* OrganiserFavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganiserFavouritesViewController.swift; sourceTree = "<group>"; };
+		FECDA9D626B00005005F82F6 /* FavouriteOrganiserViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteOrganiserViewCell.swift; sourceTree = "<group>"; };
+		FECDA9D826B02408005F82F6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		FEF4849726A4A823003A88B0 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
+		FEF4849926A4B8F1003A88B0 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		FEF4849B26A4C1EE003A88B0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FEF484AE26A4F17E003A88B0 /* BubbleTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleTabBar.swift; sourceTree = "<group>"; };
+		FEF484AF26A4F17E003A88B0 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		FEF484B026A4F17E003A88B0 /* BubbleTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleTabBarController.swift; sourceTree = "<group>"; };
+		FEF484B126A4F17E003A88B0 /* CBTabBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBTabBarButton.swift; sourceTree = "<group>"; };
+		FEF484B226A4F17E003A88B0 /* CBFlashyTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBFlashyTabBarController.h; sourceTree = "<group>"; };
+		FEF484B326A4F17E003A88B0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEF484B926A698C5003A88B0 /* Categories_View_Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories_View_Cell.swift; sourceTree = "<group>"; };
+		FEF484BB26A69CE2003A88B0 /* CategorisModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorisModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FE9BFF2826A3021F004375A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C24864FC7AC55CA037E8C6C6 /* Pods_eventkreyol.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AB141AE2C37BB212A4FB605C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CFAD850075376758A1CCEF8A /* Pods_eventkreyol.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D620585E1C4E91ED30E1C781 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				684238781D058888E8FDD745 /* Pods-eventkreyol.debug.xcconfig */,
+				7D297ACCB0674E87A08109A3 /* Pods-eventkreyol.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FE8DDD0026A323E700C28604 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FE8DDD0326A3241600C28604 /* SF-Pro-Display-Black.otf */,
+				FEF4849726A4A823003A88B0 /* RobotoCondensed-Regular.ttf */,
+				FE8DDD1026A3595E00C28604 /* SF-Pro-Text-Bold.otf */,
+				FE8DDD0F26A3595A00C28604 /* SF-Pro-Text-Medium.otf */,
+				FE8DDD0E26A3595500C28604 /* SF-Pro-Text-Regular.otf */,
+				FE8DDD0426A3241A00C28604 /* SF-Pro-Display-Bold.otf */,
+				FE8DDD0126A3240F00C28604 /* SF-Pro-Display-Heavy.otf */,
+				FE8DDD0626A3242100C28604 /* SF-Pro-Display-Medium.otf */,
+				FE8DDD0526A3241D00C28604 /* SF-Pro-Display-Regular.otf */,
+				FE8DDD0226A3241300C28604 /* SF-Pro-Display-Semibold.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		FE8DDD1526A35A5100C28604 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE9BFF3426A3021F004375A7 /* Main.storyboard */,
+				FE9BFF3726A30225004375A7 /* Assets.xcassets */,
+				FE9BFF3926A30225004375A7 /* LaunchScreen.storyboard */,
+				FEF484B926A698C5003A88B0 /* Categories_View_Cell.swift */,
+				FE5A3EDB26A7B0AB00B15991 /* Event_View_Cell.swift */,
+				FE11AA5E26A816A7004B8330 /* Top_Organiser_Cell.swift */,
+				FE090B8726A8EC0300A8F9FF /* Event_DateandTime_Cell.swift */,
+				FE3F1D9326A963ED008462CA /* Tag_Cell.swift */,
+				FE76EB0026AFBD150064F35A /* Ticket_View_Cell.swift */,
+				FECDA9D626B00005005F82F6 /* FavouriteOrganiserViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE8DDD1B26A35F3F00C28604 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FE8DDD1C26A35F5700C28604 /* MyExtensions.swift */,
+				FE8DDD6626A3FA7200C28604 /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		FE8DDD6926A3FAB400C28604 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FE9BFF3226A3021F004375A7 /* SignInViewController.swift */,
+				FE20BE9026A46E690018543C /* SignUpViewController.swift */,
+				FEF4849926A4B8F1003A88B0 /* WelcomeViewController.swift */,
+				FEF4849B26A4C1EE003A88B0 /* HomeViewController.swift */,
+				FE11AA6026A837C0004B8330 /* EventViewController.swift */,
+				FE1207A326AF2A6400132704 /* TicketsViewController.swift */,
+				FE76EAFC26AF39D90064F35A /* UpcomingTicketsViewController.swift */,
+				FE76EAFE26AF3B390064F35A /* PastTicketsViewController.swift */,
+				FECDA9D026AFE122005F82F6 /* FavouritesViewController.swift */,
+				FECDA9D226AFE156005F82F6 /* EventFavouritesViewController.swift */,
+				FECDA9D426AFE19A005F82F6 /* OrganiserFavouritesViewController.swift */,
+				FECDA9D826B02408005F82F6 /* ProfileViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		FE8DDDD526A404D200C28604 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FE8DDDD626A404E100C28604 /* UserData.swift */,
+				FEF484BB26A69CE2003A88B0 /* CategorisModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FE9BFF2226A3021F004375A7 = {
+			isa = PBXGroup;
+			children = (
+				FE9BFF2D26A3021F004375A7 /* eventkreyol */,
+				FE9BFF2C26A3021F004375A7 /* Products */,
+				D620585E1C4E91ED30E1C781 /* Pods */,
+				AB141AE2C37BB212A4FB605C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FE9BFF2C26A3021F004375A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FE9BFF2B26A3021F004375A7 /* eventkreyol.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FE9BFF2D26A3021F004375A7 /* eventkreyol */ = {
+			isa = PBXGroup;
+			children = (
+				FE20BE8F26A43F060018543C /* eventkreyol.entitlements */,
+				FE8DDDD526A404D200C28604 /* Model */,
+				FE8DDD6926A3FAB400C28604 /* ViewController */,
+				FE8DDD1B26A35F3F00C28604 /* Utils */,
+				FE8DDD1526A35A5100C28604 /* View */,
+				FE8DDD0026A323E700C28604 /* Fonts */,
+				FEF484AC26A4F17E003A88B0 /* BubbleTabBar */,
+				FE9BFF2E26A3021F004375A7 /* AppDelegate.swift */,
+				FE9BFF3026A3021F004375A7 /* SceneDelegate.swift */,
+				FE20BE8D26A43E6B0018543C /* GoogleService-Info.plist */,
+				FE9BFF3C26A30225004375A7 /* Info.plist */,
+			);
+			path = eventkreyol;
+			sourceTree = "<group>";
+		};
+		FEF484AC26A4F17E003A88B0 /* BubbleTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				FEF484AD26A4F17E003A88B0 /* Classes */,
+				FEF484B226A4F17E003A88B0 /* CBFlashyTabBarController.h */,
+				FEF484B326A4F17E003A88B0 /* Info.plist */,
+			);
+			path = BubbleTabBar;
+			sourceTree = "<group>";
+		};
+		FEF484AD26A4F17E003A88B0 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FEF484AE26A4F17E003A88B0 /* BubbleTabBar.swift */,
+				FEF484AF26A4F17E003A88B0 /* .gitkeep */,
+				FEF484B026A4F17E003A88B0 /* BubbleTabBarController.swift */,
+				FEF484B126A4F17E003A88B0 /* CBTabBarButton.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FE9BFF2A26A3021F004375A7 /* eventkreyol */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE9BFF3F26A30225004375A7 /* Build configuration list for PBXNativeTarget "eventkreyol" */;
+			buildPhases = (
+				40C51370B02685ED72207C36 /* [CP] Check Pods Manifest.lock */,
+				FE9BFF2726A3021F004375A7 /* Sources */,
+				FE9BFF2826A3021F004375A7 /* Frameworks */,
+				FE9BFF2926A3021F004375A7 /* Resources */,
+				D1FEA411EAD1A9BC962CEBE5 /* [CP] Embed Pods Frameworks */,
+				9F218F7EF427759B17E6EB13 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = eventkreyol;
+			productName = eventkreyol;
+			productReference = FE9BFF2B26A3021F004375A7 /* eventkreyol.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FE9BFF2326A3021F004375A7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					FE9BFF2A26A3021F004375A7 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = FE9BFF2626A3021F004375A7 /* Build configuration list for PBXProject "eventkreyol" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FE9BFF2226A3021F004375A7;
+			productRefGroup = FE9BFF2C26A3021F004375A7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FE9BFF2A26A3021F004375A7 /* eventkreyol */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FE9BFF2926A3021F004375A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE20BE8E26A43E6C0018543C /* GoogleService-Info.plist in Resources */,
+				FE9BFF3B26A30225004375A7 /* LaunchScreen.storyboard in Resources */,
+				FEF4849826A4A823003A88B0 /* RobotoCondensed-Regular.ttf in Resources */,
+				FE9BFF3826A30225004375A7 /* Assets.xcassets in Resources */,
+				FE8DDD1326A3595E00C28604 /* SF-Pro-Text-Bold.otf in Resources */,
+				FE8DDD0B26A3242100C28604 /* SF-Pro-Display-Regular.otf in Resources */,
+				FE22B43026A813300032A049 /* Main.storyboard in Resources */,
+				FE8DDD0826A3242100C28604 /* SF-Pro-Display-Semibold.otf in Resources */,
+				FE8DDD1226A3595E00C28604 /* SF-Pro-Text-Medium.otf in Resources */,
+				FE8DDD0A26A3242100C28604 /* SF-Pro-Display-Bold.otf in Resources */,
+				FE8DDD1126A3595E00C28604 /* SF-Pro-Text-Regular.otf in Resources */,
+				FE8DDD0C26A3242100C28604 /* SF-Pro-Display-Medium.otf in Resources */,
+				FEF484B526A4F17E003A88B0 /* .gitkeep in Resources */,
+				FE8DDD0726A3242100C28604 /* SF-Pro-Display-Heavy.otf in Resources */,
+				FE8DDD0926A3242100C28604 /* SF-Pro-Display-Black.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		40C51370B02685ED72207C36 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-eventkreyol-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F218F7EF427759B17E6EB13 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-eventkreyol/Pods-eventkreyol-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-eventkreyol/Pods-eventkreyol-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-eventkreyol/Pods-eventkreyol-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1FEA411EAD1A9BC962CEBE5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-eventkreyol/Pods-eventkreyol-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-eventkreyol/Pods-eventkreyol-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-eventkreyol/Pods-eventkreyol-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FE9BFF2726A3021F004375A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FECDA9D126AFE122005F82F6 /* FavouritesViewController.swift in Sources */,
+				FE8DDDD726A404E100C28604 /* UserData.swift in Sources */,
+				FE090B8826A8EC0300A8F9FF /* Event_DateandTime_Cell.swift in Sources */,
+				FE5A3EDC26A7B0AB00B15991 /* Event_View_Cell.swift in Sources */,
+				FE20BE9126A46E690018543C /* SignUpViewController.swift in Sources */,
+				FE3F1D9426A963ED008462CA /* Tag_Cell.swift in Sources */,
+				FE8DDD6726A3FA7200C28604 /* Constants.swift in Sources */,
+				FEF484B426A4F17E003A88B0 /* BubbleTabBar.swift in Sources */,
+				FEF484B626A4F17E003A88B0 /* BubbleTabBarController.swift in Sources */,
+				FE9BFF3326A3021F004375A7 /* SignInViewController.swift in Sources */,
+				FE76EB0126AFBD160064F35A /* Ticket_View_Cell.swift in Sources */,
+				FEF4849A26A4B8F1003A88B0 /* WelcomeViewController.swift in Sources */,
+				FEF4849C26A4C1EE003A88B0 /* HomeViewController.swift in Sources */,
+				FECDA9D726B00005005F82F6 /* FavouriteOrganiserViewCell.swift in Sources */,
+				FEF484B726A4F17E003A88B0 /* CBTabBarButton.swift in Sources */,
+				FEF484BC26A69CE2003A88B0 /* CategorisModel.swift in Sources */,
+				FECDA9D326AFE156005F82F6 /* EventFavouritesViewController.swift in Sources */,
+				FEF484BA26A698C5003A88B0 /* Categories_View_Cell.swift in Sources */,
+				FECDA9D926B02408005F82F6 /* ProfileViewController.swift in Sources */,
+				FE76EAFD26AF39D90064F35A /* UpcomingTicketsViewController.swift in Sources */,
+				FE9BFF2F26A3021F004375A7 /* AppDelegate.swift in Sources */,
+				FE9BFF3126A3021F004375A7 /* SceneDelegate.swift in Sources */,
+				FE1207A426AF2A6400132704 /* TicketsViewController.swift in Sources */,
+				FECDA9D526AFE19A005F82F6 /* OrganiserFavouritesViewController.swift in Sources */,
+				FE76EAFF26AF3B390064F35A /* PastTicketsViewController.swift in Sources */,
+				FE11AA5F26A816A7004B8330 /* Top_Organiser_Cell.swift in Sources */,
+				FE8DDD1D26A35F5700C28604 /* MyExtensions.swift in Sources */,
+				FE11AA6126A837C0004B8330 /* EventViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FE9BFF3426A3021F004375A7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE9BFF3526A3021F004375A7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FE9BFF3926A30225004375A7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE9BFF3A26A30225004375A7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FE9BFF3D26A30225004375A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FE9BFF3E26A30225004375A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FE9BFF4026A30225004375A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 684238781D058888E8FDD745 /* Pods-eventkreyol.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = eventkreyol/eventkreyol.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8Y44RKF4YT;
+				INFOPLIST_FILE = eventkreyol/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = in.softment.eventkreyol;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FE9BFF4126A30225004375A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D297ACCB0674E87A08109A3 /* Pods-eventkreyol.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = eventkreyol/eventkreyol.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8Y44RKF4YT;
+				INFOPLIST_FILE = eventkreyol/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = in.softment.eventkreyol;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FE9BFF2626A3021F004375A7 /* Build configuration list for PBXProject "eventkreyol" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE9BFF3D26A30225004375A7 /* Debug */,
+				FE9BFF3E26A30225004375A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE9BFF3F26A30225004375A7 /* Build configuration list for PBXNativeTarget "eventkreyol" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE9BFF4026A30225004375A7 /* Debug */,
+				FE9BFF4126A30225004375A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FE9BFF2326A3021F004375A7 /* Project object */;
+}

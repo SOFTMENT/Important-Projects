@@ -14,7 +14,7 @@
         <!-- Customize your theme here. -->
         <item name="android:windowTranslucentStatus">true</item>
 
-
+        <item name="android:forceDarkAllowed">false</item>
     </style>
 
     <style name="MyTimePickerDialogTheme" parent="@style/Theme.AppCompat.Light.Dialog">

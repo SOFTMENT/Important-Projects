@@ -35,7 +35,16 @@ class HomeViewController: UIViewController {
         commentBtn.isUserInteractionEnabled = true
         commentBtn.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(commentBtnClicked)))
         //getMangoBinModelsInfo
-        getMangoBinModelData()
+        
+        if let machineNumber = UserModel.userData.machineNumber {
+            if machineNumber == "0" {
+                getMangoBinModelData()
+            }
+            else {
+                getMangoBinModelDataByMachineNumber(machineNumber: machineNumber)
+            }
+        }
+        
         
         if UserModel.userData.designation != "machine" {
             commentBtn.isHidden = true
@@ -163,13 +172,37 @@ class HomeViewController: UIViewController {
     }
     
 
+    func getMangoBinModelDataByMachineNumber(machineNumber : String)  {
+        
+        ProgressHUDShow(text: "")
+        
+        Constants.getFirestoreDB().collection("BinInfo").whereField("machineNumber", isEqualTo: machineNumber).order(by: "date",descending: true).addSnapshotListener(includeMetadataChanges: true, listener: { snapshot, error in
+        
+            
+            MBProgressHUD.hide(for: self.view, animated: true)
+            if error == nil {
+                MangoBinModel.mangoBinModels.removeAll()
+                if let snap = snapshot {
+                    for s in snap.documents {
+                        if let data = try? s.data(as: MangoBinModel.self) {
+                            MangoBinModel.mangoBinModels.append(data)
+                        }
+                    }
+                }
+             
+                self.tableView.reloadData()
+            }
+            
+        })
+            
+}
+    
     func getMangoBinModelData()  {
         
         ProgressHUDShow(text: "")
         
         Constants.getFirestoreDB().collection("BinInfo").order(by: "date",descending: true).addSnapshotListener(includeMetadataChanges: true, listener: { snapshot, error in
         
-            
             MBProgressHUD.hide(for: self.view, animated: true)
             if error == nil {
                 MangoBinModel.mangoBinModels.removeAll()
@@ -233,7 +266,6 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
             cell.machineNo.text = mbm.machineNumber
             cell.imgNumber.text = String(mbm.binNumber ?? 1)
             cell.title.text = mbm.title
-            cell.scannedBy.text = mbm.scannedByName
             cell.time.text = convertTODateAndTime(dateValue: mbm.date!)
             
             cell.seeOnMap.isUserInteractionEnabled = true

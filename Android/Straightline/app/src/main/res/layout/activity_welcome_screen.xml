@@ -4,15 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#6c1011"
     tools:context=".WelcomeScreen">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:src="@drawable/splash"
-
-
-        />
+    <com.airbnb.lottie.LottieAnimationView
+        android:background="@color/white"
+        android:id="@+id/animation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/car_animation"
+        app:lottie_loop="true" />
 </RelativeLayout>

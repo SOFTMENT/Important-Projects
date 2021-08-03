@@ -487,7 +487,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = EC9SN5W46D;
 				INFOPLIST_FILE = "Mango Farm Bin Picking/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -495,7 +495,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 5;
+				MARKETING_VERSION = 7;
 				PRODUCT_BUNDLE_IDENTIFIER = in.softment.mangofarmbinpicking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -512,7 +512,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = EC9SN5W46D;
 				INFOPLIST_FILE = "Mango Farm Bin Picking/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -520,7 +520,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 5;
+				MARKETING_VERSION = 7;
 				PRODUCT_BUNDLE_IDENTIFIER = in.softment.mangofarmbinpicking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

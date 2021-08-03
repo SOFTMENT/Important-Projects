@@ -53,12 +53,7 @@ class HomeViewController: UIViewController, WKUIDelegate,WKNavigationDelegate {
                   }
        }
     
-    @IBAction func backPressed(_ sender: Any) {
-        
-        if webView.canGoBack {
-            webView.goBack()
-        }
-    }
+ 
     
     
     func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {

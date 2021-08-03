@@ -22,7 +22,7 @@ public class WelcomeAcitivity extends AppCompatActivity {
         setContentView(R.layout.activity_welcome_acitivity);
         Services.fullScreen(this);
 
-        Locale locale = new Locale("es");
+        Locale locale = new Locale("fr");
         Locale.setDefault(locale);
         Configuration config = new Configuration();
         config.locale = locale;

@@ -10,24 +10,24 @@ import MBProgressHUD
 import CalendarDateRangePickerViewController
 import Firebase
 
-class AdminPanelViewController: UIViewController, CalendarDateRangePickerViewControllerDelegate,  UITextFieldDelegate {
+class AdminPanelViewController: UIViewController, UITextFieldDelegate {
     
 
-    
-    func didTapCancel() {
-        dateRangePickerViewController?.dismiss(animated: true, completion:nil)
-    }
-    
-    func didTapDoneWithDateRange(startDate: Date!, endDate: Date!) {
-        dateRangePickerViewController?.dismiss(animated: true, completion:nil)
-        self.getReportsBasedOnDate(startDate: startDate.timeIntervalSince1970, endDate: endDate.timeIntervalSince1970)
-    }
+//
+//    func didTapCancel() {
+//        dateRangePickerViewController?.dismiss(animated: true, completion:nil)
+//    }
+//
+//    func didTapDoneWithDateRange(startDate: Date!, endDate: Date!) {
+//        dateRangePickerViewController?.dismiss(animated: true, completion:nil)
+//        self.getReportsBasedOnDate(startDate: startDate.timeIntervalSince1970, endDate: endDate.timeIntervalSince1970)
+//    }
   
      
     @objc func actioncancel() {
        view.endEditing(true)
     }
-    var dateRangePickerViewController : CalendarDateRangePickerViewController?
+    //var dateRangePickerViewController : CalendarDateRangePickerViewController?
     @IBOutlet weak var crewMemberBtn: UIButton!
     @IBOutlet weak var machineNumber: UITextField!
     @IBOutlet weak var dateBtn: UIButton!
@@ -40,20 +40,20 @@ class AdminPanelViewController: UIViewController, CalendarDateRangePickerViewCon
         
        
         
-        let collectionViewLayout = UICollectionViewFlowLayout()
-        
-    
-        dateRangePickerViewController = CalendarDateRangePickerViewController(collectionViewLayout: collectionViewLayout)
-        
-        dateRangePickerViewController!.minimumDate = Calendar.current.date(byAdding: .month, value: -6, to: Date())
-        
-        
-        dateRangePickerViewController!.maximumDate = Date()
-        
-        dateRangePickerViewController!.selectedStartDate = Calendar.current.date(byAdding: .day, value: -10, to: Date())
-        dateRangePickerViewController!.selectedEndDate = Date()
-        
-        dateRangePickerViewController!.delegate = self
+//        let collectionViewLayout = UICollectionViewFlowLayout()
+//
+//
+//        dateRangePickerViewController = CalendarDateRangePickerViewController(collectionViewLayout: collectionViewLayout)
+//
+//        dateRangePickerViewController!.minimumDate = Calendar.current.date(byAdding: .month, value: -6, to: Date())
+//
+//
+//        dateRangePickerViewController!.maximumDate = Date()
+//
+//        dateRangePickerViewController!.selectedStartDate = Calendar.current.date(byAdding: .day, value: -10, to: Date())
+//        dateRangePickerViewController!.selectedEndDate = Date()
+//
+//        dateRangePickerViewController!.delegate = self
         
         crewMemberBtn.layer.cornerRadius = 4
         machineNumber.layer.cornerRadius = 4
@@ -70,11 +70,38 @@ class AdminPanelViewController: UIViewController, CalendarDateRangePickerViewCon
     
     @IBAction func dateSelected(_ sender: Any) {
     
-            let navigationController = UINavigationController(rootViewController: dateRangePickerViewController!)
-        
-            
-            self.navigationController?.present(navigationController, animated: true, completion: nil)
+        let picker : UIDatePicker = UIDatePicker()
     
+        
+        picker.datePickerMode = UIDatePicker.Mode.date
+        if #available(iOS 14.0, *) {
+            picker.preferredDatePickerStyle = .inline
+            
+        }
+        
+        picker.backgroundColor = .black
+        picker.tintColor = .red
+   
+        picker.setDate(Date().addingTimeInterval(60*60*24), animated: false)
+        picker.addTarget(self, action: #selector(dueDateChanged(sender:)), for: .valueChanged)
+            let pickerSize : CGSize = picker.sizeThatFits(CGSize.zero)
+        picker.frame = CGRect(x:(view.layer.bounds.width / 2) - (pickerSize.width / 2) , y:(view.layer.bounds.height / 2) - (230), width:pickerSize.width, height:460)
+            // you probably don't want to set background color as black
+            // picker.backgroundColor = UIColor.blackColor()
+            self.view.addSubview(picker)
+    }
+    
+    @objc func dueDateChanged(sender:UIDatePicker){
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = .none
+        sender.isHidden = true
+        let startDate = sender.date.addingTimeInterval(60 * 60 * (-12))
+        let endDate = sender.date.addingTimeInterval(60 * 60 * 12)
+        self.getReportsBasedOnDate(startDate: startDate.timeIntervalSince1970, endDate: endDate.timeIntervalSince1970)
+        
+        print(sender.date)
+        
     }
     
    
@@ -306,3 +333,5 @@ class AdminPanelViewController: UIViewController, CalendarDateRangePickerViewCon
     
     
 }
+
+

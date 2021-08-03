@@ -1,16 +1,34 @@
 package in.softment.straightline;
 
 
+import android.Manifest;
+import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.location.Location;
+import android.location.LocationManager;
 import android.os.Bundle;
+import android.os.Looper;
+import android.provider.Settings;
 import android.util.Log;
+import android.view.View;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.viewpager.widget.ViewPager;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.canhub.cropper.CropImage;
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationCallback;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationResult;
+import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -40,19 +58,26 @@ import in.softment.straightline.Fragment.VideosFragment;
 import in.softment.straightline.Model.ChallnageModel;
 import in.softment.straightline.Model.LastMessageModel;
 import in.softment.straightline.Model.TrackImagesModel;
+import in.softment.straightline.Model.UserModel;
+import in.softment.straightline.Utils.Constants;
 import in.softment.straightline.Utils.MyFirebaseMessagingService;
 import in.softment.straightline.Utils.ProgressHud;
 import in.softment.straightline.Utils.Services;
 import me.ibrahimsn.lib.OnItemSelectedListener;
 import me.ibrahimsn.lib.SmoothBottomBar;
 
+import static android.os.Build.VERSION.SDK_INT;
+
 public class MainActivity extends AppCompatActivity {
+
 
     private ChatFragment chatFragment;
     private HomeFragment homeFragment;
     private ProfileFragment profileFragment;
     private SmoothBottomBar smoothBottomBar;
     private ViewPager viewPager;
+    FusedLocationProviderClient mFusedLocationClient;
+    public static final int REQUEST_CODE_PERMISSIONS = 101;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,11 +86,12 @@ public class MainActivity extends AppCompatActivity {
 
         //UpdateToken
         updateToken();
+        mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
         smoothBottomBar = findViewById(R.id.bottomBar);
         smoothBottomBar.setItemActiveIndex(0);
         viewPager = findViewById(R.id.viewpager);
-        viewPager.setOffscreenPageLimit(4);
+        viewPager.setOffscreenPageLimit(3);
         setupViewPager(viewPager);
         viewPager.setCurrentItem(0);
         smoothBottomBar.setOnItemSelectedListener(new OnItemSelectedListener() {
@@ -76,6 +102,146 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        Constants.requestLocationClass = "Main";
+
+    }
+
+
+
+    public void requestLocationPermission() {
+
+        boolean foreground = ActivityCompat.checkSelfPermission(this,
+                Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED;
+
+        if (foreground) {
+            if (Constants.requestLocationClass.equalsIgnoreCase("Main")) {
+                getLastLocation();
+            }
+            else if (Constants.requestLocationClass.equalsIgnoreCase("Settings")){
+                Intent intent = new Intent(MainActivity.this, CreateChallange.class);
+                startActivity(intent);
+            }
+
+
+        } else {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, REQUEST_CODE_PERMISSIONS);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == REQUEST_CODE_PERMISSIONS) {
+
+            boolean foreground = false;
+
+            for (int i = 0; i < permissions.length; i++) {
+                if (permissions[i].equalsIgnoreCase(Manifest.permission.ACCESS_COARSE_LOCATION)) {
+                    //foreground permission allowed
+                    if (grantResults[i] >= 0) {
+                        foreground = true;
+                        break;
+                    } else {
+                        Services.showDialog(MainActivity.this,"Permission Required","We can't show challenges without location permission. Please allow location permission.");
+                      //  Toast.makeText(getApplicationContext(), "Location Permission denied", Toast.LENGTH_SHORT).show();
+                        break;
+                    }
+                }
+            }
+
+            if (foreground) {
+
+                getLastLocation();
+
+
+            }
+        }
+    }
+
+
+
+
+
+    @SuppressLint("MissingPermission")
+    private void getLastLocation() {
+        // check if permissions are given
+
+
+            // check if location is enabled
+            if (isLocationEnabled()) {
+
+                // getting last
+                // location from
+                // FusedLocationClient
+                // object
+                mFusedLocationClient.getLastLocation().addOnCompleteListener(new OnCompleteListener<Location>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Location> task) {
+                        Location location = task.getResult();
+                        if (location == null) {
+                            requestNewLocationData();
+                        } else {
+                            UserModel.data.latitude = location.getLatitude();
+                            UserModel.data.longitude = location.getLongitude();
+
+                           if (Constants.requestLocationClass.equalsIgnoreCase("Settings")){
+                                Intent intent = new Intent(MainActivity.this, CreateChallange.class);
+                                startActivity(intent);
+                            }
+                           else if (Constants.requestLocationClass.equalsIgnoreCase("Main")) {
+                               getAllChallenges();
+                           }
+                        }
+                    }
+                });
+            } else {
+                Toast.makeText(this, "Please turn on" + " your location...", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+                startActivity(intent);
+            }
+
+    }
+
+
+    @SuppressLint("MissingPermission")
+    private void requestNewLocationData() {
+
+        // Initializing LocationRequest
+        // object with appropriate methods
+        LocationRequest mLocationRequest = LocationRequest.create();
+        mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        mLocationRequest.setInterval(5);
+        mLocationRequest.setFastestInterval(0);
+        mLocationRequest.setNumUpdates(1);
+
+        mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+        mFusedLocationClient.requestLocationUpdates(mLocationRequest, mLocationCallback, Looper.myLooper());
+    }
+
+    private final LocationCallback mLocationCallback = new LocationCallback() {
+
+        @Override
+        public void onLocationResult(LocationResult locationResult) {
+
+            Location mLastLocation = locationResult.getLastLocation();
+            UserModel.data.latitude = mLastLocation.getLatitude();
+            UserModel.data.longitude = mLastLocation.getLongitude();
+
+            if (Constants.requestLocationClass.equalsIgnoreCase("Settings")){
+                Intent intent = new Intent(MainActivity.this, CreateChallange.class);
+                startActivity(intent);
+            }
+            else if (Constants.requestLocationClass.equalsIgnoreCase("Main")) {
+                getAllChallenges();
+            }
+        }
+    };
+
+    private boolean isLocationEnabled() {
+        LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        return locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER) || locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
     }
 
 
@@ -89,20 +255,26 @@ public class MainActivity extends AppCompatActivity {
     }
         //getAllChallenges
     private void getAllChallenges(){
-        ProgressHud.show(MainActivity.this,"");
+
         FirebaseFirestore.getInstance().collection("Challenges").orderBy("time").whereGreaterThan("time",new Date()).addSnapshotListener(new EventListener<QuerySnapshot>() {
             @Override
             public void onEvent(@Nullable @org.jetbrains.annotations.Nullable QuerySnapshot value, @Nullable @org.jetbrains.annotations.Nullable FirebaseFirestoreException error) {
-                 ProgressHud.dialog.dismiss();
+
                 if (error == null) {
                     ChallnageModel.challnageModels.clear();
                     if (value != null && !value.isEmpty()) {
+
                         for (DocumentSnapshot documentSnapshot : value.getDocuments()) {
 
                             ChallnageModel challnageModel = documentSnapshot.toObject(ChallnageModel.class);
-                            ChallnageModel.challnageModels.add(challnageModel);
+                            if (challnageModel != null) {
+
+                                ChallnageModel.challnageModels.add(challnageModel);
+                            }
+
                         }
                     }
+
                     homeFragment.notifyAdapter();
                 }
                 else {
@@ -111,6 +283,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
     //getLastChatModelData
     private void getLastMessageData(){
         FirebaseFirestore.getInstance().collection("Chats").document(FirebaseAuth.getInstance().getCurrentUser().getUid()).collection("LastMessage").orderBy("date", Query.Direction.DESCENDING).addSnapshotListener(MetadataChanges.INCLUDE,new EventListener<QuerySnapshot>() {
@@ -144,7 +317,9 @@ public class MainActivity extends AppCompatActivity {
                     List<TrackImagesModel> trackImagesModels = queryDocumentSnapshots.toObjects(TrackImagesModel.class);
                     TrackImagesModel.trackImagesModels.addAll(trackImagesModels);
                 }
+                requestLocationPermission();
                 getAllChallenges();
+
             }
         });
     }
@@ -189,6 +364,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+
 
 
     @Override

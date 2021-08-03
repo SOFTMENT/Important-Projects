@@ -15,13 +15,11 @@ class MangoBinDetailsTableViewCell: UITableViewCell {
     @IBOutlet weak var imgNumber: UILabel!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var machineNo: UILabel!
-    @IBOutlet weak var scannedBy: UILabel!
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var pickedBy: UILabel!
     @IBOutlet weak var status: UILabel!
     @IBOutlet weak var emptyTime: UILabel!
     @IBOutlet weak var seeOnMap: UILabel!
-    
     @IBOutlet weak var pickedByView: UIView!
     @IBOutlet weak var emptyDateView: UIView!
     

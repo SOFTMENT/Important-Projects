@@ -61,8 +61,8 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         tabBarItems.image = deSelectedImage4
         tabBarItems.selectedImage = selectedImage4
         
-        let selectedImage5 = UIImage(named: "insta2")?.withRenderingMode(.alwaysOriginal)
-        let deSelectedImage5 = UIImage(named: "insta")?.withRenderingMode(.alwaysOriginal)
+        let selectedImage5 = UIImage(named: "IG Feed2")?.withRenderingMode(.alwaysOriginal)
+        let deSelectedImage5 = UIImage(named: "IG Feed-1")?.withRenderingMode(.alwaysOriginal)
         tabBarItems = self.tabBar.items![4]
         tabBarItems.tag = 4
         tabBarItems.image = deSelectedImage5

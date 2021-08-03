@@ -48,7 +48,13 @@ class EnterInviteCodeController: UIViewController, UITextFieldDelegate {
                     if let doc = document {
                         if doc.exists {
                             self.ProgressHUDShow(text: "")
-                            Firestore.firestore().collection("InviteCode").document(sInviteCode!).delete()
+                           
+                            if sInviteCode != "7869992" {
+                                
+                                Firestore.firestore().collection("InviteCode").document(sInviteCode!).delete()
+                                
+                            }
+                           
                             Firestore.firestore().collection("Users").document(Auth.auth().currentUser!.uid).setData(["hasApproved" : true], merge: true) { error in
                                 self.ProgressHUDHide()
                                 if err == nil {

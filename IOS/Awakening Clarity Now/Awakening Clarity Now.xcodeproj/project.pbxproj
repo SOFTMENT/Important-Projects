@@ -23,11 +23,9 @@
 		8B99612B2658E56400759BC1 /* AdminHomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B99612A2658E56400759BC1 /* AdminHomeViewCell.swift */; };
 		8B99612D2658E64800759BC1 /* AdminHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B99612C2658E64800759BC1 /* AdminHomeViewController.swift */; };
 		8B99612F2658EE0E00759BC1 /* DailyInsightsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B99612E2658EE0E00759BC1 /* DailyInsightsModel.swift */; };
-		8BD12CA72656D9F400E19108 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD12CA52656D9F400E19108 /* LaunchScreen.storyboard */; };
 		8BD12CA92656DA5600E19108 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BD12CA82656DA4B00E19108 /* Assets.xcassets */; };
 		8BD12CB32656E61700E19108 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BD12CB22656E61700E19108 /* GoogleService-Info.plist */; };
 		8BD2AE692656D1720037F262 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD2AE672656D1720037F262 /* Main.storyboard */; };
-		8BED73EF2657D17E0021CBB4 /* InstagramFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BED73EE2657D17E0021CBB4 /* InstagramFeedViewController.swift */; };
 		8BED73F1265802420021CBB4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BED73F0265802420021CBB4 /* SettingsViewController.swift */; };
 		8BED73F4265831B10021CBB4 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BED73F2265831B00021CBB4 /* OverlayView.swift */; };
 		8BED73F5265831B10021CBB4 /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BED73F3265831B00021CBB4 /* OverlayView.xib */; };
@@ -60,11 +58,14 @@
 		B1ED52F0264DF88100164351 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1ED52EF264DF88100164351 /* CreateViewController.swift */; };
 		B1ED52F2264E18C900164351 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1ED52F1264E18C900164351 /* TabBarController.swift */; };
 		B1ED52F4264E409B00164351 /* VideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1ED52F3264E409A00164351 /* VideosViewController.swift */; };
-		E5BD22303D5A973300AB0DB1 /* Pods_Awakening_Clarity_Now.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A8D8B435EBA90EE509C49EF /* Pods_Awakening_Clarity_Now.framework */; };
+		CDE9EA6E359DD1C077B29B29 /* Pods_Awakening_Clarity_Now.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB4E2E0CFF470ADEBF553B94 /* Pods_Awakening_Clarity_Now.framework */; };
+		FEFBB72426AC23570045357C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEFBB72326AC23570045357C /* LaunchScreen.storyboard */; };
+		FEFBB72626AC341F0045357C /* MeditationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFBB72526AC341F0045357C /* MeditationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6A8D8B435EBA90EE509C49EF /* Pods_Awakening_Clarity_Now.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Awakening_Clarity_Now.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B34B08B464524CBE3C47190 /* Pods-Awakening Clarity Now.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Awakening Clarity Now.release.xcconfig"; path = "Target Support Files/Pods-Awakening Clarity Now/Pods-Awakening Clarity Now.release.xcconfig"; sourceTree = "<group>"; };
+		227DB98DE4EAA2E7EA4EE3D8 /* Pods-Awakening Clarity Now.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Awakening Clarity Now.debug.xcconfig"; path = "Target Support Files/Pods-Awakening Clarity Now/Pods-Awakening Clarity Now.debug.xcconfig"; sourceTree = "<group>"; };
 		8B120953266AC2FC00C7D535 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		8B120954266AC2FC00C7D535 /* ProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
 		8B120957266AC48800C7D535 /* ProfilePresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresentationController.swift; sourceTree = "<group>"; };
@@ -81,12 +82,10 @@
 		8B99612A2658E56400759BC1 /* AdminHomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminHomeViewCell.swift; sourceTree = "<group>"; };
 		8B99612C2658E64800759BC1 /* AdminHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminHomeViewController.swift; sourceTree = "<group>"; };
 		8B99612E2658EE0E00759BC1 /* DailyInsightsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyInsightsModel.swift; sourceTree = "<group>"; };
-		8BD12CA52656D9F400E19108 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ../../../../../LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8BD12CA82656DA4B00E19108 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8BD12CB22656E61700E19108 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8BD2AE672656D1720037F262 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		8BED73ED2657AC950021CBB4 /* Awakening Clarity Now.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Awakening Clarity Now.entitlements"; sourceTree = "<group>"; };
-		8BED73EE2657D17E0021CBB4 /* InstagramFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramFeedViewController.swift; sourceTree = "<group>"; };
 		8BED73F0265802420021CBB4 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		8BED73F2265831B00021CBB4 /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
 		8BED73F3265831B00021CBB4 /* OverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
@@ -96,7 +95,6 @@
 		8BED73FC2658524A0021CBB4 /* StartTimeAndEndTimeOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTimeAndEndTimeOverlay.swift; sourceTree = "<group>"; };
 		8BED73FD2658524A0021CBB4 /* StartTimeAndEndTimeOverlay.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartTimeAndEndTimeOverlay.xib; sourceTree = "<group>"; };
 		8BED7400265853B70021CBB4 /* StartAndEndTimePresentationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartAndEndTimePresentationViewController.swift; sourceTree = "<group>"; };
-		95C06BF40F139314EFD87D06 /* Pods-Awakening Clarity Now.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Awakening Clarity Now.debug.xcconfig"; path = "Target Support Files/Pods-Awakening Clarity Now/Pods-Awakening Clarity Now.debug.xcconfig"; sourceTree = "<group>"; };
 		B1012151264D5F1400B08C8E /* Awakening Clarity Now.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Awakening Clarity Now.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1012154264D5F1400B08C8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1012156264D5F1400B08C8E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,7 +120,9 @@
 		B1ED52EF264DF88100164351 /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
 		B1ED52F1264E18C900164351 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		B1ED52F3264E409A00164351 /* VideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosViewController.swift; sourceTree = "<group>"; };
-		F60479BE5D203239F9A234BF /* Pods-Awakening Clarity Now.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Awakening Clarity Now.release.xcconfig"; path = "Target Support Files/Pods-Awakening Clarity Now/Pods-Awakening Clarity Now.release.xcconfig"; sourceTree = "<group>"; };
+		EB4E2E0CFF470ADEBF553B94 /* Pods_Awakening_Clarity_Now.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Awakening_Clarity_Now.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEFBB72326AC23570045357C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FEFBB72526AC341F0045357C /* MeditationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,8 +130,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5BD22303D5A973300AB0DB1 /* Pods_Awakening_Clarity_Now.framework in Frameworks */,
 				8B120964266ADD5600C7D535 /* StoreKit.framework in Frameworks */,
+				CDE9EA6E359DD1C077B29B29 /* Pods_Awakening_Clarity_Now.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,8 +141,8 @@
 		5E662030FCCEC78D2FB13895 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				95C06BF40F139314EFD87D06 /* Pods-Awakening Clarity Now.debug.xcconfig */,
-				F60479BE5D203239F9A234BF /* Pods-Awakening Clarity Now.release.xcconfig */,
+				227DB98DE4EAA2E7EA4EE3D8 /* Pods-Awakening Clarity Now.debug.xcconfig */,
+				1B34B08B464524CBE3C47190 /* Pods-Awakening Clarity Now.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -152,7 +152,6 @@
 			children = (
 				8BD12CA82656DA4B00E19108 /* Assets.xcassets */,
 				8BD2AE672656D1720037F262 /* Main.storyboard */,
-				8BD12CA52656D9F400E19108 /* LaunchScreen.storyboard */,
 				8BED73F2265831B00021CBB4 /* OverlayView.swift */,
 				8BED73F3265831B00021CBB4 /* OverlayView.xib */,
 				8BED73FC2658524A0021CBB4 /* StartTimeAndEndTimeOverlay.swift */,
@@ -163,6 +162,7 @@
 				8B12095B266AD17300C7D535 /* MembershipViewController.swift */,
 				8B12095C266AD17300C7D535 /* MembershipViewController.xib */,
 				8B120965266CE32900C7D535 /* FavoriteCell.swift */,
+				FEFBB72326AC23570045357C /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -171,7 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				8B120963266ADD5600C7D535 /* StoreKit.framework */,
-				6A8D8B435EBA90EE509C49EF /* Pods_Awakening_Clarity_Now.framework */,
+				EB4E2E0CFF470ADEBF553B94 /* Pods_Awakening_Clarity_Now.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -239,7 +239,6 @@
 				B1ED52EF264DF88100164351 /* CreateViewController.swift */,
 				B1ED52F1264E18C900164351 /* TabBarController.swift */,
 				B1ED52F3264E409A00164351 /* VideosViewController.swift */,
-				8BED73EE2657D17E0021CBB4 /* InstagramFeedViewController.swift */,
 				8BED73F0265802420021CBB4 /* SettingsViewController.swift */,
 				8BED73F6265834300021CBB4 /* PresentationController.swift */,
 				8BED73F8265840C80021CBB4 /* FavoriteViewController.swift */,
@@ -249,6 +248,7 @@
 				8B6879632658F5BE000A81BE /* AdminAddQuotes.swift */,
 				8B120957266AC48800C7D535 /* ProfilePresentationController.swift */,
 				8B12095F266AD5CE00C7D535 /* MembershipPresentationController.swift */,
+				FEFBB72526AC341F0045357C /* MeditationViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -282,12 +282,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1012165264D5F1700B08C8E /* Build configuration list for PBXNativeTarget "Awakening Clarity Now" */;
 			buildPhases = (
-				79B771441430C1944C7F7978 /* [CP] Check Pods Manifest.lock */,
+				F4A4E677CFE103DEF37964E4 /* [CP] Check Pods Manifest.lock */,
 				B101214D264D5F1400B08C8E /* Sources */,
 				B101214E264D5F1400B08C8E /* Frameworks */,
 				B101214F264D5F1400B08C8E /* Resources */,
-				8920AE66835A56FE89FE243F /* [CP] Embed Pods Frameworks */,
-				6733DE63131041E109D33998 /* [CP] Copy Pods Resources */,
+				64437FAFC74DCEC9B33E07C2 /* [CP] Embed Pods Frameworks */,
+				D3FC816A2D0B9C0DE8C25A25 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -348,8 +348,8 @@
 				B1ED52D5264D9A8D00164351 /* SF-Mono-HeavyItalic.otf in Resources */,
 				8BD12CB32656E61700E19108 /* GoogleService-Info.plist in Resources */,
 				8B12095E266AD17300C7D535 /* MembershipViewController.xib in Resources */,
+				FEFBB72426AC23570045357C /* LaunchScreen.storyboard in Resources */,
 				8B120956266AC2FC00C7D535 /* ProfileView.xib in Resources */,
-				8BD12CA72656D9F400E19108 /* LaunchScreen.storyboard in Resources */,
 				B1ED52D4264D9A8D00164351 /* SF-Mono-Regular.otf in Resources */,
 				B1ED52DA264D9A8D00164351 /* SF-Mono-Heavy.otf in Resources */,
 				B1ED52D8264D9A8D00164351 /* SF-Mono-Bold.otf in Resources */,
@@ -361,7 +361,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6733DE63131041E109D33998 /* [CP] Copy Pods Resources */ = {
+		64437FAFC74DCEC9B33E07C2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Awakening Clarity Now/Pods-Awakening Clarity Now-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Awakening Clarity Now/Pods-Awakening Clarity Now-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Awakening Clarity Now/Pods-Awakening Clarity Now-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3FC816A2D0B9C0DE8C25A25 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -378,7 +395,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Awakening Clarity Now/Pods-Awakening Clarity Now-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		79B771441430C1944C7F7978 /* [CP] Check Pods Manifest.lock */ = {
+		F4A4E677CFE103DEF37964E4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -400,23 +417,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8920AE66835A56FE89FE243F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Awakening Clarity Now/Pods-Awakening Clarity Now-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Awakening Clarity Now/Pods-Awakening Clarity Now-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Awakening Clarity Now/Pods-Awakening Clarity Now-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -430,6 +430,7 @@
 				B1ED52F0264DF88100164351 /* CreateViewController.swift in Sources */,
 				B1ED52F2264E18C900164351 /* TabBarController.swift in Sources */,
 				B1012159264D5F1400B08C8E /* LoginViewController.swift in Sources */,
+				FEFBB72626AC341F0045357C /* MeditationViewController.swift in Sources */,
 				8BED73F9265840C80021CBB4 /* FavoriteViewController.swift in Sources */,
 				B1012155264D5F1400B08C8E /* AppDelegate.swift in Sources */,
 				8BED73FE2658524A0021CBB4 /* StartTimeAndEndTimeOverlay.swift in Sources */,
@@ -451,7 +452,6 @@
 				8B12095D266AD17300C7D535 /* MembershipViewController.swift in Sources */,
 				B1ED52EE264DEAD900164351 /* Constants.swift in Sources */,
 				8B99612D2658E64800759BC1 /* AdminHomeViewController.swift in Sources */,
-				8BED73EF2657D17E0021CBB4 /* InstagramFeedViewController.swift in Sources */,
 				8B120960266AD5CE00C7D535 /* MembershipPresentationController.swift in Sources */,
 				8B120966266CE32900C7D535 /* FavoriteCell.swift in Sources */,
 				8B6879642658F5BE000A81BE /* AdminAddQuotes.swift in Sources */,
@@ -580,13 +580,13 @@
 		};
 		B1012166264D5F1700B08C8E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 95C06BF40F139314EFD87D06 /* Pods-Awakening Clarity Now.debug.xcconfig */;
+			baseConfigurationReference = 227DB98DE4EAA2E7EA4EE3D8 /* Pods-Awakening Clarity Now.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Awakening Clarity Now/Awakening Clarity Now.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 6.02;
 				DEVELOPMENT_TEAM = H9YFNDC7S2;
 				INFOPLIST_FILE = "Awakening Clarity Now/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -594,7 +594,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 6;
+				MARKETING_VERSION = 8;
 				PRODUCT_BUNDLE_IDENTIFIER = "in.softment.Awakening-Clarity-Now";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -604,13 +604,13 @@
 		};
 		B1012167264D5F1700B08C8E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F60479BE5D203239F9A234BF /* Pods-Awakening Clarity Now.release.xcconfig */;
+			baseConfigurationReference = 1B34B08B464524CBE3C47190 /* Pods-Awakening Clarity Now.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Awakening Clarity Now/Awakening Clarity Now.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 6.02;
 				DEVELOPMENT_TEAM = H9YFNDC7S2;
 				INFOPLIST_FILE = "Awakening Clarity Now/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -618,7 +618,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 6;
+				MARKETING_VERSION = 8;
 				PRODUCT_BUNDLE_IDENTIFIER = "in.softment.Awakening-Clarity-Now";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

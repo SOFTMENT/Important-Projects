@@ -24,7 +24,11 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthCredential;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.SetOptions;
@@ -237,6 +241,9 @@ public class Services {
                 if (title.equalsIgnoreCase("Challenge Created")) {
                     ((Activity) context).finish();
                 }
+                else if (title.equalsIgnoreCase("Permission Required")) {
+                    ((MainActivity)context).requestLocationPermission();
+                }
 
             }
         });
@@ -286,12 +293,30 @@ public class Services {
         map.put("fullName", Services.toUpperCase(name));
         map.put("emailAddress",emailAddress);
         map.put("uid",uid);
-        FirebaseFirestore.getInstance().collection("Users").document(uid).set(map).addOnCompleteListener(new OnCompleteListener<Void>() {
+        FirebaseFirestore.getInstance().collection("Users").document(uid).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
-            public void onComplete(@NonNull @NotNull Task<Void> task) {
+            public void onComplete(@NonNull @NotNull Task<DocumentSnapshot> task) {
                 ProgressHud.dialog.dismiss();
                 if (task.isSuccessful()) {
-                   Services.sentEmailVerificationLink(context);
+                    if (task.getResult() != null && task.getResult().exists()) {
+                        getCurrentUserData(context,uid,true);
+                    }
+                    else {
+                        ProgressHud.show(context,"");
+                        FirebaseFirestore.getInstance().collection("Users").document(uid).set(map).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull @NotNull Task<Void> task) {
+                                ProgressHud.dialog.dismiss();
+                                if (task.isSuccessful()) {
+                                    getCurrentUserData(context,uid,true);
+                                }
+                                else {
+                                    showDialog(context,"ERROR",task.getException().getLocalizedMessage());
+                                }
+                            }
+                        });
+
+                    }
                 }
                 else {
                     showDialog(context,"ERROR",task.getException().getLocalizedMessage());
@@ -301,17 +326,22 @@ public class Services {
 
     }
 
-    public static void getCurrentUserData(Context context,String uid) {
+    public static void getCurrentUserData(Context context,String uid, boolean showProgress) {
         if (!Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).isEmailVerified()) {
             sentEmailVerificationLink(context);
             return;
         }
+        if (showProgress) {
+            ProgressHud.show(context,"");
+        }
 
-        ProgressHud.show(context,"");
         FirebaseFirestore.getInstance().collection("Users").document(uid).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                ProgressHud.dialog.dismiss();
+                if (showProgress) {
+                    ProgressHud.dialog.dismiss();
+                }
+
                 if (task.isSuccessful()) {
                     DocumentSnapshot documentSnapshot = task.getResult();
                     if (documentSnapshot != null && documentSnapshot.exists()) {
@@ -321,6 +351,9 @@ public class Services {
                             if (UserModel.data.getProfileImage().isEmpty()) {
                                 if (context instanceof SignInActivity) {
                                     ((SignInActivity)context).choosePicture(context);
+                                }
+                                else if (context instanceof  RegistrationActivity) {
+                                    ((RegistrationActivity)context).choosePicture(context);
                                 }
 
                                 return;
@@ -398,5 +431,26 @@ public class Services {
                 }
             }
         });
+    }
+
+    public static  void firebaseAuthWithGoogle(Context context, AuthCredential  credential) {
+
+        FirebaseAuth.getInstance().signInWithCredential(credential)
+                .addOnCompleteListener((Activity) context, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            // Sign in success, update UI with the signed-in user's information
+
+                            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                            if (user != null)
+                                Services.addCurrentUserData(context,user.getUid(),user.getDisplayName(),user.getEmail());
+
+                        } else {
+                            // If sign in fails, display a message to the user.
+                            Services.showDialog(context,"ERROR",task.getException().getLocalizedMessage());
+                        }
+                    }
+                });
     }
 }

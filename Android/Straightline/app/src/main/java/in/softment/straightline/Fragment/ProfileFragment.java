@@ -49,6 +49,7 @@ import in.softment.straightline.Model.UserModel;
 import in.softment.straightline.R;
 import in.softment.straightline.SignInActivity;
 import in.softment.straightline.ToastType;
+import in.softment.straightline.Utils.Constants;
 import in.softment.straightline.Utils.ProgressHud;
 import in.softment.straightline.Utils.Services;
 
@@ -59,17 +60,23 @@ public class ProfileFragment extends Fragment {
     private Context context;
     CircleImageView circleImageView;
     Uri resultUri;
+
     public ProfileFragment(Context context){
         this.context = context;
     }
+    public ProfileFragment(){
+
+    }
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
         //CREATE CHALLENGE
         view.findViewById(R.id.createChallange).setOnClickListener(v -> {
+
+            Constants.requestLocationClass = "Settings";
+
             startActivity(new Intent(context, CreateChallange.class));
 
         });
@@ -128,16 +135,19 @@ public class ProfileFragment extends Fragment {
 
         //PrivacyPolicy
         view.findViewById(R.id.privacypolicy).setOnClickListener(v -> {
-
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("https://softment.in/StraightLine/privacypolicy/"));
+            startActivity(browserIntent);
         });
 
-        //Terms&Conditions
-        view.findViewById(R.id.termsandcondition).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
+//        //Terms&Conditions
+//        view.findViewById(R.id.termsandcondition).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//
+//            }
+//        });
 
         //AppDeveloper
         view.findViewById(R.id.developer).setOnClickListener(new View.OnClickListener() {

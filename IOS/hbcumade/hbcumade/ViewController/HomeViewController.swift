@@ -705,7 +705,8 @@ class HomeViewController: BaseViewController, UITextViewDelegate, UITableViewDel
           
             
             let totalRow = tableView.numberOfRows(inSection: indexPath.section)
-                    if(indexPath.row == totalRow - 1)
+                    
+            if(indexPath.row == totalRow - 1)
                     {
                         DispatchQueue.main.async {
                             self.updateTableViewHeight()

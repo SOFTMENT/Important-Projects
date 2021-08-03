@@ -298,14 +298,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = H3L6B4H77M;
 				INFOPLIST_FILE = Thewavery/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4;
+				MARKETING_VERSION = 5;
 				PRODUCT_BUNDLE_IDENTIFIER = in.softment.Thewavery;
 				PRODUCT_NAME = Thewavery;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -320,14 +321,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = H3L6B4H77M;
 				INFOPLIST_FILE = Thewavery/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4;
+				MARKETING_VERSION = 5;
 				PRODUCT_BUNDLE_IDENTIFIER = in.softment.Thewavery;
 				PRODUCT_NAME = Thewavery;
 				PROVISIONING_PROFILE_SPECIFIER = "";

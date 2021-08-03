@@ -69,7 +69,6 @@
 		B1CCD013262C47F000A9C562 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B1CCD00E262C47E800A9C562 /* Roboto-Medium.ttf */; };
 		B1CCD014262C47F000A9C562 /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B1CCD00F262C47EB00A9C562 /* RobotoCondensed-Bold.ttf */; };
 		B1CCD015262C47F000A9C562 /* RobotoCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B1CCD010262C47ED00A9C562 /* RobotoCondensed-Light.ttf */; };
-		B1CCD016262C47F100A9C562 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B1CCD011262C47F000A9C562 /* RobotoCondensed-Regular.ttf */; };
 		B1CCD019262C5AEF00A9C562 /* CommonnPresentViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CCD018262C5AEF00A9C562 /* CommonnPresentViewController2.swift */; };
 		B1CCD01C262C60E800A9C562 /* VoiceChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CCD01B262C60E800A9C562 /* VoiceChatViewController.swift */; };
 		B1CCD067262C6E4200A9C562 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CCD066262C6E4200A9C562 /* CommentViewController.swift */; };
@@ -96,6 +95,7 @@
 		FECC443525AFB99200B7E8F1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECC443425AFB99100B7E8F1 /* Constants.swift */; };
 		FED76E3925C1FE4C00F955A0 /* CommentPageTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED76E3825C1FE4C00F955A0 /* CommentPageTableCell.swift */; };
 		FED76EA825C3466900F955A0 /* GroupPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED76EA725C3466900F955A0 /* GroupPageCell.swift */; };
+		FEF4849226A4A712003A88B0 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEF4849126A4A712003A88B0 /* RobotoCondensed-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -162,7 +162,6 @@
 		B1CCD00E262C47E800A9C562 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		B1CCD00F262C47EB00A9C562 /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
 		B1CCD010262C47ED00A9C562 /* RobotoCondensed-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Light.ttf"; sourceTree = "<group>"; };
-		B1CCD011262C47F000A9C562 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
 		B1CCD018262C5AEF00A9C562 /* CommonnPresentViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonnPresentViewController2.swift; sourceTree = "<group>"; };
 		B1CCD01B262C60E800A9C562 /* VoiceChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceChatViewController.swift; sourceTree = "<group>"; };
 		B1CCD066262C6E4200A9C562 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
@@ -193,6 +192,7 @@
 		FECC443425AFB99100B7E8F1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FED76E3825C1FE4C00F955A0 /* CommentPageTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentPageTableCell.swift; sourceTree = "<group>"; };
 		FED76EA725C3466900F955A0 /* GroupPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupPageCell.swift; sourceTree = "<group>"; };
+		FEF4849126A4A712003A88B0 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,7 +233,7 @@
 				B1CCD00E262C47E800A9C562 /* Roboto-Medium.ttf */,
 				B1CCD00F262C47EB00A9C562 /* RobotoCondensed-Bold.ttf */,
 				B1CCD010262C47ED00A9C562 /* RobotoCondensed-Light.ttf */,
-				B1CCD011262C47F000A9C562 /* RobotoCondensed-Regular.ttf */,
+				FEF4849126A4A712003A88B0 /* RobotoCondensed-Regular.ttf */,
 				B1CCCFD6262C290C00A9C562 /* PlayfairDisplay-Italic-VariableFont_wght.ttf */,
 				B1CCCFDA262C292100A9C562 /* PlayfairDisplay-VariableFont_wght.ttf */,
 				B1CCCFD4262C290600A9C562 /* WorkSans-Black.ttf */,
@@ -466,12 +466,12 @@
 			files = (
 				8B7F72172671EF5D0013221E /* NetworkDoubleViewCell.xib in Resources */,
 				FECC43A925AC3A4E00B7E8F1 /* LaunchScreen.storyboard in Resources */,
+				FEF4849226A4A712003A88B0 /* RobotoCondensed-Regular.ttf in Resources */,
 				B1CCCFD1262C28F100A9C562 /* Cormorant-Medium.ttf in Resources */,
 				B1CCD012262C47F000A9C562 /* Roboto-Bold.ttf in Resources */,
 				B1CCCFE4262C293500A9C562 /* WorkSans-ExtraBold.ttf in Resources */,
 				B1CCCFE8262C293500A9C562 /* WorkSans-Thin.ttf in Resources */,
 				B1CCCFE9262C293500A9C562 /* WorkSans-Bold.ttf in Resources */,
-				B1CCD016262C47F100A9C562 /* RobotoCondensed-Regular.ttf in Resources */,
 				FECC43B325AC3CE300B7E8F1 /* GoogleService-Info.plist in Resources */,
 				B1CCCFE1262C293500A9C562 /* PlayfairDisplay-Italic-VariableFont_wght.ttf in Resources */,
 				B1CCD015262C47F000A9C562 /* RobotoCondensed-Light.ttf in Resources */,
@@ -781,7 +781,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = hbcumade/hbcumade.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 17;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = D55T9ZSDKH;
 				INFOPLIST_FILE = hbcumade/Info.plist;
@@ -790,7 +790,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.2;
+				MARKETING_VERSION = 2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = net.softment.hbcumade;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -806,7 +806,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = hbcumade/hbcumade.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = D55T9ZSDKH;
 				INFOPLIST_FILE = hbcumade/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -814,7 +814,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.2;
+				MARKETING_VERSION = 2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = net.softment.hbcumade;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

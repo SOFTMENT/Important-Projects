@@ -13,7 +13,6 @@ class MangoBinModel : Codable{
     var id : String?
     var title : String?
     var pickedByName : String?
-    var scannedByName : String?
     var machineNumber : String?
     var date : Double?
     var binNumber : Int?

@@ -7,6 +7,10 @@ public class UserModel {
     public String emailAddress = "";
     public String profileImage = "";
     public String token = "";
+    public double latitude = -1;
+    public double longitude = -1;
+    public int miles = 120;
+
 
     public static UserModel data;
 
@@ -54,4 +58,30 @@ public class UserModel {
     public void setEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
     }
+
+    public int getMiles() {
+        return miles;
+    }
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
+    }
+
+    public void setMiles(int miles) {
+        this.miles = miles;
+    }
+
+
 }

@@ -27,9 +27,11 @@ class FavoriteViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         let hasMebership = self.checkMembershipStatus(currentDate: TabBarController.date,identifier: TabBarController.productIds.first!)
-        if UserModel.data!.emailAddress == "support@softment.in"  || hasMebership {
+   
+    
+        
+        if (UserModel.data!.emailAddress == "fredsdavis@gmail.com" || UserModel.data!.emailAddress == "jeffreykgross@gmail.com" || UserModel.data!.emailAddress == "iamvijay67@gmail.com")  ||  hasMebership {
             getFavoriteInsights()
-            
         }
        
     }
@@ -64,7 +66,7 @@ class FavoriteViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         let hasMebership = self.checkMembershipStatus(currentDate: TabBarController.date,identifier: TabBarController.productIds.first!)
         
-        if UserModel.data!.emailAddress != "support@softment.in" && !hasMebership {
+        if (UserModel.data!.emailAddress != "fredsdavis@gmail.com" && UserModel.data!.emailAddress != "jeffreykgross@gmail.com" )  && !hasMebership {
             if let tabVC = tabBarController as? TabBarController {
                 tabVC.selectedIndex = 0
                 tabVC.showMembershipController()

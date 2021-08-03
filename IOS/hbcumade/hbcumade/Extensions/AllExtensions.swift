@@ -203,7 +203,7 @@ extension UIViewController {
                 do {
                 if let user = try snapshot?.data(as: UserData.self) {
                     UserData.data = user
-                   if user.isMobVerified ?? false || user.regiType != "custom" {
+                 
                         if let school = user.school {
                             if school != "" {
                                 
@@ -265,10 +265,7 @@ extension UIViewController {
                             }
                         }
                         
-                    }
-                    else {
-                        self.beRootScreen(mIdentifier: Constants.StroyBoard.mobVeriVC)
-                    }
+                   
                 }
                 else {
                     do {

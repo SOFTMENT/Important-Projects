@@ -19,7 +19,6 @@ target 'hbcumade' do
    
    pod 'Firebase/Messaging'
 
-
    pod 'FirebaseFirestoreSwift'
 
    pod 'FBSDKLoginKit'

@@ -294,49 +294,49 @@ extension QRScannerController: AVCaptureMetadataOutputObjectsDelegate {
             }
         }
         else {
-            //1. Create the alert controller.
+            
+            let id = String(self.getCurrentMillis())
+            let title = "Mango Bin Number \(number)"
+ 
             let alert = UIAlertController(title: "Fill Mango Bin \(number)", message: "", preferredStyle: .alert)
-
-        //    //2. Add the text field. You can configure it however you need.
-        //    alert.addTextField { (textField) in
-        //        textField.placeholder = "Picker Name"
-        //    }
-                
-                //2. Add the text field. You can configure it however you need.
-            alert.addTextField { (textField) in
-                textField.placeholder = "Scanner Name"
-            }
-                
             
-
-                
-                
-            // 3. Grab the value from the text field, and print it when the user clicks OK.
-            alert.addAction(UIAlertAction(title: "Add", style: .default, handler: { [weak alert] (_) in
-             //   let pickername = alert?.textFields![0].text?.trimmingCharacters(in: .whitespacesAndNewlines) // Force unwrapping because we know it exists.
-                let scannerName = alert?.textFields![0].text?.trimmingCharacters(in: .whitespacesAndNewlines)
-                
-                if (!scannerName!.isEmpty) {
-                    let id = String(self.getCurrentMillis())
-                    let title = "Mango Bin Number \(number)"
-            
-                    self.addDataToFirebase(id: id, machineNumber: UserModel.userData.machineNumber ?? "-1", title: title,  scannedByName: scannerName!, binNumber: number)
-                    
-                }
-                else {
-                    self.showToast(message: "Please Enter Scanner Name")
-                }
-                
-                self.navigationController?.popViewController(animated: true)
-            }))
-            
-            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
+            alert.addAction(UIAlertAction(title: "Add", style: .default, handler: { action in
+                self.addDataToFirebase(id: id, machineNumber: UserModel.userData.machineNumber ?? "-1", title: title, binNumber: number)
                 self.captureSession.startRunning()
-                alert.dismiss(animated: true, completion: nil)
+                self.showToast(message: "Bin Added")
+                self.dismiss(animated: true, completion: nil)
+                
             }))
-
-            // 4. Present the alert.
+            
+            alert.addAction(UIAlertAction(title: "Cancel   ", style: .default, handler: nil))
+            
+            
             self.present(alert, animated: true, completion: nil)
+//            //1. Create the alert controller.
+//            let alert = UIAlertController(title: "Fill Mango Bin \(number)", message: "", preferredStyle: .alert)
+//
+//        //    //2. Add the text field. You can configure it however you need.
+//        //    alert.addTextField { (textField) in
+//        //        textField.placeholder = "Picker Name"
+//        //    }
+//
+//                //2. Add the text field. You can configure it however you need.
+////            alert.addTextField { (textField) in
+////                textField.placeholder = "Scanner Name"
+////            }
+////
+////
+
+                
+          
+//
+//            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
+//                self.captureSession.startRunning()
+//                alert.dismiss(animated: true, completion: nil)
+//            }))
+//
+//            // 4. Present the alert.
+//
             
         }
     
@@ -357,7 +357,7 @@ extension QRScannerController: AVCaptureMetadataOutputObjectsDelegate {
     }
    
     
-    func addDataToFirebase(id : String,machineNumber : String,title : String,scannedByName : String, binNumber : Int ) {
+    func addDataToFirebase(id : String,machineNumber : String,title : String, binNumber : Int ) {
         
         
        
@@ -365,7 +365,6 @@ extension QRScannerController: AVCaptureMetadataOutputObjectsDelegate {
         
        let mangoBinData =   ["id": id,
                              "title" : title,
-                            "scannedByName" : scannedByName,
                             "date" : Date().timeIntervalSince1970,
                             "binNumber" : binNumber,
                             "lati" : self.lati,
@@ -374,7 +373,9 @@ extension QRScannerController: AVCaptureMetadataOutputObjectsDelegate {
                             "status" : "full"
                             ] as [String : Any]
         
+      
         Constants.getFirestoreDB().collection("BinInfo").document(id).setData(mangoBinData, completion: { err in
+            
             if err != nil {
                 self.showError(err!.localizedDescription)
             }

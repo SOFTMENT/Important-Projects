@@ -18,6 +18,7 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Color;
@@ -35,10 +36,23 @@ import android.widget.Toast;
 
 import com.canhub.cropper.CropImage;
 import com.canhub.cropper.CropImageView;
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.login.LoginManager;
+import com.facebook.login.LoginResult;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.GoogleAuthProvider;
 import com.makeramen.roundedimageview.RoundedImageView;
 
 import org.jetbrains.annotations.NotNull;
@@ -46,6 +60,7 @@ import org.jetbrains.annotations.NotNull;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.Objects;
 
@@ -64,6 +79,10 @@ public class SignInActivity extends AppCompatActivity {
     private boolean isImageSelected = false;
     private AlertDialog alertDialog;
     private  String currentPhotoPath;
+    private GoogleSignInClient mGoogleSignInClient;
+    private final int RC_SIGN_IN = 1022;
+
+    private CallbackManager mCallbackManager;
 
 
     @Override
@@ -78,7 +97,31 @@ public class SignInActivity extends AppCompatActivity {
             window.setStatusBarColor(Color.WHITE);
         }
 
+        TextView versionName = findViewById(R.id.versionName);
+        try {
+            PackageInfo pInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
+            String version = pInfo.versionName;
+            versionName.setText("Version - "+version);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
 
+        findViewById(R.id.googleSignIn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent signInIntent = mGoogleSignInClient.getSignInIntent();
+                startActivityForResult(signInIntent, RC_SIGN_IN);
+            }
+        });
+
+
+        // Configure Google Sign In
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken(getString(R.string.default_web_client_id))
+                .requestEmail()
+                .build();
+
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
@@ -96,6 +139,48 @@ public class SignInActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        //FACEBOOK LOGIN
+        mCallbackManager = CallbackManager.Factory.create();
+
+        LoginManager.getInstance().registerCallback(mCallbackManager,
+                new FacebookCallback<LoginResult>()
+                {
+                    @Override
+                    public void onSuccess(LoginResult loginResult)
+                    {
+
+                        AuthCredential credential = FacebookAuthProvider.getCredential(loginResult.getAccessToken().getToken());
+                        Services.firebaseAuthWithGoogle(SignInActivity.this,credential);
+
+                    }
+
+                    @Override
+                    public void onCancel()
+                    {
+
+
+                        // App code
+                    }
+
+                    @Override
+                    public void onError(FacebookException exception)
+                    {
+
+                        Services.showDialog(SignInActivity.this,"ERROR",exception.getMessage());
+                    }
+
+
+                });
+
+
+        findViewById(R.id.facebookSignIn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LoginManager.getInstance().logInWithReadPermissions(SignInActivity.this, Arrays.asList( "email", "public_profile"));
+            }
+        });
+
 
         //ResetPassword
         findViewById(R.id.reset).setOnClickListener(new View.OnClickListener() {
@@ -132,7 +217,7 @@ public class SignInActivity extends AppCompatActivity {
                             ProgressHud.dialog.dismiss();
                             if (task.isSuccessful())  {
                                 if (Services.isUserLoggedIn()) {
-                                    Services.getCurrentUserData(SignInActivity.this, Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid());
+                                    Services.getCurrentUserData(SignInActivity.this, Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid(),true);
                                 }
 
                             }
@@ -296,7 +381,21 @@ public class SignInActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
+
+            if (requestCode == RC_SIGN_IN) {
+                Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
+                try {
+                    // Google Sign In was successful, authenticate with Firebase
+                    GoogleSignInAccount account = task.getResult(ApiException.class);
+                    AuthCredential credential = GoogleAuthProvider.getCredential(account.getIdToken(), null);
+                    Services.firebaseAuthWithGoogle(SignInActivity.this,credential);
+                } catch (ApiException e) {
+                    Services.showDialog(this,"ERROR",e.getLocalizedMessage());
+
+                }
+            }
+
+            if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
 
             CropImage.ActivityResult result = CropImage.getActivityResult(data);
             if (resultCode == RESULT_OK) {
@@ -320,8 +419,9 @@ public class SignInActivity extends AppCompatActivity {
             }
         }
 
-
-
+                else {
+                    mCallbackManager.onActivityResult(requestCode, resultCode, data);
+                }
 
     }
 

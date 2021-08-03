@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dY6-uy-cLI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dY6-uy-cLI">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -516,7 +516,7 @@ support@rapidcollect.co.za</string>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="mycell" rowHeight="104" id="CvL-su-cS8" customClass="NotificationCell" customModule="Rapid_Collect" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="104"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="414" height="104"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CvL-su-cS8" id="wjs-DG-xks">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="104"/>
@@ -680,7 +680,7 @@ support@rapidcollect.co.za</string>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="messagecell" rowHeight="68" id="qc3-Zy-q58" customClass="MessagesCell" customModule="Rapid_Collect" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="68"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="414" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qc3-Zy-q58" id="vbO-9I-d11">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="68"/>
@@ -837,7 +837,7 @@ support@rapidcollect.co.za</string>
                                                 </connections>
                                             </collectionView>
                                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="8ew-zH-ose">
-                                                <rect key="frame" x="40" y="200" width="295" height="27.333333333333343"/>
+                                                <rect key="frame" x="40" y="200" width="295" height="26.333333333333343"/>
                                                 <color key="pageIndicatorTintColor" red="0.38354112689999997" green="0.38354112689999997" blue="0.38354112689999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <color key="currentPageIndicatorTintColor" red="0.92941176469999998" green="0.1058823529" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </pageControl>
@@ -1567,10 +1567,10 @@ support@rapidcollect.co.za</string>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ToDoItem" rowHeight="56" id="NyZ-sb-qHD" customClass="ToDoViewCell" customModule="Rapid_Collect" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="56"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="414" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NyZ-sb-qHD" id="tgJ-Yt-an6">
-                                            <rect key="frame" x="0.0" y="0.0" width="386.66666666666669" height="56"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="388.33333333333331" height="56"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpP-ZV-5bs">
@@ -1965,7 +1965,7 @@ support@rapidcollect.co.za</string>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="addresscell" rowHeight="209" id="8rT-rJ-2lf" customClass="AddressCell" customModule="Rapid_Collect" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="209"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="375" height="209"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8rT-rJ-2lf" id="Jsq-HM-lFr">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="209"/>
@@ -2082,7 +2082,7 @@ India 233-9b, saket nagar</string>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <prototypes>
                         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="135" id="0vR-n4-OWW">
-                            <rect key="frame" x="0.0" y="28" width="414" height="135"/>
+                            <rect key="frame" x="0.0" y="24.333333969116211" width="414" height="135"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0vR-n4-OWW" id="pRZ-1J-YQ4">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="135"/>
@@ -3052,7 +3052,7 @@ A Registered TPPP (Third Party Payments Provider) with PASA (Payments Associatio
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="rapidtvcell" rowHeight="329" id="Z32-DY-L10" customClass="RapidTVViewCell" customModule="Rapid_Collect" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="329"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="414" height="329"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Z32-DY-L10" id="g8d-ro-Jih">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="329"/>
@@ -3788,7 +3788,7 @@ A Registered TPPP (Third Party Payments Provider) with PASA (Payments Associatio
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="wpcell" rowHeight="105" id="Ppk-Kv-yhU" customClass="WPViewCell" customModule="Rapid_Collect" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="105"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="414" height="105"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ppk-Kv-yhU" id="RkD-Lp-o8R">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="105"/>

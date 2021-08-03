@@ -57,11 +57,12 @@ public class ChatScreenActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat_screen);
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            Window window = getWindow();
+     //   Services.fullScreen(this);
+        if (Build.VERSION.SDK_INT >= 21) {
+            Window window = this.getWindow();
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.setStatusBarColor(getColor(R.color.main_color));
+            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            window.setStatusBarColor(this.getResources().getColor(R.color.main_color));
         }
         FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
         uid = firebaseAuth.getCurrentUser().getUid();
@@ -166,10 +167,6 @@ public class ChatScreenActivity extends AppCompatActivity {
 
 
     }
-
-
-
-
 
     private void sentMessage(String sMessage) {
         HashMap<String,Object> hashMap = new HashMap<>();

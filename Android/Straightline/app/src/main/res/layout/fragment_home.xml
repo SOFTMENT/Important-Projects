@@ -7,33 +7,54 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
 
     tools:context=".Fragment.HomeFragment">
+    <RelativeLayout
+        android:layout_marginTop="24dp"
+        android:id="@+id/rr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
     <TextView
+        android:layout_centerVertical="true"
         android:id="@+id/myaccountText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:text="Challenges"
-        android:layout_marginTop="24dp"
         android:layout_marginStart="16dp"
         android:fontFamily="@font/sfprosemibold"
         android:textColor="#040404"
         />
 
-    <TextView
+    <LinearLayout
+        android:layout_centerVertical="true"
+        android:orientation="horizontal"
         android:layout_alignParentEnd="true"
-        android:id="@+id/seeall"
+        android:id="@+id/totalMiles"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="14sp"
-        android:text="See All"
-        android:layout_alignBaseline="@+id/myaccountText"
         android:layout_marginEnd="16dp"
-        android:fontFamily="@font/sfprosemibold"
-        android:textColor="@color/main_color"
-        />
+        android:gravity="center_vertical"
+        >
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/ic_outline_place_24"
+            />
+        <TextView
+            android:id="@+id/totalMilesText"
+            android:fontFamily="@font/sfpromedium"
+            android:layout_marginStart="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="120 Miles"
+            android:textSize="11sp"
+            />
+
+    </LinearLayout>
+    </RelativeLayout>
 
     <in.softment.straightline.Utils.KKViewPager
-    android:layout_below="@+id/myaccountText"
+    android:layout_below="@+id/rr"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/viewpager"

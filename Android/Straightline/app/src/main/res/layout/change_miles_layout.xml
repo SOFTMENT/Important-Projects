@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:padding="30dp"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Find Challenges By Miles"
+    android:textSize="15sp"
+    android:fontFamily="@font/sfprosemibold"
+    android:textColor="#333"
+    />
+    <EditText
+        android:textCursorDrawable="@drawable/black_cursor"
+        android:id="@+id/enterMiles"
+        android:inputType="number"
+        android:layout_marginStart="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edit_text_bg"
+        android:hint="Enter Miles"
+        android:textSize="13sp"
+        android:fontFamily="@font/sfprosemibold"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/update"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/transparent_back"
+        android:backgroundTint="@color/main_color"
+        android:text="Update"
+        android:textAllCaps="false"
+        android:fontFamily="@font/sfpromedium"
+        android:textColor="#fff"
+        android:textSize="13sp"
+        />
+    <TextView
+        android:layout_marginTop="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OR"
+        android:textSize="14sp"
+        android:fontFamily="@font/sfprosemibold"
+        android:textColor="#333"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/showAll"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/transparent_back"
+        android:backgroundTint="@color/link_color"
+        android:text="Show All Challenges"
+        android:textAllCaps="false"
+        android:fontFamily="@font/sfpromedium"
+        android:textColor="#fff"
+        android:textSize="13sp"
+        />
+
+</LinearLayout>
